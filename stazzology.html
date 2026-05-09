@@ -1,14 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Stazzology | STAZZBOI.COM</title>
 
-<meta name="description" content="Official page of Stazzology, a gaming promotion and media platform created by Kelvin Stazzland.">
+<meta name="description" content="Official page of Stazzology, a gaming promotion, tournament, and digital media platform founded by Kelvin Stazzland, also known as Stazzboi and The Stazzerian President.">
+
+<meta name="keywords" content="Stazzology, Kelvin Stazzland, Stazzboi, The Khamelion, The Stazzerian President, gaming promotion, esports, tournaments, Stazzeria, Bites and Battles">
+
+<meta property="og:title" content="Stazzology | STAZZBOI.COM">
+<meta property="og:description" content="Official page of Stazzology, the gaming promotion and media division founded by Kelvin Stazzland.">
+<meta property="og:type" content="website">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+
+  "name":"Stazzology",
+
+  "description":"Stazzology is a gaming promotion, tournament, and digital media platform founded by Kelvin Stazzland.",
+
+  "founder":{
+    "@type":"Person",
+    "name":"Kelvin Stazzland",
+    "alternateName":[
+      "Stazzboi",
+      "The Stazzerian President",
+      "The Khamelion"
+    ]
+  },
+
+  "parentOrganization":{
+    "@type":"Organization",
+    "name":"Stazzeria"
+  },
+
+  "sameAs":[
+    "https://www.youtube.com/@Stazzology",
+    "https://www.youtube.com/@Stazzologyevents",
+    "https://www.instagram.com/stazzology/",
+    "https://www.tiktok.com/@stazzboi.gaming"
+  ],
+
+  "knowsAbout":[
+    "Gaming tournaments",
+    "Competitive gaming",
+    "Digital media",
+    "Gaming promotion",
+    "PPV events"
+  ]
+}
+</script>
 
 <style>
+
 body{
   margin:0;
   font-family:Arial,Helvetica,sans-serif;
@@ -23,6 +72,7 @@ header{
   padding:18px 24px;
   position:sticky;
   top:0;
+  z-index:100;
 }
 
 .brand{
@@ -31,11 +81,19 @@ header{
   letter-spacing:2px;
 }
 
+nav{
+  margin-top:10px;
+}
+
 nav a{
   margin-right:18px;
   color:#0645ad;
   text-decoration:none;
   font-weight:700;
+}
+
+nav a:hover{
+  text-decoration:underline;
 }
 
 .container{
@@ -55,6 +113,16 @@ nav a{
   border:1px solid #c8ccd1;
   padding:18px;
   margin-bottom:24px;
+  transition:all .2s ease;
+}
+
+.card:hover{
+  transform:translateY(-2px);
+}
+
+.infobox{
+  position:sticky;
+  top:110px;
 }
 
 .infobox img{
@@ -62,17 +130,23 @@ nav a{
   height:320px;
   object-fit:cover;
   background:#ddd;
+  border:1px solid #c8ccd1;
 }
 
 h1,h2{
   border-bottom:1px solid #ccc;
   padding-bottom:6px;
+  margin-top:0;
 }
 
 .keyword{
   font-weight:700;
   color:#0645ad;
   text-decoration:none;
+}
+
+.keyword:hover{
+  text-decoration:underline;
 }
 
 .footer{
@@ -87,21 +161,34 @@ ul{
   padding-left:20px;
 }
 
-@media(max-width:800px){
-  .layout{
-    grid-template-columns:1fr;
-  }
-
-  .brand{
-    font-size:32px;
-  }
+.card ul li{
+  margin-bottom:8px;
 }
+
+@media(max-width:800px){
+
+.layout{
+  grid-template-columns:1fr;
+}
+
+.brand{
+  font-size:32px;
+}
+
+nav a{
+  display:inline-block;
+  margin-bottom:8px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
+
 <div class="brand">STAZZBOI.COM</div>
 
 <nav>
@@ -111,53 +198,123 @@ ul{
 <a href="stazzology.html">Stazzology</a>
 <a href="stazzex.html">The Stazzex</a>
 </nav>
+
 </header>
 
 <div class="container">
+
 <div class="layout">
 
 <main>
 
 <section class="card">
+
 <h1>Stazzology</h1>
 
-<p><strong>Stazzology</strong> is a gaming promotion and media platform created by <strong>Kelvin “Stazzboi” Stazzland</strong>.</p>
+<p>
+<strong>Stazzology</strong> is a gaming promotion, tournament, and digital media platform founded by 
+<strong>Kelvin “Stazzboi” Stazzland</strong>, also known as 
+<strong>The Stazzerian President</strong> and 
+<strong>The Khamelion</strong>.
+</p>
 
-<p>The platform focuses on tournaments, digital competition, events, community engagement, and branded gaming content across multiple platforms.</p>
+<p>
+The platform focuses on tournaments, digital competition, community engagement, creator culture, gaming media, and live entertainment initiatives connected to modern Stazzerian culture.
+</p>
 
-<p>Stazzology serves as the gaming division of the broader Stazzerian ecosystem, connecting entertainment, competition, and creator culture.</p>
+<p>
+Stazzology is recognized for events such as 
+<strong>Bites and Battles @ Megabites Arcade in Hemet, California</strong>, helping establish a recurring identity within local gaming and creator communities.
+</p>
+
+<p>
+As a media and gaming initiative associated with Stazzeria, Stazzology combines competition, branding, creator promotion, and entertainment-focused productions across multiple platforms.
+</p>
 
 </section>
 
 <section class="card">
+
 <h2>Divisions & Teams</h2>
+
 <ul>
-<li>Frost</li>
-<li>Valor</li>
-<li>Kingdom</li>
-<li>Integrity</li>
+
+<li>
+<a class="keyword" href="https://www.youtube.com/@STZFrost" target="_blank">
+STZ Frost
+</a>
+</li>
+
+<li>
+<a class="keyword" href="https://www.youtube.com/@STZValor" target="_blank">
+STZ Valor
+</a>
+</li>
+
+<li>
+<a class="keyword" href="https://www.youtube.com/@STZKingdom" target="_blank">
+STZ Kingdom
+</a>
+</li>
+
+<li>
+<a class="keyword" href="https://www.youtube.com/@STZIntegrity" target="_blank">
+STZ Integrity
+</a>
+</li>
+
 </ul>
+
 </section>
 
 <section class="card">
+
 <h2>Content Areas</h2>
+
 <ul>
 <li>Tournaments</li>
-<li>PPV Events</li>
+<li>PPV / PLE Style Events</li>
 <li>Competitive Gaming</li>
 <li>Team Branding</li>
 <li>Digital Media</li>
+<li>Creator Promotion</li>
+<li>Gaming Entertainment</li>
 </ul>
+
 </section>
 
 <section class="card">
+
 <h2>Platforms</h2>
+
 <ul>
-<li>Instagram</li>
-<li>YouTube</li>
-<li>YouTube Events</li>
-<li>TikTok</li>
+
+<li>
+<a class="keyword" href="https://www.youtube.com/@Stazzology" target="_blank">
+Stazzology YouTube
+</a>
+</li>
+
+<li>
+<a class="keyword" href="https://www.youtube.com/@Stazzologyevents" target="_blank">
+Stazzology Events
+</a>
+</li>
+
+<li>
+<a class="keyword" href="https://www.instagram.com/stazzology/" target="_blank">
+Instagram
+</a>
+</li>
+
+<li>
+<a class="keyword" href="https://www.tiktok.com/@stazzboi.gaming" target="_blank">
+TikTok
+</a>
+</li>
+
 </ul>
+
 </section>
 
 </main>
@@ -166,15 +323,32 @@ ul{
 
 <section class="card infobox">
 
-<img src="Stazzology-Logo.jpg" alt="Stazzology Logo">
+<img 
+src="Stazzology-Logo.jpg" 
+alt="Stazzology Logo"
+>
 
 <p><strong>Stazzology</strong></p>
+
 <hr>
 
-<p><strong>Type:</strong> Gaming Promotion</p>
+<p><strong>Type:</strong> Gaming Promotion & Media</p>
+
 <p><strong>Founder:</strong> Kelvin Stazzland</p>
+
+<p><strong>Also associated with:</strong></p>
+
+<ul>
+<li>Stazzboi</li>
+<li>The Stazzerian President</li>
+<li>The Khamelion</li>
+</ul>
+
 <p><strong>Affiliation:</strong> Stazzeria</p>
-<p><strong>Focus:</strong> Gaming, Events, Media</p>
+
+<p><strong>Focus:</strong> Gaming, Events, Media, Competition</p>
+
+<p><strong>Known for:</strong> Bites and Battles @ Megabites Arcade</p>
 
 </section>
 
