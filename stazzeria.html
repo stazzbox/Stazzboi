@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,7 +9,43 @@
 
 <meta name="description" content="Official Stazzeria page. Stazzeria is a digital and physical collective founded by Kelvin Stazzland, centered on creative expression, cultural identity, and Stazzerian philosophy.">
 
+<meta name="keywords" content="Stazzeria, Kelvin Stazzland, Stazzboi, The Stazzerian President, The Khamelion, STAZZsociety, Stazzerian culture, Stazzerian philosophy">
+
+<meta property="og:title" content="Stazzeria | STAZZBOI.COM">
+<meta property="og:description" content="Official Stazzeria page founded by Kelvin Stazzland.">
+<meta property="og:type" content="website">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+
+  "name":"Stazzeria",
+
+  "description":"Stazzeria is a digital and physical collective founded by Kelvin Stazzland centered around Stazzerian culture, philosophy, creative expression, and collective identity.",
+
+  "founder":{
+    "@type":"Person",
+    "name":"Kelvin Stazzland",
+    "alternateName":[
+      "Stazzboi",
+      "The Stazzerian President",
+      "The Khamelion"
+    ]
+  },
+
+  "knowsAbout":[
+    "STAZZsociety",
+    "Stazzerian philosophy",
+    "Creative expression",
+    "Cultural identity",
+    "Community organization"
+  ]
+}
+</script>
+
 <style>
+
 body{
   margin:0;
   font-family:Arial,Helvetica,sans-serif;
@@ -23,6 +60,7 @@ header{
   padding:18px 24px;
   position:sticky;
   top:0;
+  z-index:100;
 }
 
 .brand{
@@ -31,11 +69,19 @@ header{
   letter-spacing:2px;
 }
 
+nav{
+  margin-top:10px;
+}
+
 nav a{
   margin-right:18px;
   color:#0645ad;
   text-decoration:none;
   font-weight:700;
+}
+
+nav a:hover{
+  text-decoration:underline;
 }
 
 .container{
@@ -55,6 +101,16 @@ nav a{
   border:1px solid #c8ccd1;
   padding:18px;
   margin-bottom:24px;
+  transition:all .2s ease;
+}
+
+.card:hover{
+  transform:translateY(-2px);
+}
+
+.infobox{
+  position:sticky;
+  top:110px;
 }
 
 .infobox img{
@@ -62,17 +118,23 @@ nav a{
   height:320px;
   object-fit:cover;
   background:#ddd;
+  border:1px solid #c8ccd1;
 }
 
 h1,h2{
   border-bottom:1px solid #ccc;
   padding-bottom:6px;
+  margin-top:0;
 }
 
 .keyword{
   font-weight:700;
   color:#0645ad;
   text-decoration:none;
+}
+
+.keyword:hover{
+  text-decoration:underline;
 }
 
 .footer{
@@ -87,21 +149,34 @@ ul{
   padding-left:20px;
 }
 
-@media(max-width:800px){
-  .layout{
-    grid-template-columns:1fr;
-  }
-
-  .brand{
-    font-size:32px;
-  }
+.card ul li{
+  margin-bottom:8px;
 }
+
+@media(max-width:800px){
+
+.layout{
+  grid-template-columns:1fr;
+}
+
+.brand{
+  font-size:32px;
+}
+
+nav a{
+  display:inline-block;
+  margin-bottom:8px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
+
 <div class="brand">STAZZBOI.COM</div>
 
 <nav>
@@ -111,53 +186,131 @@ ul{
 <a href="stazzology.html">Stazzology</a>
 <a href="stazzex.html">The Stazzex</a>
 </nav>
+
 </header>
 
 <div class="container">
+
 <div class="layout">
 
 <main>
 
 <section class="card">
+
 <h1>Stazzeria</h1>
 
-<p><strong>Stazzeria</strong> is a digital and physical collective founded by <strong>Kelvin “Stazzboi” Stazzland</strong>, centered around creative expression, cultural identity, and Stazzerian philosophy.</p>
+<p>
+<strong>Stazzeria</strong> is a digital and physical collective founded by 
+<strong>Kelvin “Stazzboi” Stazzland</strong>, also known as 
+<strong>The Stazzerian President</strong> and 
+<strong>The Khamelion</strong>, centered around creative expression, cultural identity, and Stazzerian philosophy.
+</p>
 
-<p>The collective operates as a community, cultural framework, and creative ecosystem where members align through shared values, participation, and collective projects.</p>
+<p>
+The collective operates as a structured cultural framework and organized identity system where members align through participation, collective standards, creative contribution, and shared cultural development.
+</p>
 
-<p>Stazzeria connects its members through <strong>STAZZsociety</strong>, a cultural language and operational system linking Stazzerians across digital and physical spaces.</p>
+<p>
+Stazzeria connects its members through 
+<strong>STAZZsociety</strong>, a polyfunctional lexeme and cultural-operational language system linking Stazzerians across digital and physical spaces.
+</p>
 
 </section>
 
 <section class="card">
-<h2>Government & Leadership</h2>
+
+<h2>Government & Administration</h2>
+
 <ul>
 <li>President: Kelvin Stazzland</li>
-<li>Vice President: Isaac BeachyBird</li>
-<li>Advisor: Caro</li>
-<li>War General: John B</li>
-<li>Monarch: S</li>
+<li>Vice President: Isaac “Beachy Bird”</li>
+<li>Former Vice President: Caro</li>
+<li>Former Second Gentleman: JC</li>
+<li>War General: John B.</li>
+<li>Monarch/Jester: S</li>
 </ul>
+
 </section>
 
 <section class="card">
+
 <h2>Citizen Types</h2>
+
 <ul>
 <li>Birthright</li>
 <li>Adopted</li>
 <li>Supporters</li>
 </ul>
+
 </section>
 
 <section class="card">
+
 <h2>Core Principles</h2>
+
 <ul>
 <li>Alignment</li>
 <li>Accountability</li>
 <li>Creative Output</li>
 <li>Community Standards</li>
 <li>Cultural Identity</li>
+<li>Collective Advancement</li>
+<li>Adaptability</li>
 </ul>
+
+</section>
+
+<section class="card">
+
+<h2>Stazzerian History & Presidential Timeline</h2>
+
+<p>
+According to the Ashreeha timeline, 
+<strong>Kelvin “Stazzboi” Stazzland</strong> is recognized as the 
+<strong>50th President of Stazzeria</strong>.
+</p>
+
+<p>
+Stazzland is currently serving his second presidential term. His first term primarily focused on isolation management, internal stabilization, and opposition containment alongside former Vice President <strong>Caro</strong> and former Second Gentleman of Stazzeria <strong>JC</strong>.
+</p>
+
+<p>
+During his second term, Stazzland shifted focus toward growth, institutional expansion, and long-term Stazzerian sustainability. His administration expanded the cabinet structure through the addition of roles including 
+<strong>War General</strong> and 
+<strong>Monarch/Jester</strong>, further formalizing the operational structure of modern Stazzeria.
+</p>
+
+<p>
+Politically, Stazzland and former Vice President Caro became known for coordinated opposition suppression against multiple hostile entities during the early developmental period of Stazzeria.
+</p>
+
+<p>
+Under the current administration of 
+<strong>Vice President Isaac “Beachy Bird”</strong>, Stazzland has focused heavily on expanding the digital real estate and public visibility of Stazzeria across media, branding, and online infrastructure.
+</p>
+
+<p>
+In 2025, War General <strong>John B.</strong> and President Stazzland navigated two major conflicts against the same opposing entity during what later became known as the 
+<strong>Zits Conflict</strong>.
+</p>
+
+<p>
+The conflict began after the unnamed opposing entity publicly directed hostile statements toward Stazzland and Stazzeria, resulting in rapid retaliatory action carried out by Stazzland and the Stazzerian Military under the leadership of War General John B.
+</p>
+
+<p>
+John B.'s strategic precision helped maintain the conflict in Stazzerian favor throughout multiple stages of engagement. Following the neutralization of approximately 75% of the opposition, President Stazzland offered a truce agreement.
+</p>
+
+<p>
+The proposed truce was reportedly violated within minutes, resulting in renewed retaliatory operations led by Stazzland and John B., reducing the remaining opposition presence to approximately 22%.
+</p>
+
+<p>
+Later in 2025, 
+<strong>First Lady Leann Stazzland</strong> successfully helped establish a peace agreement between both parties. The agreement remains active and respected by both sides from 2025 to the present day.
+</p>
+
 </section>
 
 </main>
@@ -166,15 +319,29 @@ ul{
 
 <section class="card infobox">
 
-<img src="Stazzeria-Nation-Seal-Logo.jpg" alt="Stazzeria Nation Seal Logo">
+<img 
+src="Stazzeria-Nation-Seal-Logo.jpg" 
+alt="Stazzeria Nation Seal Logo"
+>
 
 <p><strong>Stazzeria</strong></p>
+
 <hr>
 
 <p><strong>Founded by:</strong> Kelvin Stazzland</p>
+
+<p><strong>Current President:</strong> Kelvin Stazzland</p>
+
+<p><strong>Vice President:</strong> Isaac “Beachy Bird”</p>
+
 <p><strong>Type:</strong> Digital & Physical Collective</p>
-<p><strong>Members:</strong> Stazzerians</p>
+
+<p><strong>Citizens Known As:</strong> Stazzerians</p>
+
 <p><strong>Language System:</strong> STAZZsociety</p>
+
+<p><strong>Philosophy:</strong> Stazzerian Philosophy</p>
+
 <p><strong>Current Era:</strong> Second Presidential Term</p>
 
 </section>
