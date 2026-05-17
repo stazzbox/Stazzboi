@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>STAZZBOI | Stazzboi.com</title>
+
+<meta name="description" content="Official profile and portfolio page for Kelvin 'Stazzboi' Stazzland.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:22px 60px;
+
+    background:rgba(0,0,0,0.45);
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,0.08);
+
+    z-index:999;
+}
+
+.logo{
+    font-size:1.4rem;
+    font-weight:700;
+    letter-spacing:3px;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:rgba(255,255,255,0.82);
+    transition:0.3s ease;
+    font-size:0.95rem;
+}
+
+.nav-links a:hover{
+    color:white;
+}
+
+/* HERO */
+
+.hero{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:140px 8% 80px;
+}
+
+.hero-container{
+    width:100%;
+    max-width:1400px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.hero-image{
+    position:relative;
+}
+
+.hero-image img{
+    width:100%;
+    border-radius:30px;
+    object-fit:cover;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+    0 0 40px rgba(255,255,255,0.03);
+}
+
+.glass-panel{
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:30px;
+
+    padding:45px;
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+}
+
+.hero-text h1{
+    font-size:4.5rem;
+    letter-spacing:5px;
+    margin-bottom:20px;
+}
+
+.hero-text h2{
+    font-size:1.1rem;
+    color:rgba(255,255,255,0.7);
+    margin-bottom:35px;
+    letter-spacing:2px;
+}
+
+.hero-text p{
+    line-height:1.9;
+    color:rgba(255,255,255,0.8);
+    font-size:1rem;
+}
+
+/* SECTION */
+
+.section{
+    width:100%;
+    padding:100px 8%;
+}
+
+.section-container{
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.section-image img{
+    width:100%;
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.section-text h3{
+    font-size:2.5rem;
+    margin-bottom:25px;
+    letter-spacing:3px;
+}
+
+.section-text p{
+    line-height:1.9;
+    color:rgba(255,255,255,0.78);
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+    width:100%;
+    padding:100px 8%;
+}
+
+.portfolio-container{
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+}
+
+.portfolio-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.portfolio-header h3{
+    font-size:3rem;
+    letter-spacing:4px;
+    margin-bottom:15px;
+}
+
+.portfolio-header p{
+    color:rgba(255,255,255,0.7);
+}
+
+/* PROJECT GRID */
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.project-card{
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:28px;
+
+    padding:35px;
+
+    transition:0.35s ease;
+
+    backdrop-filter:blur(10px);
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+
+    border-color:rgba(255,255,255,0.22);
+
+    box-shadow:
+    0 0 35px rgba(255,255,255,0.05);
+}
+
+.project-card img{
+    width:100%;
+    height:180px;
+    object-fit:contain;
+    margin-bottom:25px;
+}
+
+.project-card h4{
+    font-size:1.5rem;
+    margin-bottom:15px;
+    letter-spacing:2px;
+}
+
+.project-card p{
+    line-height:1.8;
+    color:rgba(255,255,255,0.74);
+    margin-bottom:25px;
+}
+
+.project-btn{
+    display:inline-block;
+
+    text-decoration:none;
+    color:white;
+
+    border:1px solid rgba(255,255,255,0.18);
+
+    padding:13px 22px;
+
+    border-radius:50px;
+
+    transition:0.3s ease;
+}
+
+.project-btn:hover{
+    background:white;
+    color:black;
+}
+
+/* SOCIALS */
+
+.socials{
+    width:100%;
+    padding:100px 8%;
+}
+
+.social-container{
+    width:100%;
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+}
+
+.social-container h3{
+    font-size:2.5rem;
+    margin-bottom:40px;
+    letter-spacing:4px;
+}
+
+.social-links{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.social-links a{
+    text-decoration:none;
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    padding:15px 24px;
+
+    border-radius:50px;
+
+    transition:0.3s ease;
+
+    background:rgba(255,255,255,0.04);
+}
+
+.social-links a:hover{
+    background:white;
+    color:black;
+}
+
+/* FOOTER */
+
+.footer{
+    padding:40px 20px;
+    text-align:center;
+    color:rgba(255,255,255,0.5);
+    letter-spacing:2px;
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+    .hero-container,
+    .section-container{
+        grid-template-columns:1fr;
+    }
+
+    .project-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-text h1{
+        font-size:3rem;
+    }
+
+}
+
+@media(max-width:700px){
+
+    .navbar{
+        padding:20px;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .glass-panel{
+        padding:30px;
+    }
+
+    .hero-text h1{
+        font-size:2.4rem;
+    }
+
+    .section-text h3{
+        font-size:2rem;
+    }
+
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo">STAZZBOI</div>
+
+    <div class="nav-links">
+        <a href="index.html">STAZZEX</a>
+        <a href="#about">ABOUT</a>
+        <a href="#philosophy">PHILOSOPHY</a>
+        <a href="#bio">BIO</a>
+        <a href="#portfolio">PORTFOLIO</a>
+    </div>
+
+</nav>
+
+<!-- HERO / ABOUT -->
+
+<section class="hero" id="about">
+
+    <div class="hero-container">
+
+        <div class="hero-image">
+
+            <img src="images/stazzboi-main.jpg" alt="Stazzboi">
+
+        </div>
+
+        <div class="glass-panel hero-text">
+
+            <h1>STAZZBOI</h1>
+
+            <h2>
+                Content Creator • Music Artist • Digital Entrepreneur
+            </h2>
+
+            <p>
+                Kelvin “Stazzboi” Stazzland is known for his social media
+                content covering topics such as private security,
+                overviews of Stazzeria, and commentary-based hot takes.
+
+                Stazzland began creating content on YouTube in 2013 under
+                previous names including KID14XD, BLACKFOXARK,
+                and most notably KELVIN TV before later adopting
+                the name STAZZBOI (Stazz Boy).
+
+                His early content primarily focused on gaming titles such as
+                Call of Duty: Black Ops II, Grand Theft Auto V, and Minecraft,
+                later expanding into content surrounding Call of Duty and
+                Rainbow Six. Over time, his content shifted away from gaming
+                and toward IRL-style media including vlogs, reactions,
+                and opinion-based videos on various topics.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PHILOSOPHY -->
+
+<section class="section" id="philosophy">
+
+    <div class="section-container">
+
+        <div class="glass-panel section-text">
+
+            <h3>THE KHAMELION</h3>
+
+            <p>
+                Kelvin Stazzland is associated with several titles,
+                with “The Khamelion” being among the most recognized
+                due to its meaning and construction.
+
+                The nickname was reportedly given to Stazzland by members
+                of his inner circle and has been described as a reflection
+                of his ability to adapt within environments —
+                particularly social settings that may initially appear
+                uncomfortable — while maintaining a composed and effortless presence.
+
+                In a published article, Stazzland stated that he views his
+                “Khamelion state” as the ability to blend into situations,
+                events, societal settings, or environments where he may not
+                naturally fit in or fully agree with the surrounding norms.
+            </p>
+
+        </div>
+
+        <div class="section-image">
+
+            <img src="images/khamelion.jpg" alt="The Khamelion">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BIO -->
+
+<section class="section" id="bio">
+
+    <div class="section-container">
+
+        <div class="section-image">
+
+            <img src="images/stazzboi-bio.jpg" alt="Kelvin Stazzland">
+
+        </div>
+
+        <div class="glass-panel section-text">
+
+            <h3>BIOGRAPHY</h3>
+
+            <p>
+                Kelvin Stazzland, born September 15, 1998,
+                and identified within the Stazzerian Tribe,
+                currently resides in California.
+
+                He is the founder and operator of Stazzology,
+                a gaming promotion platform created as an homage
+                to the origins of his content career, which began in 2013.
+
+                Stazzology continues to maintain a presence within
+                the Call of Duty community, with a primary focus on
+                Call of Duty: Mobile content.
+
+                On April 11, 2026, Stazzology hosted “Bites and Battles,”
+                a competitive gaming event held at MegaBites Arcade
+                in Hemet, California.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PORTFOLIO -->
+
+<section class="portfolio" id="portfolio">
+
+    <div class="portfolio-container">
+
+        <div class="portfolio-header">
+
+            <h3>PROJECTS & PORTFOLIO</h3>
+
+            <p>
+                Ventures, media projects, and connected divisions.
+            </p>
+
+        </div>
+
+        <div class="project-grid">
+
+            <!-- STAZZOLOGY -->
+
+            <div class="project-card">
+
+                <img src="images/stazzology-logo.png" alt="Stazzology">
+
+                <h4>STAZZOLOGY</h4>
+
+                <p>
+                    Gaming promotion, tournaments,
+                    creator media, and competitive gaming platform.
+                </p>
+
+                <a href="stazzology.html" class="project-btn">
+                    ENTER PLATFORM
+                </a>
+
+            </div>
+
+            <!-- STAZZLANDS -->
+
+            <div class="project-card">
+
+                <img src="images/CDD5315B-BA19-4623-90CA-9797F8233DDD.png" alt="The Stazzlands">
+
+                <h4>THE STAZZLANDS</h4>
+
+                <p>
+                    A family-oriented media and lifestyle project connected
+                    to Kelvin Stazzland and associates.
+                </p>
+
+                <a href="https://youtube.com/@thestazzlands?si=pfuqn_DgN0iXqOiN"
+                   target="_blank"
+                   class="project-btn">
+
+                    ENTER CHANNEL
+
+                </a>
+
+            </div>
+
+            <!-- PATROL ONE -->
+
+            <div class="project-card">
+
+                <img src="images/Patrol1.png" alt="Patrol One">
+
+                <h4>PATROL ONE</h4>
+
+                <p>
+                    A private security-focused web series centered around
+                    patrol activity, security operations, and team-based
+                    field experiences starring Kelvin Stazzland alongside
+                    associated personnel.
+                </p>
+
+                <a href="https://youtube.com/@stzpatrolone?si=yNojb3CVJHU-H6R7"
+                   target="_blank"
+                   class="project-btn">
+
+                    ENTER CHANNEL
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SOCIALS -->
+
+<section class="socials">
+
+    <div class="social-container">
+
+        <h3>SOCIAL MEDIA</h3>
+
+        <div class="social-links">
+
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+            <a href="#">TikTok</a>
+            <a href="#">X / Twitter</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    STAZZBOI.COM
+
+</footer>
+
+</body>
+</html>
