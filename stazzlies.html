@@ -1,182 +1,692 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The Stazzlies | STAZZBOI.COM</title>
+<title>THE STAZZLIES | Stazzboi.com</title>
 
-<meta name="description" content="Official page of The Stazzlies, an all-female collective within the Stazzerian community.">
+<meta name="description" content="Official collective page documenting The Stazzlies, an all-female collective within the Stazzerian community.">
 
 <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f8f9fa;
-  color:#202122;
-  line-height:1.6;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
 }
 
-header{
-  background:#ffffff;
-  border-bottom:1px solid #ccc;
-  padding:18px 24px;
-  position:sticky;
-  top:0;
+/* NAVBAR */
+
+.navbar{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:22px 60px;
+
+    background:rgba(0,0,0,0.45);
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,0.08);
+
+    z-index:999;
 }
 
-.brand{
-  font-size:42px;
-  font-weight:700;
-  letter-spacing:2px;
+.logo{
+    font-size:1.4rem;
+    font-weight:700;
+    letter-spacing:3px;
+    text-decoration:none;
+    color:white;
 }
 
-nav a{
-  margin-right:18px;
-  color:#0645ad;
-  text-decoration:none;
-  font-weight:700;
+.nav-links{
+    display:flex;
+    gap:28px;
 }
 
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:24px;
+.nav-links a{
+    text-decoration:none;
+    color:rgba(255,255,255,0.82);
+    transition:0.3s ease;
+    font-size:0.95rem;
 }
 
-.layout{
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  gap:28px;
+.nav-links a:hover{
+    color:#ff4f81;
 }
 
-.card{
-  background:#fff;
-  border:1px solid #c8ccd1;
-  padding:18px;
-  margin-bottom:24px;
+/* HERO */
+
+.hero{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:140px 8% 80px;
 }
 
-.infobox img{
-  width:100%;
-  height:320px;
-  object-fit:cover;
-  background:#ddd;
+.hero-container{
+    width:100%;
+    max-width:1400px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
 }
 
-h1,h2{
-  border-bottom:1px solid #ccc;
-  padding-bottom:6px;
+.hero-image img{
+    width:100%;
+    border-radius:30px;
+
+    border:1px solid rgba(255,79,129,0.15);
+
+    box-shadow:
+    0 0 40px rgba(255,79,129,0.05);
 }
 
-.keyword{
-  font-weight:700;
-  color:#0645ad;
-  text-decoration:none;
+.glass-panel{
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,79,129,0.12);
+
+    border-radius:30px;
+
+    padding:45px;
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
 }
+
+.hero-text h1{
+    font-size:4.5rem;
+    letter-spacing:5px;
+    margin-bottom:20px;
+}
+
+.hero-text h2{
+    font-size:1.1rem;
+    color:rgba(255,255,255,0.7);
+    margin-bottom:35px;
+    letter-spacing:2px;
+}
+
+.hero-text p{
+    line-height:1.9;
+    color:rgba(255,255,255,0.8);
+}
+
+/* SECTION */
+
+.section{
+    width:100%;
+    padding:100px 8%;
+}
+
+.section-container{
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+}
+
+.section-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-header h3{
+    font-size:3rem;
+    letter-spacing:4px;
+    margin-bottom:20px;
+}
+
+.section-header p{
+    color:rgba(255,255,255,0.74);
+    line-height:1.8;
+}
+
+/* CREATIVE GRID */
+
+.creative-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.creative-card{
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,79,129,0.12);
+
+    border-radius:28px;
+
+    padding:35px;
+
+    transition:0.35s ease;
+
+    text-align:center;
+}
+
+.creative-card:hover{
+    transform:translateY(-8px);
+
+    border-color:rgba(255,79,129,0.35);
+
+    box-shadow:
+    0 0 35px rgba(255,79,129,0.08);
+}
+
+.creative-card h4{
+    font-size:1.5rem;
+    margin-bottom:18px;
+    color:#ff4f81;
+}
+
+.creative-card p{
+    line-height:1.8;
+    color:rgba(255,255,255,0.75);
+}
+
+/* ROLE GRID */
+
+.role-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.role-card{
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,79,129,0.12);
+
+    border-radius:28px;
+
+    padding:35px;
+}
+
+.role-card h4{
+    font-size:1.5rem;
+    margin-bottom:18px;
+    color:#ff4f81;
+}
+
+.role-card p{
+    line-height:1.8;
+    color:rgba(255,255,255,0.75);
+}
+
+/* DETAILS */
+
+.details{
+    width:100%;
+    padding:100px 8%;
+}
+
+.details-container{
+    width:100%;
+    max-width:1000px;
+    margin:auto;
+}
+
+.details-panel{
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,79,129,0.12);
+
+    border-radius:30px;
+
+    padding:45px;
+}
+
+.details-panel h3{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:40px;
+    letter-spacing:4px;
+}
+
+.detail-item{
+    display:flex;
+    justify-content:space-between;
+    padding:18px 0;
+
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.detail-item:last-child{
+    border-bottom:none;
+}
+
+.detail-item span:first-child{
+    color:#ff4f81;
+    font-weight:700;
+}
+
+.detail-item span:last-child{
+    color:rgba(255,255,255,0.75);
+}
+
+/* DIRECTORY */
+
+.directory{
+    width:100%;
+    padding:100px 8%;
+}
+
+.directory-container{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
+}
+
+.directory-container h3{
+    font-size:3rem;
+    margin-bottom:45px;
+    letter-spacing:4px;
+}
+
+.directory-links{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.directory-links a{
+    text-decoration:none;
+
+    color:white;
+
+    border:1px solid rgba(255,79,129,0.18);
+
+    padding:15px 24px;
+
+    border-radius:50px;
+
+    transition:0.3s ease;
+
+    background:rgba(255,255,255,0.04);
+}
+
+.directory-links a:hover{
+    background:#ff4f81;
+    color:black;
+}
+
+/* FOOTER */
 
 .footer{
-  margin-top:40px;
-  padding:20px;
-  border-top:1px solid #ccc;
-  font-size:14px;
-  color:#555;
+    padding:40px 20px;
+    text-align:center;
+    color:rgba(255,255,255,0.5);
+    letter-spacing:2px;
 }
 
-ul{
-  padding-left:20px;
+/* MOBILE */
+
+@media(max-width:1000px){
+
+    .hero-container,
+    .creative-grid,
+    .role-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-text h1{
+        font-size:3rem;
+    }
+
 }
 
-@media(max-width:800px){
-  .layout{
-    grid-template-columns:1fr;
-  }
+@media(max-width:700px){
 
-  .brand{
-    font-size:32px;
-  }
+    .navbar{
+        padding:20px;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .glass-panel,
+    .details-panel{
+        padding:30px;
+    }
+
+    .hero-text h1{
+        font-size:2.3rem;
+    }
+
+    .section-header h3,
+    .details-panel h3,
+    .directory-container h3{
+        font-size:2rem;
+    }
+
+    .detail-item{
+        flex-direction:column;
+        gap:10px;
+    }
+
 }
+
 </style>
-</head>
 
+</head>
 <body>
 
-<header>
-<div class="brand">STAZZBOI.COM</div>
+<!-- NAVBAR -->
 
-<nav>
-<a href="index.html">Stazzboi</a>
-<a href="stazzeria.html">Stazzeria</a>
-<a href="stazzlies.html">The Stazzlies</a>
-<a href="stazzology.html">Stazzology</a>
-<a href="stazzex.html">The Stazzex</a>
+<nav class="navbar">
+
+    <a href="index.html" class="logo">THE STAZZLIES</a>
+
+    <div class="nav-links">
+        <a href="index.html">STAZZEX</a>
+        <a href="#overview">OVERVIEW</a>
+        <a href="#creative">CREATIVE AREAS</a>
+        <a href="#role">COMMUNITY ROLE</a>
+        <a href="#details">DETAILS</a>
+    </div>
+
 </nav>
-</header>
 
-<div class="container">
-<div class="layout">
+<!-- HERO -->
 
-<main>
+<section class="hero" id="overview">
 
-<section class="card">
-<h1>The Stazzlies</h1>
+    <div class="hero-container">
 
-<p><strong>The Stazzlies</strong> are an all-female collective within the broader <strong>Stazzerian</strong> community.</p>
+        <div class="hero-image">
 
-<p>Recognized as female Stazzerians, The Stazzlies represent creativity, presence, and participation across the Stazzerian ecosystem.</p>
+            <img src="images/stazzlies-main.jpg" alt="The Stazzlies">
 
-<p>Within the website structure, The Stazzlies function as a dedicated page focused on the female collective, its members, symbolism, role in society, and notable contributions to Stazzeria.</p>
+        </div>
 
-</section>
+        <div class="glass-panel hero-text">
 
-<section class="card">
-<h2>Creative Areas</h2>
-<ul>
-<li>Beauty & Makeup</li>
-<li>Storytime Content</li>
-<li>Lifestyle Media</li>
-<li>Culture & Community</li>
-<li>Digital Presence</li>
-</ul>
-</section>
+            <h1>THE STAZZLIES</h1>
 
-<section class="card">
-<h2>Community Role</h2>
-<ul>
-<li>Representation</li>
-<li>Engagement</li>
-<li>Creative Influence</li>
-<li>Support of Stazzerian Identity</li>
-</ul>
-</section>
+            <h2>
+                Collective Page
+            </h2>
 
-</main>
+            <p>
+                The Stazzlies are an all-female collective within
+                the Stazzerian community.
 
-<aside>
+                Recognized as female Stazzerians, The Stazzlies
+                represent creativity, presence, and participation
+                across the Stazzerian Network.
 
-<section class="card infobox">
+                Within the website structure, The Stazzlies function
+                as a dedicated page focused on the female collective,
+                its members, symbolism, role in society,
+                and notable contributions to Stazzeria.
+            </p>
 
-<img src="Stazzlies-Logo.jpg" alt="The Stazzlies Logo">
+        </div>
 
-<p><strong>The Stazzlies</strong></p>
-<hr>
-
-<p><strong>Type:</strong> Collective</p>
-<p><strong>Affiliation:</strong> Stazzeria</p>
-<p><strong>Members:</strong> Female Stazzerians</p>
-<p><strong>Focus:</strong> Media, Culture, Community</p>
+    </div>
 
 </section>
 
-</aside>
+<!-- CREATIVE AREAS -->
 
-</div>
+<section class="section" id="creative">
 
-<div class="footer">
-© STAZZBOI.COM — Official The Stazzlies page.
-</div>
+    <div class="section-container">
 
-</div>
+        <div class="section-header">
+
+            <h3>CREATIVE AREAS</h3>
+
+            <p>
+                Core areas connected to media, participation,
+                and digital presence.
+            </p>
+
+        </div>
+
+        <div class="creative-grid">
+
+            <div class="creative-card">
+
+                <h4>BEAUTY & MAKEUP</h4>
+
+                <p>
+                    Beauty-oriented media, styling,
+                    and visual presentation.
+                </p>
+
+            </div>
+
+            <div class="creative-card">
+
+                <h4>STORYTIME CONTENT</h4>
+
+                <p>
+                    Personality-driven storytelling,
+                    commentary, and social media content.
+                </p>
+
+            </div>
+
+            <div class="creative-card">
+
+                <h4>LIFESTYLE MEDIA</h4>
+
+                <p>
+                    Lifestyle-focused digital media
+                    and public-facing content.
+                </p>
+
+            </div>
+
+            <div class="creative-card">
+
+                <h4>CULTURE & COMMUNITY</h4>
+
+                <p>
+                    Participation within the broader
+                    Stazzerian social structure.
+                </p>
+
+            </div>
+
+            <div class="creative-card">
+
+                <h4>DIGITAL PRESENCE</h4>
+
+                <p>
+                    Social media activity,
+                    engagement, and online influence.
+                </p>
+
+            </div>
+
+            <div class="creative-card">
+
+                <h4>MEDIA PARTICIPATION</h4>
+
+                <p>
+                    Contributions to collective projects,
+                    collaborations, and community initiatives.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- COMMUNITY ROLE -->
+
+<section class="section" id="role">
+
+    <div class="section-container">
+
+        <div class="section-header">
+
+            <h3>COMMUNITY ROLE</h3>
+
+        </div>
+
+        <div class="role-grid">
+
+            <div class="role-card">
+
+                <h4>REPRESENTATION</h4>
+
+                <p>
+                    Representing female participation
+                    within the Stazzerian community.
+                </p>
+
+            </div>
+
+            <div class="role-card">
+
+                <h4>ENGAGEMENT</h4>
+
+                <p>
+                    Active involvement through media,
+                    communication, and collective interaction.
+                </p>
+
+            </div>
+
+            <div class="role-card">
+
+                <h4>CREATIVE INFLUENCE</h4>
+
+                <p>
+                    Supporting creative identity,
+                    digital culture, and collaborative projects.
+                </p>
+
+            </div>
+
+            <div class="role-card">
+
+                <h4>STAZZERIAN IDENTITY</h4>
+
+                <p>
+                    Supporting the identity,
+                    symbolism, and public-facing culture of Stazzeria.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- DETAILS -->
+
+<section class="details" id="details">
+
+    <div class="details-container">
+
+        <div class="details-panel">
+
+            <h3>COLLECTIVE DETAILS</h3>
+
+            <div class="detail-item">
+
+                <span>TYPE</span>
+                <span>Collective</span>
+
+            </div>
+
+            <div class="detail-item">
+
+                <span>AFFILIATION</span>
+                <span>Stazzeria</span>
+
+            </div>
+
+            <div class="detail-item">
+
+                <span>MEMBERS</span>
+                <span>Female Stazzerians</span>
+
+            </div>
+
+            <div class="detail-item">
+
+                <span>FOCUS</span>
+                <span>Media, Culture, Community</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- DIRECTORY -->
+
+<section class="directory">
+
+    <div class="directory-container">
+
+        <h3>CONNECTED DIVISIONS</h3>
+
+        <div class="directory-links">
+
+            <a href="index.html">STAZZEX</a>
+            <a href="sb.html">STAZZBOI</a>
+            <a href="stazzeria.html">STAZZERIA</a>
+            <a href="stazzology.html">STAZZOLOGY</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    STAZZBOI.COM
+
+</footer>
 
 </body>
 </html>
