@@ -5,753 +5,436 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Stazzboi.com | Kelvin Stazzland</title>
+<title>STAZZEX | Stazzboi.com</title>
 
-<meta name="description" content="Official website of Stazzboi, also known as Kelvin Stazzland — musician, creator of STAZZsociety, founder of Stazzology, and President of Stazzeria.">
-
-<meta name="keywords" content="Stazzboi, Kelvin Stazzland, The Khamelion, The Stazzerian President, STAZZsociety, Stazzeria, Stazzology, SuicidalYacht, Swerve, Robbery, Stazzerian Wrist Flick">
-
-<meta property="og:title" content="Stazzboi.com | Kelvin Stazzland">
-<meta property="og:description" content="Official website of Stazzboi, also known as Kelvin Stazzland.">
-<meta property="og:type" content="website">
-
-<link rel="icon" href="trident-logo.png">
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Person",
-
-  "name":"Kelvin Stazzland",
-
-  "alternateName":[
-    "Stazzboi",
-    "The Stazzerian President",
-    "The Khamelion"
-  ],
-
-  "description":"Kelvin Stazzland, professionally known as Stazzboi, is a Stazzerian-American musician, creator of STAZZsociety, founder of Stazzology, and President of Stazzeria.",
-
-  "url":"https://stazzboi.com",
-
-  "sameAs":[
-    "https://www.instagram.com/stazzboi/",
-    "https://www.instagram.com/stazzboi.tv/",
-    "https://www.tiktok.com/@stazzboi",
-    "https://www.facebook.com/StazzboiFB/",
-    "https://www.facebook.com/kelshd/",
-    "https://www.youtube.com/@iKelvinHD",
-    "https://www.youtube.com/channel/UCWwNDkwejQU8ScwwfUXnF1w",
-    "https://www.youtube.com/@TheStazzlands",
-    "https://www.youtube.com/@STZPatrolOne",
-    "https://music.apple.com/us/artist/stazzboi/1627663453",
-    "https://musicbrainz.org/artist/2f17a5d8-5d1f-4b97-b3b6-d1a9ea1b2432",
-    "https://unitedmasters.com/a/stazzboi"
-  ],
-
-  "jobTitle":[
-    "Musician",
-    "Digital Entrepreneur",
-    "President of Stazzeria"
-  ],
-
-  "knowsAbout":[
-    "The Khamelion Pose",
-    "STAZZsociety",
-    "Stazzerian culture",
-    "Music",
-    "Gaming promotion"
-  ]
-}
-</script>
+<meta name="description" content="The official information database and index connecting the major divisions associated with the Stazzerian Network.">
 
 <style>
 
 *{
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:#090909;
-  color:#e6e6e6;
-  line-height:1.7;
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:url('images/Stazzboi Homepage.png') no-repeat center center;
+    background-size:cover;
+
+    min-height:100vh;
+
+    color:white;
+
+    overflow-x:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px 20px;
 }
 
-/* HEADER */
+/* OVERLAY */
 
-header{
-  position:sticky;
-  top:0;
-  z-index:999;
-  background:#0f0f0f;
-  border-bottom:1px solid #232323;
-  backdrop-filter:blur(10px);
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+    z-index:-1;
 }
 
-.topbar{
-  max-width:1400px;
-  margin:auto;
-  padding:18px 24px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:15px;
-}
+/* MAIN CONTAINER */
 
-.brand{
-  color:#d4af37;
-  font-size:34px;
-  font-weight:800;
-  letter-spacing:3px;
-}
+.main-container{
 
-nav{
-  display:flex;
-  flex-wrap:wrap;
-  gap:14px;
-}
+    width:100%;
+    max-width:1400px;
+    min-height:88vh;
 
-nav a{
-  color:#d7d7d7;
-  text-decoration:none;
-  font-weight:700;
-  padding:10px 14px;
-  border-radius:6px;
-  transition:all .2s ease;
-}
+    background:rgba(0,0,0,0.35);
 
-nav a:hover{
-  background:#d4af37;
-  color:#000;
+    border:1px solid rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border-radius:32px;
+
+    padding:60px 50px;
+
+    box-shadow:
+    0 0 50px rgba(0,0,0,0.6),
+    inset 0 0 20px rgba(255,255,255,0.03);
 }
 
 /* HERO */
 
 .hero{
-  position:relative;
-  min-height:70vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  overflow:hidden;
-}
-
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.82)),
-    url("Stazzboi-Offical-Portrait-Kelvin-Stazzland.jpg");
-  background-size:cover;
-  background-position:center top;
-  filter:saturate(1.1);
-}
-
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:950px;
-  padding:40px 20px;
+    text-align:center;
+    margin-bottom:75px;
 }
 
 .hero h1{
-  margin:0;
-  color:#d4af37;
-  font-size:70px;
-  letter-spacing:3px;
-  line-height:1.1;
+    font-size:5rem;
+    letter-spacing:8px;
+    margin-bottom:22px;
+    font-weight:800;
 }
 
 .hero p{
-  margin-top:25px;
-  font-size:1.15rem;
-  color:#d9d9d9;
+    max-width:780px;
+    margin:auto;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,0.78);
+
+    font-size:1.05rem;
 }
 
-.hero-buttons{
-  margin-top:35px;
-  display:flex;
-  justify-content:center;
-  gap:16px;
-  flex-wrap:wrap;
+/* PORTAL GRID */
+
+.portal-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+    margin-bottom:70px;
 }
 
-.hero-buttons a{
-  text-decoration:none;
-  padding:14px 22px;
-  border-radius:8px;
-  font-weight:700;
-  transition:all .2s ease;
+/* PORTAL CARD */
+
+.portal-card{
+
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    border-radius:28px;
+
+    padding:42px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:0.35s ease;
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
 }
 
-.primary-btn{
-  background:#d4af37;
-  color:#000;
+.portal-card:hover{
+
+    transform:translateY(-8px) scale(1.02);
+
+    border-color:rgba(255,255,255,0.28);
+
+    box-shadow:
+    0 0 30px rgba(255,255,255,0.06);
 }
 
-.primary-btn:hover{
-  background:#f0c74d;
+/* LIGHT SWEEP */
+
+.portal-card::before{
+    content:"";
+
+    position:absolute;
+
+    top:-100%;
+    left:-100%;
+
+    width:250%;
+    height:250%;
+
+    background:linear-gradient(
+        45deg,
+        transparent,
+        rgba(255,255,255,0.05),
+        transparent
+    );
+
+    transform:rotate(25deg);
+
+    transition:0.7s;
 }
 
-.secondary-btn{
-  border:1px solid #d4af37;
-  color:#d4af37;
+.portal-card:hover::before{
+    top:-40%;
+    left:-40%;
 }
 
-.secondary-btn:hover{
-  background:#d4af37;
-  color:#000;
+/* CARD TEXT */
+
+.portal-card h2{
+    font-size:2rem;
+    margin-bottom:18px;
+    letter-spacing:2px;
 }
 
-/* MAIN */
-
-.container{
-  max-width:1400px;
-  margin:auto;
-  padding:60px 24px;
+.portal-card p{
+    color:rgba(255,255,255,0.74);
+    line-height:1.8;
+    margin-bottom:28px;
 }
 
-/* FEATURE GRID */
+/* BUTTON */
 
-.feature-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:28px;
-  margin-bottom:60px;
+.portal-btn{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,0.18);
+
+    padding:14px 24px;
+
+    border-radius:50px;
+
+    letter-spacing:1px;
+
+    transition:0.3s ease;
+
+    background:rgba(255,255,255,0.04);
 }
 
-.feature-card{
-  background:#111;
-  border:1px solid #252525;
-  border-radius:14px;
-  overflow:hidden;
-  transition:all .25s ease;
+.portal-btn:hover{
+    background:white;
+    color:black;
 }
 
-.feature-card:hover{
-  transform:translateY(-5px);
-  border-color:#d4af37;
-  box-shadow:0 0 22px rgba(212,175,55,.14);
+/* OVERVIEW */
+
+.overview{
+    text-align:center;
+    margin-bottom:65px;
 }
 
-.feature-card img{
-  width:100%;
-  height:240px;
-  object-fit:cover;
-  border-bottom:1px solid #222;
+.overview h3{
+    font-size:2rem;
+    letter-spacing:4px;
+    margin-bottom:22px;
 }
 
-.feature-content{
-  padding:24px;
+.overview p{
+    max-width:850px;
+    margin:auto;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,0.72);
 }
 
-.feature-content h2{
-  margin-top:0;
-  color:#d4af37;
-  font-size:1.8rem;
+/* DIVISION TAGS */
+
+.divisions{
+
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+
+    margin-bottom:60px;
 }
 
-.feature-content p{
-  color:#cccccc;
-}
+.division-tag{
 
-.feature-content a{
-  display:inline-block;
-  margin-top:18px;
-  text-decoration:none;
-  background:#d4af37;
-  color:#000;
-  padding:12px 18px;
-  border-radius:6px;
-  font-weight:700;
-  transition:all .2s ease;
-}
+    border:1px solid rgba(255,255,255,0.14);
 
-.feature-content a:hover{
-  background:#f0c74d;
-}
+    background:rgba(255,255,255,0.03);
 
-/* CONTENT SECTION */
+    padding:14px 22px;
 
-.layout{
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  gap:32px;
-}
+    border-radius:40px;
 
-.card{
-  background:#111;
-  border:1px solid #232323;
-  border-radius:12px;
-  padding:28px;
-  margin-bottom:30px;
-}
+    font-size:0.92rem;
 
-.card h1,
-.card h2{
-  color:#d4af37;
-  border-bottom:1px solid #262626;
-  padding-bottom:10px;
-  margin-top:0;
-}
+    letter-spacing:1px;
 
-.card h3{
-  margin-top:26px;
-  color:#d4af37;
-}
-
-.card p{
-  color:#d7d7d7;
-}
-
-.card ul li{
-  margin-bottom:10px;
-}
-
-.keyword{
-  color:#f0c74d;
-  text-decoration:none;
-  font-weight:700;
-}
-
-.keyword:hover{
-  text-decoration:underline;
-}
-
-/* INFOBOX */
-
-.infobox{
-  position:sticky;
-  top:110px;
-}
-
-.infobox img{
-  width:100%;
-  border-radius:10px;
-  border:1px solid #2b2b2b;
-  margin-bottom:20px;
-}
-
-.infobox hr{
-  border:none;
-  border-top:1px solid #252525;
-  margin:20px 0;
-}
-
-/* KHAMELION IMAGE */
-
-.khamelion-image{
-  width:100%;
-  border-radius:12px;
-  border:1px solid #2b2b2b;
-  margin-top:20px;
+    color:rgba(255,255,255,0.82);
 }
 
 /* FOOTER */
 
 .footer{
-  margin-top:80px;
-  padding:30px;
-  text-align:center;
-  border-top:1px solid #1f1f1f;
-  color:#777;
-  font-size:14px;
+    text-align:center;
+
+    color:rgba(255,255,255,0.5);
+
+    font-size:0.9rem;
+
+    letter-spacing:2px;
 }
 
 /* MOBILE */
 
-@media(max-width:900px){
+@media(max-width:950px){
 
-.layout{
-  grid-template-columns:1fr;
+    .portal-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:3.2rem;
+    }
+
+    .main-container{
+        padding:40px 25px;
+    }
+
 }
 
-.infobox{
-  position:relative;
-  top:0;
-}
+@media(max-width:600px){
 
-.hero h1{
-  font-size:48px;
-}
+    .hero h1{
+        font-size:2.4rem;
+        letter-spacing:4px;
+    }
 
-.brand{
-  font-size:26px;
-}
+    .portal-card{
+        padding:30px;
+    }
+
+    .portal-card h2{
+        font-size:1.5rem;
+    }
 
 }
 
 </style>
-</head>
 
+</head>
 <body>
 
-<header>
+<div class="main-container">
 
-<div class="topbar">
+    <!-- HERO -->
 
-<div class="brand">STAZZBOI.COM</div>
+    <section class="hero">
 
-<nav>
-<a href="#about">Stazzboi</a>
-<a href="stazzeria.html">Stazzeria</a>
-<a href="stazzlies.html">The Stazzlies</a>
-<a href="stazzology.html">Stazzology</a>
-<a href="stazzex.html">The Stazzex</a>
-</nav>
+        <h1>STAZZEX</h1>
 
-</div>
+        <p>
+            The official information database and index connecting
+            the major divisions associated with the Stazzerian Network.
+        </p>
 
-</header>
+    </section>
 
-<!-- HERO -->
+    <!-- PORTALS -->
 
-<section class="hero">
+    <section class="portal-grid">
 
-<div class="hero-content">
+        <!-- STAZZBOI -->
 
-<h1>STAZZBOI</h1>
+        <div class="portal-card">
 
-<p>
-Kelvin “Stazzboi” Stazzland —
-The Khamelion, creator of STAZZsociety,
-founder of Stazzology,
-and President of Stazzeria.
-</p>
+            <h2>STAZZBOI</h2>
 
-<div class="hero-buttons">
+            <p>
+                Content Creator • Music Artist • Digital Entrepreneur
+            </p>
 
-<a class="primary-btn" href="#about">
-Explore Profile
-</a>
+            <a href="sb.html" class="portal-btn">
+                ENTER STAZZBOI
+            </a>
 
-<a class="secondary-btn" href="stazzeria.html">
-Enter Stazzeria
-</a>
+        </div>
 
-</div>
+        <!-- STAZZERIA -->
 
-</div>
+        <div class="portal-card">
 
-</section>
+            <h2>STAZZERIA</h2>
 
-<div class="container">
+            <p>
+                Nation portal documenting citizenship,
+                leadership, structure, and identity.
+            </p>
 
-<!-- FEATURED PAGES -->
+            <a href="stazzeria.html" class="portal-btn">
+                ENTER THE NATION
+            </a>
 
-<section class="feature-grid">
+        </div>
 
-<div class="feature-card">
+        <!-- STAZZLIES -->
 
-<img
-src="Stazzeria-Nation-Seal-Logo.jpg"
-alt="Stazzeria Nation Seal"
->
+        <div class="portal-card">
 
-<div class="feature-content">
+            <h2>THE STAZZLIES</h2>
 
-<h2>Stazzeria</h2>
+            <p>
+                An all-female collective within the
+                Stazzerian community.
+            </p>
 
-<p>
-Governmental, historical, and cultural framework
-of the Stazzerian Nation.
-</p>
+            <a href="stazzlies.html" class="portal-btn">
+                ENTER THE STAZZLIES
+            </a>
 
-<a href="stazzeria.html">
-Open Page
-</a>
+        </div>
 
-</div>
+        <!-- STAZZOLOGY -->
 
-</div>
+        <div class="portal-card">
 
-<div class="feature-card">
+            <h2>STAZZOLOGY</h2>
 
-<img
-src="Stazzology-Logo.jpg"
-alt="Stazzology Logo"
->
+            <p>
+                Gaming promotion, tournaments,
+                creator media, and competitive events.
+            </p>
 
-<div class="feature-content">
+            <a href="stazzology.html" class="portal-btn">
+                ENTER STAZZOLOGY
+            </a>
 
-<h2>Stazzology</h2>
+        </div>
 
-<p>
-Gaming promotion, creator initiatives,
-events, tournaments, and entertainment media.
-</p>
+    </section>
 
-<a href="stazzology.html">
-Open Page
-</a>
+    <!-- OVERVIEW -->
 
-</div>
+    <section class="overview">
 
-</div>
+        <h3>NETWORK OVERVIEW</h3>
 
-<div class="feature-card">
+        <p>
+            STAZZEX serves as the central information database and
+            index connecting media, gaming, community, and national
+            divisions associated with the broader Stazzerian structure.
+        </p>
 
-<img
-src="Stazzlies-Logo.jpg"
-alt="The Stazzlies Logo"
->
+    </section>
 
-<div class="feature-content">
+    <!-- ACTIVE DIVISIONS -->
 
-<h2>The Stazzlies</h2>
+    <section class="divisions">
 
-<p>
-Female collective within the Stazzerian ecosystem
-focused on creativity, culture, and community.
-</p>
+        <div class="division-tag">STAZZBOI</div>
+        <div class="division-tag">STAZZERIA</div>
+        <div class="division-tag">THE STAZZLIES</div>
+        <div class="division-tag">STAZZOLOGY</div>
 
-<a href="stazzlies.html">
-Open Page
-</a>
+    </section>
 
-</div>
+    <!-- FOOTER -->
 
-</div>
+    <footer class="footer">
 
-<div class="feature-card">
+        STAZZBOI.COM
 
-<img
-src="Stazzex-Logo.jpg"
-alt="Stazzex Logo"
->
-
-<div class="feature-content">
-
-<h2>The Stazzex</h2>
-
-<p>
-Digital archive and documentation structure
-connected to Stazzerian records and media.
-</p>
-
-<a href="stazzex.html">
-Open Page
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<div class="layout">
-
-<main>
-
-<section class="card" id="about">
-
-<h1>Stazzboi</h1>
-
-<p>
-<strong>Stazzboi</strong>, also known as
-<strong>Kelvin Stazzland</strong>,
-<strong>The Stazzerian President</strong>, and
-<strong>The Khamelion</strong>,
-is a Stazzerian-American musician,
-creator, and digital entrepreneur based in California.
-</p>
-
-<p>
-He is recognized for creating the polyfunctional lexeme
-known as <strong>STAZZsociety</strong>,
-founding <strong>Stazzology</strong>,
-and helping establish modern Stazzerian culture
-through music, gaming promotion,
-branding, and digital media initiatives.
-</p>
-
-<p>
-Stazzland's music career evolved from his earlier
-SuicidalYacht era into the modern Stazzboi catalog
-featuring releases including
-<em>Swerve</em>,
-<em>Robbery</em>,
-and
-<em>Stazzerian Wrist Flick</em>.
-</p>
-
-<p>
-Stazzland is additionally recognized for the recurring
-“Khamelion Pose,” a signature visual gesture associated
-with his public image and symbolic identity
-as The Khamelion.
-</p>
-
-</section>
-
-<section class="card">
-
-<h2>Catalog</h2>
-
-<h3>Content</h3>
-
-<ul>
-
-<li>
-<a class="keyword" href="https://www.youtube.com/@iKelvinHD" target="_blank">
-Official Music YouTube
-</a>
-</li>
-
-<li>
-<a class="keyword" href="https://www.youtube.com/channel/UCWwNDkwejQU8ScwwfUXnF1w" target="_blank">
-Stazzboi Topic Channel
-</a>
-</li>
-
-<li>
-<a class="keyword" href="https://www.youtube.com/@TheStazzlands" target="_blank">
-The Stazzlands
-</a>
-</li>
-
-<li>
-<a class="keyword" href="https://www.youtube.com/@STZPatrolOne" target="_blank">
-Patrol One
-</a>
-</li>
-
-<li>
-<a class="keyword" href="https://www.instagram.com/stazzboi.tv/" target="_blank">
-Stazzboi TV
-</a>
-</li>
-
-</ul>
-
-<h3>Music</h3>
-
-<ul>
-
-<li>
-<a class="keyword" href="https://music.apple.com/us/artist/stazzboi/1627663453" target="_blank">
-Apple Music
-</a>
-</li>
-
-<li>
-<a class="keyword" href="https://www.amazon.com/music/player/artists/B0DYP8GJJ3/stazzboi" target="_blank">
-Amazon Music
-</a>
-</li>
-
-<li>
-<a class="keyword" href="https://www.jiosaavn.com/artist/stazzboi-songs/5xTsfsLBpT4_" target="_blank">
-JioSaavn
-</a>
-</li>
-
-<li>
-<a class="keyword" href="https://unitedmasters.com/a/stazzboi" target="_blank">
-UnitedMasters Profile
-</a>
-</li>
-
-<li>
-<a class="keyword" href="https://musicbrainz.org/artist/2f17a5d8-5d1f-4b97-b3b6-d1a9ea1b2432" target="_blank">
-MusicBrainz Artist Profile
-</a>
-</li>
-
-</ul>
-
-</section>
-
-<section class="card">
-
-<h2>The Khamelion Pose</h2>
-
-<p>
-The <strong>Khamelion Pose</strong>
-is the signature pose associated with
-Kelvin “Stazzboi” Stazzland.
-</p>
-
-<p>
-The gesture has become a recognizable visual symbol
-connected to adaptability, charisma,
-confidence, and public identity
-within Stazzerian culture.
-</p>
-
-<img
-class="khamelion-image"
-src="stazzboi-khamelion-pose-art.jpg"
-alt="Kelvin Stazzland performing the Khamelion Pose"
->
-
-</section>
-
-</main>
-
-<aside>
-
-<section class="card infobox">
-
-<img
-src="Stazzboi-Offical-Portrait-Kelvin-Stazzland.jpg"
-alt="Kelvin Stazzland portrait"
->
-
-<p>
-<strong>Kelvin “Stazzboi” Stazzland</strong>
-</p>
-
-<hr>
-
-<p><strong>Known as:</strong></p>
-
-<ul>
-<li>Stazzboi</li>
-<li>The Stazzerian President</li>
-<li>The Khamelion</li>
-</ul>
-
-<p><strong>Title:</strong> President of Stazzeria</p>
-
-<p><strong>Known for:</strong></p>
-
-<ul>
-
-<li>
-Creator of the STAZZsociety lexeme
-</li>
-
-<li>
-Founder of Stazzology
-</li>
-
-<li>
-Stazzerian music and media culture
-</li>
-
-<li>
-The Khamelion Pose
-</li>
-
-</ul>
-
-<p><strong>Website:</strong> STAZZBOI.COM</p>
-
-</section>
-
-</aside>
-
-</div>
-
-<div class="footer">
-© STAZZBOI.COM — Official digital presence of Kelvin Stazzland.
-</div>
+    </footer>
 
 </div>
 
