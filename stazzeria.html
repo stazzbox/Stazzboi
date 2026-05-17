@@ -5,356 +5,698 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Stazzeria | STAZZBOI.COM</title>
+<title>STAZZERIA | Stazzboi.com</title>
 
-<meta name="description" content="Official Stazzeria page. Stazzeria is a digital and physical collective founded by Kelvin Stazzland, centered on creative expression, cultural identity, and Stazzerian philosophy.">
-
-<meta name="keywords" content="Stazzeria, Kelvin Stazzland, Stazzboi, The Stazzerian President, The Khamelion, STAZZsociety, Stazzerian culture, Stazzerian philosophy">
-
-<meta property="og:title" content="Stazzeria | STAZZBOI.COM">
-<meta property="og:description" content="Official Stazzeria page founded by Kelvin Stazzland.">
-<meta property="og:type" content="website">
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-
-  "name":"Stazzeria",
-
-  "description":"Stazzeria is a digital and physical collective founded by Kelvin Stazzland centered around Stazzerian culture, philosophy, creative expression, and collective identity.",
-
-  "founder":{
-    "@type":"Person",
-    "name":"Kelvin Stazzland",
-    "alternateName":[
-      "Stazzboi",
-      "The Stazzerian President",
-      "The Khamelion"
-    ]
-  },
-
-  "knowsAbout":[
-    "STAZZsociety",
-    "Stazzerian philosophy",
-    "Creative expression",
-    "Cultural identity",
-    "Community organization"
-  ]
-}
-</script>
+<meta name="description" content="Official nation portal documenting the governmental structure, citizenship systems, leadership, and national identity of Stazzeria.">
 
 <style>
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f8f9fa;
-  color:#202122;
-  line-height:1.6;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
 }
 
-header{
-  background:#ffffff;
-  border-bottom:1px solid #ccc;
-  padding:18px 24px;
-  position:sticky;
-  top:0;
-  z-index:100;
+/* NAVBAR */
+
+.navbar{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:22px 60px;
+
+    background:rgba(0,0,0,0.45);
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,0.08);
+
+    z-index:999;
 }
 
-.brand{
-  font-size:42px;
-  font-weight:700;
-  letter-spacing:2px;
+.logo{
+    font-size:1.4rem;
+    font-weight:700;
+    letter-spacing:3px;
+    text-decoration:none;
+    color:white;
 }
 
-nav{
-  margin-top:10px;
+.nav-links{
+    display:flex;
+    gap:28px;
 }
 
-nav a{
-  margin-right:18px;
-  color:#0645ad;
-  text-decoration:none;
-  font-weight:700;
+.nav-links a{
+    text-decoration:none;
+    color:rgba(255,255,255,0.82);
+    transition:0.3s ease;
+    font-size:0.95rem;
 }
 
-nav a:hover{
-  text-decoration:underline;
+.nav-links a:hover{
+    color:#d4af37;
 }
 
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:24px;
+/* HERO */
+
+.hero{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:140px 8% 80px;
 }
 
-.layout{
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  gap:28px;
+.hero-container{
+    width:100%;
+    max-width:1400px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
 }
 
-.card{
-  background:#fff;
-  border:1px solid #c8ccd1;
-  padding:18px;
-  margin-bottom:24px;
-  transition:all .2s ease;
+.hero-image img{
+    width:100%;
+    border-radius:30px;
+
+    border:1px solid rgba(212,175,55,0.15);
+
+    box-shadow:
+    0 0 40px rgba(212,175,55,0.05);
 }
 
-.card:hover{
-  transform:translateY(-2px);
+.glass-panel{
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(212,175,55,0.12);
+
+    border-radius:30px;
+
+    padding:45px;
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
 }
 
-.infobox{
-  position:sticky;
-  top:110px;
+.hero-text h1{
+    font-size:4.5rem;
+    letter-spacing:5px;
+    margin-bottom:20px;
 }
 
-.infobox img{
-  width:100%;
-  height:320px;
-  object-fit:cover;
-  background:#ddd;
-  border:1px solid #c8ccd1;
+.hero-text h2{
+    font-size:1.1rem;
+    color:rgba(255,255,255,0.7);
+    margin-bottom:35px;
+    letter-spacing:2px;
 }
 
-h1,h2{
-  border-bottom:1px solid #ccc;
-  padding-bottom:6px;
-  margin-top:0;
+.hero-text p{
+    line-height:1.9;
+    color:rgba(255,255,255,0.8);
 }
 
-.keyword{
-  font-weight:700;
-  color:#0645ad;
-  text-decoration:none;
+/* SECTION */
+
+.section{
+    width:100%;
+    padding:100px 8%;
 }
 
-.keyword:hover{
-  text-decoration:underline;
+.section-container{
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
 }
+
+.section-image img{
+    width:100%;
+    border-radius:30px;
+
+    border:1px solid rgba(212,175,55,0.12);
+}
+
+.section-text h3{
+    font-size:2.5rem;
+    margin-bottom:25px;
+    letter-spacing:3px;
+}
+
+.section-text p{
+    line-height:1.9;
+    color:rgba(255,255,255,0.78);
+}
+
+/* CITIZENSHIP */
+
+.citizenship{
+    width:100%;
+    padding:100px 8%;
+}
+
+.citizenship-container{
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+}
+
+.citizenship-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.citizenship-header h3{
+    font-size:3rem;
+    margin-bottom:20px;
+    letter-spacing:4px;
+}
+
+.citizenship-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.citizenship-card{
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(212,175,55,0.12);
+
+    border-radius:28px;
+
+    padding:35px;
+
+    transition:0.35s ease;
+}
+
+.citizenship-card:hover{
+    transform:translateY(-8px);
+
+    border-color:rgba(212,175,55,0.35);
+
+    box-shadow:
+    0 0 35px rgba(212,175,55,0.08);
+}
+
+.citizenship-card h4{
+    font-size:1.5rem;
+    margin-bottom:18px;
+    color:#d4af37;
+}
+
+.citizenship-card p{
+    line-height:1.8;
+    color:rgba(255,255,255,0.75);
+}
+
+/* GOVERNMENT */
+
+.gov{
+    width:100%;
+    padding:100px 8%;
+}
+
+.gov-container{
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+}
+
+.gov-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.gov-header h3{
+    font-size:3rem;
+    margin-bottom:15px;
+    letter-spacing:4px;
+}
+
+.gov-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.gov-card{
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(212,175,55,0.12);
+
+    border-radius:28px;
+
+    padding:35px;
+
+    text-align:center;
+}
+
+.gov-card h4{
+    font-size:1.6rem;
+    margin-bottom:15px;
+    color:#d4af37;
+}
+
+.gov-card p{
+    color:rgba(255,255,255,0.74);
+}
+
+/* TIMELINE */
+
+.timeline{
+    width:100%;
+    padding:100px 8%;
+}
+
+.timeline-container{
+    width:100%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.timeline-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.timeline-header h3{
+    font-size:3rem;
+    letter-spacing:4px;
+}
+
+.timeline-item{
+    border-left:2px solid rgba(212,175,55,0.35);
+
+    padding-left:30px;
+    margin-bottom:40px;
+}
+
+.timeline-item h4{
+    color:#d4af37;
+    margin-bottom:12px;
+    font-size:1.4rem;
+}
+
+.timeline-item p{
+    color:rgba(255,255,255,0.74);
+    line-height:1.8;
+}
+
+/* DIRECTORY */
+
+.directory{
+    width:100%;
+    padding:100px 8%;
+}
+
+.directory-container{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    text-align:center;
+}
+
+.directory-container h3{
+    font-size:3rem;
+    margin-bottom:45px;
+    letter-spacing:4px;
+}
+
+.directory-links{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.directory-links a{
+    text-decoration:none;
+
+    color:white;
+
+    border:1px solid rgba(212,175,55,0.18);
+
+    padding:15px 24px;
+
+    border-radius:50px;
+
+    transition:0.3s ease;
+
+    background:rgba(255,255,255,0.04);
+}
+
+.directory-links a:hover{
+    background:#d4af37;
+    color:black;
+}
+
+/* FOOTER */
 
 .footer{
-  margin-top:40px;
-  padding:20px;
-  border-top:1px solid #ccc;
-  font-size:14px;
-  color:#555;
+    padding:40px 20px;
+    text-align:center;
+    color:rgba(255,255,255,0.5);
+    letter-spacing:2px;
 }
 
-ul{
-  padding-left:20px;
+/* MOBILE */
+
+@media(max-width:1000px){
+
+    .hero-container,
+    .section-container,
+    .citizenship-grid,
+    .gov-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-text h1{
+        font-size:3rem;
+    }
+
 }
 
-.card ul li{
-  margin-bottom:8px;
-}
+@media(max-width:700px){
 
-@media(max-width:800px){
+    .navbar{
+        padding:20px;
+        flex-direction:column;
+        gap:15px;
+    }
 
-.layout{
-  grid-template-columns:1fr;
-}
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
 
-.brand{
-  font-size:32px;
-}
+    .glass-panel{
+        padding:30px;
+    }
 
-nav a{
-  display:inline-block;
-  margin-bottom:8px;
-}
+    .hero-text h1{
+        font-size:2.4rem;
+    }
+
+    .section-text h3{
+        font-size:2rem;
+    }
 
 }
 
 </style>
-</head>
 
+</head>
 <body>
 
-<header>
+<!-- NAVBAR -->
 
-<div class="brand">STAZZBOI.COM</div>
+<nav class="navbar">
 
-<nav>
-<a href="index.html">Stazzboi</a>
-<a href="stazzeria.html">Stazzeria</a>
-<a href="stazzlies.html">The Stazzlies</a>
-<a href="stazzology.html">Stazzology</a>
-<a href="stazzex.html">The Stazzex</a>
+    <a href="index.html" class="logo">STAZZERIA</a>
+
+    <div class="nav-links">
+        <a href="index.html">STAZZEX</a>
+        <a href="#overview">OVERVIEW</a>
+        <a href="#citizenship">CITIZENSHIP</a>
+        <a href="#government">GOVERNMENT</a>
+        <a href="#timeline">TIMELINE</a>
+    </div>
+
 </nav>
 
-</header>
+<!-- HERO -->
 
-<div class="container">
+<section class="hero" id="overview">
 
-<div class="layout">
+    <div class="hero-container">
 
-<main>
+        <div class="hero-image">
 
-<section class="card">
+            <img src="images/stazzeria-president.jpg" alt="Stazzeria">
 
-<h1>Stazzeria</h1>
+        </div>
 
-<p>
-<strong>Stazzeria</strong> is a digital and physical collective founded by 
-<strong>Kelvin “Stazzboi” Stazzland</strong>, also known as 
-<strong>The Stazzerian President</strong> and 
-<strong>The Khamelion</strong>, centered around creative expression, cultural identity, and Stazzerian philosophy.
-</p>
+        <div class="glass-panel hero-text">
 
-<p>
-The collective operates as a structured cultural framework and organized identity system where members align through participation, collective standards, creative contribution, and shared cultural development.
-</p>
+            <h1>STAZZERIA</h1>
 
-<p>
-Stazzeria connects its members through 
-<strong>STAZZsociety</strong>, a polyfunctional lexeme and cultural-operational language system linking Stazzerians across digital and physical spaces.
-</p>
+            <h2>
+                Nation Portal
+            </h2>
 
-</section>
+            <p>
+                Stazzeria is a functioning social nation and organizational
+                structure formed through agreements that operate similarly
+                to citizenship contracts.
 
-<section class="card">
+                Individuals who enter these agreements acknowledge and
+                accept the policies, expectations, and organizational
+                standards associated with Stazzeria in a manner comparable
+                to how nations establish systems of law and governance.
 
-<h2>Government & Administration</h2>
+                While certain conflicts, rivalries, and storylines connected
+                to Stazzeria are dramatized for entertainment purposes,
+                many are rooted in real experiences, interpersonal situations,
+                or historical developments connected to Kelvin Stazzland
+                and associated individuals.
+            </p>
 
-<ul>
-<li>President: Kelvin Stazzland</li>
-<li>Vice President: Isaac “Beachy Bird”</li>
-<li>Former Vice President: Caro</li>
-<li>Former Second Gentleman: JC</li>
-<li>War General: John B.</li>
-<li>Monarch/Jester: S</li>
-</ul>
+        </div>
+
+    </div>
 
 </section>
 
-<section class="card">
+<!-- CITIZENSHIP -->
 
-<h2>Citizen Types</h2>
+<section class="citizenship" id="citizenship">
 
-<ul>
-<li>Birthright</li>
-<li>Adopted</li>
-<li>Supporters</li>
-</ul>
+    <div class="citizenship-container">
 
-</section>
+        <div class="citizenship-header">
 
-<section class="card">
+            <h3>STAZZERIAN CITIZENSHIP</h3>
 
-<h2>Core Principles</h2>
+        </div>
 
-<ul>
-<li>Alignment</li>
-<li>Accountability</li>
-<li>Creative Output</li>
-<li>Community Standards</li>
-<li>Cultural Identity</li>
-<li>Collective Advancement</li>
-<li>Adaptability</li>
-</ul>
+        <div class="citizenship-grid">
 
-</section>
+            <!-- BIRTHRIGHT -->
 
-<section class="card">
+            <div class="citizenship-card">
 
-<h2>Stazzerian History & Presidential Timeline</h2>
+                <h4>BIRTHRIGHT</h4>
 
-<p>
-According to the Ashreeha timeline, 
-<strong>Kelvin “Stazzboi” Stazzland</strong> is recognized as the 
-<strong>50th President of Stazzeria</strong>.
-</p>
+                <p>
+                    Citizenship obtained through direct bloodline
+                    and familial connection to the foundational
+                    Stazzerian lineage.
+                </p>
 
-<p>
-Stazzland is currently serving his second presidential term. His first term primarily focused on isolation management, internal stabilization, and opposition containment alongside former Vice President <strong>Caro</strong> and former Second Gentleman of Stazzeria <strong>JC</strong>.
-</p>
+            </div>
 
-<p>
-During his second term, Stazzland shifted focus toward growth, institutional expansion, and long-term Stazzerian sustainability. His administration expanded the cabinet structure through the addition of roles including 
-<strong>War General</strong> and 
-<strong>Monarch/Jester</strong>, further formalizing the operational structure of modern Stazzeria.
-</p>
+            <!-- ADOPTED -->
 
-<p>
-Politically, Stazzland and former Vice President Caro became known for coordinated opposition suppression against multiple hostile entities during the early developmental period of Stazzeria.
-</p>
+            <div class="citizenship-card">
 
-<p>
-Under the current administration of 
-<strong>Vice President Isaac “Beachy Bird”</strong>, Stazzland has focused heavily on expanding the digital real estate and public visibility of Stazzeria across media, branding, and online infrastructure.
-</p>
+                <h4>ADOPTED</h4>
 
-<p>
-In 2025, War General <strong>John B.</strong> and President Stazzland navigated two major conflicts against the same opposing entity during what later became known as the 
-<strong>Zits Conflict</strong>.
-</p>
+                <p>
+                    Citizenship granted to individuals who actively
+                    participate within the community and have been
+                    formally accepted by recognized Stazzerians.
+                </p>
 
-<p>
-The conflict began after the unnamed opposing entity publicly directed hostile statements toward Stazzland and Stazzeria, resulting in rapid retaliatory action carried out by Stazzland and the Stazzerian Military under the leadership of War General John B.
-</p>
+            </div>
 
-<p>
-John B.'s strategic precision helped maintain the conflict in Stazzerian favor throughout multiple stages of engagement. Following the neutralization of approximately 75% of the opposition, President Stazzland offered a truce agreement.
-</p>
+            <!-- SUPPORTER -->
 
-<p>
-The proposed truce was reportedly violated within minutes, resulting in renewed retaliatory operations led by Stazzland and John B., reducing the remaining opposition presence to approximately 22%.
-</p>
+            <div class="citizenship-card">
 
-<p>
-Later in 2025, 
-<strong>First Lady Leann Stazzland</strong> successfully helped establish a peace agreement between both parties. The agreement remains active and respected by both sides from 2025 to the present day.
-</p>
+                <h4>SUPPORTER</h4>
+
+                <p>
+                    A social classification commonly used to describe
+                    supporters, viewers, and members of the Stazzboi
+                    audience who identify with or support the
+                    Stazzerian structure.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-</main>
+<!-- GOVERNMENT -->
 
-<aside>
+<section class="gov" id="government">
 
-<section class="card infobox">
+    <div class="gov-container">
 
-<img 
-src="Stazzeria-Nation-Seal-Logo.jpg" 
-alt="Stazzeria Nation Seal Logo"
->
+        <div class="gov-header">
 
-<p><strong>Stazzeria</strong></p>
+            <h3>GOVERNMENT STRUCTURE</h3>
 
-<hr>
+        </div>
 
-<p><strong>Founded by:</strong> Kelvin Stazzland</p>
+        <div class="gov-grid">
 
-<p><strong>Current President:</strong> Kelvin Stazzland</p>
+            <div class="gov-card">
 
-<p><strong>Vice President:</strong> Isaac “Beachy Bird”</p>
+                <h4>PRESIDENT</h4>
 
-<p><strong>Type:</strong> Digital & Physical Collective</p>
+                <p>
+                    Kelvin “STAZZBOI” Stazzland
+                </p>
 
-<p><strong>Citizens Known As:</strong> Stazzerians</p>
+            </div>
 
-<p><strong>Language System:</strong> STAZZsociety</p>
+            <div class="gov-card">
 
-<p><strong>Philosophy:</strong> Stazzerian Philosophy</p>
+                <h4>VICE PRESIDENT</h4>
 
-<p><strong>Current Era:</strong> Second Presidential Term</p>
+                <p>
+                    Isaac BeachyBird
+                </p>
+
+            </div>
+
+            <div class="gov-card">
+
+                <h4>WAR GENERAL</h4>
+
+                <p>
+                    John Stazzland
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-</aside>
+<!-- TIMELINE -->
 
-</div>
+<section class="timeline" id="timeline">
 
-<div class="footer">
-© STAZZBOI.COM — Official Stazzeria page.
-</div>
+    <div class="timeline-container">
 
-</div>
+        <div class="timeline-header">
+
+            <h3>STAZZERIAN TIMELINE</h3>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <h4>FOUNDATIONAL ERA</h4>
+
+            <p>
+                Early formation of Stazzerian identity,
+                leadership concepts, and foundational structure.
+            </p>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <h4>FORMATION ERA</h4>
+
+            <p>
+                Formal establishment of presidential structure
+                and national identity systems.
+            </p>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <h4>EXPANSION ERA</h4>
+
+            <p>
+                Growth of leadership systems, affiliations,
+                and public-facing development.
+            </p>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <h4>INSTITUTIONAL EXPANSION ERA</h4>
+
+            <p>
+                Continued organizational growth, division expansion,
+                and development of connected structures.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- DIRECTORY -->
+
+<section class="directory">
+
+    <div class="directory-container">
+
+        <h3>CONNECTED DIVISIONS</h3>
+
+        <div class="directory-links">
+
+            <a href="index.html">STAZZEX</a>
+            <a href="sb.html">STAZZBOI</a>
+            <a href="stazzlies.html">THE STAZZLIES</a>
+            <a href="stazzology.html">STAZZOLOGY</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    STAZZBOI.COM
+
+</footer>
 
 </body>
 </html>
