@@ -1,11 +1,613 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STAZZEX</title>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+
+  <title>
+    The STAZZEX | Official Public Archive of the Stazz Universe
+  </title>
+
+  <meta
+    name="description"
+    content="The STAZZEX is the official public archive, encyclopedia, registry, and lexicon of the Stazz Universe featuring figures, titles, structures, events, doctrine, and Stazzerian terminology."
+  />
+
+  <meta
+    name="keywords"
+    content="STAZZEX, Stazz Universe, Stazzeria, Stazzboi, Khamelion, STAZZsociety, Stazzation, StazzQueen, Stazzerian archive"
+  />
+
+  <meta name="author" content="The STAZZEX" />
+
+  <!-- OPEN GRAPH -->
+
+  <meta
+    property="og:title"
+    content="The STAZZEX"
+  />
+
+  <meta
+    property="og:description"
+    content="Official public archive and encyclopedia of the Stazz Universe."
+  />
+
+  <meta
+    property="og:type"
+    content="website"
+  />
+
+  <meta
+    property="og:url"
+    content="https://stazzex.stazzboi.com"
+  />
+
+  <meta
+    property="og:image"
+    content="https://stazzex.stazzboi.com/assets/logos/Stazzex-Logo.jpg"
+  />
+
+  <link
+    rel="icon"
+    href="/stazzex/assets/logos/Stazzex-Logo.jpg"
+  />
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#050505;
+      color:white;
+      font-family:Arial, Helvetica, sans-serif;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    :root{
+      --gold:#d4af37;
+      --border:rgba(255,255,255,0.08);
+    }
+
+    /* NAV */
+
+    nav{
+      width:100%;
+      padding:22px 6%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:999;
+      backdrop-filter:blur(10px);
+      background:rgba(0,0,0,0.82);
+      border-bottom:1px solid var(--border);
+    }
+
+    .nav-left{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .nav-left img{
+      width:46px;
+      border-radius:50%;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:28px;
+    }
+
+    .nav-links a:hover{
+      color:var(--gold);
+    }
+
+    /* HERO */
+
+    .hero{
+      padding:140px 6% 120px;
+      text-align:center;
+      position:relative;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,0.92),
+          rgba(0,0,0,0.97)
+        );
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:1000px;
+      margin:auto;
+    }
+
+    .hero-subtitle{
+      color:var(--gold);
+      letter-spacing:3px;
+      text-transform:uppercase;
+      margin-bottom:20px;
+      font-size:0.85rem;
+    }
+
+    .hero h1{
+      font-size:clamp(3rem,7vw,6rem);
+      margin-bottom:28px;
+      line-height:1;
+    }
+
+    .hero p{
+      color:#c1c1c1;
+      line-height:1.9;
+      max-width:850px;
+      margin:auto;
+      margin-bottom:50px;
+    }
+
+    /* SEARCH */
+
+    .search-container{
+      max-width:850px;
+      margin:auto;
+      position:relative;
+    }
+
+    .search-bar{
+      width:100%;
+      padding:22px 28px;
+      border:none;
+      outline:none;
+      background:#0d0d0d;
+      border:1px solid var(--border);
+      border-radius:16px;
+      color:white;
+      font-size:1rem;
+    }
+
+    .search-bar:focus{
+      border-color:var(--gold);
+    }
+
+    /* ENTRIES */
+
+    section{
+      padding:100px 6%;
+    }
+
+    .section-title{
+      font-size:2.8rem;
+      margin-bottom:20px;
+    }
+
+    .gold{
+      color:var(--gold);
+    }
+
+    .section-description{
+      color:#bdbdbd;
+      line-height:1.9;
+      max-width:900px;
+      margin-bottom:50px;
+    }
+
+    .entry-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:28px;
+    }
+
+    .entry-card{
+      background:#0d0d0d;
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:32px;
+      transition:0.3s ease;
+    }
+
+    .entry-card:hover{
+      transform:translateY(-6px);
+      border-color:rgba(212,175,55,0.35);
+    }
+
+    .entry-classification{
+      color:var(--gold);
+      letter-spacing:2px;
+      text-transform:uppercase;
+      font-size:0.75rem;
+      margin-bottom:16px;
+    }
+
+    .entry-card h3{
+      font-size:1.7rem;
+      margin-bottom:18px;
+    }
+
+    .entry-card p{
+      color:#c1c1c1;
+      line-height:1.8;
+      margin-bottom:24px;
+    }
+
+    .entry-link{
+      color:var(--gold);
+      font-weight:bold;
+    }
+
+    /* FOOTER */
+
+    footer{
+      padding:50px 6%;
+      border-top:1px solid var(--border);
+      text-align:center;
+      color:#9d9d9d;
+    }
+
+    @media(max-width:900px){
+
+      .nav-links{
+        display:none;
+      }
+
+    }
+
+  </style>
+
 </head>
+
 <body>
-    <h1>STAZZEX</h1>
+
+  <!-- NAV -->
+
+  <nav>
+
+    <div class="nav-left">
+
+      <img
+        src="/stazzex/assets/logos/Stazzex-Logo.jpg"
+        alt="The STAZZEX"
+      />
+
+      <strong>
+        The STAZZEX
+      </strong>
+
+    </div>
+
+    <div class="nav-links">
+
+      <a href="/">
+        Home
+      </a>
+
+      <a href="/stazzeria/">
+        Stazzeria
+      </a>
+
+      <a href="/stazzboi/">
+        Stazzboi
+      </a>
+
+      <a href="/stazzology/">
+        STAZZOLOGY
+      </a>
+
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="hero-subtitle">
+        Official Public Archive of the Stazz Universe
+      </div>
+
+      <h1>
+        The <span class="gold">STAZZEX</span>
+      </h1>
+
+      <p>
+        The STAZZEX functions as the official public archive, encyclopedia, registry, lexicon, and information network of the Stazz Universe. The archive preserves figures, titles, structures, doctrine, lexemes, competitive events, factions, historical conflicts, media, and symbolic systems associated with Stazzerian development.
+      </p>
+
+      <!-- SEARCH -->
+
+      <div class="search-container">
+
+        <input
+          type="text"
+          id="searchInput"
+          class="search-bar"
+          placeholder="Search The STAZZEX..."
+        />
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ENTRIES -->
+
+  <section>
+
+    <h2 class="section-title">
+      Featured <span class="gold">Entries</span>
+    </h2>
+
+    <p class="section-description">
+      The STAZZEX preserves and categorizes official records associated with the Stazz Universe through structured entry systems and interconnected archival documentation.
+    </p>
+
+    <div class="entry-grid" id="entryGrid">
+
+      <!-- KHAMELION -->
+
+      <div
+        class="entry-card"
+        data-name="Khamelion"
+      >
+
+        <div class="entry-classification">
+          Title
+        </div>
+
+        <h3>
+          The Khamelion
+        </h3>
+
+        <p>
+          Symbolic title associated with adaptability, environmental awareness, charisma, and identity continuity throughout changing situations.
+        </p>
+
+        <a
+          href="/stazzex/entries/khamelion.html"
+          class="entry-link"
+        >
+          View Entry →
+        </a>
+
+      </div>
+
+      <!-- STAZZERIA -->
+
+      <div
+        class="entry-card"
+        data-name="Stazzeria"
+      >
+
+        <div class="entry-classification">
+          Structure
+        </div>
+
+        <h3>
+          Stazzeria
+        </h3>
+
+        <p>
+          The Digital Nation of Stazzerians functioning as the executive, cultural, and organizational foundation of the Stazz Universe.
+        </p>
+
+        <a
+          href="/stazzex/entries/stazzeria.html"
+          class="entry-link"
+        >
+          View Entry →
+        </a>
+
+      </div>
+
+      <!-- STAZZSOCIETY -->
+
+      <div
+        class="entry-card"
+        data-name="STAZZsociety"
+      >
+
+        <div class="entry-classification">
+          Polyfunctional Lexeme
+        </div>
+
+        <h3>
+          STAZZsociety
+        </h3>
+
+        <p>
+          Cultural framework, operational language system, and connective identity structure associated with Stazzerian participation.
+        </p>
+
+        <a
+          href="/stazzex/entries/stazzsociety.html"
+          class="entry-link"
+        >
+          View Entry →
+        </a>
+
+      </div>
+
+      <!-- STAZZATION -->
+
+      <div
+        class="entry-card"
+        data-name="Stazzation"
+      >
+
+        <div class="entry-classification">
+          Polyfunctional Lexeme
+        </div>
+
+        <h3>
+          Stazzation
+        </h3>
+
+        <p>
+          Process associated with symbolic transformation, identity alignment, institutional integration, and Stazzerian conversion.
+        </p>
+
+        <a
+          href="/stazzex/entries/stazzation.html"
+          class="entry-link"
+        >
+          View Entry →
+        </a>
+
+      </div>
+
+      <!-- PRESIDENT -->
+
+      <div
+        class="entry-card"
+        data-name="President"
+      >
+
+        <div class="entry-classification">
+          Title
+        </div>
+
+        <h3>
+          President
+        </h3>
+
+        <p>
+          Executive title associated with leadership, governance, institutional continuity, and structural authority within Stazzeria.
+        </p>
+
+        <a
+          href="/stazzex/entries/president.html"
+          class="entry-link"
+        >
+          View Entry →
+        </a>
+
+      </div>
+
+      <!-- STAZZQUEEN -->
+
+      <div
+        class="entry-card"
+        data-name="StazzQueen"
+      >
+
+        <div class="entry-classification">
+          Title
+        </div>
+
+        <h3>
+          StazzQueen
+        </h3>
+
+        <p>
+          Symbolic title associated with the romantic partner of Stazzboi during an active Stazzerian presidential term.
+        </p>
+
+        <a
+          href="/stazzex/entries/stazzqueen.html"
+          class="entry-link"
+        >
+          View Entry →
+        </a>
+
+      </div>
+
+      <!-- WARGAMES -->
+
+      <div
+        class="entry-card"
+        data-name="WARGAMES"
+      >
+
+        <div class="entry-classification">
+          Competitive Event
+        </div>
+
+        <h3>
+          WARGAMES
+        </h3>
+
+        <p>
+          Large-scale STAZZOLOGY competitive event associated with faction warfare, tactical competition, and rivalry escalation.
+        </p>
+
+        <a
+          href="/stazzex/entries/wargames.html"
+          class="entry-link"
+        >
+          View Entry →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © The STAZZEX — Official Public Archive of the Stazz Universe
+    </p>
+
+  </footer>
+
+  <!-- SEARCH SCRIPT -->
+
+  <script>
+
+    const searchInput = document.getElementById("searchInput");
+    const cards = document.querySelectorAll(".entry-card");
+
+    searchInput.addEventListener("keyup", function(){
+
+      const value = this.value.toLowerCase();
+
+      cards.forEach(card => {
+
+        const name = card.dataset.name.toLowerCase();
+
+        if(name.includes(value)){
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+
+      });
+
+    });
+
+  </script>
+
 </body>
+
 </html>
