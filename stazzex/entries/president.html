@@ -1,1 +1,868 @@
-Placeholder president entry
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+
+  <title>
+    Stazzeria | The STAZZEX
+  </title>
+
+  <meta
+    name="description"
+    content="Official STAZZEX entry for Stazzeria — The Digital Nation of Stazzerians and the organizational structure of the Stazz Universe."
+  />
+
+  <meta
+    name="keywords"
+    content="Stazzeria, Stazzerians, Stazz Universe, Department of Stazz, STAZZsociety, President of Stazzeria, Stazzboi"
+  />
+
+  <meta name="author" content="The STAZZEX" />
+
+  <!-- OPEN GRAPH -->
+
+  <meta
+    property="og:title"
+    content="Stazzeria | The STAZZEX"
+  />
+
+  <meta
+    property="og:description"
+    content="Official STAZZEX archive entry for Stazzeria."
+  />
+
+  <meta
+    property="og:type"
+    content="website"
+  />
+
+  <meta
+    property="og:url"
+    content="https://stazzex.stazzboi.com/entries/stazzeria.html"
+  />
+
+  <meta
+    property="og:image"
+    content="https://stazzeria.stazzboi.com/assets/images/symbolism/StazzerianFlag.jpg"
+  />
+
+  <link
+    rel="icon"
+    href="/stazzex/assets/logos/Stazzex-Logo.jpg"
+  />
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#050505;
+      color:white;
+      font-family:Arial, Helvetica, sans-serif;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    :root{
+      --gold:#d4af37;
+      --border:rgba(255,255,255,0.08);
+    }
+
+    /* NAV */
+
+    nav{
+      width:100%;
+      padding:22px 6%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:999;
+      backdrop-filter:blur(10px);
+      background:rgba(0,0,0,0.82);
+      border-bottom:1px solid var(--border);
+    }
+
+    .nav-left{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .nav-left img{
+      width:46px;
+      border-radius:50%;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:28px;
+    }
+
+    .nav-links a:hover{
+      color:var(--gold);
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:80vh;
+      display:grid;
+      grid-template-columns:1.1fr 1fr;
+      align-items:center;
+      gap:60px;
+      padding:120px 6%;
+      position:relative;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,0.92),
+          rgba(0,0,0,0.97)
+        );
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+    }
+
+    .classification{
+      color:var(--gold);
+      letter-spacing:3px;
+      text-transform:uppercase;
+      margin-bottom:18px;
+      font-size:0.82rem;
+    }
+
+    .hero h1{
+      font-size:clamp(3rem,7vw,6rem);
+      line-height:1;
+      margin-bottom:28px;
+    }
+
+    .hero p{
+      color:#c1c1c1;
+      line-height:1.9;
+      max-width:760px;
+    }
+
+    .hero-image{
+      position:relative;
+      z-index:2;
+    }
+
+    .hero-image img{
+      border-radius:24px;
+      border:1px solid var(--border);
+    }
+
+    /* SECTION */
+
+    section{
+      padding:100px 6%;
+    }
+
+    .entry-layout{
+      display:grid;
+      grid-template-columns:320px 1fr;
+      gap:60px;
+      align-items:start;
+    }
+
+    /* INFOBOX */
+
+    .infobox{
+      background:#0d0d0d;
+      border:1px solid var(--border);
+      border-radius:20px;
+      overflow:hidden;
+      position:sticky;
+      top:110px;
+    }
+
+    .infobox img{
+      width:100%;
+      height:360px;
+      object-fit:cover;
+    }
+
+    .infobox-content{
+      padding:28px;
+    }
+
+    .info-row{
+      padding:16px 0;
+      border-bottom:1px solid rgba(255,255,255,0.06);
+    }
+
+    .info-row:last-child{
+      border-bottom:none;
+    }
+
+    .info-label{
+      color:var(--gold);
+      font-size:0.8rem;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:8px;
+    }
+
+    .info-value{
+      color:#d0d0d0;
+      line-height:1.7;
+    }
+
+    /* CONTENT */
+
+    .content-section{
+      margin-bottom:80px;
+    }
+
+    .content-section h2{
+      font-size:2.5rem;
+      margin-bottom:24px;
+    }
+
+    .content-section p{
+      color:#c1c1c1;
+      line-height:1.95;
+      margin-bottom:22px;
+    }
+
+    /* LIST */
+
+    .list-box{
+      background:#0d0d0d;
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:32px;
+      margin-top:36px;
+    }
+
+    .list-item{
+      padding:18px 0;
+      border-bottom:1px solid rgba(255,255,255,0.06);
+    }
+
+    .list-item:last-child{
+      border-bottom:none;
+    }
+
+    .list-item strong{
+      color:var(--gold);
+      display:block;
+      margin-bottom:10px;
+    }
+
+    .list-item p{
+      margin:0;
+    }
+
+    /* RELATED */
+
+    .related-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;
+      margin-top:40px;
+    }
+
+    .related-card{
+      background:#0d0d0d;
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:28px;
+      transition:0.3s ease;
+    }
+
+    .related-card:hover{
+      transform:translateY(-5px);
+      border-color:rgba(212,175,55,0.35);
+    }
+
+    .related-class{
+      color:var(--gold);
+      font-size:0.75rem;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+
+    .related-card h3{
+      margin-bottom:16px;
+    }
+
+    .related-card p{
+      color:#c1c1c1;
+      line-height:1.8;
+      margin-bottom:18px;
+    }
+
+    .related-link{
+      color:var(--gold);
+      font-weight:bold;
+    }
+
+    /* FOOTER */
+
+    footer{
+      padding:50px 6%;
+      border-top:1px solid var(--border);
+      text-align:center;
+      color:#9d9d9d;
+    }
+
+    @media(max-width:1000px){
+
+      .hero,
+      .entry-layout{
+        grid-template-columns:1fr;
+      }
+
+      .infobox{
+        position:relative;
+        top:0;
+      }
+
+    }
+
+    @media(max-width:900px){
+
+      .nav-links{
+        display:none;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAV -->
+
+  <nav>
+
+    <div class="nav-left">
+
+      <img
+        src="/stazzex/assets/logos/Stazzex-Logo.jpg"
+        alt="The STAZZEX"
+      />
+
+      <strong>
+        The STAZZEX
+      </strong>
+
+    </div>
+
+    <div class="nav-links">
+
+      <a href="/stazzex/">
+        STAZZEX
+      </a>
+
+      <a href="/stazzeria/">
+        Stazzeria
+      </a>
+
+      <a href="/stazzboi/">
+        Stazzboi
+      </a>
+
+      <a href="/stazzology/">
+        STAZZOLOGY
+      </a>
+
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="classification">
+        Structure
+      </div>
+
+      <h1>
+        Stazzeria
+      </h1>
+
+      <p>
+        Stazzeria is The Digital Nation of Stazzerians functioning as the organizational, administrative, and national structure of the Stazz Universe. The structure maintains governance, hierarchy, cultural continuity, and institutional organization throughout Stazzerian systems.
+      </p>
+
+    </div>
+
+    <div class="hero-image">
+
+      <img
+        src="/assets/images/symbolism/StazzerianFlag.jpg"
+        alt="Stazzerian Flag"
+      />
+
+    </div>
+
+  </section>
+
+  <!-- ENTRY -->
+
+  <section>
+
+    <div class="entry-layout">
+
+      <!-- INFOBOX -->
+
+      <div class="infobox">
+
+        <img
+          src="/assets/images/symbolism/StazzerianFlag.jpg"
+          alt="Stazzerian Flag"
+        />
+
+        <div class="infobox-content">
+
+          <div class="info-row">
+
+            <div class="info-label">
+              Classification
+            </div>
+
+            <div class="info-value">
+              Structure
+            </div>
+
+          </div>
+
+          <div class="info-row">
+
+            <div class="info-label">
+              Official Designation
+            </div>
+
+            <div class="info-value">
+              The Digital Nation of Stazzerians
+            </div>
+
+          </div>
+
+          <div class="info-row">
+
+            <div class="info-label">
+              Executive Authority
+            </div>
+
+            <div class="info-value">
+              President of Stazzeria
+            </div>
+
+          </div>
+
+          <div class="info-row">
+
+            <div class="info-label">
+              Administrative Structure
+            </div>
+
+            <div class="info-value">
+              Department of Stazz
+            </div>
+
+          </div>
+
+          <div class="info-row">
+
+            <div class="info-label">
+              Foundational Systems
+            </div>
+
+            <div class="info-value">
+              STAZZsociety<br>
+              The Council<br>
+              Stazzerian Hierarchy
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CONTENT -->
+
+      <div>
+
+        <!-- OVERVIEW -->
+
+        <div class="content-section">
+
+          <h2>
+            Overview
+          </h2>
+
+          <p>
+            Stazzeria functions as the organizational and national structure associated with the Stazz Universe. The structure maintains executive organization, hierarchy, institutional continuity, citizen participation, and cultural alignment throughout Stazzerian systems.
+          </p>
+
+          <p>
+            Unlike traditional territorial nations, Stazzeria primarily operates through digital participation, institutional organization, collective identity systems, cultural structure, symbolic governance, and interconnected Stazzerian development.
+          </p>
+
+        </div>
+
+        <!-- PURPOSE -->
+
+        <div class="content-section">
+
+          <h2>
+            Organizational Purpose
+          </h2>
+
+          <p>
+            Stazzeria exists to preserve and expand Stazzerian identity, organizational continuity, executive structure, and collective participation throughout the Stazz Universe.
+          </p>
+
+          <p>
+            The structure maintains administrative systems allowing Stazzerians to participate through cultural contribution, creative output, hierarchy alignment, institutional involvement, competitive participation, and collective development.
+          </p>
+
+        </div>
+
+        <!-- CITIZEN TYPES -->
+
+        <div class="content-section">
+
+          <h2>
+            Citizen Types
+          </h2>
+
+          <div class="list-box">
+
+            <div class="list-item">
+
+              <strong>
+                Birthright
+              </strong>
+
+              <p>
+                Members associated with direct Stazzerian lineage and continuity connected to foundational Stazzerian identity systems.
+              </p>
+
+            </div>
+
+            <div class="list-item">
+
+              <strong>
+                Adopted
+              </strong>
+
+              <p>
+                Recognized members aligned with STAZZsociety principles and organizational participation throughout Stazzerian systems.
+              </p>
+
+            </div>
+
+            <div class="list-item">
+
+              <strong>
+                Supporters
+              </strong>
+
+              <p>
+                Individuals associated with Stazzerian participation, media support, events, content engagement, and cultural alignment.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- HIERARCHY -->
+
+        <div class="content-section">
+
+          <h2>
+            Hierarchy
+          </h2>
+
+          <div class="list-box">
+
+            <div class="list-item">
+
+              <strong>
+                President
+              </strong>
+
+              <p>
+                Highest executive authority responsible for governance, executive continuity, and organizational direction.
+              </p>
+
+            </div>
+
+            <div class="list-item">
+
+              <strong>
+                Vice President
+              </strong>
+
+              <p>
+                Executive office associated with operational support and organizational execution.
+              </p>
+
+            </div>
+
+            <div class="list-item">
+
+              <strong>
+                Monarch / Jester
+              </strong>
+
+              <p>
+                Dual-role authority framework associated with symbolic hierarchy and disciplinary transition systems.
+              </p>
+
+            </div>
+
+            <div class="list-item">
+
+              <strong>
+                War General
+              </strong>
+
+              <p>
+                Role associated with enforcement, conflict management, and organizational discipline.
+              </p>
+
+            </div>
+
+            <div class="list-item">
+
+              <strong>
+                Council
+              </strong>
+
+              <p>
+                Advisory and administrative leadership structure associated with guidance and continuity.
+              </p>
+
+            </div>
+
+            <div class="list-item">
+
+              <strong>
+                Citizens
+              </strong>
+
+              <p>
+                Participating Stazzerians associated with contribution, alignment, and organizational involvement.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- HISTORICAL ERAS -->
+
+        <div class="content-section">
+
+          <h2>
+            Historical Eras
+          </h2>
+
+          <div class="list-box">
+
+            <div class="list-item">
+
+              <strong>
+                Prestazzium Era
+              </strong>
+
+              <p>
+                Foundational period associated with early identity formation and pre-structural Stazzerian development.
+              </p>
+
+            </div>
+
+            <div class="list-item">
+
+              <strong>
+                Stazzium Era
+              </strong>
+
+              <p>
+                Formation period associated with executive structure, organizational systems, and national establishment.
+              </p>
+
+            </div>
+
+            <div class="list-item">
+
+              <strong>
+                Stazzation Era
+              </strong>
+
+              <p>
+                Expansionary period associated with institutional growth, competitive systems, public identity expansion, and interconnected Stazzerian development.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- HISTORICAL CONFLICTS -->
+
+        <div class="content-section">
+
+          <h2>
+            Historical Conflicts
+          </h2>
+
+          <p>
+            Multiple historical conflicts and organizational tensions are documented throughout Stazzerian development, including the Zits Conflict, which remains one of the most recognized conflicts associated with internal Stazzerian historical chronology.
+          </p>
+
+        </div>
+
+        <!-- RELATED ENTRIES -->
+
+        <div class="content-section">
+
+          <h2>
+            Related Entries
+          </h2>
+
+          <div class="related-grid">
+
+            <!-- PRESIDENT -->
+
+            <div class="related-card">
+
+              <div class="related-class">
+                Executive Title
+              </div>
+
+              <h3>
+                President of Stazzeria
+              </h3>
+
+              <p>
+                Executive authority associated with governance, continuity, and organizational direction throughout Stazzeria.
+              </p>
+
+              <a
+                href="/stazzex/entries/president.html"
+                class="related-link"
+              >
+                View Entry →
+              </a>
+
+            </div>
+
+            <!-- STAZZSOCIETY -->
+
+            <div class="related-card">
+
+              <div class="related-class">
+                Polyfunctional Lexeme
+              </div>
+
+              <h3>
+                STAZZsociety
+              </h3>
+
+              <p>
+                Cultural framework and operational language structure associated with Stazzerian participation.
+              </p>
+
+              <a
+                href="/stazzex/entries/stazzsociety.html"
+                class="related-link"
+              >
+                View Entry →
+              </a>
+
+            </div>
+
+            <!-- STAZZLIES -->
+
+            <div class="related-card">
+
+              <div class="related-class">
+                Structure
+              </div>
+
+              <h3>
+                The Stazzlies
+              </h3>
+
+              <p>
+                Official female collective of Stazzeria associated with feminine leadership and institutional support.
+              </p>
+
+              <a
+                href="/stazzlies/"
+                class="related-link"
+              >
+                View Structure →
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © The STAZZEX — Stazzeria Entry
+    </p>
+
+  </footer>
+
+</body>
+
+</html>
