@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+
+  <title>
+    War General of Stazzeria | The STAZZEX
+  </title>
+
+  <meta
+    name="description"
+    content="Official STAZZEX entry for the War General of Stazzeria — executive role associated with enforcement, protection, disciplinary continuity, conflict alignment, and structural loyalty throughout Stazzerian systems."
+  />
+
+  <meta
+    name="keywords"
+    content="War General of Stazzeria, John B. Stazzland, Zits Conflict, Department of Stazz, Stazzeria, STAZZEX"
+  />
+
+  <meta name="author" content="The STAZZEX" />
+
+  <!-- OPEN GRAPH -->
+
+  <meta
+    property="og:title"
+    content="War General of Stazzeria | The STAZZEX"
+  />
+
+  <meta
+    property="og:description"
+    content="Official STAZZEX archive entry for the War General of Stazzeria."
+  />
+
+  <meta
+    property="og:type"
+    content="website"
+  />
+
+  <meta
+    property="og:url"
+    content="https://stazzex.stazzboi.com/entries/war-general.html"
+  />
+
+  <meta
+    property="og:image"
+    content="https://stazzeria.stazzboi.com/assets/images/leadership/BlankStazzerianPhoto.png"
+  />
+
+  <link
+    rel="icon"
+    href="/stazzex/assets/logos/Stazzex-Logo.jpg"
+  />
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#050505;
+      color:white;
+      font-family:Arial, Helvetica, sans-serif;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    :root{
+      --gold:#d4af37;
+      --border:rgba(255,255,255,0.08);
+    }
+
+    nav{
+      width:100%;
+      padding:22px 6%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:999;
+      backdrop-filter:blur(10px);
+      background:rgba(0,0,0,0.82);
+      border-bottom:1px solid var(--border);
+    }
+
+    .nav-left{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .nav-left img{
+      width:46px;
+      border-radius:50%;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:28px;
+    }
+
+    .nav-links a:hover{
+      color:var(--gold);
+    }
+
+    .hero{
+      min-height:75vh;
+      display:grid;
+      grid-template-columns:1.1fr 1fr;
+      align-items:center;
+      gap:60px;
+      padding:120px 6%;
+      position:relative;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,0.92),
+          rgba(0,0,0,0.97)
+        );
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+    }
+
+    .classification{
+      color:var(--gold);
+      letter-spacing:3px;
+      text-transform:uppercase;
+      margin-bottom:18px;
+      font-size:0.82rem;
+    }
+
+    .hero h1{
+      font-size:clamp(3rem,7vw,6rem);
+      line-height:1;
+      margin-bottom:28px;
+    }
+
+    .hero p{
+      color:#c1c1c1;
+      line-height:1.9;
+      max-width:760px;
+    }
+
+    .hero-image{
+      position:relative;
+      z-index:2;
+    }
+
+    .hero-image img{
+      border-radius:24px;
+      border:1px solid var(--border);
+    }
+
+    section{
+      padding:100px 6%;
+    }
+
+    .entry-layout{
+      display:grid;
+      grid-template-columns:320px 1fr;
+      gap:60px;
+      align-items:start;
+    }
+
+    .infobox{
+      background:#0d0d0d;
+      border:1px solid var(--border);
+      border-radius:20px;
+      overflow:hidden;
+      position:sticky;
+      top:110px;
+    }
+
+    .infobox img{
+      width:100%;
+      height:360px;
+      object-fit:cover;
+    }
+
+    .infobox-content{
+      padding:28px;
+    }
+
+    .info-row{
+      padding:16px 0;
+      border-bottom:1px solid rgba(255,255,255,0.06);
+    }
+
+    .info-row:last-child{
+      border-bottom:none;
+    }
+
+    .info-label{
+      color:var(--gold);
+      font-size:0.8rem;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:8px;
+    }
+
+    .info-value{
+      color:#d0d0d0;
+      line-height:1.7;
+    }
+
+    .content-section{
+      margin-bottom:80px;
+    }
+
+    .content-section h2{
+      font-size:2.5rem;
+      margin-bottom:24px;
+    }
+
+    .content-section p{
+      color:#c1c1c1;
+      line-height:1.95;
+      margin-bottom:22px;
+    }
+
+    .related-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;
+      margin-top:40px;
+    }
+
+    .related-card{
+      background:#0d0d0d;
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:28px;
+      transition:0.3s ease;
+    }
+
+    .related-card:hover{
+      transform:translateY(-5px);
+      border-color:rgba(212,175,55,0.35);
+    }
+
+    .related-class{
+      color:var(--gold);
+      font-size:0.75rem;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+
+    .related-card h3{
+      margin-bottom:16px;
+    }
+
+    .related-card p{
+      color:#c1c1c1;
+      line-height:1.8;
+      margin-bottom:18px;
+    }
+
+    .related-link{
+      color:var(--gold);
+      font-weight:bold;
+    }
+
+    footer{
+      padding:50px 6%;
+      border-top:1px solid var(--border);
+      text-align:center;
+      color:#9d9d9d;
+    }
+
+    @media(max-width:1000px){
+
+      .hero,
+      .entry-layout{
+        grid-template-columns:1fr;
+      }
+
+      .infobox{
+        position:relative;
+        top:0;
+      }
+
+    }
+
+    @media(max-width:900px){
+
+      .nav-links{
+        display:none;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAV -->
+
+  <nav>
+
+    <div class="nav-left">
+
+      <img
+        src="/stazzex/assets/logos/Stazzex-Logo.jpg"
+        alt="The STAZZEX"
+      />
+
+      <strong>
+        The STAZZEX
+      </strong>
+
+    </div>
+
+    <div class="nav-links">
+
+      <a href="/stazzex/">
+        STAZZEX
+      </a>
+
+      <a href="/stazzeria/">
+        Stazzeria
+      </a>
+
+      <a href="/stazzboi/">
+        Stazzboi
+      </a>
+
+      <a href="/stazzology/">
+        STAZZOLOGY
+      </a>
+
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="classification">
+        Executive Role
+      </div>
+
+      <h1>
+        War General of Stazzeria
+      </h1>
+
+      <p>
+        The War General of Stazzeria is an executive enforcement role associated with protection, disciplinary continuity, conflict alignment, structural loyalty, and executive stabilization throughout Stazzerian systems.
+      </p>
+
+    </div>
+
+    <div class="hero-image">
+
+      <img
+        src="/assets/images/placeholders/BlankStazzerianPhoto.png"
+        alt="War General of Stazzeria"
+      />
+
+    </div>
+
+  </section>
+
+  <!-- ENTRY -->
+
+  <section>
+
+    <div class="entry-layout">
+
+      <!-- INFOBOX -->
+
+      <div class="infobox">
+
+        <img
+          src="/assets/images/placeholders/BlankStazzerianPhoto.png"
+          alt="War General"
+        />
+
+        <div class="infobox-content">
+
+          <div class="info-row">
+
+            <div class="info-label">
+              Classification
+            </div>
+
+            <div class="info-value">
+              Executive Role
+            </div>
+
+          </div>
+
+          <div class="info-row">
+
+            <div class="info-label">
+              Current Holder
+            </div>
+
+            <div class="info-value">
+              John B. Stazzland
+            </div>
+
+          </div>
+
+          <div class="info-row">
+
+            <div class="info-label">
+              Associated Structures
+            </div>
+
+            <div class="info-value">
+              Department of Stazz<br>
+              Presidency<br>
+              Stazzeria
+            </div>
+
+          </div>
+
+          <div class="info-row">
+
+            <div class="info-label">
+              Core Themes
+            </div>
+
+            <div class="info-value">
+              Loyalty<br>
+              Discipline<br>
+              Protection<br>
+              Structural Continuity
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CONTENT -->
+
+      <div>
+
+        <!-- OVERVIEW -->
+
+        <div class="content-section">
+
+          <h2>
+            Overview
+          </h2>
+
+          <p>
+            The War General functions as the principal enforcement-aligned executive role within Stazzerian hierarchy and is associated with disciplinary continuity, organizational protection, executive stabilization, and conflict management throughout Stazzerian systems.
+          </p>
+
+          <p>
+            Unlike ceremonial or symbolic offices, the War General role is structurally associated with executive loyalty, organizational defense, internal stability, and preservation of continuity during periods of conflict and tension.
+          </p>
+
+        </div>
+
+        <!-- ZITS CONFLICT -->
+
+        <div class="content-section">
+
+          <h2>
+            Zits Conflict
+          </h2>
+
+          <p>
+            Following the Zits Conflict, John B. was awarded the title War General of Stazzeria in recognition of his loyalty, alignment, and disciplinary presence throughout Stazzerian tensions and organizational conflicts.
+          </p>
+
+          <p>
+            The appointment marked the formal integration of enforcement-oriented executive authority within the developing Stazzerian hierarchy and strengthened the continuity systems associated with executive stabilization.
+          </p>
+
+        </div>
+
+        <!-- LOYALTY ALIGNMENT -->
+
+        <div class="content-section">
+
+          <h2>
+            Loyalty Alignment
+          </h2>
+
+          <p>
+            Throughout subsequent internal tensions and structural disputes, John B. consistently aligned himself alongside President Kelvin “Stazzboi” Stazzland, while Stazzland in turn publicly supported and reinforced John B.’s independent ventures and organizational standing.
+          </p>
+
+          <p>
+            This reciprocal alignment became one of the defining relational dynamics associated with executive continuity throughout Stazzerian development.
+          </p>
+
+        </div>
+
+        <!-- TRIBAL CONTINUITY -->
+
+        <div class="content-section">
+
+          <h2>
+            Tribal Continuity
+          </h2>
+
+          <p>
+            Culturally within the Stazzerian Tribe, adopted members commonly inherit the surname of the Head of House as a symbolic representation of familial alignment, tribal continuity, and recognized integration into the Stazzerian lineage structure.
+          </p>
+
+          <p>
+            As a result, John B. became culturally recognized as John B. Stazzland within Stazzerian continuity systems.
+          </p>
+
+        </div>
+
+        <!-- STRUCTURAL ROLE -->
+
+        <div class="content-section">
+
+          <h2>
+            Structural Role
+          </h2>
+
+          <p>
+            The War General functions as a stabilizing enforcement counterpart within the executive hierarchy surrounding the Presidency, the First Lady, and the Department of Stazz.
+          </p>
+
+          <p>
+            Within Stazzerian interpretation, the role symbolizes loyalty, discipline, continuity protection, executive reinforcement, and organizational resilience throughout periods of structural tension and conflict escalation.
+          </p>
+
+        </div>
+
+        <!-- RELATED ENTRIES -->
+
+        <div class="content-section">
+
+          <h2>
+            Related Entries
+          </h2>
+
+          <div class="related-grid">
+
+            <div class="related-card">
+
+              <div class="related-class">
+                Executive Title
+              </div>
+
+              <h3>
+                President of Stazzeria
+              </h3>
+
+              <p>
+                Executive office associated with governance, institutional continuity, and leadership.
+              </p>
+
+              <a
+                href="/stazzex/entries/president.html"
+                class="related-link"
+              >
+                View Entry →
+              </a>
+
+            </div>
+
+            <div class="related-card">
+
+              <div class="related-class">
+                Title
+              </div>
+
+              <h3>
+                StazzQueen
+              </h3>
+
+              <p>
+                Ceremonial Stazzerian relationship title associated with the First Lady of Stazzeria.
+              </p>
+
+              <a
+                href="/stazzex/entries/stazzqueen.html"
+                class="related-link"
+              >
+                View Entry →
+              </a>
+
+            </div>
+
+            <div class="related-card">
+
+              <div class="related-class">
+                Structure
+              </div>
+
+              <h3>
+                Stazzeria
+              </h3>
+
+              <p>
+                Organizational and national structure associated with Stazzerian systems and continuity.
+              </p>
+
+              <a
+                href="/stazzex/entries/stazzeria.html"
+                class="related-link"
+              >
+                View Entry →
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © The STAZZEX — War General of Stazzeria Entry
+    </p>
+
+  </footer>
+
+</body>
+
+</html>
