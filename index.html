@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+
+  <title>
+    Stazzboi | Official Stazz Universe
+  </title>
+
+  <meta
+    name="description"
+    content="Official home of Stazzboi and the interconnected Stazz Universe including Stazzeria, STAZZOLOGY, The STAZZEX, and The Stazzlies."
+  />
+
+  <meta
+    name="keywords"
+    content="Stazzboi, Stazzeria, STAZZOLOGY, STAZZEX, Khamelion, Stazz Universe, Stazzlies"
+  />
+
+  <meta name="author" content="Stazzboi" />
+
+  <!-- OPEN GRAPH -->
+
+  <meta
+    property="og:title"
+    content="Stazzboi | Official Stazz Universe"
+  />
+
+  <meta
+    property="og:description"
+    content="Official home of the interconnected Stazz Universe."
+  />
+
+  <meta
+    property="og:type"
+    content="website"
+  />
+
+  <meta
+    property="og:url"
+    content="https://stazzboi.com"
+  />
+
+  <meta
+    property="og:image"
+    content="https://stazzboi.com/stazzboi/assets/images/khamelion/OriginalKhamelion.jpg"
+  />
+
+  <link
+    rel="icon"
+    href="/assets/logos/STZTRITON.png"
+  />
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#050505;
+      color:white;
+      font-family:Arial, Helvetica, sans-serif;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    :root{
+      --gold:#d4af37;
+      --border:rgba(255,255,255,0.08);
+    }
+
+    /* NAV */
+
+    nav{
+      width:100%;
+      padding:24px 6%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      z-index:999;
+      backdrop-filter:blur(12px);
+      background:rgba(0,0,0,0.72);
+      border-bottom:1px solid var(--border);
+    }
+
+    .nav-left{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .nav-left img{
+      width:48px;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:30px;
+      align-items:center;
+    }
+
+    .nav-links a{
+      transition:0.3s ease;
+    }
+
+    .nav-links a:hover{
+      color:var(--gold);
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      display:grid;
+      grid-template-columns:1.1fr 1fr;
+      align-items:center;
+      gap:60px;
+      padding:140px 6% 100px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,0.88),
+          rgba(0,0,0,0.97)
+        ),
+        url("/stazzboi/assets/images/khamelion/stazzboi-khamelion-pose-art.jpg");
+      background-size:cover;
+      background-position:center;
+      opacity:0.18;
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+    }
+
+    .hero-tag{
+      color:var(--gold);
+      text-transform:uppercase;
+      letter-spacing:4px;
+      margin-bottom:20px;
+      font-size:0.82rem;
+    }
+
+    .hero h1{
+      font-size:clamp(4rem,9vw,8rem);
+      line-height:0.95;
+      margin-bottom:28px;
+    }
+
+    .hero h1 span{
+      color:var(--gold);
+    }
+
+    .hero p{
+      color:#c1c1c1;
+      line-height:1.95;
+      max-width:760px;
+      margin-bottom:42px;
+      font-size:1.05rem;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .primary-btn{
+      background:var(--gold);
+      color:black;
+      padding:16px 30px;
+      border-radius:12px;
+      font-weight:bold;
+      transition:0.3s ease;
+    }
+
+    .primary-btn:hover{
+      transform:translateY(-4px);
+    }
+
+    .secondary-btn{
+      border:1px solid var(--border);
+      padding:16px 30px;
+      border-radius:12px;
+      transition:0.3s ease;
+    }
+
+    .secondary-btn:hover{
+      border-color:var(--gold);
+      color:var(--gold);
+    }
+
+    .hero-image{
+      position:relative;
+      z-index:2;
+      display:flex;
+      justify-content:center;
+    }
+
+    .hero-image img{
+      width:100%;
+      max-width:560px;
+      border-radius:28px;
+      border:1px solid var(--border);
+    }
+
+    /* SECTION */
+
+    section{
+      padding:110px 6%;
+    }
+
+    .section-title{
+      font-size:clamp(2.5rem,5vw,4rem);
+      margin-bottom:22px;
+    }
+
+    .gold{
+      color:var(--gold);
+    }
+
+    .section-description{
+      color:#bdbdbd;
+      line-height:1.95;
+      max-width:920px;
+      margin-bottom:60px;
+    }
+
+    /* UNIVERSE GRID */
+
+    .universe-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:28px;
+    }
+
+    .universe-card{
+      background:#0d0d0d;
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:34px;
+      transition:0.35s ease;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .universe-card:hover{
+      transform:translateY(-6px);
+      border-color:rgba(212,175,55,0.4);
+    }
+
+    .card-label{
+      color:var(--gold);
+      text-transform:uppercase;
+      letter-spacing:2px;
+      font-size:0.72rem;
+      margin-bottom:16px;
+    }
+
+    .universe-card h3{
+      font-size:2rem;
+      margin-bottom:18px;
+    }
+
+    .universe-card p{
+      color:#c1c1c1;
+      line-height:1.85;
+      margin-bottom:24px;
+    }
+
+    .card-link{
+      color:var(--gold);
+      font-weight:bold;
+    }
+
+    /* EXECUTIVE */
+
+    .executive-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:26px;
+      margin-top:50px;
+    }
+
+    .executive-card{
+      background:#0d0d0d;
+      border:1px solid var(--border);
+      border-radius:22px;
+      overflow:hidden;
+    }
+
+    .executive-card img{
+      width:100%;
+      height:300px;
+      object-fit:cover;
+    }
+
+    .executive-content{
+      padding:26px;
+    }
+
+    .executive-role{
+      color:var(--gold);
+      letter-spacing:2px;
+      text-transform:uppercase;
+      font-size:0.72rem;
+      margin-bottom:12px;
+    }
+
+    .executive-content h3{
+      margin-bottom:14px;
+      font-size:1.5rem;
+    }
+
+    .executive-content p{
+      color:#c1c1c1;
+      line-height:1.8;
+    }
+
+    /* KHAMELION */
+
+    .khamelion-section{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .khamelion-image img{
+      border-radius:26px;
+      border:1px solid var(--border);
+    }
+
+    .quote-box{
+      margin-top:40px;
+      border-left:4px solid var(--gold);
+      padding-left:24px;
+      color:#d0d0d0;
+      line-height:1.9;
+      font-size:1.1rem;
+    }
+
+    /* STAZZEX */
+
+    .entry-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;
+      margin-top:50px;
+    }
+
+    .entry-card{
+      background:#0d0d0d;
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:28px;
+      transition:0.3s ease;
+    }
+
+    .entry-card:hover{
+      transform:translateY(-5px);
+      border-color:rgba(212,175,55,0.4);
+    }
+
+    .entry-type{
+      color:var(--gold);
+      font-size:0.72rem;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+
+    .entry-card h3{
+      margin-bottom:16px;
+    }
+
+    .entry-card p{
+      color:#c1c1c1;
+      line-height:1.8;
+      margin-bottom:18px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      padding:70px 6%;
+      border-top:1px solid var(--border);
+      text-align:center;
+    }
+
+    footer p{
+      color:#9d9d9d;
+      line-height:1.8;
+    }
+
+    @media(max-width:1100px){
+
+      .hero,
+      .khamelion-section{
+        grid-template-columns:1fr;
+      }
+
+    }
+
+    @media(max-width:900px){
+
+      .nav-links{
+        display:none;
+      }
+
+      .hero{
+        padding-top:180px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAV -->
+
+  <nav>
+
+    <div class="nav-left">
+
+      <img
+        src="/assets/logos/STZTRITON.png"
+        alt="STZTRITON"
+      />
+
+      <strong>
+        STAZZBOI
+      </strong>
+
+    </div>
+
+    <div class="nav-links">
+
+      <a href="https://stazzeria.stazzboi.com">
+        Stazzeria
+      </a>
+
+      <a href="https://stazzology.stazzboi.com">
+        STAZZOLOGY
+      </a>
+
+      <a href="https://stazzex.stazzboi.com">
+        STAZZEX
+      </a>
+
+      <a href="https://stazzlies.stazzboi.com">
+        Stazzlies
+      </a>
+
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="hero-tag">
+        Official Stazz Universe
+      </div>
+
+      <h1>
+        STAZZ<span>BOI</span>
+      </h1>
+
+      <p>
+        Stazzboi is the central public identity associated with the interconnected Stazz Universe — an expanding network of symbolic systems, executive structures, competitive institutions, cultural continuity, archival documentation, and Stazzerian development.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          href="https://stazzboi.stazzboi.com"
+          class="primary-btn"
+        >
+          Explore Stazzboi
+        </a>
+
+        <a
+          href="https://stazzex.stazzboi.com"
+          class="secondary-btn"
+        >
+          Enter The STAZZEX
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="hero-image">
+
+      <img
+        src="/stazzboi/assets/images/khamelion/OriginalKhamelion.jpg"
+        alt="Stazzboi"
+      />
+
+    </div>
+
+  </section>
+
+  <!-- STAZZ UNIVERSE -->
+
+  <section>
+
+    <h2 class="section-title">
+      The <span class="gold">Stazz Universe</span>
+    </h2>
+
+    <p class="section-description">
+      The Stazz Universe consists of interconnected structures associated with executive organization, symbolic identity, competitive systems, ceremonial continuity, cultural participation, and archival preservation throughout Stazzerian development.
+    </p>
+
+    <div class="universe-grid">
+
+      <!-- STAZZERIA -->
+
+      <div class="universe-card">
+
+        <div class="card-label">
+          Structure
+        </div>
+
+        <h3>
+          Stazzeria
+        </h3>
+
+        <p>
+          The Digital Nation of Stazzerians functioning as the executive and organizational structure of the Stazz Universe.
+        </p>
+
+        <a
+          href="https://stazzeria.stazzboi.com"
+          class="card-link"
+        >
+          Visit Structure →
+        </a>
+
+      </div>
+
+      <!-- STAZZOLOGY -->
+
+      <div class="universe-card">
+
+        <div class="card-label">
+          Competitive Institution
+        </div>
+
+        <h3>
+          STAZZOLOGY
+        </h3>
+
+        <p>
+          Competitive and esports-centered institution associated with events, faction rivalry, and organized Stazzerian competition.
+        </p>
+
+        <a
+          href="https://stazzology.stazzboi.com"
+          class="card-link"
+        >
+          View Events →
+        </a>
+
+      </div>
+
+      <!-- STAZZEX -->
+
+      <div class="universe-card">
+
+        <div class="card-label">
+          Archive
+        </div>
+
+        <h3>
+          The STAZZEX
+        </h3>
+
+        <p>
+          Official public archive documenting titles, structures, lexemes, symbolism, executive systems, and Stazzerian continuity.
+        </p>
+
+        <a
+          href="https://stazzex.stazzboi.com"
+          class="card-link"
+        >
+          Open Archive →
+        </a>
+
+      </div>
+
+      <!-- STAZZLIES -->
+
+      <div class="universe-card">
+
+        <div class="card-label">
+          Collective
+        </div>
+
+        <h3>
+          The Stazzlies
+        </h3>
+
+        <p>
+          Official female collective of Stazzeria associated with feminine leadership, support systems, and ceremonial continuity.
+        </p>
+
+        <a
+          href="https://stazzlies.stazzboi.com"
+          class="card-link"
+        >
+          Explore Collective →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EXECUTIVE -->
+
+  <section>
+
+    <h2 class="section-title">
+      Executive <span class="gold">Structure</span>
+    </h2>
+
+    <p class="section-description">
+      Executive continuity throughout Stazzerian systems is maintained through interconnected leadership roles associated with governance, operational stability, ceremonial continuity, and organizational protection.
+    </p>
+
+    <div class="executive-grid">
+
+      <!-- PRESIDENT -->
+
+      <div class="executive-card">
+
+        <img
+          src="/stazzboi/assets/images/presidency/Stazzboi-Offical-Portrait-Kelvin-Stazzland.jpg"
+          alt="President Kelvin Stazzland"
+        />
+
+        <div class="executive-content">
+
+          <div class="executive-role">
+            President of Stazzeria
+          </div>
+
+          <h3>
+            Kelvin “Stazzboi” Stazzland
+          </h3>
+
+          <p>
+            Executive authority associated with governance, organizational continuity, symbolic leadership, and Stazzerian development.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- VP -->
+
+      <div class="executive-card">
+
+        <img
+          src="/assets/images/leadership/BeachyBird.jpg"
+          alt="Vice President"
+        />
+
+        <div class="executive-content">
+
+          <div class="executive-role">
+            Vice President
+          </div>
+
+          <h3>
+            Isaac “Beachy Bird” Ochoa
+          </h3>
+
+          <p>
+            Operational executive authority associated with continuity, organizational coordination, and executive support.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- FIRST LADY -->
+
+      <div class="executive-card">
+
+        <img
+          src="/stazzlies/assets/images/StazzerianFirstCouple.JPEG"
+          alt="StazzQueen"
+        />
+
+        <div class="executive-content">
+
+          <div class="executive-role">
+            StazzQueen
+          </div>
+
+          <h3>
+            Leann Stazzland
+          </h3>
+
+          <p>
+            Ceremonial and symbolic First Lady associated with feminine continuity, partnership symbolism, and Stazzerian morale.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- WAR GENERAL -->
+
+      <div class="executive-card">
+
+        <img
+          src="/assets/images/placeholders/BlankStazzerianPhoto.png"
+          alt="War General"
+        />
+
+        <div class="executive-content">
+
+          <div class="executive-role">
+            War General
+          </div>
+
+          <h3>
+            John B. Stazzland
+          </h3>
+
+          <p>
+            Enforcement-aligned executive role associated with discipline, loyalty, protection, and structural continuity.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- KHAMELION -->
+
+  <section>
+
+    <div class="khamelion-section">
+
+      <div class="khamelion-image">
+
+        <img
+          src="/stazzboi/assets/images/khamelion/stazzboi-khamelion-pose-art.jpg"
+          alt="The Khamelion"
+        />
+
+      </div>
+
+      <div>
+
+        <h2 class="section-title">
+          The <span class="gold">Khamelion</span>
+        </h2>
+
+        <p class="section-description">
+          The Khamelion represents one of the defining symbolic identities associated with Stazzboi and the expanding perception systems surrounding Stazzation, confidence evolution, adaptability, and public identity continuity.
+        </p>
+
+        <div class="quote-box">
+          “The Khamelion symbolizes adaptation without identity loss.”
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- STAZZEX -->
+
+  <section>
+
+    <h2 class="section-title">
+      Featured <span class="gold">STAZZEX</span> Entries
+    </h2>
+
+    <p class="section-description">
+      The STAZZEX documents the structures, titles, lexemes, and symbolic systems associated with the Stazz Universe.
+    </p>
+
+    <div class="entry-grid">
+
+      <div class="entry-card">
+
+        <div class="entry-type">
+          Title
+        </div>
+
+        <h3>
+          The Khamelion
+        </h3>
+
+        <p>
+          Symbolic title associated with adaptability, charisma, confidence, and identity continuity.
+        </p>
+
+        <a
+          href="https://stazzex.stazzboi.com/entries/khamelion.html"
+          class="card-link"
+        >
+          View Entry →
+        </a>
+
+      </div>
+
+      <div class="entry-card">
+
+        <div class="entry-type">
+          Structure
+        </div>
+
+        <h3>
+          Stazzeria
+        </h3>
+
+        <p>
+          The Digital Nation of Stazzerians and organizational structure of the Stazz Universe.
+        </p>
+
+        <a
+          href="https://stazzex.stazzboi.com/entries/stazzeria.html"
+          class="card-link"
+        >
+          View Entry →
+        </a>
+
+      </div>
+
+      <div class="entry-card">
+
+        <div class="entry-type">
+          Polyfunctional Lexeme
+        </div>
+
+        <h3>
+          STAZZsociety
+        </h3>
+
+        <p>
+          Transmedia cultural construct associated with symbolism, identity systems, and collective continuity.
+        </p>
+
+        <a
+          href="https://stazzex.stazzboi.com/entries/stazzsociety.html"
+          class="card-link"
+        >
+          View Entry →
+        </a>
+
+      </div>
+
+      <div class="entry-card">
+
+        <div class="entry-type">
+          Executive Role
+        </div>
+
+        <h3>
+          War General
+        </h3>
+
+        <p>
+          Enforcement-aligned executive role associated with loyalty, continuity protection, and structural discipline.
+        </p>
+
+        <a
+          href="https://stazzex.stazzboi.com/entries/war-general.html"
+          class="card-link"
+        >
+          View Entry →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © Stazzboi.com — Official Stazz Universe
+      <br><br>
+      For The Stazzie, By The Stazzie (Strength Through Honor)
+    </p>
+
+  </footer>
+
+</body>
+
+</html>
