@@ -1,1 +1,704 @@
-Placeholder stazzqueen entry
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+
+  <title>
+    StazzQueen | The STAZZEX
+  </title>
+
+  <meta
+    name="description"
+    content="Official STAZZEX entry for StazzQueen — ceremonial Stazzerian title associated with the romantic partner of Stazzboi during an active presidential term."
+  />
+
+  <meta
+    name="keywords"
+    content="StazzQueen, First Lady of Stazzeria, Leann Stazzland, OSQ, Stazzeria, Stazzboi, STAZZEX"
+  />
+
+  <meta name="author" content="The STAZZEX" />
+
+  <!-- OPEN GRAPH -->
+
+  <meta
+    property="og:title"
+    content="StazzQueen | The STAZZEX"
+  />
+
+  <meta
+    property="og:description"
+    content="Official STAZZEX archive entry for StazzQueen."
+  />
+
+  <meta
+    property="og:type"
+    content="website"
+  />
+
+  <meta
+    property="og:url"
+    content="https://stazzex.stazzboi.com/entries/stazzqueen.html"
+  />
+
+  <meta
+    property="og:image"
+    content="https://stazzlies.stazzboi.com/assets/images/StazzerianFirstCouple.JPEG"
+  />
+
+  <link
+    rel="icon"
+    href="/stazzex/assets/logos/Stazzex-Logo.jpg"
+  />
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#050505;
+      color:white;
+      font-family:Arial, Helvetica, sans-serif;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    :root{
+      --gold:#d4af37;
+      --border:rgba(255,255,255,0.08);
+    }
+
+    nav{
+      width:100%;
+      padding:22px 6%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:999;
+      backdrop-filter:blur(10px);
+      background:rgba(0,0,0,0.82);
+      border-bottom:1px solid var(--border);
+    }
+
+    .nav-left{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .nav-left img{
+      width:46px;
+      border-radius:50%;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:28px;
+    }
+
+    .nav-links a:hover{
+      color:var(--gold);
+    }
+
+    .hero{
+      min-height:75vh;
+      display:grid;
+      grid-template-columns:1.1fr 1fr;
+      align-items:center;
+      gap:60px;
+      padding:120px 6%;
+      position:relative;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,0.92),
+          rgba(0,0,0,0.97)
+        );
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+    }
+
+    .classification{
+      color:var(--gold);
+      letter-spacing:3px;
+      text-transform:uppercase;
+      margin-bottom:18px;
+      font-size:0.82rem;
+    }
+
+    .hero h1{
+      font-size:clamp(3rem,7vw,6rem);
+      line-height:1;
+      margin-bottom:28px;
+    }
+
+    .hero p{
+      color:#c1c1c1;
+      line-height:1.9;
+      max-width:760px;
+    }
+
+    .hero-image{
+      position:relative;
+      z-index:2;
+    }
+
+    .hero-image img{
+      border-radius:24px;
+      border:1px solid var(--border);
+    }
+
+    section{
+      padding:100px 6%;
+    }
+
+    .entry-layout{
+      display:grid;
+      grid-template-columns:320px 1fr;
+      gap:60px;
+      align-items:start;
+    }
+
+    .infobox{
+      background:#0d0d0d;
+      border:1px solid var(--border);
+      border-radius:20px;
+      overflow:hidden;
+      position:sticky;
+      top:110px;
+    }
+
+    .infobox img{
+      width:100%;
+      height:360px;
+      object-fit:cover;
+    }
+
+    .infobox-content{
+      padding:28px;
+    }
+
+    .info-row{
+      padding:16px 0;
+      border-bottom:1px solid rgba(255,255,255,0.06);
+    }
+
+    .info-row:last-child{
+      border-bottom:none;
+    }
+
+    .info-label{
+      color:var(--gold);
+      font-size:0.8rem;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:8px;
+    }
+
+    .info-value{
+      color:#d0d0d0;
+      line-height:1.7;
+    }
+
+    .content-section{
+      margin-bottom:80px;
+    }
+
+    .content-section h2{
+      font-size:2.5rem;
+      margin-bottom:24px;
+    }
+
+    .content-section p{
+      color:#c1c1c1;
+      line-height:1.95;
+      margin-bottom:22px;
+    }
+
+    .timeline-box{
+      margin-top:40px;
+      background:#0d0d0d;
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:32px;
+    }
+
+    .timeline-item{
+      padding:22px 0;
+      border-bottom:1px solid rgba(255,255,255,0.06);
+    }
+
+    .timeline-item:last-child{
+      border-bottom:none;
+    }
+
+    .timeline-item h3{
+      color:var(--gold);
+      margin-bottom:10px;
+    }
+
+    .timeline-item p{
+      margin:0;
+      color:#c1c1c1;
+      line-height:1.8;
+    }
+
+    .related-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;
+      margin-top:40px;
+    }
+
+    .related-card{
+      background:#0d0d0d;
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:28px;
+      transition:0.3s ease;
+    }
+
+    .related-card:hover{
+      transform:translateY(-5px);
+      border-color:rgba(212,175,55,0.35);
+    }
+
+    .related-class{
+      color:var(--gold);
+      font-size:0.75rem;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+
+    .related-card h3{
+      margin-bottom:16px;
+    }
+
+    .related-card p{
+      color:#c1c1c1;
+      line-height:1.8;
+      margin-bottom:18px;
+    }
+
+    .related-link{
+      color:var(--gold);
+      font-weight:bold;
+    }
+
+    footer{
+      padding:50px 6%;
+      border-top:1px solid var(--border);
+      text-align:center;
+      color:#9d9d9d;
+    }
+
+    @media(max-width:1000px){
+
+      .hero,
+      .entry-layout{
+        grid-template-columns:1fr;
+      }
+
+      .infobox{
+        position:relative;
+        top:0;
+      }
+
+    }
+
+    @media(max-width:900px){
+
+      .nav-links{
+        display:none;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAV -->
+
+  <nav>
+
+    <div class="nav-left">
+
+      <img
+        src="/stazzex/assets/logos/Stazzex-Logo.jpg"
+        alt="The STAZZEX"
+      />
+
+      <strong>
+        The STAZZEX
+      </strong>
+
+    </div>
+
+    <div class="nav-links">
+
+      <a href="/stazzex/">
+        STAZZEX
+      </a>
+
+      <a href="/stazzlies/">
+        Stazzlies
+      </a>
+
+      <a href="/stazzeria/">
+        Stazzeria
+      </a>
+
+      <a href="/stazzboi/">
+        Stazzboi
+      </a>
+
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="classification">
+        Title
+      </div>
+
+      <h1>
+        StazzQueen
+      </h1>
+
+      <p>
+        StazzQueen is a ceremonial and symbolic Stazzerian title exclusively associated with the romantic partner of Stazzboi during an active presidential term. The title represents partnership prestige, feminine symbolism, ceremonial continuity, and model-couple representation throughout Stazzerian culture.
+      </p>
+
+    </div>
+
+    <div class="hero-image">
+
+      <img
+        src="/stazzlies/assets/images/StazzerianFirstCouple.JPEG"
+        alt="StazzQueen"
+      />
+
+    </div>
+
+  </section>
+
+  <!-- ENTRY -->
+
+  <section>
+
+    <div class="entry-layout">
+
+      <!-- INFOBOX -->
+
+      <div class="infobox">
+
+        <img
+          src="/stazzlies/assets/images/StazzerianFirstCouple.JPEG"
+          alt="StazzQueen"
+        />
+
+        <div class="infobox-content">
+
+          <div class="info-row">
+
+            <div class="info-label">
+              Classification
+            </div>
+
+            <div class="info-value">
+              Title
+            </div>
+
+          </div>
+
+          <div class="info-row">
+
+            <div class="info-label">
+              Associated Structure
+            </div>
+
+            <div class="info-value">
+              Stazzeria
+            </div>
+
+          </div>
+
+          <div class="info-row">
+
+            <div class="info-label">
+              Associated Role
+            </div>
+
+            <div class="info-value">
+              First Lady of Stazzeria
+            </div>
+
+          </div>
+
+          <div class="info-row">
+
+            <div class="info-label">
+              Core Themes
+            </div>
+
+            <div class="info-value">
+              Partnership<br>
+              Elegance<br>
+              Symbolic Continuity<br>
+              Feminine Leadership
+            </div>
+
+          </div>
+
+          <div class="info-row">
+
+            <div class="info-label">
+              Current Holder
+            </div>
+
+            <div class="info-value">
+              Leann Stazzland
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CONTENT -->
+
+      <div>
+
+        <!-- DEFINITION -->
+
+        <div class="content-section">
+
+          <h2>
+            Definition
+          </h2>
+
+          <p>
+            The title StazzQueen functions as a ceremonial Stazzerian relationship honor associated exclusively with the romantic partner of Stazzboi during an active presidential term.
+          </p>
+
+          <p>
+            Within Stazzerian culture, the title represents symbolic partnership prestige, public couple continuity, feminine representation, ceremonial identity, and relationship alignment associated with executive Stazzerian systems.
+          </p>
+
+        </div>
+
+        <!-- FIRST LADY -->
+
+        <div class="content-section">
+
+          <h2>
+            Relationship to the First Lady
+          </h2>
+
+          <p>
+            All StazzQueens are recognized as First Ladies of Stazzeria. However, not all First Ladies are recognized as StazzQueens.
+          </p>
+
+          <p>
+            The distinction exists because the title StazzQueen is exclusive to the romantic partner of Stazzboi, while the First Lady role functions as the broader ceremonial office associated with the Presidency.
+          </p>
+
+        </div>
+
+        <!-- SYMBOLIC ROLE -->
+
+        <div class="content-section">
+
+          <h2>
+            Symbolic Role
+          </h2>
+
+          <p>
+            The StazzQueen title symbolizes elegance, support, partnership continuity, morale, femininity, and ceremonial presence throughout Stazzerian systems.
+          </p>
+
+          <p>
+            The role is also strongly associated with idealized partnership representation and model-couple symbolism within Stazzerian culture, reinforcing relationship standards associated with public presentation, loyalty, support, and mutual advancement.
+          </p>
+
+        </div>
+
+        <!-- HISTORICAL CONTINUITY -->
+
+        <div class="content-section">
+
+          <h2>
+            Historical Continuity
+          </h2>
+
+          <div class="timeline-box">
+
+            <div class="timeline-item">
+
+              <h3>
+                OSQ
+              </h3>
+
+              <p>
+                Recognized as the First StazzQueen during the early presidential era of Stazzeria.
+              </p>
+
+            </div>
+
+            <div class="timeline-item">
+
+              <h3>
+                Leann Stazzland
+              </h3>
+
+              <p>
+                Current StazzQueen and First Lady of Stazzeria during the second presidential term of Kelvin “Stazzboi” Stazzland.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- RELATED ENTRIES -->
+
+        <div class="content-section">
+
+          <h2>
+            Related Entries
+          </h2>
+
+          <div class="related-grid">
+
+            <div class="related-card">
+
+              <div class="related-class">
+                Executive Title
+              </div>
+
+              <h3>
+                President of Stazzeria
+              </h3>
+
+              <p>
+                Executive office associated with governance, institutional continuity, and leadership.
+              </p>
+
+              <a
+                href="/stazzex/entries/president.html"
+                class="related-link"
+              >
+                View Entry →
+              </a>
+
+            </div>
+
+            <div class="related-card">
+
+              <div class="related-class">
+                Structure
+              </div>
+
+              <h3>
+                The Stazzlies
+              </h3>
+
+              <p>
+                Official female collective of Stazzeria associated with feminine leadership and institutional support.
+              </p>
+
+              <a
+                href="/stazzlies/"
+                class="related-link"
+              >
+                View Structure →
+              </a>
+
+            </div>
+
+            <div class="related-card">
+
+              <div class="related-class">
+                Structure
+              </div>
+
+              <h3>
+                Stazzeria
+              </h3>
+
+              <p>
+                The Digital Nation of Stazzerians and organizational structure of the Stazz Universe.
+              </p>
+
+              <a
+                href="/stazzex/entries/stazzeria.html"
+                class="related-link"
+              >
+                View Entry →
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © The STAZZEX — StazzQueen Entry
+    </p>
+
+  </footer>
+
+</body>
+
+</html>
