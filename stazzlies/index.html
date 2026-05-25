@@ -6,11 +6,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO -->
-
-  <title>
-    The Stazzlies | Stazzeria
-  </title>
+  <title>The Stazzlies | Stazzboi.com</title>
 
   <meta
     name="description"
@@ -24,11 +20,9 @@
 
   <meta name="author" content="Stazzeria" />
 
-  <!-- OPEN GRAPH -->
-
   <meta
     property="og:title"
-    content="The Stazzlies | Stazzeria"
+    content="The Stazzlies | Stazzboi.com"
   />
 
   <meta
@@ -43,335 +37,262 @@
 
   <meta
     property="og:url"
-    content="https://stazzlies.stazzboi.com"
+    content="https://stazzboi.com/stazzlies"
   />
 
   <meta
     property="og:image"
-    content="https://stazzlies.stazzboi.com/assets/images/Stazzlies-group.png"
+    content="https://stazzboi.com/Stazzlies-Logo.jpg"
   />
 
   <link
     rel="icon"
-    href="/stazzlies/assets/logos/Stazzlies-Logo.jpg"
+    href="Stazzlies-Logo.jpg"
   />
 
   <style>
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
     body{
-      background:#050505;
-      color:white;
-      font-family:Arial, Helvetica, sans-serif;
-      overflow-x:hidden;
+      margin:0;
+      background:#f8f9fa;
+      color:#202122;
+      font-family:Linux Libertine, Georgia, Times, serif;
     }
 
     a{
+      color:#0645ad;
       text-decoration:none;
-      color:inherit;
     }
 
-    img{
-      max-width:100%;
-      display:block;
+    a:hover{
+      text-decoration:underline;
     }
 
-    :root{
-      --gold:#d4af37;
-      --border:rgba(255,255,255,0.08);
-    }
-
-    /* NAV */
-
-    nav{
+    .topbar{
       width:100%;
-      padding:22px 6%;
+      background:white;
+      border-bottom:1px solid #a2a9b1;
+      padding:12px 30px;
+      box-sizing:border-box;
       display:flex;
-      justify-content:space-between;
       align-items:center;
       position:sticky;
       top:0;
       z-index:999;
-      backdrop-filter:blur(10px);
-      background:rgba(0,0,0,0.82);
-      border-bottom:1px solid var(--border);
     }
 
-    .nav-left{
-      display:flex;
-      align-items:center;
-      gap:14px;
+    .logo-title{
+      font-size:32px;
+      font-weight:normal;
+      letter-spacing:-1px;
     }
 
-    .nav-left img{
-      width:46px;
-      border-radius:50%;
+    .logo-sub{
+      font-size:12px;
+      color:#54595d;
+      margin-top:-4px;
     }
 
-    .nav-links{
-      display:flex;
-      gap:28px;
-    }
-
-    .nav-links a:hover{
-      color:var(--gold);
-    }
-
-    /* HERO */
-
-    .hero{
+    .page{
+      max-width:1200px;
+      margin:auto;
+      background:white;
+      padding:20px 35px 60px;
+      border-left:1px solid #c8ccd1;
+      border-right:1px solid #c8ccd1;
       min-height:100vh;
-      display:grid;
-      grid-template-columns:1.1fr 1fr;
-      align-items:center;
-      gap:60px;
-      padding:120px 6%;
-      position:relative;
+      box-sizing:border-box;
     }
 
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(0,0,0,0.9),
-          rgba(0,0,0,0.96)
-        ),
-        url("/stazzlies/assets/images/Stazzlies-group.png");
-      background-size:cover;
-      background-position:center;
-      opacity:0.14;
+    h1{
+      font-weight:normal;
+      font-size:34px;
+      border-bottom:1px solid #a2a9b1;
+      padding-bottom:6px;
+      margin-top:0;
     }
 
-    .hero-content{
-      position:relative;
-      z-index:2;
+    h2{
+      font-weight:normal;
+      border-bottom:1px solid #a2a9b1;
+      padding-bottom:4px;
+      margin-top:40px;
+      font-size:30px;
     }
 
-    .hero-subtitle{
-      color:var(--gold);
-      letter-spacing:3px;
-      text-transform:uppercase;
-      margin-bottom:18px;
-      font-size:0.85rem;
-    }
-
-    .hero h1{
-      font-size:clamp(3rem,7vw,5.8rem);
-      line-height:1;
-      margin-bottom:28px;
-    }
-
-    .hero p{
-      color:#c2c2c2;
-      line-height:1.9;
-      margin-bottom:38px;
-      max-width:720px;
-    }
-
-    .hero-buttons{
+    .intro{
       display:flex;
-      gap:18px;
-      flex-wrap:wrap;
+      gap:30px;
+      align-items:flex-start;
+      margin-top:20px;
     }
 
-    .btn{
-      padding:15px 28px;
-      border-radius:8px;
+    .intro-text{
+      flex:1;
+      font-size:18px;
+      line-height:1.8;
+    }
+
+    .infobox{
+      width:340px;
+      border:1px solid #a2a9b1;
+      background:#f8f9fa;
+      font-size:14px;
+      flex-shrink:0;
+    }
+
+    .infobox-title{
+      background:#eaecf0;
+      text-align:center;
       font-weight:bold;
-      transition:0.3s ease;
-    }
-
-    .btn-gold{
-      background:var(--gold);
-      color:black;
-    }
-
-    .btn-outline{
-      border:1px solid var(--gold);
-      color:var(--gold);
-    }
-
-    .btn:hover{
-      transform:translateY(-3px);
+      padding:10px;
+      font-size:18px;
+      border-bottom:1px solid #a2a9b1;
     }
 
     .hero-image{
-      position:relative;
-      z-index:2;
+      width:100%;
+      display:block;
+      border-bottom:1px solid #a2a9b1;
+      background:white;
     }
 
-    .hero-image img{
-      border-radius:22px;
-      border:1px solid var(--border);
+    .infobox table{
+      width:100%;
+      border-collapse:collapse;
     }
 
-    /* SECTIONS */
-
-    section{
-      padding:100px 6%;
+    .infobox td{
+      padding:8px 10px;
+      vertical-align:top;
+      border-top:1px solid #eaecf0;
     }
 
-    .section-title{
-      font-size:2.8rem;
-      margin-bottom:22px;
+    .label{
+      font-weight:bold;
+      width:120px;
     }
 
-    .gold{
-      color:var(--gold);
-    }
-
-    .section-description{
-      color:#bdbdbd;
+    .section-text{
+      font-size:17px;
       line-height:1.9;
-      max-width:900px;
-      margin-bottom:50px;
     }
 
-    /* GRID */
+    details{
+      border:1px solid #c8ccd1;
+      margin-top:18px;
+      background:#f8f9fa;
+      overflow:hidden;
+    }
+
+    summary{
+      padding:14px;
+      font-size:20px;
+      cursor:pointer;
+      font-weight:bold;
+      background:#eaecf0;
+      user-select:none;
+    }
+
+    .section-content{
+      padding:24px;
+      background:white;
+    }
 
     .feature-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:28px;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+      margin-top:25px;
     }
 
     .feature-card{
-      background:#0d0d0d;
-      border:1px solid var(--border);
-      border-radius:18px;
-      padding:32px;
-      transition:0.3s ease;
-    }
-
-    .feature-card:hover{
-      transform:translateY(-5px);
-      border-color:rgba(212,175,55,0.35);
+      border:1px solid #c8ccd1;
+      background:#f8f9fa;
+      padding:24px;
     }
 
     .feature-card h3{
-      color:var(--gold);
-      margin-bottom:16px;
-      font-size:1.3rem;
+      margin-top:0;
+      margin-bottom:14px;
+      font-size:24px;
+      font-weight:normal;
     }
 
     .feature-card p{
-      color:#c1c1c1;
       line-height:1.8;
+      color:#444;
     }
 
-    /* FIRST LADY */
-
     .first-lady{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:50px;
-      align-items:center;
+      display:flex;
+      gap:30px;
+      align-items:flex-start;
+      margin-top:20px;
     }
 
     .first-lady img{
-      border-radius:24px;
-      border:1px solid var(--border);
+      width:360px;
+      border:1px solid #c8ccd1;
+      background:white;
     }
 
-    .first-lady-content h2{
-      font-size:3rem;
-      margin-bottom:24px;
+    .first-lady-content{
+      flex:1;
+      font-size:17px;
+      line-height:1.9;
     }
 
     .first-lady-content p{
-      color:#c2c2c2;
-      line-height:1.9;
-      margin-bottom:20px;
-    }
-
-    /* INSTAGRAM */
-
-    .instagram-box{
-      margin-top:60px;
-      background:#0d0d0d;
-      border:1px solid var(--border);
-      border-radius:18px;
-      padding:32px;
-      text-align:center;
-    }
-
-    .instagram-box h3{
-      font-size:2rem;
       margin-bottom:18px;
     }
 
-    .instagram-box p{
-      color:#c2c2c2;
-      line-height:1.8;
-      margin-bottom:26px;
+    .links{
+      margin-top:20px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
     }
 
-    .instagram-link{
-      display:inline-block;
-      padding:14px 28px;
-      border:1px solid var(--gold);
-      border-radius:8px;
-      color:var(--gold);
-      font-weight:bold;
-      transition:0.3s ease;
+    .links a{
+      background:#eaecf0;
+      padding:6px 12px;
+      border-radius:4px;
+      font-size:14px;
+      border:1px solid #c8ccd1;
     }
-
-    .instagram-link:hover{
-      background:var(--gold);
-      color:black;
-    }
-
-    /* STAZZEX NOTE */
 
     .stazzex-note{
-      margin-top:70px;
-      background:rgba(255,255,255,0.03);
-      border-left:4px solid var(--gold);
-      padding:30px;
-      border-radius:14px;
+      margin-top:40px;
+      background:#f8f9fa;
+      border-left:4px solid #a2a9b1;
+      padding:24px;
+      font-size:16px;
+      line-height:1.8;
     }
-
-    .stazzex-note h4{
-      color:var(--gold);
-      margin-bottom:16px;
-      letter-spacing:2px;
-    }
-
-    .stazzex-note p{
-      color:#d0d0d0;
-      line-height:1.9;
-    }
-
-    /* FOOTER */
 
     footer{
-      padding:50px 6%;
-      border-top:1px solid var(--border);
-      text-align:center;
-      color:#9d9d9d;
-    }
-
-    @media(max-width:1000px){
-
-      .hero,
-      .first-lady{
-        grid-template-columns:1fr;
-      }
-
+      margin-top:60px;
+      padding-top:20px;
+      border-top:1px solid #a2a9b1;
+      color:#54595d;
+      font-size:13px;
+      line-height:1.6;
     }
 
     @media(max-width:900px){
 
-      .nav-links{
-        display:none;
+      .intro,
+      .first-lady{
+        flex-direction:column;
+      }
+
+      .infobox{
+        width:100%;
+      }
+
+      .first-lady img{
+        width:100%;
       }
 
     }
@@ -382,245 +303,248 @@
 
 <body>
 
-  <!-- NAV -->
+  <div class="topbar">
 
-  <nav>
+    <div>
 
-    <div class="nav-left">
-
-      <img
-        src="/stazzlies/assets/logos/Stazzlies-Logo.jpg"
-        alt="The Stazzlies Logo"
-      />
-
-      <strong>
-        The Stazzlies
-      </strong>
-
-    </div>
-
-    <div class="nav-links">
-
-      <a href="/">
-        Home
-      </a>
-
-      <a href="/stazzeria/">
-        Stazzeria
-      </a>
-
-      <a href="/stazzboi/">
-        Stazzboi
-      </a>
-
-      <a href="/stazzex/">
-        STAZZEX
-      </a>
-
-    </div>
-
-  </nav>
-
-  <!-- HERO -->
-
-  <section class="hero">
-
-    <div class="hero-content">
-
-      <div class="hero-subtitle">
-        Official Female Collective of Stazzeria
+      <div class="logo-title">
+        Stazzboi.com
       </div>
 
-      <h1>
-        The <span class="gold">Stazzlies</span>
-      </h1>
-
-      <p>
-        The Stazzlies are the official female collective of Stazzeria. Representing feminine unity, advancement, leadership, and cultural identity, The Stazzlies function as an influential branch of the Stazz Universe dedicated to supporting female Stazzerians and strengthening the future of Stazzeria.
-      </p>
-
-      <div class="hero-buttons">
-
-        <a
-          href="https://www.instagram.com/stazzlies/"
-          class="btn btn-gold"
-          target="_blank"
-        >
-          Official Instagram
-        </a>
-
-        <a
-          href="/stazzex/"
-          class="btn btn-outline"
-        >
-          View STAZZEX
-        </a>
-
+      <div class="logo-sub">
+        Powered by the Stazzex
       </div>
 
     </div>
 
-    <div class="hero-image">
+  </div>
 
-      <img
-        src="/stazzlies/assets/images/Stazzlies-group.png"
-        alt="The Stazzlies"
-      />
+  <div class="page">
 
-    </div>
+    <h1>
+      The Stazzlies
+    </h1>
 
-  </section>
+    <div class="intro">
 
-  <!-- PURPOSE -->
-
-  <section>
-
-    <h2 class="section-title">
-      Feminine <span class="gold">Leadership</span>
-    </h2>
-
-    <p class="section-description">
-      The Stazzlies contribute directly to the advancement, presentation, unity, morale, and institutional identity of Stazzeria through leadership, support systems, organization, cultural participation, and social influence.
-    </p>
-
-    <div class="feature-grid">
-
-      <div class="feature-card">
-
-        <h3>
-          Unity
-        </h3>
+      <div class="intro-text">
 
         <p>
-          Encouraging loyalty, collaboration, and support among female Stazzerians throughout Stazzerian society.
+          <b>The Stazzlies</b> are the official female collective of Stazzeria. Representing feminine unity, advancement, leadership, and cultural identity, The Stazzlies function as an influential branch of the Stazz Universe dedicated to supporting female Stazzerians and strengthening the future of Stazzeria.
         </p>
-
-      </div>
-
-      <div class="feature-card">
-
-        <h3>
-          Advancement
-        </h3>
-
-        <p>
-          Supporting projects, ambitions, creative growth, and participation connected to the Stazz Universe.
-        </p>
-
-      </div>
-
-      <div class="feature-card">
-
-        <h3>
-          Representation
-        </h3>
-
-        <p>
-          Representing feminine elegance, intelligence, influence, confidence, and leadership within Stazzerian culture.
-        </p>
-
-      </div>
-
-      <div class="feature-card">
-
-        <h3>
-          Institutional Support
-        </h3>
-
-        <p>
-          Assisting in organizational, diplomatic, social, and cultural initiatives connected to Stazzeria.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- FIRST LADY -->
-
-  <section>
-
-    <div class="first-lady">
-
-      <img
-        src="/stazzlies/assets/images/StazzerianFirstCouple.JPEG"
-        alt="The First Lady of Stazzeria"
-      />
-
-      <div class="first-lady-content">
 
         <h2>
-          The <span class="gold">First Lady</span>
+          Key facts
         </h2>
 
-        <p>
-          Leann Stazzland, also recognized as the current StazzQueen, serves as the First Lady of Stazzeria and Head Stazzlie of The Stazzlies.
-        </p>
+        <ul>
+          <li><b>Organization:</b> The Stazzlies</li>
+          <li><b>Affiliation:</b> Stazzeria</li>
+          <li><b>Classification:</b> Female Stazzerian collective</li>
+          <li><b>Leadership:</b> The First Lady of Stazzeria</li>
+          <li><b>Philosophy:</b> Unity, advancement, representation, feminine leadership</li>
+        </ul>
 
-        <p>
-          As First Lady, she assists the President in major Stazzerian ventures while representing feminine leadership, unity, morale, and advancement throughout Stazzerian society.
-        </p>
+      </div>
 
-        <p>
-          The First Lady acts as both a symbolic and institutional figure within the Stazz Universe, helping guide The Stazzlies while supporting the continued expansion of Stazzeria.
-        </p>
+      <div class="infobox">
 
-        <p>
-          All StazzQueens are First Ladies, though not all First Ladies are recognized as StazzQueens.
-        </p>
+        <div class="infobox-title">
+          The Stazzlies
+        </div>
+
+        <img
+          src="Stazzlies-Logo.jpg"
+          class="hero-image"
+          alt="The Stazzlies Logo"
+        >
+
+        <table>
+
+          <tr>
+            <td class="label">Type</td>
+            <td>Female collective</td>
+          </tr>
+
+          <tr>
+            <td class="label">Affiliation</td>
+            <td>Stazzeria</td>
+          </tr>
+
+          <tr>
+            <td class="label">Leadership</td>
+            <td>First Lady of Stazzeria</td>
+          </tr>
+
+          <tr>
+            <td class="label">Recognized in</td>
+            <td>The STAZZEX</td>
+          </tr>
+
+          <tr>
+            <td class="label">Known for</td>
+            <td>Unity, advancement, feminine leadership, cultural identity</td>
+          </tr>
+
+        </table>
 
       </div>
 
     </div>
 
-    <!-- INSTAGRAM -->
+    <h2>
+      Feminine Leadership
+    </h2>
 
-    <div class="instagram-box">
-
-      <h3>
-        Official Stazzlies Instagram
-      </h3>
+    <div class="section-text">
 
       <p>
-        Follow The Stazzlies for official updates, community highlights, cultural media, and Stazzerian feminine representation.
-      </p>
-
-      <a
-        href="https://www.instagram.com/stazzlies/"
-        target="_blank"
-        class="instagram-link"
-      >
-        @stazzlies
-      </a>
-
-    </div>
-
-    <!-- STAZZEX NOTE -->
-
-    <div class="stazzex-note">
-
-      <h4>
-        STAZZEX NOTE
-      </h4>
-
-      <p>
-        The Stazzlies are formally recognized within The STAZZEX as the official female collective of Stazzeria, associated with feminine leadership, institutional support, morale, unity, advancement, and Stazzerian cultural identity.
+        The Stazzlies contribute directly to the advancement, presentation, unity, morale, and institutional identity of Stazzeria through leadership, support systems, organization, cultural participation, and social influence.
       </p>
 
     </div>
 
-  </section>
+    <details open>
 
-  <!-- FOOTER -->
+      <summary>
+        Principles
+      </summary>
 
-  <footer>
+      <div class="section-content">
 
-    <p>
-      © The Stazzlies — Official Female Collective of Stazzeria
-    </p>
+        <div class="feature-grid">
 
-  </footer>
+          <div class="feature-card">
+
+            <h3>
+              Unity
+            </h3>
+
+            <p>
+              Encouraging loyalty, collaboration, and support among female Stazzerians throughout Stazzerian society.
+            </p>
+
+          </div>
+
+          <div class="feature-card">
+
+            <h3>
+              Advancement
+            </h3>
+
+            <p>
+              Supporting projects, ambitions, creative growth, and participation connected to the Stazz Universe.
+            </p>
+
+          </div>
+
+          <div class="feature-card">
+
+            <h3>
+              Representation
+            </h3>
+
+            <p>
+              Representing feminine elegance, intelligence, influence, confidence, and leadership within Stazzerian culture.
+            </p>
+
+          </div>
+
+          <div class="feature-card">
+
+            <h3>
+              Institutional Support
+            </h3>
+
+            <p>
+              Assisting in organizational, diplomatic, social, and cultural initiatives connected to Stazzeria.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </details>
+
+    <details>
+
+      <summary>
+        The First Lady
+      </summary>
+
+      <div class="section-content">
+
+        <div class="first-lady">
+
+          <img
+            src="flos.png"
+            alt="The First Lady of Stazzeria"
+          >
+
+          <div class="first-lady-content">
+
+            <p>
+              Leann Stazzland, also recognized as the current StazzQueen, serves as the First Lady of Stazzeria and Head Stazzlie of The Stazzlies.
+            </p>
+
+            <p>
+              As First Lady, she assists the President in major Stazzerian ventures while representing feminine leadership, unity, morale, and advancement throughout Stazzerian society.
+            </p>
+
+            <p>
+              The First Lady acts as both a symbolic and institutional figure within the Stazz Universe, helping guide The Stazzlies while supporting the continued expansion of Stazzeria.
+            </p>
+
+            <p>
+              All StazzQueens are First Ladies, though not all First Ladies are recognized as StazzQueens.
+            </p>
+
+            <div class="links">
+
+              <a
+                href="https://www.instagram.com/stazzlies/"
+                target="_blank"
+              >
+                Official Instagram
+              </a>
+
+              <a href="/stazzex">
+                View STAZZEX
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="stazzex-note">
+
+          <strong>
+            STAZZEX NOTE
+          </strong>
+
+          <p>
+            The Stazzlies are formally recognized within The STAZZEX as the official female collective of Stazzeria, associated with feminine leadership, institutional support, morale, unity, advancement, and Stazzerian cultural identity.
+          </p>
+
+        </div>
+
+      </div>
+
+    </details>
+
+    <footer>
+
+      This page was last edited on May 25, 2026.<br><br>
+
+      Powered by the Stazzex archival system.
+
+    </footer>
+
+  </div>
 
 </body>
 
