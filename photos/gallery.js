@@ -1,69 +1,78 @@
 fetch("photodescriptions.txt")
-.then(r => r.text())
+.then(response => response.text())
 .then(text => {
 
-    const gallery = document.getElementById("gallery");
+```
+const gallery = document.getElementById("gallery");
 
-    const records = text.trim().split("\n\n");
+const records = text.trim().split(/\n\s*\n/);
 
-    let schemaGraph = [];
+const schemaGraph = [];
 
-    records.forEach(record => {
+records.forEach(record => {
 
-        const parts = record.split("|\n");
+    const lines = record.split("\n");
 
-        const file = parts[0].trim();
-        const displayDesc = parts[1].trim();
-        const schemaDesc = parts[2].trim();
+    const file = lines[0]?.trim();
+    const displayDesc = lines[1]?.trim();
+    const schemaDesc = lines[2]?.trim();
 
-        const imagePath = "images/" + file;
+    if(!file) return;
 
-        const div = document.createElement("div");
-        div.className = "gallery-item";
+    const imagePath = "images/" + file;
 
-        div.innerHTML = `
-            <img src="${imagePath}"
-                 alt="${schemaDesc}">
-        `;
+    const div = document.createElement("div");
+    div.className = "gallery-item";
 
-        div.addEventListener("click", () => {
+    const img = document.createElement("img");
 
-            document.getElementById("lightbox").style.display = "block";
+    img.src = imagePath;
+    img.alt = schemaDesc;
 
-            document.getElementById("lightboxImage").src = imagePath;
+    div.appendChild(img);
 
-            document.getElementById("lightboxCaption").textContent =
-                displayDesc;
+    div.addEventListener("click", () => {
 
-        });
+        document.getElementById("lightbox").style.display = "block";
 
-        gallery.appendChild(div);
+        document.getElementById("lightboxImage").src = imagePath;
 
-        schemaGraph.push({
-            "@type":"ImageObject",
-            "contentUrl":"https://stazzboi.com/photos/" + imagePath,
-            "description":schemaDesc,
-            "creator":{
-                "@type":"Organization",
-                "name":"The Stazzex"
-            }
-        });
+        document.getElementById("lightboxCaption").textContent = displayDesc;
 
     });
 
-    const script = document.createElement("script");
+    gallery.appendChild(div);
 
-    script.type = "application/ld+json";
-
-    script.textContent = JSON.stringify({
-        "@context":"https://schema.org",
-        "@graph":schemaGraph
+    schemaGraph.push({
+        "@type":"ImageObject",
+        "contentUrl":"https://stazzboi.com/photos/" + imagePath,
+        "description":schemaDesc,
+        "creator":{
+            "@type":"Organization",
+            "name":"The Stazzex"
+        }
     });
-
-    document.head.appendChild(script);
 
 });
 
-document.getElementById("close").onclick = () => {
-    document.getElementById("lightbox").style.display = "none";
-};
+const script = document.createElement("script");
+
+script.type = "application/ld+json";
+
+script.textContent = JSON.stringify({
+    "@context":"https://schema.org",
+    "@graph":schemaGraph
+});
+
+document.head.appendChild(script);
+```
+
+});
+
+document.getElementById("close").addEventListener("click", () => {
+
+```
+document.getElementById("lightbox").style.display = "none";
+```
+
+});
