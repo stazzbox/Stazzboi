@@ -1,19 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Stazzography | Powered by The Stazzex</title>
+
+<meta name="description" content="Official Stazzography photo archive powered by The Stazzex.">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
 ```
-<span id="close">&times;</span>
+<div class="brand">
 
-<div class="lightbox-content">
+    <img src="Stazzex-Logo.jpg"
+         alt="The Stazzex"
+         class="brand-logo">
 
-    <div class="lightbox-header">
-        <img src="Stazzex-Logo.jpg" class="avatar">
-        <span>The Stazzex</span>
-    </div>
-
-    <img id="lightboxImage">
-
-    <div class="caption">
-        <strong>Courtesy of The Stazzex.</strong>
-        <p id="lightboxCaption"></p>
+    <div>
+        <h1>Stazzography</h1>
+        <p>Powered by The Stazzex</p>
     </div>
 
 </div>
 ```
+
+</header>
+
+<main>
+
+```
+<section class="intro">
+
+    <h2>Official Photo Gallery</h2>
+
+    <p>
+        Official photographs courtesy of The Stazzex.
+        Images may depict STAZZBOI, Stazzerian leadership,
+        associates, events, activities, and historical moments.
+    </p>
+
+</section>
+
+<section id="gallery" class="gallery">
+    <!-- Generated automatically by gallery.js -->
+</section>
+```
+
+</main>
+
+<div id="lightbox" class="lightbox">
+
+```
+<span id="close" class="close-btn">&times;</span>
+
+<div class="lightbox-wrapper">
+
+    <div class="post-header">
+
+        <img src="Stazzex-Logo.jpg"
+             alt="The Stazzex"
+             class="avatar">
+
+        <div>
+            <strong>The Stazzex</strong>
+            <div class="subtext">Official Media Source</div>
+        </div>
+
+    </div>
+
+    <img id="lightboxImage"
+         src=""
+         alt="">
+
+    <div class="caption">
+
+        <strong>Courtesy of The Stazzex.</strong>
+
+        <p id="lightboxCaption"></p>
+
+    </div>
+
+</div>
+```
+
+</div>
+
+<script src="gallery.js"></script>
+
+</body>
+
+</html>
