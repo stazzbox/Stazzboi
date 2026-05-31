@@ -7,23 +7,23 @@
 
 <title>Stazzography | Powered by The Stazzex</title>
 
-<meta name="description" content="Official Stazzography photo archive powered by The Stazzex.">
+<meta name="description" content="Official Stazzography photo gallery powered by The Stazzex.">
 
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="topbar">
+<header class="header">
 
 ```
-<div class="brand">
+<div class="header-inner">
 
     <img src="Stazzex-Logo.jpg"
          alt="The Stazzex"
-         class="brand-logo">
+         class="logo">
 
-    <div>
+    <div class="branding">
         <h1>Stazzography</h1>
         <p>Powered by The Stazzex</p>
     </div>
@@ -43,7 +43,7 @@
     <p>
         Official photographs courtesy of The Stazzex.
         Images may depict STAZZBOI, Stazzerian leadership,
-        associates, events, activities, and historical moments.
+        associates, activities, events, and historical moments.
     </p>
 
 </section>
@@ -54,37 +54,34 @@
 
 </main>
 
-<div id="lightbox" class="lightbox">
+<div id="viewer" class="viewer">
 
 ```
-<span id="close" class="close-btn">&times;</span>
+<div class="viewer-content">
 
-<div class="lightbox-wrapper">
+    <span id="close" class="close">&times;</span>
 
-    <div class="post-header">
+    <div class="viewer-header">
 
         <img src="Stazzex-Logo.jpg"
              alt="The Stazzex"
-             class="avatar">
+             class="viewer-avatar">
 
         <div>
             <strong>The Stazzex</strong>
-            <div class="subtext">Official Media Source</div>
+            <div class="viewer-subtitle">
+                Official Media Source
+            </div>
         </div>
 
     </div>
 
-    <img id="lightboxImage"
+    <img id="viewerImage"
+         class="viewer-image"
          src=""
          alt="">
 
-    <div class="caption">
-
-        <strong>Courtesy of The Stazzex.</strong>
-
-        <p id="lightboxCaption"></p>
-
-    </div>
+    <p id="viewerCaption"></p>
 
 </div>
 ```
