@@ -1,222 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>STAZZOLOGY</title>
+<title>
+STAZZOLOGY Teams
+</title>
 
 <meta
 name="description"
-content="Official Stazzology page featuring teams, events, highlights, and community competition."
+content="Official STAZZOLOGY teams and channels."
 >
 
-<link rel="stylesheet" href="style.css">
+<link
+rel="canonical"
+href="https://stazzboi.com/stazzology"
+>
 
-</head>
+<style>
 
-<body>
+body{
+    margin:0;
+    background:#0f0f0f;
+    color:white;
+    font-family:Arial,sans-serif;
+}
 
-<!-- HERO -->
+.page{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
 
-<header class="hero">
+h1{
+    text-align:center;
+    font-size:52px;
+    margin-bottom:10px;
+}
 
-    <div class="hero-overlay">
+.subtitle{
+    text-align:center;
+    color:#b8b8b8;
+    margin-bottom:60px;
+    font-size:20px;
+}
 
-        <img
-        src="assets/logos/STAZZOLOGY.png"
-        class="stazzology-logo"
-        alt="STAZZOLOGY Logo">
+.main-logo{
+    width:300px;
+    display:block;
+    margin:0 auto 70px;
+}
 
-        <h1>STAZZOLOGY</h1>
+.teams-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:70px;
+    flex-wrap:wrap;
+}
 
-        <p class="tagline">
-            Competition • Brotherhood • Legacy
-        </p>
+.team-link{
+    transition:.3s;
+}
 
+.team-link:hover{
+    transform:scale(1.08);
+}
+
+.team-icon{
+    width:180px;
+    height:auto;
+}.frost-glow img{
+    filter:drop-shadow(0 0 25px #00bfff);
+}
+
+.integrity-glow img{
+    filter:drop-shadow(0 0 25px #ff3030);
+}
+
+.valor-glow img{
+    filter:drop-shadow(0 0 25px #ffd700);
+}
+
+.kingdom-glow img{
+    filter:drop-shadow(0 0 25px #9b30ff);
+}
+
+.frost-glow:hover img{
+    filter:drop-shadow(0 0 40px #00bfff);
+}
+
+.integrity-glow:hover img{
+    filter:drop-shadow(0 0 40px #ff3030);
+}
+
+.valor-glow:hover img{
+    filter:drop-shadow(0 0 40px #ffd700);
+}
+
+.kingdom-glow:hover img{
+    filter:drop-shadow(0 0 40px #9b30ff);
+}
+
+footer{
+    text-align:center;
+    color:#888;
+    margin-top:100px;
+    padding-top:30px;
+    border-top:1px solid #333;
+}
+
+@media(max-width:900px){
+
+    .teams-section{
+        gap:40px;
+    }
+
+    .team-icon{
+        width:140px;
+    }
+
+}
+
+</style>
+
+</head><body>
+
+<div class="page">
+
+    <h1>
+        STAZZOLOGY
+    </h1>
+
+    <div class="subtitle">
+        Official Teams
     </div>
 
-</header>
+    <img
+        src="Stazzology-Logo.jpg"
+        class="main-logo"
+        alt="STAZZOLOGY"
+    >
 
-<!-- BITES & BATTLES -->
+    <div class="teams-section">
 
-<section class="bnb-section">
+        <a
+            href="https://youtube.com/@STZFrost"
+            class="team-link frost-glow"
+            target="_blank"
+        >
 
-    <div class="bnb-image">
+            <img
+                src="STZFrost.png"
+                class="team-icon"
+                alt="STAZZOLOGY Frost"
+            >
 
-        <img
-        src="assets/media/BnB.jpg"
-        alt="Bites and Battles Event">
+        </a>
 
-    </div>
+        <a
+            href="https://youtube.com/@STZIntegrity"
+            class="team-link integrity-glow"
+            target="_blank"
+        >
 
-    <div class="bnb-info">
+            <img
+                src="STZIntegrity.png"
+                class="team-icon"
+                alt="STAZZOLOGY Integrity"
+            >
 
-        <h2>Bites & Battles</h2>
+        </a>
 
-        <p>
+        <a
+            href="https://youtube.com/@STZValor"
+            class="team-link valor-glow"
+            target="_blank"
+        >
 
-            Bites & Battles brings together food,
-            gaming, rivalries, and unforgettable
-            moments across the Stazzology teams.
+            <img
+                src="STZValor.png"
+                class="team-icon"
+                alt="STAZZOLOGY Valor"
+            >
 
-        </p>
+        </a>
 
-        <a href="#" class="gold-button">
+        <a
+            href="https://youtube.com/@STZKingdom"
+            class="team-link kingdom-glow"
+            target="_blank"
+        >
 
-            Learn More
+            <img
+                src="StzKingdom.png"
+                class="team-icon"
+                alt="STAZZOLOGY Kingdom"
+            >
 
         </a>
 
     </div>
 
-</section>
+    <footer>
 
-<!-- TEAM SELECTION -->
+        <br><br>
 
-<section class="teams">
+        Powered by the Stazzex
 
-    <h2>Choose Your Team</h2>
+    </footer>
 
-    <div class="team-grid">
-
-        <!-- Frost -->
-
-        <div class="team-card frost">
-
-            <img
-            src="../teams/STZFrost.png"
-            alt="Frost Team Logo">
-
-            <h3>FROST</h3>
-
-            <p>Blue Division</p>
-
-        </div>
-
-        <!-- Valor -->
-
-        <div class="team-card valor">
-
-            <img
-            src="../teams/STZValor.PNG"
-            alt="Valor Team Logo">
-
-            <h3>VALOR</h3>
-
-            <p>Red Division</p>
-
-        </div>
-
-        <!-- Kingdom -->
-
-        <div class="team-card kingdom">
-
-            <img
-            src="../teams/StzKingdom.png"
-            alt="Kingdom Team Logo">
-
-            <h3>KINGDOM</h3>
-
-            <p>Golden Division</p>
-
-        </div>
-
-        <!-- Integrity -->
-
-        <div class="team-card integrity">
-
-            <img
-            src="../teams/STZIntegrity.png"
-            alt="Integrity Team Logo">
-
-            <h3>INTEGRITY</h3>
-
-            <p>Silver Division</p>
-
-        </div>
-
-    </div>
-
-</section><!-- HIGHLIGHTS -->
-
-<section class="highlights">
-
-    <h2>Latest Highlights</h2>
-
-    <div class="highlight-grid">
-
-        <div class="highlight-card">
-
-            <h3>Events</h3>
-
-            <p>
-                Major competitions, gatherings,
-                and special Stazzology moments.
-            </p>
-
-        </div>
-
-        <div class="highlight-card">
-
-            <h3>Media</h3>
-
-            <p>
-                Photos, videos, and memorable
-                moments from across the teams.
-            </p>
-
-        </div>
-
-        <div class="highlight-card">
-
-            <h3>Community</h3>
-
-            <p>
-                Brotherhood, rivalry, and the
-                spirit that defines Stazzology.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- JOIN -->
-
-<section class="join-section">
-
-    <h2>Join The Community</h2>
-
-    <p>
-
-        Four teams. One legacy.
-
-    </p>
-
-    <a href="#" class="gold-button">
-
-        Enter STAZZOLOGY
-
-    </a>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-    <p>
-
-        © STAZZOLOGY
-
-    </p>
-
-</footer>
+</div>
 
 </body>
-
 </html>
