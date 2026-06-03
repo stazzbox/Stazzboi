@@ -1,33 +1,70 @@
 body{
     margin:0;
-    background:#0f0f0f;
+    background:#111;
     color:white;
     font-family:Arial,sans-serif;
 }
 
 .page{
-    max-width:1200px;
+    max-width:1400px;
     margin:auto;
     padding:40px 20px;
 }
 
 h1{
     text-align:center;
-    font-size:52px;
-    margin-bottom:10px;
+    font-size:70px;
+    margin-bottom:50px;
+    letter-spacing:3px;
 }
 
-.subtitle{
+.brands{
+    display:flex;
+    justify-content:center;
+    gap:100px;
+    flex-wrap:wrap;
+    margin-bottom:100px;
+}
+
+.brand-card{
     text-align:center;
-    color:#b8b8b8;
-    margin-bottom:60px;
-    font-size:20px;
 }
 
-.main-logo{
-    width:300px;
-    display:block;
-    margin:0 auto 70px;
+.brand-card h2{
+    margin-bottom:25px;
+}
+
+.brand-logo{
+    width:350px;
+    max-width:90%;
+    transition:.3s;
+}
+
+.brand-logo:hover{
+    transform:scale(1.03);
+}
+
+.socials{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.socials a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+}
+
+.socials a:hover{
+    color:#00bfff;
+}
+
+.teams-title{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:50px;
 }
 
 .teams-section{
@@ -36,6 +73,7 @@ h1{
     align-items:center;
     gap:70px;
     flex-wrap:wrap;
+    margin-bottom:100px;
 }
 
 .team-link{
@@ -43,11 +81,11 @@ h1{
 }
 
 .team-link:hover{
-    transform:scale(1.08);
+    transform:translateY(-10px) scale(1.08);
 }
 
 .team-icon{
-    width:180px;
+    width:200px;
     height:auto;
 }
 
@@ -55,50 +93,151 @@ h1{
     filter:drop-shadow(0 0 25px #00bfff);
 }
 
-.integrity-glow img{
-    filter:drop-shadow(0 0 25px #c0c0c0);
+.frost-glow:hover img{
+    filter:drop-shadow(0 0 45px #00bfff);
 }
 
 .valor-glow img{
     filter:drop-shadow(0 0 25px #ff3030);
 }
 
+.valor-glow:hover img{
+    filter:drop-shadow(0 0 45px #ff3030);
+}
+
 .kingdom-glow img{
     filter:drop-shadow(0 0 25px #ffd700);
 }
 
-.frost-glow:hover img{
-    filter:drop-shadow(0 0 40px #00bfff);
+.kingdom-glow:hover img{
+    filter:drop-shadow(0 0 45px #ffd700);
+}
+
+.integrity-glow img{
+    filter:drop-shadow(0 0 25px #c0c0c0);
 }
 
 .integrity-glow:hover img{
-    filter:drop-shadow(0 0 40px #c0c0c0);
+    filter:drop-shadow(0 0 45px #c0c0c0);
 }
 
-.valor-glow:hover img{
-    filter:drop-shadow(0 0 40px #ff3030);
+.bnb-section{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+    line-height:1.8;
 }
 
-.kingdom-glow:hover img{
-    filter:drop-shadow(0 0 40px #ffd700);
+.bnb-section h2{
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+.bnb-image{
+    width:100%;
+    max-width:900px;
+    border-radius:15px;
+    margin-bottom:40px;
+}
+
+.bnb-section h3{
+    font-size:30px;
+}
+
+.bnb-section p{
+    font-size:20px;
 }
 
 footer{
     text-align:center;
-    color:#888;
     margin-top:100px;
     padding-top:30px;
     border-top:1px solid #333;
+    color:#888;
 }
 
 @media(max-width:900px){
 
-    .teams-section{
-        gap:40px;
+    h1{
+        font-size:50px;
+    }
+
+    .brands{
+        gap:50px;
+    }
+
+    .brand-logo{
+        width:280px;
     }
 
     .team-icon{
-        width:140px;
+        width:150px;
     }
 
+}.team-link{
+    transition:.3s;
+}
+
+.team-link:hover{
+    transform:translateY(-8px) scale(1.05);
+}
+
+.team-icon{
+    width:200px;
+    height:auto;
+    transition:.3s;
+}
+
+/* FROST */
+
+.frost-glow img{
+    filter:drop-shadow(0 0 25px #00bfff);
+}
+
+.frost-glow:hover img{
+    filter:drop-shadow(0 0 55px #00bfff);
+}
+
+/* VALOR */
+
+.valor-glow img{
+    filter:drop-shadow(0 0 25px #ff3030);
+}
+
+.valor-glow:hover img{
+    filter:drop-shadow(0 0 55px #ff3030);
+}
+
+/* KINGDOM */
+
+.kingdom-glow img{
+    filter:drop-shadow(0 0 25px #ffd700);
+}
+
+.kingdom-glow:hover img{
+    filter:drop-shadow(0 0 55px #ffd700);
+}
+
+/* INTEGRITY */
+
+.integrity-glow img{
+    filter:drop-shadow(0 0 25px #c0c0c0);
+}
+
+.integrity-glow:hover img{
+    filter:drop-shadow(0 0 55px #c0c0c0);
+}
+
+/* TEAM NAMES */
+
+.team-link{
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.team-link:hover{
+    text-decoration:none;
 }
