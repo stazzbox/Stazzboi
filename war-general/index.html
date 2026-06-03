@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>
+    War General of Stazzeria | John B. Stazzland
+  </title>
+
+  <meta
+    name="description"
+    content="Official page of John B. Stazzland, War General of Stazzeria and supreme military authority of the Stazzerian Nation."
+  >
+
+  <link
+    rel="canonical"
+    href="https://stazzboi.com/war-general"
+  >
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ProfilePage",
+    "url":"https://stazzboi.com/war-general",
+    "name":"War General of Stazzeria",
+    "description":"Official page of John B. Stazzland, War General of Stazzeria.",
+    "mainEntity":{
+      "@type":"Person",
+      "name":"John B. Stazzland",
+      "jobTitle":"War General of Stazzeria",
+      "image":"https://stazzboi.com/war-general/mstazzerianpfp.png",
+      "affiliation":{
+        "@type":"Organization",
+        "name":"Stazzeria"
+      }
+    }
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+
+    body{
+      margin:0;
+      background:#f8f9fa;
+      font-family:Linux Libertine, Georgia, Times, serif;
+      color:#202122;
+    }
+
+    a{
+      color:#0645ad;
+      text-decoration:none;
+    }
+
+    a:hover{
+      text-decoration:underline;
+    }
+
+    .topbar{
+      width:100%;
+      background:white;
+      border-bottom:1px solid #a2a9b1;
+      padding:12px 30px;
+      box-sizing:border-box;
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+
+    .logo-title{
+      font-size:32px;
+      font-weight:normal;
+      letter-spacing:-1px;
+    }
+
+    .logo-sub{
+      font-size:12px;
+      color:#54595d;
+      margin-top:-4px;
+    }
+
+    .wiki-nav{
+      display:flex;
+      gap:18px;
+      margin-top:10px;
+      flex-wrap:wrap;
+    }
+
+    .wiki-nav a{
+      color:#0645ad;
+      font-size:14px;
+    }
+
+    .wiki-nav a:hover{
+      text-decoration:underline;
+    }
+
+    .page{
+      max-width:1200px;
+      margin:auto;
+      background:white;
+      padding:20px 35px 60px;
+      border-left:1px solid #c8ccd1;
+      border-right:1px solid #c8ccd1;
+      min-height:100vh;
+      box-sizing:border-box;
+    }
+
+    h1{
+      font-weight:normal;
+      font-size:34px;
+      border-bottom:1px solid #a2a9b1;
+      padding-bottom:6px;
+      margin-top:0;
+    }
+
+    h2{
+      font-weight:normal;
+      border-bottom:1px solid #a2a9b1;
+      padding-bottom:4px;
+      margin-top:40px;
+    }
+    .intro{
+      display:flex;
+      gap:30px;
+      align-items:flex-start;
+      margin-top:20px;
+    }
+
+    .intro-text{
+      flex:1;
+      font-size:18px;
+      line-height:1.7;
+    }
+
+    .infobox{
+      width:340px;
+      border:1px solid #a2a9b1;
+      background:#f8f9fa;
+      font-size:14px;
+      flex-shrink:0;
+    }
+
+    .infobox-title{
+      background:#eaecf0;
+      text-align:center;
+      font-weight:bold;
+      padding:10px;
+      font-size:18px;
+      border-bottom:1px solid #a2a9b1;
+    }
+
+    .hero-image{
+      width:100%;
+      display:block;
+      border-bottom:1px solid #a2a9b1;
+      background:white;
+    }
+
+    .infobox table{
+      width:100%;
+      border-collapse:collapse;
+    }
+
+    .infobox td{
+      padding:8px 10px;
+      vertical-align:top;
+      border-top:1px solid #eaecf0;
+    }
+
+    .label{
+      font-weight:bold;
+      width:110px;
+    }
+
+    .section-text{
+      font-size:17px;
+      line-height:1.8;
+    }
+
+    details{
+      border:1px solid #c8ccd1;
+      margin-top:18px;
+      background:#f8f9fa;
+      overflow:hidden;
+    }
+
+    summary{
+      padding:14px;
+      font-size:20px;
+      cursor:pointer;
+      font-weight:bold;
+      background:#eaecf0;
+      user-select:none;
+    }
+
+    .project-content{
+      padding:20px;
+      background:white;
+    }
+
+    .project{
+      display:flex;
+      gap:18px;
+      align-items:flex-start;
+      margin-bottom:35px;
+      padding-bottom:25px;
+      border-bottom:1px solid #eaecf0;
+    }
+
+    .project:last-child{
+      border-bottom:none;
+      margin-bottom:0;
+      padding-bottom:0;
+    }
+
+    .project-info{
+      flex:1;
+    }
+
+    .project-info h3{
+      margin:0 0 10px;
+      font-size:24px;
+      font-weight:normal;
+    }
+
+    .links{
+      margin-top:10px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .links a{
+      background:#eaecf0;
+      padding:6px 12px;
+      border-radius:4px;
+      font-size:14px;
+      border:1px solid #c8ccd1;
+    }
+
+    footer{
+      margin-top:60px;
+      padding-top:20px;
+      border-top:1px solid #a2a9b1;
+      color:#54595d;
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    @media(max-width:900px){
+
+      .intro{
+        flex-direction:column-reverse;
+      }
+
+      .infobox{
+        width:100%;
+      }
+
+      .project{
+        flex-direction:column;
+      }
+    }
+
+  </style>
+
+</head>
+    .intro{
+      display:flex;
+      gap:30px;
+      align-items:flex-start;
+      margin-top:20px;
+    }
+
+    .intro-text{
+      flex:1;
+      font-size:18px;
+      line-height:1.7;
+    }
+
+    .infobox{
+      width:340px;
+      border:1px solid #a2a9b1;
+      background:#f8f9fa;
+      font-size:14px;
+      flex-shrink:0;
+    }
+
+    .infobox-title{
+      background:#eaecf0;
+      text-align:center;
+      font-weight:bold;
+      padding:10px;
+      font-size:18px;
+      border-bottom:1px solid #a2a9b1;
+    }
+
+    .hero-image{
+      width:100%;
+      display:block;
+      border-bottom:1px solid #a2a9b1;
+      background:white;
+    }
+
+    .infobox table{
+      width:100%;
+      border-collapse:collapse;
+    }
+
+    .infobox td{
+      padding:8px 10px;
+      vertical-align:top;
+      border-top:1px solid #eaecf0;
+    }
+
+    .label{
+      font-weight:bold;
+      width:110px;
+    }
+
+    .section-text{
+      font-size:17px;
+      line-height:1.8;
+    }
+
+    details{
+      border:1px solid #c8ccd1;
+      margin-top:18px;
+      background:#f8f9fa;
+      overflow:hidden;
+    }
+
+    summary{
+      padding:14px;
+      font-size:20px;
+      cursor:pointer;
+      font-weight:bold;
+      background:#eaecf0;
+      user-select:none;
+    }
+
+    .project-content{
+      padding:20px;
+      background:white;
+    }
+
+    .project{
+      display:flex;
+      gap:18px;
+      align-items:flex-start;
+      margin-bottom:35px;
+      padding-bottom:25px;
+      border-bottom:1px solid #eaecf0;
+    }
+
+    .project:last-child{
+      border-bottom:none;
+      margin-bottom:0;
+      padding-bottom:0;
+    }
+
+    .project-info{
+      flex:1;
+    }
+
+    .project-info h3{
+      margin:0 0 10px;
+      font-size:24px;
+      font-weight:normal;
+    }
+
+    .links{
+      margin-top:10px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .links a{
+      background:#eaecf0;
+      padding:6px 12px;
+      border-radius:4px;
+      font-size:14px;
+      border:1px solid #c8ccd1;
+    }
+
+    footer{
+      margin-top:60px;
+      padding-top:20px;
+      border-top:1px solid #a2a9b1;
+      color:#54595d;
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    @media(max-width:900px){
+
+      .intro{
+        flex-direction:column-reverse;
+      }
+
+      .infobox{
+        width:100%;
+      }
+
+      .project{
+        flex-direction:column;
+      }
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div class="topbar">
+
+    <div>
+
+      <div class="logo-title">
+        Stazzboi.com
+      </div>
+
+      <div class="logo-sub">
+        Powered by the Stazzex
+      </div>
+
+      <div class="wiki-nav">
+
+        <a href="/stazzeria">
+          Stazzeria
+        </a>
+
+        <a href="/stazzology">
+          Stazzology
+        </a>
+
+        <a href="/stazzlies">
+          The Stazzlies
+        </a>
+
+        <a href="/stazzex">
+          The Stazzex
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="page">
+
+    <h1>
+      War General of Stazzeria
+    </h1>
+
+    <div class="intro">
+
+      <div class="intro-text">
+
+        <p>
+          The <b>War General of Stazzeria</b> is the primary military and conflict authority of Stazzeria—a sovereign NATION and collective built around the Stazzerian identity, culture, and ideals.
+        </p>
+
+        <p>
+          The role serves as the chief defensive and strategic leadership position within the Stazzerian structure and operates as a protector of national stability, symbolic strength, and internal order.
+        </p>
+
+        <p>
+          The role combines elements of military leadership, strategic authority, defensive coordination, symbolic enforcement, and national protection.
+        </p>
+
+        <h2>
+          Key facts
+        </h2>
+
+        <ul>
+
+          <li>
+            <b>Current Officeholder:</b> John B. Stazzland
+          </li>
+
+          <li>
+            <b>Position:</b> War General of Stazzeria
+          </li>
+
+          <li>
+            <b>Role:</b> Supreme Military Authority
+          </li>
+
+          <li>
+            <b>Affiliation:</b> Department of Stazz
+          </li>
+
+          <li>
+            <b>Known for:</b> Strategic leadership, conflict authority, and national defense
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="infobox">
+
+        <div class="infobox-title">
+          War General of Stazzeria
+        </div>
+
+        <img
+          src="mstazzerianpfp.png"
+          class="hero-image"
+          alt="John B. Stazzland, War General of Stazzeria"
+        >
+
+        <table>
+
+          <tr>
+            <td class="label">
+              Officeholder
+            </td>
+
+            <td>
+              John B. Stazzland
+            </td>
+          </tr>
+
+          <tr>
+            <td class="label">
+              Position
+            </td>
+
+            <td>
+              War General of Stazzeria
+            </td>
+          </tr>
+
+          <tr>
+            <td class="label">
+              Role
+            </td>
+
+            <td>
+              Supreme Military Authority
+            </td>
+          </tr>
+
+          <tr>
+            <td class="label">
+              Affiliation
+            </td>
+
+            <td>
+              Department of Stazz
+            </td>
+          </tr>
+
+          <tr>
+            <td class="label">
+              President
+            </td>
+
+            <td>
+
+              <a href="/stazzboi">
+                Kelvin Stazzland
+              </a>
+
+            </td>
+          </tr>
+
+          <tr>
+            <td class="label">
+              Vice President
+            </td>
+
+            <td>
+
+              <a href="/vice-president">
+                Isaac BeachyBird Ochoa
+              </a>
+
+            </td>
+          </tr>
+
+        </table>
+
+      </div>
+
+    </div>
+    <h2>
+      Role and Authority
+    </h2>
+
+    <div class="section-text">
+
+      <p>
+        The current War General is <b>John B.</b>, also referred to as <b>John B. Stazzland</b>.
+      </p>
+
+      <p>
+        Unlike a traditional military commander, the War General of Stazzeria operates as the symbolic defender of the Stazzerian NATION, the chief authority during national conflicts and challenges, a strategic enforcer of Stazzerian unity and order, and a major leadership figure within the Stazz Universe.
+      </p>
+
+    </div>
+
+    <h2>
+      Responsibilities
+    </h2>
+
+    <div class="section-text">
+
+      <p>
+        The position oversees conflict response and coordination, defensive strategy, protection of national symbolism and structure, ceremonial and symbolic military authority, internal stability during periods of challenge, and preservation of Stazzerian strength and continuity.
+      </p>
+
+      <p>
+        The War General of Stazzeria serves as the supreme military authority, national defender, and strategic protector of the Stazzerian NATION and collective.
+      </p>
+
+    </div>
+
+    <details>
+
+      <summary>
+        Department of Stazz
+      </summary>
+
+      <div class="project-content">
+
+        <div class="project">
+
+          <div class="project-info">
+
+            <h3>
+              President Kelvin Stazzland
+            </h3>
+
+            <p>
+              Founder of Stazzeria, creator of Stazzism, and President of the Stazzerian NATION.
+            </p>
+
+            <div class="links">
+
+              <a href="/stazzboi">
+                Learn More
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="project">
+
+          <div class="project-info">
+
+            <h3>
+              Vice President Isaac BeachyBird Ochoa
+            </h3>
+
+            <p>
+              Principal executive support authority and secondary leadership position within the Stazzerian structure.
+            </p>
+
+            <div class="links">
+
+              <a href="/vice-president">
+                Learn More
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="project">
+
+          <div class="project-info">
+
+            <h3>
+              First Lady LeAnn Stazzland
+            </h3>
+
+            <p>
+              Head Stazzlie and leading ceremonial female authority of the Stazzerian NATION.
+            </p>
+
+            <div class="links">
+
+              <a href="/1stlady">
+                Learn More
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </details>
+
+    <footer>
+
+      This page was last edited on June 2, 2026.<br><br>
+
+      Powered by the Stazzex archival system.
+
+    </footer>
+
+  </div>
+
+</body>
+</html>
