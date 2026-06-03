@@ -1,448 +1,101 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 body{
-    background:#0b0b0b;
+    margin:0;
+    background:#0f0f0f;
     color:white;
     font-family:Arial,sans-serif;
 }
 
-/* HERO */
+.page{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
 
-.hero{
-    position:relative;
-    min-height:100vh;
+h1{
+    text-align:center;
+    font-size:48px;
+    margin-bottom:10px;
+}
 
+.subtitle{
+    text-align:center;
+    color:#b8b8b8;
+    margin-bottom:60px;
+}
+
+.main-logo{
+    width:250px;
+    display:block;
+    margin:0 auto 50px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:36px;
+}
+
+.teams-section{
     display:flex;
     justify-content:center;
     align-items:center;
-
-    text-align:center;
-
-    background:
-    linear-gradient(
-        rgba(0,0,0,.8),
-        rgba(0,0,0,.9)
-    );
-
-    border-bottom:2px solid #ffd700;
+    gap:70px;
+    flex-wrap:wrap;
 }
 
-.hero-overlay{
-    padding:40px;
-}
-
-.stazzology-logo{
-    width:220px;
-    max-width:80%;
-    margin-bottom:30px;
-}
-
-.hero h1{
-
-    font-size:5rem;
-
-    color:#ffd700;
-
-    letter-spacing:10px;
-
-    text-shadow:
-    0 0 10px #ffd700,
-    0 0 25px #ffd700;
-
-}
-
-.tagline{
-
-    margin-top:20px;
-
-    font-size:1.2rem;
-
-    color:#ccc;
-
-    letter-spacing:3px;
-
-}
-
-/* SECTION TITLES */
-
-section h2{
-
-    text-align:center;
-
-    color:#ffd700;
-
-    font-size:2.5rem;
-
-    margin-bottom:40px;
-
-    text-transform:uppercase;
-
-    letter-spacing:4px;
-
-}
-
-/* BUTTONS */
-
-.gold-button{
-
-    display:inline-block;
-
-    margin-top:25px;
-
-    padding:14px 32px;
-
-    color:black;
-
-    background:#ffd700;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    border-radius:8px;
-
+.team-link{
     transition:.3s;
-
 }
 
-.gold-button:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:
-    0 0 20px #ffd700,
-    0 0 40px rgba(255,215,0,.7);
-
-}/* BITES & BATTLES */
-
-.bnb-section{
-
-    max-width:1400px;
-
-    margin:auto;
-
-    padding:100px 40px;
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:50px;
-
-    align-items:center;
-
+.team-link:hover{
+    transform:scale(1.08);
 }
 
-.bnb-image img{
-
-    width:100%;
-
-    border-radius:20px;
-
-    border:2px solid rgba(255,215,0,.3);
-
-    transition:.3s;
-
-}
-
-.bnb-image img:hover{
-
-    transform:translateY(-5px);
-
-    box-shadow:
-    0 0 25px rgba(255,215,0,.5),
-    0 0 60px rgba(255,215,0,.3);
-
-}
-
-.bnb-info p{
-
-    color:#ccc;
-
-    line-height:1.8;
-
-    font-size:1.1rem;
-
-}
-
-/* TEAM SECTION */
-
-.teams{
-
-    padding:100px 40px;
-
-}
-
-.team-grid{
-
-    max-width:1400px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
-
-    gap:40px;
-
-}
-
-.team-card{
-
-    background:#111;
-
-    border:2px solid rgba(255,215,0,.15);
-
-    border-radius:20px;
-
-    padding:40px 20px;
-
-    text-align:center;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-.team-card img{
-
-    width:150px;
-
+.team-icon{
+    width:180px;
     height:auto;
-
-    margin-bottom:25px;
-
 }
 
-.team-card h3{
-
-    color:#ffd700;
-
-    letter-spacing:4px;
-
-    margin-bottom:10px;
-
+.frost-glow img{
+    filter:drop-shadow(0 0 25px #00bfff);
 }
 
-.team-card p{
-
-    color:#aaa;
-
+.integrity-glow img{
+    filter:drop-shadow(0 0 25px #c0c0c0);
 }
 
-/* GAME MENU HOVER */
-
-.team-card:hover{
-
-    transform:
-    translateY(-10px)
-    scale(1.05);
-
+.valor-glow img{
+    filter:drop-shadow(0 0 25px #ff2a2a);
 }
 
-/* FROST */
-
-.frost:hover{
-
-    border-color:#00aaff;
-
-    box-shadow:
-    0 0 20px #00aaff,
-    0 0 50px rgba(0,170,255,.8),
-    0 0 90px rgba(0,170,255,.4);
-
+.kingdom-glow img{
+    filter:drop-shadow(0 0 25px #ffd700);
 }
 
-/* VALOR */
-
-.valor:hover{
-
-    border-color:red;
-
-    box-shadow:
-    0 0 20px red,
-    0 0 50px rgba(255,0,0,.8),
-    0 0 90px rgba(255,0,0,.4);
-
+.frost-glow:hover img{
+    filter:drop-shadow(0 0 40px #00bfff);
 }
 
-/* KINGDOM */
-
-.kingdom:hover{
-
-    border-color:gold;
-
-    box-shadow:
-    0 0 20px gold,
-    0 0 50px rgba(255,215,0,.8),
-    0 0 90px rgba(255,215,0,.4);
-
+.integrity-glow:hover img{
+    filter:drop-shadow(0 0 40px #c0c0c0);
 }
 
-/* INTEGRITY */
-
-.integrity:hover{
-
-    border-color:silver;
-
-    box-shadow:
-    0 0 20px silver,
-    0 0 50px rgba(220,220,220,.8),
-    0 0 90px rgba(220,220,220,.4);
-
-}/* HIGHLIGHTS */
-
-.highlights{
-
-    padding:100px 40px;
-
+.valor-glow:hover img{
+    filter:drop-shadow(0 0 40px #ff2a2a);
 }
 
-.highlight-grid{
-
-    max-width:1400px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
-
-    gap:40px;
-
+.kingdom-glow:hover img{
+    filter:drop-shadow(0 0 40px #ffd700);
 }
-
-.highlight-card{
-
-    background:#111;
-
-    border:1px solid rgba(255,215,0,.15);
-
-    border-radius:20px;
-
-    padding:40px;
-
-    transition:.3s;
-
-}
-
-.highlight-card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:
-    0 0 20px rgba(255,215,0,.4);
-
-}
-
-.highlight-card h3{
-
-    color:#ffd700;
-
-    margin-bottom:20px;
-
-    letter-spacing:2px;
-
-}
-
-.highlight-card p{
-
-    color:#bbb;
-
-    line-height:1.8;
-
-}
-
-/* JOIN SECTION */
-
-.join-section{
-
-    padding:120px 40px;
-
-    text-align:center;
-
-    border-top:1px solid rgba(255,215,0,.15);
-
-}
-
-.join-section p{
-
-    color:#aaa;
-
-    font-size:1.2rem;
-
-    margin-top:20px;
-
-}
-
-/* FOOTER */
-
-footer{
-
-    text-align:center;
-
-    padding:40px;
-
-    border-top:1px solid rgba(255,215,0,.15);
-
-}
-
-footer p{
-
-    color:#666;
-
-    letter-spacing:3px;
-
-}
-
-/* MOBILE */
 
 @media(max-width:900px){
 
-    .hero h1{
-
-        font-size:3rem;
-
+    .teams-section{
+        gap:40px;
     }
 
-    .bnb-section{
-
-        grid-template-columns:1fr;
-
-    }
-
-}
-
-@media(max-width:600px){
-
-    .hero h1{
-
-        font-size:2.3rem;
-
-        letter-spacing:5px;
-
-    }
-
-    section h2{
-
-        font-size:1.8rem;
-
-    }
-
-    .teams,
-    .highlights,
-    .join-section,
-    .bnb-section{
-
-        padding:70px 20px;
-
+    .team-icon{
+        width:140px;
     }
 
 }
