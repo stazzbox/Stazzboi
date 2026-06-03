@@ -1,772 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO -->
-
-  <title>
-    STAZZOLOGY | Competitive Stazzerian Entertainment
-  </title>
-
-  <meta
-    name="description"
-    content="Official STAZZOLOGY platform featuring competitive CODM events, Stazzerian teams, esports promotions, Bites and Battles tournaments, and Stazz Universe competitive entertainment."
-  />
-
-  <meta
-    name="keywords"
-    content="STAZZOLOGY, CODM, Call of Duty Mobile, Bites and Battles, Stazzboi, Stazzeria, esports, Stazz Universe, Frost, Valor, Kingdom, Integrity"
-  />
-
-  <meta name="author" content="STAZZOLOGY" />
-
-  <!-- OPEN GRAPH -->
-
-  <meta
-    property="og:title"
-    content="STAZZOLOGY"
-  />
-
-  <meta
-    property="og:description"
-    content="Competitive Stazzerian entertainment and esports."
-  />
-
-  <meta
-    property="og:type"
-    content="website"
-  />
-
-  <meta
-    property="og:url"
-    content="https://stazzology.stazzboi.com"
-  />
-
-  <meta
-    property="og:image"
-    content="https://stazzology.stazzboi.com/assets/logos/Stazzology-Logo.jpg"
-  />
-
-  <link
-    rel="icon"
-    href="/stazzology/assets/logos/Stazzology-Logo.jpg"
-  />
-
-  <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
-    body{
-      background:#050505;
-      color:white;
-      font-family:Arial, Helvetica, sans-serif;
-      overflow-x:hidden;
-    }
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-    img{
-      max-width:100%;
-      display:block;
-    }
-
-    :root{
-      --gold:#d4af37;
-      --border:rgba(255,255,255,0.08);
-    }
-
-    /* NAV */
-
-    nav{
-      width:100%;
-      padding:22px 6%;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      position:sticky;
-      top:0;
-      z-index:999;
-      backdrop-filter:blur(10px);
-      background:rgba(0,0,0,0.82);
-      border-bottom:1px solid var(--border);
-    }
-
-    .nav-left{
-      display:flex;
-      align-items:center;
-      gap:14px;
-    }
-
-    .nav-left img{
-      width:46px;
-      border-radius:50%;
-    }
-
-    .nav-links{
-      display:flex;
-      gap:28px;
-    }
-
-    .nav-links a:hover{
-      color:var(--gold);
-    }
-
-    /* HERO */
-
-    .hero{
-      min-height:100vh;
-      display:grid;
-      grid-template-columns:1.1fr 1fr;
-      align-items:center;
-      gap:60px;
-      padding:120px 6%;
-      position:relative;
-    }
-
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(0,0,0,0.92),
-          rgba(0,0,0,0.97)
-        ),
-        url("/stazzology/assets/media/BnB.jpg");
-      background-size:cover;
-      background-position:center;
-      opacity:0.14;
-    }
-
-    .hero-content{
-      position:relative;
-      z-index:2;
-    }
-
-    .hero-subtitle{
-      color:var(--gold);
-      letter-spacing:3px;
-      text-transform:uppercase;
-      margin-bottom:18px;
-      font-size:0.85rem;
-    }
-
-    .hero h1{
-      font-size:clamp(3rem,7vw,6rem);
-      line-height:1;
-      margin-bottom:28px;
-    }
-
-    .hero p{
-      color:#c1c1c1;
-      line-height:1.9;
-      margin-bottom:38px;
-      max-width:720px;
-    }
-
-    .hero-buttons{
-      display:flex;
-      gap:18px;
-      flex-wrap:wrap;
-    }
-
-    .btn{
-      padding:15px 28px;
-      border-radius:8px;
-      font-weight:bold;
-      transition:0.3s ease;
-    }
-
-    .btn-gold{
-      background:var(--gold);
-      color:black;
-    }
-
-    .btn-outline{
-      border:1px solid var(--gold);
-      color:var(--gold);
-    }
-
-    .btn:hover{
-      transform:translateY(-3px);
-    }
-
-    .hero-image{
-      position:relative;
-      z-index:2;
-    }
-
-    .hero-image img{
-      border-radius:22px;
-      border:1px solid var(--border);
-    }
-
-    /* SECTION */
-
-    section{
-      padding:100px 6%;
-    }
-
-    .section-title{
-      font-size:2.8rem;
-      margin-bottom:22px;
-    }
-
-    .gold{
-      color:var(--gold);
-    }
-
-    .section-description{
-      color:#bdbdbd;
-      line-height:1.9;
-      max-width:900px;
-      margin-bottom:50px;
-    }
-
-    /* EVENTS */
-
-    .event-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:28px;
-    }
-
-    .event-card{
-      background:#0d0d0d;
-      border:1px solid var(--border);
-      border-radius:20px;
-      overflow:hidden;
-      transition:0.3s ease;
-    }
-
-    .event-card:hover{
-      transform:translateY(-6px);
-      border-color:rgba(212,175,55,0.35);
-    }
-
-    .event-card img{
-      width:100%;
-      height:260px;
-      object-fit:cover;
-    }
-
-    .event-content{
-      padding:28px;
-    }
-
-    .event-content h3{
-      margin-bottom:16px;
-      font-size:1.5rem;
-    }
-
-    .event-content p{
-      color:#c1c1c1;
-      line-height:1.8;
-    }
-
-    /* TEAMS */
-
-    .team-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:28px;
-      margin-top:50px;
-    }
-
-    .team-card{
-      background:#0d0d0d;
-      border:1px solid var(--border);
-      border-radius:18px;
-      padding:32px;
-      text-align:center;
-      transition:0.3s ease;
-    }
-
-    .team-card:hover{
-      transform:translateY(-5px);
-      border-color:rgba(212,175,55,0.35);
-    }
-
-    .team-card img{
-      width:120px;
-      margin:auto;
-      margin-bottom:24px;
-    }
-
-    .team-card h3{
-      font-size:1.4rem;
-      margin-bottom:14px;
-    }
-
-    .team-card p{
-      color:#c1c1c1;
-      line-height:1.7;
-    }
-
-    /* BNB */
-
-    .bnb-section{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:50px;
-      align-items:center;
-    }
-
-    .bnb-section img{
-      border-radius:24px;
-      border:1px solid var(--border);
-    }
-
-    .bnb-content h2{
-      font-size:3rem;
-      margin-bottom:24px;
-    }
-
-    .bnb-content p{
-      color:#c2c2c2;
-      line-height:1.9;
-      margin-bottom:20px;
-    }
-
-    /* STAZZEX NOTE */
-
-    .stazzex-note{
-      margin-top:70px;
-      background:rgba(255,255,255,0.03);
-      border-left:4px solid var(--gold);
-      padding:30px;
-      border-radius:14px;
-    }
-
-    .stazzex-note h4{
-      color:var(--gold);
-      margin-bottom:16px;
-      letter-spacing:2px;
-    }
-
-    .stazzex-note p{
-      color:#d0d0d0;
-      line-height:1.9;
-    }
-
-    /* FOOTER */
-
-    footer{
-      padding:50px 6%;
-      border-top:1px solid var(--border);
-      text-align:center;
-      color:#9d9d9d;
-    }
-
-    @media(max-width:1000px){
-
-      .hero,
-      .bnb-section{
-        grid-template-columns:1fr;
-      }
-
-    }
-
-    @media(max-width:900px){
-
-      .nav-links{
-        display:none;
-      }
-
-    }
-
-  </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STAZZOLOGY</title>
+<meta
+name="description"
+content="Official Stazzology page featuring teams, events, highlights, and community competition."
+>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-  <!-- NAV -->
-
-  <nav>
-
-    <div class="nav-left">
-
-      <img
-        src="/stazzology/assets/logos/Stazzology-Logo.jpg"
-        alt="STAZZOLOGY Logo"
-      />
-
-      <strong>
-        STAZZOLOGY
-      </strong>
-
+<!-- HERO -->
+<header class="hero">
+    <div class="hero-overlay">
+        <img
+        src="assets/logos/STAZZOLOGY.png"
+        class="stazzology-logo"
+        alt="STAZZOLOGY Logo">
+        <h1>STAZZOLOGY</h1>
+        <p class="tagline">
+            Competition • Brotherhood • Legacy
+        </p>
     </div>
-
-    <div class="nav-links">
-
-      <a href="/">
-        Home
-      </a>
-
-      <a href="/stazzeria/">
-        Stazzeria
-      </a>
-
-      <a href="/stazzboi/">
-        Stazzboi
-      </a>
-
-      <a href="/stazzex/">
-        STAZZEX
-      </a>
-
+</header>
+<!-- BITES & BATTLES -->
+<section class="bnb-section">
+    <div class="bnb-image">
+        <img
+        src="assets/media/BnB.jpg"
+        alt="Bites and Battles Event">
     </div>
-
-  </nav>
-
-  <!-- HERO -->
-
-  <section class="hero">
-
-    <div class="hero-content">
-
-      <div class="hero-subtitle">
-        Competitive Stazzerian Entertainment
-      </div>
-
-      <h1>
-        <span class="gold">STAZZOLOGY</span>
-      </h1>
-
-      <p>
-        STAZZOLOGY is the competitive entertainment and esports division of the Stazz Universe, focused on CODM competition, live events, tournament culture, team rivalries, and organized Stazzerian gaming entertainment.
-      </p>
-
-      <div class="hero-buttons">
-
-        <a
-          href="/stazzex/"
-          class="btn btn-gold"
-        >
-          View STAZZEX
+    <div class="bnb-info">
+        <h2>Bites & Battles</h2>
+        <p>
+            Bites & Battles brings together food,
+            gaming, rivalries, and unforgettable
+            moments across the Stazzology teams.
+        </p>
+        <a href="#" class="gold-button">
+            Learn More
         </a>
-
-        <a
-          href="/stazzboi/"
-          class="btn btn-outline"
-        >
-          View Stazzboi
-        </a>
-
-      </div>
-
     </div>
-
-    <div class="hero-image">
-
-      <img
-        src="/stazzology/assets/logos/Stazzology-Logo.jpg"
-        alt="STAZZOLOGY"
-      />
-
-    </div>
-
-  </section>
-
-  <!-- EVENTS -->
-
-  <section>
-
-    <h2 class="section-title">
-      Featured <span class="gold">Events</span>
-    </h2>
-
-    <p class="section-description">
-      STAZZOLOGY events combine esports presentation, faction rivalry, competitive identity, tournament culture, and Stazzerian entertainment into large-scale CODM event experiences.
-    </p>
-
-    <div class="event-grid">
-
-      <!-- AAO -->
-
-      <div class="event-card">
-
-        <img
-          src="/stazzology/assets/events/AAO.PNG"
-          alt="Against All Odds"
-        />
-
-        <div class="event-content">
-
-          <h3>
-            Against All Odds
-          </h3>
-
-          <p>
-            Competitive event associated with resilience, rivalry escalation, and underdog momentum within STAZZOLOGY competition.
-          </p>
-
-        </div>
-
-      </div>
-
-      <!-- SHOWDOWN -->
-
-      <div class="event-card">
-
-        <img
-          src="/stazzology/assets/events/Showdown.PNG"
-          alt="Showdown"
-        />
-
-        <div class="event-content">
-
-          <h3>
-            Showdown
-          </h3>
-
-          <p>
-            High-intensity event structure focused on direct competitive confrontation and decisive faction competition.
-          </p>
-
-        </div>
-
-      </div>
-
-      <!-- TAKEOVER -->
-
-      <div class="event-card">
-
-        <img
-          src="/stazzology/assets/events/STakeover.PNG"
-          alt="Takeover"
-        />
-
-        <div class="event-content">
-
-          <h3>
-            Takeover
-          </h3>
-
-          <p>
-            Event centered around dominance, expansion, strategic pressure, and competitive control within STAZZOLOGY.
-          </p>
-
-        </div>
-
-      </div>
-
-      <!-- WARGAMES -->
-
-      <div class="event-card">
-
-        <img
-          src="/stazzology/assets/events/SWarGames.PNG"
-          alt="WARGAMES"
-        />
-
-        <div class="event-content">
-
-          <h3>
-            WARGAMES
-          </h3>
-
-          <p>
-            Large-scale competitive conflict event associated with faction warfare, tactical competition, and organizational rivalry.
-          </p>
-
-        </div>
-
-      </div>
-
-      <!-- STAZZEX SERIES -->
-
-      <div class="event-card">
-
-        <img
-          src="/stazzology/assets/events/StazzexSeries.PNG"
-          alt="Stazzex Series Finals"
-        />
-
-        <div class="event-content">
-
-          <h3>
-            Stazzex Series Finals
-          </h3>
-
-          <p>
-            Championship-level event structure connected to elite competition, rankings, and high-stakes STAZZOLOGY finals.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- TEAMS -->
-
-  <section>
-
-    <h2 class="section-title">
-      Competitive <span class="gold">Teams</span>
-    </h2>
-
-    <p class="section-description">
-      STAZZOLOGY competition is organized around recognizable Stazzerian factions representing different identities, rivalries, strategies, and competitive philosophies.
-    </p>
-
+</section>
+<!-- TEAM SELECTION -->
+<section class="teams">
+    <h2>Choose Your Team</h2>
     <div class="team-grid">
-
-      <!-- FROST -->
-
-      <div class="team-card">
-
-        <img
-          src="/stazzology/assets/teams/STZFrost.png"
-          alt="Frost"
-        />
-
-        <h3>
-          Frost
-        </h3>
-
-        <p>
-          Tactical faction associated with composure, discipline, and calculated competitive execution.
-        </p>
-
-      </div>
-
-      <!-- VALOR -->
-
-      <div class="team-card">
-
-        <img
-          src="/stazzology/assets/teams/STZValor.PNG"
-          alt="Valor"
-        />
-
-        <h3>
-          Valor
-        </h3>
-
-        <p>
-          Competitive faction recognized for aggression, confidence, and offensive momentum.
-        </p>
-
-      </div>
-
-      <!-- KINGDOM -->
-
-      <div class="team-card">
-
-        <img
-          src="/stazzology/assets/teams/StzKingdom.png"
-          alt="Kingdom"
-        />
-
-        <h3>
-          Kingdom
-        </h3>
-
-        <p>
-          Organizational faction associated with structure, dominance, and unified strategic control.
-        </p>
-
-      </div>
-
-      <!-- INTEGRITY -->
-
-      <div class="team-card">
-
-        <img
-          src="/stazzology/assets/teams/STZIntegrity.png"
-          alt="Integrity"
-        />
-
-        <h3>
-          Integrity
-        </h3>
-
-        <p>
-          Faction centered around discipline, consistency, reliability, and competitive standards.
-        </p>
-
-      </div>
-
+        <!-- Frost -->
+        <div class="team-card frost">
+            <img
+            src="../teams/STZFrost.png"
+            alt="Frost Team Logo">
+            <h3>FROST</h3>
+            <p>Blue Division</p>
+        </div>
+        <!-- Valor -->
+        <div class="team-card valor">
+            <img
+            src="../teams/STZValor.PNG"
+            alt="Valor Team Logo">
+            <h3>VALOR</h3>
+            <p>Red Division</p>
+        </div>
+        <!-- Kingdom -->
+        <div class="team-card kingdom">
+            <img
+            src="../teams/StzKingdom.png"
+            alt="Kingdom Team Logo">
+            <h3>KINGDOM</h3>
+            <p>Golden Division</p>
+        </div>
+        <!-- Integrity -->
+        <div class="team-card integrity">
+            <img
+            src="../teams/STZIntegrity.png"
+            alt="Integrity Team Logo">
+            <h3>INTEGRITY</h3>
+            <p>Silver Division</p>
+        </div>
     </div>
-
-  </section>
-
-  <!-- BNB -->
-
-  <section>
-
-    <div class="bnb-section">
-
-      <img
-        src="/stazzology/assets/media/BnB.jpg"
-        alt="Bites and Battles"
-      />
-
-      <div class="bnb-content">
-
-        <h2>
-          Bites and <span class="gold">Battles</span>
-        </h2>
-
-        <p>
-          Bites and Battles is one of the most recognizable live STAZZOLOGY competitive events associated with CODM tournament culture and Stazzerian gaming entertainment.
-        </p>
-
-        <p>
-          Hosted in Hemet, California at MegaBites Arcade, the event combines esports competition, faction rivalries, live community interaction, and organized Stazzerian entertainment presentation.
-        </p>
-
-        <p>
-          The event is strongly associated with The Aimbot Kelvin “Stazzboi” Stazzland and the expansion of STAZZOLOGY competitive identity.
-        </p>
-
-      </div>
-
+</section> <!-- HIGHLIGHTS -->
+<section class="highlights">
+    <h2>Latest Highlights</h2>
+    <div class="highlight-grid">
+        <div class="highlight-card">
+            <h3>Events</h3>
+            <p>
+                Major competitions, gatherings,
+                and special Stazzology moments.
+            </p>
+        </div>
+        <div class="highlight-card">
+            <h3>Media</h3>
+            <p>
+                Photos, videos, and memorable
+                moments from across the teams.
+            </p>
+        </div>
+        <div class="highlight-card">
+            <h3>Community</h3>
+            <p>
+                Brotherhood, rivalry, and the
+                spirit that defines Stazzology.
+            </p>
+        </div>
     </div>
-
-    <!-- STAZZEX NOTE -->
-
-    <div class="stazzex-note">
-
-      <h4>
-        STAZZEX NOTE
-      </h4>
-
-      <p>
-        STAZZOLOGY is formally recognized within The STAZZEX as the competitive entertainment and esports division of the Stazz Universe, associated with CODM competition, organized gaming culture, faction systems, tournament events, and Stazzerian competitive identity.
-      </p>
-
-    </div>
-
-  </section>
-
-  <!-- FOOTER -->
-
-  <footer>
-
+</section>
+<!-- JOIN -->
+<section class="join-section">
+    <h2>Join The Community</h2>
     <p>
-      © STAZZOLOGY — Competitive Stazzerian Entertainment
+        Four teams. One legacy.
     </p>
-
-  </footer>
-
+    <a href="#" class="gold-button">
+        Enter STAZZOLOGY
+    </a>
+</section>
+<!-- FOOTER -->
+<footer>
+    <p>
+        © STAZZOLOGY
+    </p>
+</footer>
 </body>
+</html> *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background:#0b0b0b;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+/* HERO */
+.hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:
+    linear-gradient(
+        rgba(0,0,0,.8),
+        rgba(0,0,0,.9)
+    );
+    border-bottom:2px solid #ffd700;
+}
+.hero-overlay{
+    padding:40px;
+}
+.stazzology-logo{
+    width:220px;
+    max-width:80%;
+    margin-bottom:30px;
+}
+.hero h1{
+    font-size:5rem;
+    color:#ffd700;
+    letter-spacing:10px;
+    text-shadow:
+    0 0 10px #ffd700,
+    0 0 25px #ffd700;
+}
+.tagline{
+    margin-top:20px;
+    font-size:1.2rem;
+    color:#ccc;
+    letter-spacing:3px;
+}
+/* SECTION TITLES */
+section h2{
+    text-align:center;
+    color:#ffd700;
+    font-size:2.5rem;
+    margin-bottom:40px;
+    text-transform:uppercase;
+    letter-spacing:4px;
+}
+/* BUTTONS */
+.gold-button{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 32px;
+    color:black;
+    background:#ffd700;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:8px;
+    transition:.3s;
+}
+.gold-button:hover{
+    transform:translateY(-3px);
+    box-shadow:
+    0 0 20px #ffd700,
+    0 0 40px rgba(255,215,0,.7);
+} /* BITES & BATTLES */
+.bnb-section{
+    max-width:1400px;
+    margin:auto;
+    padding:100px 40px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+.bnb-image img{
+    width:100%;
+    border-radius:20px;
+    border:2px solid rgba(255,215,0,.3);
+    transition:.3s;
+}
+.bnb-image img:hover{
+    transform:translateY(-5px);
+    box-shadow:
+    0 0 25px rgba(255,215,0,.5),
+    0 0 60px rgba(255,215,0,.3);
+}
+.bnb-info p{
+    color:#ccc;
+    line-height:1.8;
+    font-size:1.1rem;
+}
+/* TEAM SECTION */
+.teams{
+    padding:100px 40px;
+}
+.team-grid{
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+}
+.team-card{
+    background:#111;
+    border:2px solid rgba(255,215,0,.15);
+    border-radius:20px;
+    padding:40px 20px;
+    text-align:center;
+    cursor:pointer;
+    transition:.3s;
+}
+.team-card img{
+    width:150px;
+    height:auto;
+    margin-bottom:25px;
+}
+.team-card h3{
+    color:#ffd700;
+    letter-spacing:4px;
+    margin-bottom:10px;
+}
+.team-card p{
+    color:#aaa;
+}
+/* GAME MENU HOVER */
+.team-card:hover{
+    transform:
+    translateY(-10px)
+    scale(1.05);
+}
+/* FROST */
+.frost:hover{
+    border-color:#00aaff;
+    box-shadow:
+    0 0 20px #00aaff,
+    0 0 50px rgba(0,170,255,.8),
+    0 0 90px rgba(0,170,255,.4);
+}
+/* VALOR */
+.valor:hover{
+    border-color:red;
+    box-shadow:
+    0 0 20px red,
+    0 0 50px rgba(255,0,0,.8),
+    0 0 90px rgba(255,0,0,.4);
+}
+/* KINGDOM */
+.kingdom:hover{
+    border-color:gold;
+    box-shadow:
+    0 0 20px gold,
+    0 0 50px rgba(255,215,0,.8),
+    0 0 90px rgba(255,215,0,.4);
+}
+/* INTEGRITY */
+.integrity:hover{
+    border-color:silver;
+    box-shadow:
+    0 0 20px silver,
+    0 0 50px rgba(220,220,220,.8),
+    0 0 90px rgba(220,220,220,.4);
+} /* HIGHLIGHTS */
+.highlights{
+    padding:100px 40px;
+}
+.highlight-grid{
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+}
+.highlight-card{
+    background:#111;
+    border:1px solid rgba(255,215,0,.15);
+    border-radius:20px;
+    padding:40px;
+    transition:.3s;
+}
+.highlight-card:hover{
+    transform:translateY(-8px);
+    box-shadow:
+    0 0 20px rgba(255,215,0,.4);
+}
+.highlight-card h3{
+    color:#ffd700;
+    margin-bottom:20px;
+    letter-spacing:2px;
+}
+.highlight-card p{
+    color:#bbb;
+    line-height:1.8;
+}
+/* JOIN SECTION */
+.join-section{
+    padding:120px 40px;
+    text-align:center;
+    border-top:1px solid rgba(255,215,0,.15);
+}
+.join-section p{
+    color:#aaa;
+    font-size:1.2rem;
+    margin-top:20px;
+}
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:40px;
+    border-top:1px solid rgba(255,215,0,.15);
+}
+footer p{
+    color:#666;
+    letter-spacing:3px;
+}
+/* MOBILE */
+@media(max-width:900px){
+    .hero h1{
+        font-size:3rem;
+    }
+    .bnb-section{
+        grid-template-columns:1fr;
+    }
+}
+@media(max-width:600px){
+    .hero h1{
+        font-size:2.3rem;
+        letter-spacing:5px;
+    }
+    section h2{
+        font-size:1.8rem;
+    }
+    .teams,
+    .highlights,
+    .join-section,
+    .bnb-section{
+        padding:70px 20px;
+    }
+}
 
-</html>
