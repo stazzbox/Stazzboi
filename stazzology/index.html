@@ -1,376 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>STAZZOLOGY</title>
+
 <meta
 name="description"
 content="Official Stazzology page featuring teams, events, highlights, and community competition."
 >
+
 <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
+
 <!-- HERO -->
+
 <header class="hero">
+
     <div class="hero-overlay">
+
         <img
         src="assets/logos/STAZZOLOGY.png"
         class="stazzology-logo"
         alt="STAZZOLOGY Logo">
+
         <h1>STAZZOLOGY</h1>
+
         <p class="tagline">
             Competition • Brotherhood • Legacy
         </p>
+
     </div>
+
 </header>
+
 <!-- BITES & BATTLES -->
+
 <section class="bnb-section">
+
     <div class="bnb-image">
+
         <img
         src="assets/media/BnB.jpg"
         alt="Bites and Battles Event">
+
     </div>
+
     <div class="bnb-info">
+
         <h2>Bites & Battles</h2>
+
         <p>
+
             Bites & Battles brings together food,
             gaming, rivalries, and unforgettable
             moments across the Stazzology teams.
+
         </p>
+
         <a href="#" class="gold-button">
+
             Learn More
+
         </a>
+
     </div>
+
 </section>
+
 <!-- TEAM SELECTION -->
+
 <section class="teams">
+
     <h2>Choose Your Team</h2>
+
     <div class="team-grid">
+
         <!-- Frost -->
+
         <div class="team-card frost">
+
             <img
             src="../teams/STZFrost.png"
             alt="Frost Team Logo">
+
             <h3>FROST</h3>
+
             <p>Blue Division</p>
+
         </div>
+
         <!-- Valor -->
+
         <div class="team-card valor">
+
             <img
             src="../teams/STZValor.PNG"
             alt="Valor Team Logo">
+
             <h3>VALOR</h3>
+
             <p>Red Division</p>
+
         </div>
+
         <!-- Kingdom -->
+
         <div class="team-card kingdom">
+
             <img
             src="../teams/StzKingdom.png"
             alt="Kingdom Team Logo">
+
             <h3>KINGDOM</h3>
+
             <p>Golden Division</p>
+
         </div>
+
         <!-- Integrity -->
+
         <div class="team-card integrity">
+
             <img
             src="../teams/STZIntegrity.png"
             alt="Integrity Team Logo">
+
             <h3>INTEGRITY</h3>
+
             <p>Silver Division</p>
+
         </div>
+
     </div>
-</section> <!-- HIGHLIGHTS -->
+
+</section><!-- HIGHLIGHTS -->
+
 <section class="highlights">
+
     <h2>Latest Highlights</h2>
+
     <div class="highlight-grid">
+
         <div class="highlight-card">
+
             <h3>Events</h3>
+
             <p>
                 Major competitions, gatherings,
                 and special Stazzology moments.
             </p>
+
         </div>
+
         <div class="highlight-card">
+
             <h3>Media</h3>
+
             <p>
                 Photos, videos, and memorable
                 moments from across the teams.
             </p>
+
         </div>
+
         <div class="highlight-card">
+
             <h3>Community</h3>
+
             <p>
                 Brotherhood, rivalry, and the
                 spirit that defines Stazzology.
             </p>
-        </div>
-    </div>
-</section>
-<!-- JOIN -->
-<section class="join-section">
-    <h2>Join The Community</h2>
-    <p>
-        Four teams. One legacy.
-    </p>
-    <a href="#" class="gold-button">
-        Enter STAZZOLOGY
-    </a>
-</section>
-<!-- FOOTER -->
-<footer>
-    <p>
-        © STAZZOLOGY
-    </p>
-</footer>
-</body>
-</html> *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-body{
-    background:#0b0b0b;
-    color:white;
-    font-family:Arial,sans-serif;
-}
-/* HERO */
-.hero{
-    position:relative;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:
-    linear-gradient(
-        rgba(0,0,0,.8),
-        rgba(0,0,0,.9)
-    );
-    border-bottom:2px solid #ffd700;
-}
-.hero-overlay{
-    padding:40px;
-}
-.stazzology-logo{
-    width:220px;
-    max-width:80%;
-    margin-bottom:30px;
-}
-.hero h1{
-    font-size:5rem;
-    color:#ffd700;
-    letter-spacing:10px;
-    text-shadow:
-    0 0 10px #ffd700,
-    0 0 25px #ffd700;
-}
-.tagline{
-    margin-top:20px;
-    font-size:1.2rem;
-    color:#ccc;
-    letter-spacing:3px;
-}
-/* SECTION TITLES */
-section h2{
-    text-align:center;
-    color:#ffd700;
-    font-size:2.5rem;
-    margin-bottom:40px;
-    text-transform:uppercase;
-    letter-spacing:4px;
-}
-/* BUTTONS */
-.gold-button{
-    display:inline-block;
-    margin-top:25px;
-    padding:14px 32px;
-    color:black;
-    background:#ffd700;
-    text-decoration:none;
-    font-weight:bold;
-    border-radius:8px;
-    transition:.3s;
-}
-.gold-button:hover{
-    transform:translateY(-3px);
-    box-shadow:
-    0 0 20px #ffd700,
-    0 0 40px rgba(255,215,0,.7);
-} /* BITES & BATTLES */
-.bnb-section{
-    max-width:1400px;
-    margin:auto;
-    padding:100px 40px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
-}
-.bnb-image img{
-    width:100%;
-    border-radius:20px;
-    border:2px solid rgba(255,215,0,.3);
-    transition:.3s;
-}
-.bnb-image img:hover{
-    transform:translateY(-5px);
-    box-shadow:
-    0 0 25px rgba(255,215,0,.5),
-    0 0 60px rgba(255,215,0,.3);
-}
-.bnb-info p{
-    color:#ccc;
-    line-height:1.8;
-    font-size:1.1rem;
-}
-/* TEAM SECTION */
-.teams{
-    padding:100px 40px;
-}
-.team-grid{
-    max-width:1400px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
-    gap:40px;
-}
-.team-card{
-    background:#111;
-    border:2px solid rgba(255,215,0,.15);
-    border-radius:20px;
-    padding:40px 20px;
-    text-align:center;
-    cursor:pointer;
-    transition:.3s;
-}
-.team-card img{
-    width:150px;
-    height:auto;
-    margin-bottom:25px;
-}
-.team-card h3{
-    color:#ffd700;
-    letter-spacing:4px;
-    margin-bottom:10px;
-}
-.team-card p{
-    color:#aaa;
-}
-/* GAME MENU HOVER */
-.team-card:hover{
-    transform:
-    translateY(-10px)
-    scale(1.05);
-}
-/* FROST */
-.frost:hover{
-    border-color:#00aaff;
-    box-shadow:
-    0 0 20px #00aaff,
-    0 0 50px rgba(0,170,255,.8),
-    0 0 90px rgba(0,170,255,.4);
-}
-/* VALOR */
-.valor:hover{
-    border-color:red;
-    box-shadow:
-    0 0 20px red,
-    0 0 50px rgba(255,0,0,.8),
-    0 0 90px rgba(255,0,0,.4);
-}
-/* KINGDOM */
-.kingdom:hover{
-    border-color:gold;
-    box-shadow:
-    0 0 20px gold,
-    0 0 50px rgba(255,215,0,.8),
-    0 0 90px rgba(255,215,0,.4);
-}
-/* INTEGRITY */
-.integrity:hover{
-    border-color:silver;
-    box-shadow:
-    0 0 20px silver,
-    0 0 50px rgba(220,220,220,.8),
-    0 0 90px rgba(220,220,220,.4);
-} /* HIGHLIGHTS */
-.highlights{
-    padding:100px 40px;
-}
-.highlight-grid{
-    max-width:1400px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
-    gap:40px;
-}
-.highlight-card{
-    background:#111;
-    border:1px solid rgba(255,215,0,.15);
-    border-radius:20px;
-    padding:40px;
-    transition:.3s;
-}
-.highlight-card:hover{
-    transform:translateY(-8px);
-    box-shadow:
-    0 0 20px rgba(255,215,0,.4);
-}
-.highlight-card h3{
-    color:#ffd700;
-    margin-bottom:20px;
-    letter-spacing:2px;
-}
-.highlight-card p{
-    color:#bbb;
-    line-height:1.8;
-}
-/* JOIN SECTION */
-.join-section{
-    padding:120px 40px;
-    text-align:center;
-    border-top:1px solid rgba(255,215,0,.15);
-}
-.join-section p{
-    color:#aaa;
-    font-size:1.2rem;
-    margin-top:20px;
-}
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:40px;
-    border-top:1px solid rgba(255,215,0,.15);
-}
-footer p{
-    color:#666;
-    letter-spacing:3px;
-}
-/* MOBILE */
-@media(max-width:900px){
-    .hero h1{
-        font-size:3rem;
-    }
-    .bnb-section{
-        grid-template-columns:1fr;
-    }
-}
-@media(max-width:600px){
-    .hero h1{
-        font-size:2.3rem;
-        letter-spacing:5px;
-    }
-    section h2{
-        font-size:1.8rem;
-    }
-    .teams,
-    .highlights,
-    .join-section,
-    .bnb-section{
-        padding:70px 20px;
-    }
-}
 
+        </div>
+
+    </div>
+
+</section>
+
+<!-- JOIN -->
+
+<section class="join-section">
+
+    <h2>Join The Community</h2>
+
+    <p>
+
+        Four teams. One legacy.
+
+    </p>
+
+    <a href="#" class="gold-button">
+
+        Enter STAZZOLOGY
+
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+
+        © STAZZOLOGY
+
+    </p>
+
+</footer>
+
+</body>
+
+</html>
