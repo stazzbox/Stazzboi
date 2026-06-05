@@ -98,7 +98,7 @@
         }
 
         .header-meta h1 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 900;
             letter-spacing: -1px;
             line-height: 1;
@@ -113,12 +113,12 @@
 
         .clearance-badge {
             display: inline-block;
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             color: var(--text-main);
             padding: 2px 6px;
             margin-top: 12px;
-            letter-spacing: 1.5px;
-            border: 1px solid var(--text-main);
+            letter-spacing: 1px;
+            border: 1px solid var(--border-color);
             text-transform: uppercase;
         }
 
@@ -263,7 +263,7 @@
             background-color: #020202;
             border-top: 1px solid var(--border-color);
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             align-items: center;
             z-index: 9999;
             padding-bottom: env(safe-area-inset-bottom);
@@ -275,7 +275,7 @@
             align-items: center;
             color: var(--text-muted);
             text-decoration: none;
-            font-size: 0.55rem;
+            font-size: 0.48rem;
             font-weight: 700;
             letter-spacing: 0.5px;
             text-transform: uppercase;
@@ -307,7 +307,7 @@
         
         <header class="app-header">
             <div class="header-meta">
-                <h1>STAZZOLOGY</h1>
+                <h1>Stazzboi/stazzology</h1>
                 <div class="clearance-badge">Gaming Promotion Matrix</div>
             </div>
             <img src="stazzology.png" alt="STAZZOLOGY Logo" class="brand-logo">
@@ -371,7 +371,13 @@
                     <p style="margin-bottom:15px;">Official archival video updates and event playlist indexing from live assembly hubs.</p>
                     
                     <div class="media-canvas">
-                        <iframe src="https://www.youtube.com/embed/videoseries?list=YOUR_EVENTS_PLAYLIST_ID" title="STAZZOLOGY Events Playlist Feed" allowfullscreen></iframe>
+                        <iframe 
+                            src="https://www.youtube.com/embed/videoseries?si=rxA3B2jp1G3Fnfoo&amp;list=PLdryDqCyyPsUTBXLEN4I0ldvkRsGyWKLi" 
+                            title="STAZZOLOGY Events Playlist Feed" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
             </section>
@@ -408,7 +414,8 @@
         <nav class="app-tab-bar" aria-label="System Menu">
             <a href="index.html" class="tab-item"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Home</span></a>
             <a href="#" class="tab-item active"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2z"/></svg><span>Stazzology</span></a>
-            <a href="index.html#governance-section" class="tab-item"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/></svg><span>Profile</span></a>
+            <a href="stazzlies.html" class="tab-item"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/></svg><span>Stazzlies</span></a>
+            <a href="stazzeria.html" class="tab-item"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Stazzeria</span></a>
         </nav>
 
     </div>
