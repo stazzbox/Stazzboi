@@ -1,144 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>STAZZOLOGY</title>
-<meta
-name="description"
-content="Official home of STAZZOLOGY, STAZZOLOGY Events, and the canon teams of Frost, Valor, Kingdom, and Integrity."
->
-<link
-rel="canonical"
-href="https://stazzboi.com/stazzology"
->
-<link
-rel="icon"
-type="image/png"
-href="favicon.png"
->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAZZERIA // STAZZOLOGY</title>
+
+    <meta name="description" content="Official Stazzology promotion index. Gaming asset matrices, network nodes, and tournament logs for the Bites and Battles Street Fighter 6 event.">
+    <meta name="keywords" content="Stazzology, Bites and Battles, Street Fighter 6, MegaBites Hemet, Kelvin Stazzland, The Aimbot, STZ Frost, STZ Valor, STZ Kingdom, STZ Integrity, PlayStation 5, The Stazzex">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="STAZZOLOGY // OPERATIONAL INDEX">
+    <meta property="og:description" content="Official tournament logistics, team nodes, and network platform deployment.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stazzboi.com/stazzology">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SportsEvent",
+          "@id": "https://stazzboi.com/stazzology/#event-2026-04-11",
+          "name": "Bites and Battles Street Fighter 6 Tournament",
+          "startDate": "2026-04-11T16:00:00-07:00",
+          "location": {
+            "@type": "Place",
+            "name": "MegaBites Arcade",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Hemet",
+              "addressRegion": "CA"
+            }
+          },
+          "description": "Double-elimination Street Fighter 6 competitive bracket tournament serving as a core marketing promotion.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-main: #020202;
+            --bg-card: #080808;
+            --border-color: #1c1c1c;
+            --text-main: #ffffff;
+            --text-muted: #666666;
+            --accent-status: #aaaaaa;
+            --app-max-width: 420px;
+            
+            /* Team Accent Colors for Subtle Glowing Aesthetics */
+            --glow-frost: rgba(0, 212, 255, 0.2);
+            --glow-valor: rgba(255, 0, 76, 0.2);
+            --glow-kingdom: rgba(255, 200, 0, 0.2);
+            --glow-integrity: rgba(0, 255, 136, 0.2);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .app-container {
+            width: 100%;
+            max-width: var(--app-max-width);
+            border-left: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            padding: 40px 20px 100px 20px;
+        }
+
+        .app-header {
+            text-align: left;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--text-main);
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .header-meta h1 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+        .brand-logo {
+            width: 50px;
+            height: 50px;
+            border: 1px solid var(--border-color);
+            background: #000;
+        }
+
+        .clearance-badge {
+            display: inline-block;
+            font-size: 0.6rem;
+            color: var(--text-main);
+            padding: 2px 6px;
+            margin-top: 12px;
+            letter-spacing: 1.5px;
+            border: 1px solid var(--text-main);
+            text-transform: uppercase;
+        }
+
+        .app-section {
+            margin-bottom: 35px;
+        }
+
+        .section-index {
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            display: block;
+            letter-spacing: 2px;
+        }
+
+        .pillar-node {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .pillar-node h2 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .pillar-node h3 {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--accent-status);
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .pillar-node p {
+            font-size: 0.8rem;
+            line-height: 1.6;
+            color: #b3b3b3;
+            margin-bottom: 12px;
+        }
+
+        .pillar-node p:last-child {
+            margin-bottom: 0;
+        }
+
+        .media-asset {
+            width: 100%;
+            height: auto;
+            border: 1px solid var(--border-color);
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        .media-canvas {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            background: #000;
+            border: 1px solid var(--border-color);
+            margin-bottom: 15px;
+        }
+
+        .media-canvas iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .logistics-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.75rem;
+        }
+
+        .logistics-table td {
+            padding: 7px 0;
+            border-bottom: 1px solid #111;
+            vertical-align: top;
+        }
+
+        .logistics-table td.label {
+            color: var(--text-muted);
+            width: 35%;
+            font-weight: 700;
+        }
+
+        .channel-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .channel-link-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 0.65rem;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            transition: box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .channel-link-card img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #111;
+            background: #000;
+        }
+
+        .channel-link-card span {
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* Specific Team Hover Aesthetics */
+        .card-frost:hover { border-color: #00d4ff; box-shadow: 0 0 10px var(--glow-frost); }
+        .card-valor:hover { border-color: #ff004c; box-shadow: 0 0 10px var(--glow-valor); }
+        .card-kingdom:hover { border-color: #ffc800; box-shadow: 0 0 10px var(--glow-kingdom); }
+        .card-integrity:hover { border-color: #00ff88; box-shadow: 0 0 10px var(--glow-integrity); }
+
+        .app-tab-bar {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: var(--app-max-width);
+            height: 60px;
+            background-color: #020202;
+            border-top: 1px solid var(--border-color);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            z-index: 9999;
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+
+        .tab-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.55rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            gap: 4px;
+        }
+
+        .tab-item.active {
+            color: var(--text-main);
+        }
+
+        .tab-icon {
+            width: 14px;
+            height: 14px;
+        }
+
+        footer {
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+    </style>
 </head>
 <body>
-<div class="page">
-<h1>
-STAZZOLOGY
-</h1>
-<div class="brands">
-<div class="brand-card">
-<h2>
-A. STAZZOLOGY
-</h2>
-<a
-href="http://youtube.com/@stazzology"
-target="_blank"
->
-<img
-src="stazzology.png"
-class="brand-logo"
-alt="STAZZOLOGY"
->
-</a>
-<div class="socials">
-<a href="#">
-TikTok
-</a>
-<a href="#">
-Instagram
-</a>
-</div>
-</div>
-<div class="brand-card">
-<h2>
-B. STAZZOLOGY EVENTS
-</h2>
-<a
-href="https://youtube.com/@StazzologyEvents"
-target="_blank"
->
-<img
-src="stazzologyevents.png"
-class="brand-logo"
-alt="STAZZOLOGY Events"
->
-</a>
-</div>
-</div>
-<h2 class="teams-title">
-TEAMS
-</h2>
-<div class="teams-section">
-<a
-href="https://youtube.com/@STZFrost"
-class="team-link frost-glow"
-target="_blank"
->
-<img
-src="STZFrost.png"
-class="team-icon"
-alt="Frost"
->
-</a>
-<a
-href="https://youtube.com/@STZValor"
-class="team-link valor-glow"
-target="_blank"
->
-<img
-src="STZValor.png"
-class="team-icon"
-alt="Valor"
->
-</a>
-<a
-href="https://youtube.com/@STZKingdom"
-class="team-link kingdom-glow"
-target="_blank"
->
-<img
-src="StzKingdom.png"
-class="team-icon"
-alt="Kingdom"
->
-</a>
-<a
-href="https://youtube.com/@STZIntegrity"
-class="team-link integrity-glow"
-target="_blank"
->
-<img
-src="STZIntegrity.png"
-class="team-icon"
-alt="Integrity"
->
-</a>
-</div> <section class="bnb-section">
-<h2>
-Bites &amp; Battles
-</h2>
-<img
-src="BnB.jpg"
-class="bnb-image"
-alt="Bites and Battles Street Fighter 6 event"
->
-<h3>
-Bites &amp; Battles Overview
-</h3>
-<p>
-Bites &amp; Battles was an event hosted by Kelvin “The Khamelion” Stazzland, professionally known as Stazzboi, through STAZZOLOGY Gaming at local venue MegaBites Arcade in Hemet, California on April 11, 2026.
-</p>
-<p>
-Featuring approximately thirty competitors and additional spectators, the Street Fighter 6 double-elimination tournament served both as a competitive event and as a marketing promotion for MegaBites Arcade.
-</p>
-<p>
-At the conclusion of the tournament, Kingston S. captured first place while David S. captured second place.
-</p>
-<p>
-Bites &amp; Battles represents one of the most documented and recognizable events associated with STAZZOLOGY and marked a major milestone in the promotion's development.
-</p>
-</section>
-<footer>
-Powered by The Stazzex
-</footer>
-</div>
+
+    <div class="app-container">
+        
+        <header class="app-header">
+            <div class="header-meta">
+                <h1>STAZZOLOGY</h1>
+                <div class="clearance-badge">Gaming Promotion Matrix</div>
+            </div>
+            <img src="stazzology.png" alt="STAZZOLOGY Logo" class="brand-logo">
+        </header>
+
+        <main>
+            <section class="app-section">
+                <span class="section-index">[INDEX // ARCHITECTURE]</span>
+                <div class="pillar-node" style="border-top: 2px solid var(--text-main);">
+                    <h2>A. STAZZOLOGY</h2>
+                    <p>Stazzology is the live event curation and strategic media promotion framework within the Stazzerian nation ecosystem. Directed under the multi-disciplinary oversight of Kelvin "The Aimbot" Stazzland, the promotion focuses primarily on CODM platforms, arena bracket coordination, and live collaborative media appearances.</p>
+                </div>
+            </section>
+
+            <section class="app-section">
+                <span class="section-index">[DEPLOYMENT LOG // BITES & BATTLES]</span>
+                <div class="pillar-node">
+                    <h2>BITES & BATTLES OVERVIEW</h2>
+                    
+                    <img src="BnB.jpg" alt="Bites and Battles Street Fighter 6 event" class="media-asset">
+                    
+                    <p>Bites &amp; Battles represents one of the most documented and recognizable events associated with STAZZOLOGY and marked a major milestone in the promotion's development. Hosted through STAZZOLOGY Gaming at MegaBites Arcade, the double-elimination bracket mobilized approximately thirty competitive entries alongside local spectators.</p>
+                    
+                    <table class="logistics-table">
+                        <tr>
+                            <td class="label">LOCATION</td>
+                            <td>MegaBites Arcade // Hemet, CA</td>
+                        </tr>
+                        <tr>
+                            <td class="label">DATE LOG</td>
+                            <td>Saturday, April 11, 2026</td>
+                        </tr>
+                        <tr>
+                            <td class="label">TIMELINE</td>
+                            <td>16:00 Sign-ups // 16:30 Bracket Launch</td>
+                        </tr>
+                        <tr>
+                            <td class="label">PLATFORM</td>
+                            <td>PlayStation 5 Console Nodes</td>
+                        </tr>
+                        <tr>
+                            <td class="label">ENTRY MATRIX</td>
+                            <td>Free // Zero Cover Charge</td>
+                        </tr>
+                        <tr>
+                            <td class="label">1ST PLACE</td>
+                            <td>Kingston S.</td>
+                        </tr>
+                        <tr>
+                            <td class="label">2ND PLACE</td>
+                            <td>David S.</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+            <section class="app-section">
+                <span class="section-index">[STREAM NODE // STAZZOLOGY EVENTS]</span>
+                <div class="pillar-node">
+                    <h2>B. STAZZOLOGY EVENTS FEED</h2>
+                    <p style="margin-bottom:15px;">Official archival video updates and event playlist indexing from live assembly hubs.</p>
+                    
+                    <div class="media-canvas">
+                        <iframe src="https://www.youtube.com/embed/videoseries?list=YOUR_EVENTS_PLAYLIST_ID" title="STAZZOLOGY Events Playlist Feed" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <section class="app-section">
+                <span class="section-index">[DIRECTORY // CANON TEAMS]</span>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 5px; padding-left: 2px;">Select logo to access system playlists:</p>
+                
+                <div class="channel-grid">
+                    <a href="https://youtube.com/@STZFrost" target="_blank" class="channel-link-card card-frost">
+                        <img src="STZFrost.png" alt="Frost Team Emblem">
+                        <span>STZ FROST</span>
+                    </a>
+                    <a href="https://youtube.com/@STZValor" target="_blank" class="channel-link-card card-valor">
+                        <img src="STZValor.png" alt="Valor Team Emblem">
+                        <span>STZ VALOR</span>
+                    </a>
+                    <a href="https://youtube.com/@STZKingdom" target="_blank" class="channel-link-card card-kingdom">
+                        <img src="StzKingdom.png" alt="Kingdom Team Emblem">
+                        <span>STZ KINGDOM</span>
+                    </a>
+                    <a href="https://youtube.com/@STZIntegrity" target="_blank" class="channel-link-card card-integrity">
+                        <img src="STZIntegrity.png" alt="Integrity Team Emblem">
+                        <span>STZ INTEGRITY</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>POWERED BY THE STAZZEX // DATA SECURE</p>
+        </footer>
+
+        <nav class="app-tab-bar" aria-label="System Menu">
+            <a href="index.html" class="tab-item"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Home</span></a>
+            <a href="#" class="tab-item active"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2z"/></svg><span>Stazzology</span></a>
+            <a href="index.html#governance-section" class="tab-item"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/></svg><span>Profile</span></a>
+        </nav>
+
+    </div>
+
 </body>
 </html>
