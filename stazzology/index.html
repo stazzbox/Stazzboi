@@ -80,11 +80,13 @@
         .app-container {
             width: 100%;
             max-width: var(--app-max-width);
+            min-height: 100vh; /* Prevents screen from collapsing into a black screen */
             border-left: 1px solid var(--border-color);
             border-right: 1px solid var(--border-color);
             display: flex;
             flex-direction: column;
             padding: 40px 20px 100px 20px;
+            background-color: var(--bg-main);
         }
 
         .app-header {
@@ -179,4 +181,248 @@
 
         .media-canvas {
             position: relative;
-            padding-bottom:
+            padding-bottom: 56.25%;
+            height: 0;
+            background: #000;
+            border: 1px solid var(--border-color);
+            margin-bottom: 15px;
+        }
+
+        .media-canvas iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .logistics-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.75rem;
+        }
+
+        .logistics-table td {
+            padding: 7px 0;
+            border-bottom: 1px solid #111;
+            vertical-align: top;
+        }
+
+        .logistics-table td.label {
+            color: var(--text-muted);
+            width: 35%;
+            font-weight: 700;
+        }
+
+        .channel-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .channel-link-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 0.65rem;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            transition: box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .channel-link-card img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #111;
+            background: #000;
+        }
+
+        .channel-link-card span {
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* Specific Team Hover Aesthetics */
+        .card-frost:hover { border-color: #00d4ff; box-shadow: 0 0 10px var(--glow-frost); }
+        .card-valor:hover { border-color: #ff004c; box-shadow: 0 0 10px var(--glow-valor); }
+        .card-kingdom:hover { border-color: #ffc800; box-shadow: 0 0 10px var(--glow-kingdom); }
+        .card-integrity:hover { border-color: #00ff88; box-shadow: 0 0 10px var(--glow-integrity); }
+
+        .app-tab-bar {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: var(--app-max-width);
+            height: 60px;
+            background-color: #020202;
+            border-top: 1px solid var(--border-color);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            align-items: center;
+            z-index: 9999;
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+
+        .tab-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.48rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            gap: 4px;
+        }
+
+        .tab-item.active {
+            color: var(--text-main);
+        }
+
+        .tab-icon {
+            width: 14px;
+            height: 14px;
+        }
+
+        footer {
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header class="app-header">
+            <div class="header-meta">
+                <h1>Stazzboi/stazzology</h1>
+                <div class="clearance-badge">Gaming Promotion Matrix</div>
+            </div>
+            <img src="stazzology.png" alt="STAZZOLOGY Logo" class="brand-logo">
+        </header>
+
+        <main>
+            <section class="app-section">
+                <span class="section-index">[INDEX // ARCHITECTURE]</span>
+                <div class="pillar-node" style="border-top: 2px solid var(--text-main);">
+                    <h2>A. STAZZOLOGY</h2>
+                    <p>Stazzology is the live event curation and strategic media promotion framework within the Stazzerian nation ecosystem. Directed under the multi-disciplinary oversight of Kelvin "The Aimbot" Stazzland, the promotion focuses primarily on CODM platforms, arena bracket coordination, and live collaborative media appearances.</p>
+                </div>
+            </section>
+
+            <section class="app-section">
+                <span class="section-index">[DEPLOYMENT LOG // BITES & BATTLES]</span>
+                <div class="pillar-node">
+                    <h2>BITES & BATTLES OVERVIEW</h2>
+                    
+                    <img src="BnB.jpg" alt="Bites and Battles Street Fighter 6 event" class="media-asset">
+                    
+                    <p>Bites &amp; Battles represents one of the most documented and recognizable events associated with STAZZOLOGY and marked a major milestone in the promotion's development. Hosted through STAZZOLOGY Gaming at MegaBites Arcade, the double-elimination bracket mobilized approximately thirty competitive entries alongside local spectators.</p>
+                    
+                    <table class="logistics-table">
+                        <tr>
+                            <td class="label">LOCATION</td>
+                            <td>MegaBites Arcade // Hemet, CA</td>
+                        </tr>
+                        <tr>
+                            <td class="label">DATE LOG</td>
+                            <td>Saturday, April 11, 2026</td>
+                        </tr>
+                        <tr>
+                            <td class="label">TIMELINE</td>
+                            <td>16:00 Sign-ups // 16:30 Bracket Launch</td>
+                        </tr>
+                        <tr>
+                            <td class="label">PLATFORM</td>
+                            <td>PlayStation 5 Console Nodes</td>
+                        </tr>
+                        <tr>
+                            <td class="label">ENTRY MATRIX</td>
+                            <td>Free // Zero Cover Charge</td>
+                        </tr>
+                        <tr>
+                            <td class="label">1ST PLACE</td>
+                            <td>Kingston S.</td>
+                        </tr>
+                        <tr>
+                            <td class="label">2ND PLACE</td>
+                            <td>David S.</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+            <section class="app-section">
+                <span class="section-index">[STREAM NODE // STAZZOLOGY EVENTS]</span>
+                <div class="pillar-node">
+                    <h2>B. STAZZOLOGY EVENTS FEED</h2>
+                    <p style="margin-bottom:15px;">Official archival video updates and event playlist indexing from live assembly hubs.</p>
+                    
+                    <div class="media-canvas">
+                        <iframe 
+                            src="https://www.youtube.com/embed/videoseries?si=rxA3B2jp1G3Fnfoo&amp;list=PLdryDqCyyPsUTBXLEN4I0ldvkRsGyWKLi" 
+                            title="STAZZOLOGY Events Playlist Feed" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+
+            <section class="app-section">
+                <span class="section-index">[DIRECTORY // CANON TEAMS]</span>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 5px; padding-left: 2px;">Select logo to access system playlists:</p>
+                
+                <div class="channel-grid">
+                    <a href="https://youtube.com/@STZFrost" target="_blank" class="channel-link-card card-frost">
+                        <img src="STZFrost.png" alt="Frost Team Emblem">
+                        <span>STZ FROST</span>
+                    </a>
+                    <a href="https://youtube.com/@STZValor" target="_blank" class="channel-link-card card-valor">
+                        <img src="STZValor.png" alt="Valor Team Emblem">
+                        <span>STZ VALOR</span>
+                    </a>
+                    <a href="https://youtube.com/@STZKingdom" target="_blank" class="channel-link-card card-kingdom">
+                        <img src="StzKingdom.png" alt="Kingdom Team Emblem">
+                        <span>STZ KINGDOM</span>
+                    </a>
+                    <a href="https://youtube.com/@STZIntegrity" target="_blank" class="channel-link-card card-integrity">
+                        <img src="STZIntegrity.png" alt="Integrity Team Emblem">
+                        <span>STZ INTEGRITY</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>POWERED BY THE STAZZEX // DATA SECURE</p>
+        </footer>
+
+        <nav class="app-tab-bar" aria-label="System Menu">
+            <a href="/" class="tab-item"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Home</span></a>
+            <a href="/stazzology" class="tab-item active"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2z"/></svg><span>Stazzology</span></a>
+            <a href="/stazzlies" class="tab-item"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/></svg><span>Stazzlies</span></a>
+            <a href="/stazzeria" class="tab-item"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Stazzeria</span></a>
+        </nav>
+
+    </div>
+
+</body>
+</html>
+
+```
