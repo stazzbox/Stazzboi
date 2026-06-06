@@ -2,612 +2,455 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO -->
+  <title>The STAZZEX | Official Public Archive of the Stazz Universe</title>
 
-  <title>
-    The STAZZEX | Official Public Archive of the Stazz Universe
-  </title>
+  <meta name="description" content="The STAZZEX is the official public archive, encyclopedia, registry, and lexicon of the Stazz Universe. Access verified terminology, administrative portfolios, and historical records." />
+  <meta name="keywords" content="STAZZEX, Stazz Universe, Stazzeria, Stazzboi, Khamelion, STAZZsociety, Stazzation, StazzQueen, Stazzerian archive, Stazzology, The Zits Conflict, Leann Stazzland, Isaac Ochoa" />
+  <meta name="author" content="The STAZZEX Archival System" />
+  <meta name="robots" content="index, follow" />
 
-  <meta
-    name="description"
-    content="The STAZZEX is the official public archive, encyclopedia, registry, and lexicon of the Stazz Universe featuring figures, titles, structures, events, doctrine, and Stazzerian terminolo"
-  />
+  <meta property="og:title" content="The STAZZEX | Official Lexicon & Archive" />
+  <meta property="og:description" content="Official public repository, terminology database, and historical logs of the Stazz Universe." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://stazzex.stazzboi.com" />
+  <meta property="og:image" content="https://stazzex.stazzboi.com/assets/logos/stazzex-logo.jpg" />
 
-  <meta
-    name="keywords"
-    content="STAZZEX, Stazz Universe, Stazzeria, Stazzboi, Khamelion, STAZZsociety, Stazzation, StazzQueen, Stazzerian archive"
-  />
-
-  <meta name="author" content="The STAZZEX" />
-
-  <!-- OPEN GRAPH -->
-
-  <meta
-    property="og:title"
-    content="The STAZZEX"
-  />
-
-  <meta
-    property="og:description"
-    content="Official public archive and encyclopedia of the Stazz Universe."
-  />
-
-  <meta
-    property="og:type"
-    content="website"
-  />
-
-  <meta
-    property="og:url"
-    content="https://stazzex.stazzboi.com"
-  />
-
-  <meta
-    property="og:image"
-    content="https://stazzex.stazzboi.com/assets/logos/stazzex-logo.jpg"
-  />
-
-  <link
-    rel="icon"
-    href="/stazzex/assets/logos/stazzex-logo.jpg"
-  />
+  <link rel="canonical" href="https://stazzex.stazzboi.com" />
+  <link rel="icon" href="/stazzex/assets/logos/stazzex-logo.jpg" />
 
   <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    body{
-      background:#050505;
-      color:white;
-      font-family:Arial, Helvetica, sans-serif;
-      overflow-x:hidden;
+    body {
+      background: #050505;
+      color: white;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
 
-    a{
-      text-decoration:none;
-      color:inherit;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    img{
-      max-width:100%;
-      display:block;
+    :root {
+      --gold: #d4af37;
+      --border: rgba(255, 255, 255, 0.08);
+      --card-bg: #0d0d0d;
     }
 
-    :root{
-      --gold:#d4af37;
-      --border:rgba(255,255,255,0.08);
+    /* NAVIGATION ARCHITECTURE */
+    nav {
+      width: 100%;
+      padding: 22px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.85);
+      border-bottom: 1px solid var(--border);
     }
 
-    /* NAV */
-
-    nav{
-      width:100%;
-      padding:22px 6%;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      position:sticky;
-      top:0;
-      z-index:999;
-      backdrop-filter:blur(10px);
-      background:rgba(0,0,0,0.82);
-      border-bottom:1px solid var(--border);
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
     }
 
-    .nav-left{
-      display:flex;
-      align-items:center;
-      gap:14px;
+    .nav-left img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--gold);
     }
 
-    .nav-left img{
-      width:46px;
-      border-radius:50%;
+    .nav-links {
+      display: flex;
+      gap: 28px;
     }
 
-    .nav-links{
-      display:flex;
-      gap:28px;
+    .nav-links a {
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
     }
 
-    .nav-links a:hover{
-      color:var(--gold);
+    .nav-links a:hover {
+      color: var(--gold);
     }
 
-    /* HERO */
-
-    .hero{
-      padding:140px 6% 120px;
-      text-align:center;
-      position:relative;
+    /* BRAND HERO CONTAINER */
+    .hero {
+      padding: 120px 6% 80px;
+      text-align: center;
+      position: relative;
     }
 
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(0,0,0,0.92),
-          rgba(0,0,0,0.97)
-        );
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .hero-content{
-      position:relative;
-      z-index:2;
-      max-width:1000px;
-      margin:auto;
+    .hero-subtitle {
+      color: var(--gold);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-size: 0.85rem;
+      font-family: monospace;
     }
 
-    .hero-subtitle{
-      color:var(--gold);
-      letter-spacing:3px;
-      text-transform:uppercase;
-      margin-bottom:20px;
-      font-size:0.85rem;
+    .hero h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      margin-bottom: 24px;
+      line-height: 1.1;
+      font-weight: 800;
     }
 
-    .hero h1{
-      font-size:clamp(3rem,7vw,6rem);
-      margin-bottom:28px;
-      line-height:1;
+    .hero p {
+      color: #a1a1aa;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      font-size: 1.05rem;
     }
 
-    .hero p{
-      color:#c1c1c1;
-      line-height:1.9;
-      max-width:850px;
-      margin:auto;
-      margin-bottom:50px;
+    /* PORTAL SEARCH CONTEXT */
+    .search-container {
+      max-width: 700px;
+      margin: auto;
     }
 
-    /* SEARCH */
-
-    .search-container{
-      max-width:850px;
-      margin:auto;
-      position:relative;
+    .search-bar {
+      width: 100%;
+      padding: 20px 24px;
+      outline: none;
+      background: #121212;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      color: white;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+      text-align: center;
     }
 
-    .search-bar{
-      width:100%;
-      padding:22px 28px;
-      border:none;
-      outline:none;
-      background:#0d0d0d;
-      border:1px solid var(--border);
-      border-radius:16px;
-      color:white;
-      font-size:1rem;
+    .search-bar:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
     }
 
-    .search-bar:focus{
-      border-color:var(--gold);
+    /* GRID ARCHIVE LAYOUTS */
+    section {
+      padding: 60px 6%;
     }
 
-    /* ENTRIES */
-
-    section{
-      padding:100px 6%;
+    .section-header {
+      border-left: 3px solid var(--gold);
+      padding-left: 14px;
+      margin-bottom: 40px;
     }
 
-    .section-title{
-      font-size:2.8rem;
-      margin-bottom:20px;
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
     }
 
-    .gold{
-      color:var(--gold);
+    .section-description {
+      color: #71717a;
+      font-size: 0.95rem;
+      margin-top: 4px;
     }
 
-    .section-description{
-      color:#bdbdbd;
-      line-height:1.9;
-      max-width:900px;
-      margin-bottom:50px;
+    .gold {
+      color: var(--gold);
     }
 
-    .entry-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-      gap:28px;
+    .entry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
     }
 
-    .entry-card{
-      background:#0d0d0d;
-      border:1px solid var(--border);
-      border-radius:20px;
-      padding:32px;
-      transition:0.3s ease;
+    .entry-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
     }
 
-    .entry-card:hover{
-      transform:translateY(-6px);
-      border-color:rgba(212,175,55,0.35);
+    .entry-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212, 175, 55, 0.3);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     }
 
-    .entry-classification{
-      color:var(--gold);
-      letter-spacing:2px;
-      text-transform:uppercase;
-      font-size:0.75rem;
-      margin-bottom:16px;
+    .entry-classification {
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      font-family: monospace;
+      margin-bottom: 12px;
     }
 
-    .entry-card h3{
-      font-size:1.7rem;
-      margin-bottom:18px;
+    .entry-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      font-weight: 700;
     }
 
-    .entry-card p{
-      color:#c1c1c1;
-      line-height:1.8;
-      margin-bottom:24px;
+    .entry-card p {
+      color: #d4d4d8;
+      line-height: 1.7;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      flex-grow: 1;
     }
 
-    .entry-link{
-      color:var(--gold);
-      font-weight:bold;
+    .entry-task {
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 2px solid #3f3f46;
+      padding: 10px 14px;
+      font-size: 0.85rem;
+      color: #a1a1aa;
+      margin-bottom: 20px;
+      border-radius: 0 8px 8px 0;
     }
 
-    /* FOOTER */
+    .entry-link {
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
 
-    footer{
-      padding:50px 6%;
-      border-top:1px solid var(--border);
-      text-align:center;
-      color:#9d9d9d;
+    .entry-link:hover {
+      text-decoration: underline;
+    }
+
+    /* TIMELINE SUB-PILLS */
+    .timeline-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .timeline-pill {
+      background: #121212;
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: #e4e4e7;
+    }
+
+    /* SYSTEM ARCHIVE FOOTER */
+    footer {
+      padding: 40px 6%;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: #52525b;
+      font-size: 0.8rem;
+      font-family: monospace;
+      letter-spacing: 0.5px;
     }
 
     @media(max-width:900px){
-
-      .nav-links{
-        display:none;
-      }
-
+      .nav-links { display: none; }
+      section { padding: 40px 6%; }
     }
-
   </style>
-
 </head>
 
 <body>
 
-  <!-- NAV -->
-
   <nav>
-
     <div class="nav-left">
-
-      <img
-        src="/stazzex/assets/logos/stazzex-logo.jpg"
-        alt="The STAZZEX"
-      />
-
-      <strong>
-        The STAZZEX
-      </strong>
-
+      <img src="/stazzex/assets/logos/stazzex-logo.jpg" alt="The STAZZEX Emblem" />
+      <strong>The STAZZEX</strong>
     </div>
-
     <div class="nav-links">
-
-      <a href="/">
-        Home
-      </a>
-
-      <a href="/stazzeria/">
-        Stazzeria
-      </a>
-
-      <a href="/stazzboi/">
-        Stazzboi
-      </a>
-
-      <a href="/stazzology/">
-        STAZZOLOGY
-      </a>
-
+      <a href="/">Home</a>
+      <a href="/stazzeria/">Stazzeria</a>
+      <a href="/stazzboi/">Stazzboi</a>
+      <a href="/stazzology/">STAZZOLOGY</a>
     </div>
-
   </nav>
 
-  <!-- HERO -->
-
   <section class="hero">
-
     <div class="hero-content">
-
-      <div class="hero-subtitle">
-        Official Public Archive of the Stazz Universe
-      </div>
-
-      <h1>
-        The <span class="gold">STAZZEX</span>
-      </h1>
-
+      <div class="hero-subtitle">Official Lexicon &amp; Archival Dictionary</div>
+      <h1>The <span class="gold">STAZZEX</span> Database</h1>
       <p>
-        The STAZZEX functions as the official public archive, encyclopedia, registry, lexicon, and information network of the Stazz Universe. The archive preserves figures, titles, structures, doctrine, symbolic systems, and institutional continuity.
+        The authoritative reference pipeline defining verified terminology, operational language portfolios, leadership hierarchies, and canonical timelines across the entire Stazz Universe.
       </p>
 
-      <!-- SEARCH -->
-
       <div class="search-container">
-
-        <input
-          type="text"
-          id="searchInput"
-          class="search-bar"
-          placeholder="Search The STAZZEX..."
-        />
-
+        <input type="text" id="searchInput" class="search-bar" placeholder="Query terminology, titles, or event files..." autocomplete="off"/>
       </div>
-
     </div>
-
   </section>
 
-  <!-- ENTRIES -->
-
   <section>
-
-    <h2 class="section-title">
-      Featured <span class="gold">Entries</span>
-    </h2>
-
-    <p class="section-description">
-      The STAZZEX preserves and categorizes official records associated with the Stazz Universe through structured entry systems and interconnected archival documentation.
-    </p>
+    <div class="section-header">
+      <h2 class="section-title">Verified <span class="gold">Lexicon Entries</span></h2>
+      <p class="section-description">Showing active registries indexed within the system architecture.</p>
+    </div>
 
     <div class="entry-grid" id="entryGrid">
 
-      <!-- KHAMELION -->
-
-      <div
-        class="entry-card"
-        data-name="Khamelion"
-      >
-
-        <div class="entry-classification">
-          Title
-        </div>
-
-        <h3>
-          The Khamelion
-        </h3>
-
-        <p>
-          Symbolic title associated with adaptability, environmental awareness, charisma, and identity continuity throughout changing situations.
-        </p>
-
-        <a
-          href="/stazzex/entries/khamelion.html"
-          class="entry-link"
-        >
-          View Entry →
-        </a>
-
+      <div class="entry-card" data-name="Stazz Stazzed Stazzerian Stazzerians">
+        <div class="entry-classification">Core Identity Root</div>
+        <h3>Stazz // Stazzed</h3>
+        <p>“Stazz” translates directly to “Bless” or “Blessed.” It forms the baseline root behind language, visual media culture, and native community participation within the collective.</p>
+        <a href="/stazzex/entries/stazz.html" class="entry-link">View Documentation →</a>
       </div>
 
-      <!-- STAZZERIA -->
-
-      <div
-        class="entry-card"
-        data-name="Stazzeria"
-      >
-
-        <div class="entry-classification">
-          Structure
-        </div>
-
-        <h3>
-          Stazzeria
-        </h3>
-
-        <p>
-          The Digital Nation of Stazzerians functioning as the executive, cultural, and organizational foundation of the Stazz Universe.
-        </p>
-
-        <a
-          href="/stazzex/entries/stazzeria.html"
-          class="entry-link"
-        >
-          View Entry →
-        </a>
-
+      <div class="entry-card" data-name="Stazzeria Stazz Universe STAZZsociety">
+        <div class="entry-classification">Sovereign Structure</div>
+        <h3>Stazzeria</h3>
+        <p>The Digital Nation of Stazzeria. A sovereign ecosystem and digital embassy representing unified governance, symbolic identity, and structured administrative initiatives.</p>
+        <a href="/stazzex/entries/stazzeria.html" class="entry-link">View Documentation →</a>
       </div>
 
-      <!-- STAZZSOCIETY -->
-
-      <div
-        class="entry-card"
-        data-name="STAZZsociety"
-      >
-
-        <div class="entry-classification">
-          Polyfunctional Lexeme
-        </div>
-
-        <h3>
-          STAZZsociety
-        </h3>
-
-        <p>
-          Cultural framework, operational language system, and connective identity structure associated with Stazzerian participation.
-        </p>
-
-        <a
-          href="/stazzex/entries/stazzsociety.html"
-          class="entry-link"
-        >
-          View Entry →
-        </a>
-
+      <div class="entry-card" data-name="Stazzboi Kelvin Stazzland">
+        <div class="entry-classification">Executive Architect</div>
+        <h3>Stazzboi</h3>
+        <p>Kelvin “Stazzboi” Stazzland. Sovereign President of Stazzeria, media content creator, recording artist, and chief founding architect of the culture.</p>
+        <a href="/stazzex/entries/stazzboi.html" class="entry-link">View Documentation →</a>
       </div>
 
-      <!-- STAZZATION -->
-
-      <div
-        class="entry-card"
-        data-name="Stazzation"
-      >
-
-        <div class="entry-classification">
-          Polyfunctional Lexeme
-        </div>
-
-        <h3>
-          Stazzation
-        </h3>
-
-        <p>
-          Process associated with symbolic transformation, identity alignment, institutional integration, and Stazzerian conversion.
-        </p>
-
-        <a
-          href="/stazzex/entries/stazzation.html"
-          class="entry-link"
-        >
-          View Entry →
-        </a>
-
+      <div class="entry-card" data-name="Stazzerian President Executive Authority">
+        <div class="entry-classification">Administrative Role</div>
+        <h3>Stazzerian President</h3>
+        <div class="entry-task">Task: Oversees digital sovereignty, strategic deployment, diplomatic expansion, and institutional management.</div>
+        <p>The leading executive power structure and diplomatic face managing operations inside the Digital Embassy framework.</p>
+        <a href="/stazzex/entries/president.html" class="entry-link">View Documentation →</a>
       </div>
 
-      <!-- PRESIDENT -->
-
-      <div
-        class="entry-card"
-        data-name="President"
-      >
-
-        <div class="entry-classification">
-          Title
-        </div>
-
-        <h3>
-          President
-        </h3>
-
-        <p>
-          Executive title associated with leadership, governance, institutional continuity, and structural authority within Stazzeria.
-        </p>
-
-        <a
-          href="/stazzex/entries/president.html"
-          class="entry-link"
-        >
-          View Entry →
-        </a>
-
+      <div class="entry-card" data-name="Stazzerian First Lady Head Stazzlie Leann StazzQueen">
+        <div class="entry-classification">Administrative Role</div>
+        <h3>Stazzerian First Lady</h3>
+        <div class="entry-task">Task: Drives cultural development, media presence, and represents the female citizen baseline (Head Stazzlie).</div>
+        <p>The official romantic partner of the sitting President, recognized as a primary stabilizing advisor and elite community diplomat.</p>
+        <a href="/stazzex/entries/firstlady.html" class="entry-link">View Documentation →</a>
       </div>
 
-      <!-- STAZZQUEEN -->
-
-      <div
-        class="entry-card"
-        data-name="StazzQueen"
-      >
-
-        <div class="entry-classification">
-          Title
-        </div>
-
-        <h3>
-          StazzQueen
-        </h3>
-
-        <p>
-          Symbolic title associated with the romantic partner of Stazzboi during an active Stazzerian presidential term.
-        </p>
-
-        <a
-          href="/stazzex/entries/stazzqueen.html"
-          class="entry-link"
-        >
-          View Entry →
-        </a>
-
+      <div class="entry-card" data-name="Stazzerian Vice President Isaac Ochoa">
+        <div class="entry-classification">Administrative Role</div>
+        <h3>Stazzerian Vice President</h3>
+        <div class="entry-task">Task: Assists in active governance, operational alignment, and tracks succession contingencies.</div>
+        <p>The secondary executive authority currently assigned to oversee platform deployments parallel to the high command.</p>
+        <a href="/stazzex/entries/vicepresident.html" class="entry-link">View Documentation →</a>
       </div>
 
-      <!-- WARGAMES -->
+      <div class="entry-card" data-name="Stazzerian Advisor Caro Former VP">
+        <div class="entry-classification">Administrative Role</div>
+        <h3>Stazzerian Advisor</h3>
+        <div class="entry-task">Task: Provides deep policy analysis, strategic guidance, and system-wide planning vectors.</div>
+        <p>Senior counselor post occupied by Caro to leverage historical alignment from her run as the First Term Vice President.</p>
+        <a href="/stazzex/entries/advisor.html" class="entry-link">View Documentation →</a>
+      </div>
 
-      <div
-        class="entry-card"
-        data-name="WARGAMES"
-      >
+      <div class="entry-card" data-name="Stazzerian War General John B Defenses">
+        <div class="entry-classification">Administrative Role</div>
+        <h3>War General (John B.)</h3>
+        <div class="entry-task">Task: Coordinates defensive containment, competitive brackets, and combat threat matrix reduction.</div>
+        <p>High-tier security office established to oversee strength parameters, tactical alignment, and combat division operations.</p>
+        <a href="/stazzex/entries/wargeneral.html" class="entry-link">View Documentation →</a>
+      </div>
 
-        <div class="entry-classification">
-          Competitive Event
-        </div>
+      <div class="entry-card" data-name="Khamelion Khamelion Pose Adaptability">
+        <div class="entry-classification">Symbolic Framework</div>
+        <h3>The Khamelion Matrix</h3>
+        <p>The capacity to adjust real-world outward expression while holding strict internal parameters. Backed by the iconic Khamelion Pose to signal controlled composure.</p>
+        <a href="/stazzex/entries/khamelion.html" class="entry-link">View Documentation →</a>
+      </div>
 
-        <h3>
-          WARGAMES
-        </h3>
+      <div class="entry-card" data-name="Stazzology Gaming Tournament Brackets Aimbot MegaBites WARGAMES">
+        <div class="entry-classification">Media Platform</div>
+        <h3>STAZZOLOGY Network</h3>
+        <p>The entertainment engine commanded by the Aimbot archetype. Coordinates Paid Live Events, mobile esports arrays, and live community tournaments.</p>
+        <a href="/stazzex/entries/stazzology.html" class="entry-link">View Documentation →</a>
+      </div>
 
-        <p>
-          Large-scale STAZZOLOGY competitive event associated with faction warfare, tactical competition, and rivalry escalation.
-        </p>
+      <div class="entry-card" data-name="Stazzation Stazzism Philosophy Doctrine">
+        <div class="entry-classification">Polyfunctional Lexeme</div>
+        <h3>Stazzism Philosophy</h3>
+        <p>The foundational ideological framework emphasizing high creative execution, intentional personal accountability, and rigid operational discipline.</p>
+        <a href="/stazzex/entries/stazzism.html" class="entry-link">View Documentation →</a>
+      </div>
 
-        <a
-          href="/stazzex/entries/wargames.html"
-          class="entry-link"
-        >
-          View Entry →
-        </a>
-
+      <div class="entry-card" data-name="The Zits Conflict 2025 Retaliation Peace Accord">
+        <div class="entry-classification">Historical Event Log</div>
+        <h3>The Zits Conflict (2025)</h3>
+        <p>A landmark social-political escalation resolved via diplomatic intervention. Noted for establishing instant defense doctrines and launching modern cabinet roles.</p>
+        <a href="/stazzex/entries/zits-conflict.html" class="entry-link">View Conflict Files →</a>
       </div>
 
     </div>
-
   </section>
 
-  <!-- FOOTER -->
+  <section style="background: #08080c; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="section-header">
+      <h2 class="section-title">Historical <span class="gold">System Eras</span></h2>
+      <p class="section-description">Chronological milestones documented inside the Presidential Timeline matrix.</p>
+    </div>
+    <div class="timeline-strip">
+      <span class="timeline-pill"><b>Formation Era:</b> Constitutional Baseline Setup</span>
+      <span class="timeline-pill"><b>Expansion Era:</b> Rapid Cultural &amp; Network Influx</span>
+      <span class="timeline-pill"><b>Transition &amp; Succession Era:</b> Cabinet Rotation Structuring</span>
+      <span class="timeline-pill"><b>Institutional Expansion Era:</b> Modern Multichannel Governance (2026)</span>
+    </div>
+  </section>
 
   <footer>
-
-    <p>
-      © The STAZZEX — Official Public Archive of the Stazz Universe
-    </p>
-
+    <p>THE STAZZEX RECORDING NODE // SECURE CRAWL COMPLETE // CANONICAL TRACKING STATUS: ACTIVE // 2026</p>
   </footer>
 
-  <!-- SEARCH SCRIPT -->
-
   <script>
-
     const searchInput = document.getElementById("searchInput");
     const cards = document.querySelectorAll(".entry-card");
 
-    searchInput.addEventListener("keyup", function(){
-
-      const value = this.value.toLowerCase();
+    searchInput.addEventListener("input", function() {
+      const value = this.value.toLowerCase().trim();
 
       cards.forEach(card => {
+        const matchingPool = card.getAttribute("data-name").toLowerCase();
+        const contentText = card.innerText.toLowerCase();
 
-        const name = card.dataset.name.toLowerCase();
-
-        if(name.includes(value)){
-          card.style.display = "block";
+        if (matchingPool.includes(value) || contentText.includes(value)) {
+          card.style.display = "flex";
         } else {
           card.style.display = "none";
         }
-
       });
-
     });
-
   </script>
 
 </body>
-
 </html>
+
+```
+
