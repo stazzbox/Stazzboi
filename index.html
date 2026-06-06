@@ -100,6 +100,7 @@
             width: 50px;
             height: 50px;
             border: 1px solid var(--border-color);
+            object-fit: cover;
             background: #000;
         }
 
@@ -132,6 +133,18 @@
             border: 1px solid var(--border-color);
             padding: 20px;
             margin-bottom: 15px;
+            position: relative;
+        }
+
+        .stazzex-tag {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: var(--accent-status);
+            border: 1px dashed var(--border-color);
+            padding: 2px 6px;
         }
 
         .pillar-node h2 {
@@ -140,6 +153,9 @@
             letter-spacing: -0.5px;
             margin-bottom: 10px;
             color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .pillar-node h3 {
@@ -168,6 +184,14 @@
             margin-top: 5px;
             margin-bottom: 15px;
             background-color: #000;
+        }
+
+        .node-icon {
+            width: 24px;
+            height: 24px;
+            border: 1px solid var(--border-color);
+            object-fit: cover;
+            background: #000;
         }
 
         .logistics-table {
@@ -251,7 +275,7 @@
             background-color: #020202;
             border-top: 1px solid var(--border-color);
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             align-items: center;
             z-index: 9999;
             padding-bottom: env(safe-area-inset-bottom);
@@ -263,20 +287,28 @@
             align-items: center;
             color: var(--text-muted);
             text-decoration: none;
-            font-size: 0.48rem;
+            font-size: 0.45rem;
             font-weight: 700;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
             text-transform: uppercase;
             gap: 4px;
+            text-align: center;
         }
 
         .tab-item.active {
             color: var(--text-main);
         }
 
-        .tab-icon {
-            width: 14px;
-            height: 14px;
+        .tab-logo-icon {
+            width: 18px;
+            height: 18px;
+            border: 1px solid var(--border-color);
+            object-fit: cover;
+            background: #000;
+        }
+
+        .tab-item.active .tab-logo-icon {
+            border-color: var(--text-main);
         }
 
         footer {
@@ -304,9 +336,13 @@
 
         <main>
             <section class="app-section">
-                <span class="section-index">[IDENTITY LOG // PRINCIPAL PROPRIETOR]</span>
+                <span class="section-index">[SECTION 01 // PROPRIETOR LAYER]</span>
                 <div class="pillar-node" style="border-top: 2px solid var(--text-main);">
-                    <h2>KELVIN STAZZLAND</h2>
+                    <div class="stazzex-tag">STAZZEX #2</div>
+                    <h2>
+                        <img src="stazzboi-kelvinstazzland.png" alt="Stazzboi Icon" class="node-icon">
+                        KELVIN STAZZLAND
+                    </h2>
                     
                     <img src="stazzboi-kelvinstazzland.png" alt="Kelvin Stazzland Dossier Graphic" class="media-asset">
                     
@@ -349,72 +385,80 @@
                             </td>
                         </tr>
                     </table>
-                </div>
-            </section>
-
-            <section class="app-section">
-                <span class="section-index">[FOUNDATIONAL CORE // STAZZ UNIVERSE]</span>
-                <div class="pillar-node">
-                    <h2>THE STAZZ UNIVERSE STRUCTURE</h2>
-                    <p>The structural framework built by Stazzboi unifies art, community participation, branding, and history into a closed-loop matrix. Key operational achievements are organized across four core structural pillars:</p>
                     
-                    <p style="margin-top:10px;"><b>1. STAZZsociety (The Polyfunctional Lexeme):</b> An interconnector between marketing, branding, and Stazz products. It serves as a noun for the fanbase collective and an adjective or verb for the subcultural aesthetic and digital lifestyle.</p>
-                    
-                    <p style="margin-top:10px;"><b>2. Stazzeria (The Digital Nation):</b> A borderless collective of gathering Stazzerians and the band of Stazzlie Stazzerians. Online interaction functions directly as citizenship where participation serves as social currency.</p>
-                    
-                    <p style="margin-top:10px;"><b>3. Stazzology (The Media Engine):</b> The functional operational engine that centralizes multimedia outputs, gaming promotions, video content, and internet entertainment.</p>
-                    
-                    <p style="margin-top:10px;"><b>4. The Stazzex (The Historic Archive):</b> The centralized data repository tracking historical records, timelines, and creative evolution from the early independent rap 'SuicidalYacht' music era to present-day projects.</p>
-                </div>
-            </section>
-
-            <section class="app-section">
-                <span class="section-index">[BRANCH MATRIX // MEDIA PRODUCTION]</span>
-                
-                <div class="pillar-node">
-                    <h3>[NODE // THE STAZZLANDS]</h3>
-                    <p style="margin-top: 5px;">Official reality vlog channel documenting daily life, personal updates, and lifestyle content across media platforms.</p>
-                    <div class="project-links">
-                        <a href="https://youtube.com/@stazzboi" target="_blank" class="project-btn">YOUTUBE</a>
-                        <a href="https://www.instagram.com/stazzboi" target="_blank" class="project-btn">INSTAGRAM</a>
-                        <a href="https://www.facebook.com/StazzboiFB" target="_blank" class="project-btn">FACEBOOK</a>
-                        <a href="https://www.threads.net/@stazzboi" target="_blank" class="project-btn">THREADS</a>
-                    </div>
-                </div>
-
-                <div class="pillar-node">
-                    <h3>[NODE // STAZZOLOGY]</h3>
-                    <p style="margin-top: 5px;">The media and content hub utilized to execute gaming promotions, streaming media, and independent entertainment outputs.</p>
-                    <div class="project-links">
-                        <a href="/stazzology" class="project-btn">ENTER SYSTEM</a>
-                        <a href="https://www.youtube.com/@Stazzology" target="_blank" class="project-btn">YOUTUBE</a>
-                        <a href="https://www.tiktok.com/@stazzboi" target="_blank" class="project-btn">TIKTOK</a>
-                    </div>
-                </div>
-
-                <div class="pillar-node">
-                    <h3>[NODE // PRODUCTION EVENTS]</h3>
-                    <p style="margin-top: 5px;">Assembly segment managing tournament bracket configurations, organized productions, and showcase experiences.</p>
-                    <div class="project-links">
-                        <a href="/stazzology" class="project-btn">VIEW EVENTS LOG</a>
-                    </div>
-                </div>
-
-                <div class="pillar-node">
-                    <h3>[NODE // DISCOGRAPHY ARCHIVE]</h3>
-                    <p style="margin-top: 5px;">Rooted in the independent 'SuicidalYacht' era. Tracks independent rap and digital-native projects including tracks such as <i>Swerve</i>, <i>Robbery</i>, <i>Locked In</i>, and <i>Stazzerian Wrist Flick</i>.</p>
-                    <div class="project-links">
-                        <a href="https://music.apple.com/us/artist/stazzboi/1627663453" target="_blank" class="project-btn">APPLE MUSIC</a>
-                        <a href="https://unitedmasters.com/a/stazzboi" target="_blank" class="project-btn">UNITED MASTERS</a>
-                        <a href="https://www.youtube.com/channel/UCWwNDkwejQU8ScwwfUXnF1w" target="_blank" class="project-btn">YOUTUBE TOPIC</a>
+                    <div class="project-links" style="margin-top: 15px;">
+                        <a href="/stazzboi" class="project-btn">VIEW PROFILE</a>
                     </div>
                 </div>
             </section>
 
             <section class="app-section">
-                <span class="section-index">[COLLECTIVE // SYSTEM REPRESENTATION]</span>
+                <span class="section-index">[SECTION 02 // NATIONAL SECTOR]</span>
                 <div class="pillar-node">
-                    <h2>THE STAZZLIES</h2>
+                    <div class="stazzex-tag">STAZZEX #3</div>
+                    <h2>
+                        <img src="stazzeria-logo.png" alt="Stazzeria Icon" class="node-icon">
+                        STAZZERIA
+                    </h2>
+                    <p>A borderless digital nation and collective of gathering Stazzerians and the band of Stazzlie Stazzerians. Within this ecosystem, online interaction functions directly as citizenship where participation serves as social currency.</p>
+                    
+                    <div class="project-links">
+                        <a href="/stazzeria" class="project-btn">ENTER NATION</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="app-section">
+                <span class="section-index">[SECTION 03 // PRODUCTION ENGINE]</span>
+                <div class="pillar-node">
+                    <div class="stazzex-tag">STAZZEX #4</div>
+                    <h2>
+                        <img src="stazzology-logo.png" alt="Stazzology Icon" class="node-icon">
+                        STAZZOLOGY
+                    </h2>
+                    <p>The functional operational engine that centralizes multimedia outputs, gaming promotions, video content, and internet entertainment.</p>
+                    
+                    <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--border-color);">
+                        <h3>[SUB-NODE // THE STAZZLANDS]</h3>
+                        <p>Official reality vlog channel documenting daily life, personal updates, and lifestyle content across media platforms.</p>
+                        <div class="project-links">
+                            <a href="https://youtube.com/@stazzboi" target="_blank" class="project-btn">YOUTUBE</a>
+                            <a href="https://www.instagram.com/stazzboi" target="_blank" class="project-btn">INSTAGRAM</a>
+                            <a href="https://www.facebook.com/StazzboiFB" target="_blank" class="project-btn">FACEBOOK</a>
+                            <a href="https://www.threads.net/@stazzboi" target="_blank" class="project-btn">THREADS</a>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--border-color);">
+                        <h3>[SUB-NODE // MEDIA & EVENTS]</h3>
+                        <p>The media hub managing gaming pipelines, tournament configurations, streaming media, and production showcase experiences.</p>
+                        <div class="project-links">
+                            <a href="/stazzology" class="project-btn">ENTER SYSTEM</a>
+                            <a href="https://www.youtube.com/@Stazzology" target="_blank" class="project-btn">YOUTUBE</a>
+                            <a href="https://www.tiktok.com/@stazzboi" target="_blank" class="project-btn">TIKTOK</a>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--border-color);">
+                        <h3>[SUB-NODE // DISCOGRAPHY ARCHIVE]</h3>
+                        <p>Rooted in the independent 'SuicidalYacht' era. Tracks independent rap and digital-native tracks including <i>Swerve</i>, <i>Robbery</i>, <i>Locked In</i>, and <i>Stazzerian Wrist Flick</i>.</p>
+                        <div class="project-links">
+                            <a href="https://music.apple.com/us/artist/stazzboi/1627663453" target="_blank" class="project-btn">APPLE MUSIC</a>
+                            <a href="https://unitedmasters.com/a/stazzboi" target="_blank" class="project-btn">UNITED MASTERS</a>
+                            <a href="https://www.youtube.com/channel/UCWwNDkwejQU8ScwwfUXnF1w" target="_blank" class="project-btn">YOUTUBE TOPIC</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="app-section">
+                <span class="section-index">[SECTION 04 // COLLECTIVE LAYER]</span>
+                <div class="pillar-node">
+                    <div class="stazzex-tag">STAZZEX #5</div>
+                    <h2>
+                        <img src="Stazzlies-Logo.jpg" alt="The Stazzlies Icon" class="node-icon">
+                        THE STAZZLIES
+                    </h2>
                     <img src="Stazzlies-Logo.jpg" alt="The Stazzlies Logo" class="media-asset">
                     
                     <p>The First Lady of Stazzeria serves as the leading authority of the Stazzlies. The Stazzlies are the official female collective of Stazzeria. Representing feminine unity, advancement, leadership, and cultural identity, The Stazzlies function as an influential branch of the Stazz Universe dedicated to supporting female Stazzerians and strengthening the future of Stazzeria.</p>
@@ -422,6 +466,22 @@
                     <div class="project-links" style="margin-top: 15px;">
                         <a href="/stazzlies" class="pink-stazzlies-btn">click here</a>
                         <a href="https://www.instagram.com/stazzlies/" target="_blank" class="project-btn">INSTAGRAM</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="app-section">
+                <span class="section-index">[SECTION 05 // REPOSITORY RECORD]</span>
+                <div class="pillar-node">
+                    <div class="stazzex-tag">STAZZEX #1</div>
+                    <h2>
+                        <img src="stazzex-logo.png" alt="The Stazzex Icon" class="node-icon">
+                        THE STAZZEX
+                    </h2>
+                    <p>The centralized data repository tracking historical records, operational timelines, and the complete creative evolution from the early independent rap music eras to present-day framework projects.</p>
+                    
+                    <div class="project-links">
+                        <a href="/stazzex" class="project-btn">ACCESS ARCHIVES</a>
                     </div>
                 </div>
             </section>
@@ -433,10 +493,11 @@
         </footer>
 
         <nav class="app-tab-bar" aria-label="System Navigation Hub">
-            <a href="/" class="tab-item active"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Home</span></a>
-            <a href="/stazzology" class="tab-item"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2z"/></svg><span>Stazzology</span></a>
-            <a href="/stazzlies" class="tab-item"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/></svg><span>Stazzlies</span></a>
-            <a href="/stazzeria" class="tab-item"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Stazzeria</span></a>
+            <a href="/stazzboi" class="tab-item"><img src="stazzboi-kelvinstazzland.png" alt="" class="tab-logo-icon"><span>Stazzboi</span></a>
+            <a href="/stazzeria" class="tab-item"><img src="stazzeria-logo.png" alt="" class="tab-logo-icon"><span>Stazzeria</span></a>
+            <a href="/stazzology" class="tab-item"><img src="stazzology-logo.png" alt="" class="tab-logo-icon"><span>Stazzology</span></a>
+            <a href="/stazzlies" class="tab-item"><img src="Stazzlies-Logo.jpg" alt="" class="tab-logo-icon"><span>Stazzlies</span></a>
+            <a href="/stazzex" class="tab-item"><img src="stazzex-logo.png" alt="" class="tab-logo-icon"><span>Stazzex</span></a>
         </nav>
 
     </div>
@@ -444,4 +505,3 @@
 </body>
 </html>
 
-```
