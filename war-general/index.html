@@ -1,677 +1,379 @@
+To integrate the War General page perfectly into the **Stazzeria/Stazzology** system design, we need to bring it out of the flat, light-mode style and align it with the signature dark-mode mobile app layout.
+The template below includes your updated structure, fixes the duplicate CSS tags present in your snippet, applies the correct canonical URL (https://stazzboi.com/war-general), and maps the external and internal navigation buttons precisely to your routing configuration.
+Here is the fully engineered, responsive page code for the **War General Node** (/war-general/index.html):
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War General of Stazzeria | John B. Stazzland</title>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>
-    War General of Stazzeria | John B. Stazzland
-  </title>
-
-  <meta
-    name="description"
-    content="Official page of John B. Stazzland, War General of Stazzeria and supreme military authority of the Stazzerian Nation."
-  >
-
-  <link
-    rel="canonical"
-    href="https://stazzboi.com/war-general"
-  >
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ProfilePage",
-    "url":"https://stazzboi.com/war-general",
-    "name":"War General of Stazzeria",
-    "description":"Official page of John B. Stazzland, War General of Stazzeria.",
-    "mainEntity":{
-      "@type":"Person",
-      "name":"John B. Stazzland",
-      "jobTitle":"War General of Stazzeria",
-      "image":"https://stazzboi.com/war-general/mstazzerianpfp.png",
-      "affiliation":{
-        "@type":"Organization",
-        "name":"Stazzeria"
+    <meta name="description" content="Official profile page of John B. Stazzland, War General of Stazzeria and supreme military authority of the Stazzerian Nation.">
+    <meta name="keywords" content="War General, John B. Stazzland, Stazzeria, Department of Stazz, Kelvin Stazzland, Isaac Ochoa, Stazz Universe, Tactical Portal, The Stazzex">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://stazzboi.com/war-general">
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "url": "https://stazzboi.com/war-general",
+      "name": "War General of Stazzeria",
+      "description": "Official page of John B. Stazzland, War General of Stazzeria.",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "John B. Stazzland",
+        "jobTitle": "War General of Stazzeria",
+        "image": "https://stazzboi.com/war-general/mstazzerianpfp.png",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Stazzeria"
+        }
       }
     }
-  }
-  </script>
+    </script>
 
-  <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        :root {
+            --bg-main: #09090b; 
+            --bg-card: #141419; 
+            --border-color: #27272a;
+            --text-main: #ffffff;
+            --text-muted: #71717a;
+            --accent-tactical: #f59e0b; /* Aligns with the tactical gold standard */
+            --glow-tactical: rgba(245, 158, 11, 0.15);
+            --border-radius: 20px;
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-  <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
 
-    body{
-      margin:0;
-      background:#f8f9fa;
-      font-family:Linux Libertine, Georgia, Times, serif;
-      color:#202122;
-    }
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
 
-    a{
-      color:#0645ad;
-      text-decoration:none;
-    }
+        .app-container {
+            width: 100%;
+            max-width: 440px;
+            background-color: var(--bg-main);
+            padding: 20px 20px 60px 20px;
+            display: flex;
+            flex-direction: column;
+        }
 
-    a:hover{
-      text-decoration:underline;
-    }
+        /* Consistent Top System Header */
+        .app-header {
+            padding: 10px 0 20px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 24px;
+        }
 
-    .topbar{
-      width:100%;
-      background:white;
-      border-bottom:1px solid #a2a9b1;
-      padding:12px 30px;
-      box-sizing:border-box;
-      position:sticky;
-      top:0;
-      z-index:999;
-    }
+        .system-meta {
+            text-align: center;
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-    .logo-title{
-      font-size:32px;
-      font-weight:normal;
-      letter-spacing:-1px;
-    }
+        .system-meta a {
+            color: var(--accent-tactical);
+            text-decoration: none;
+            font-weight: 600;
+        }
 
-    .logo-sub{
-      font-size:12px;
-      color:#54595d;
-      margin-top:-4px;
-    }
+        /* Hero Node Block */
+        .profile-hero {
+            text-align: center;
+            padding-bottom: 24px;
+            border-bottom: 1px dashed var(--border-color);
+            margin-bottom: 24px;
+        }
 
-    .wiki-nav{
-      display:flex;
-      gap:18px;
-      margin-top:10px;
-      flex-wrap:wrap;
-    }
+        .profile-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-tactical);
+            box-shadow: 0 0 15px var(--glow-tactical);
+            object-fit: cover;
+            background: #000;
+            margin-bottom: 14px;
+        }
 
-    .wiki-nav a{
-      color:#0645ad;
-      font-size:14px;
-    }
+        .section-tag {
+            font-family: monospace;
+            font-size: 11px;
+            color: var(--accent-tactical);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 6px;
+        }
 
-    .wiki-nav a:hover{
-      text-decoration:underline;
-    }
+        .profile-hero h1 {
+          font-size: 26px;
+          font-weight: 800;
+          letter-spacing: -0.5px;
+          margin-bottom: 4px;
+        }
 
-    .page{
-      max-width:1200px;
-      margin:auto;
-      background:white;
-      padding:20px 35px 60px;
-      border-left:1px solid #c8ccd1;
-      border-right:1px solid #c8ccd1;
-      min-height:100vh;
-      box-sizing:border-box;
-    }
+        .profile-hero .rank-sub {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
 
-    h1{
-      font-weight:normal;
-      font-size:34px;
-      border-bottom:1px solid #a2a9b1;
-      padding-bottom:6px;
-      margin-top:0;
-    }
+        /* Content Modules */
+        .content-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+        }
 
-    h2{
-      font-weight:normal;
-      border-bottom:1px solid #a2a9b1;
-      padding-bottom:4px;
-      margin-top:40px;
-    }
-    .intro{
-      display:flex;
-      gap:30px;
-      align-items:flex-start;
-      margin-top:20px;
-    }
+        .card-title {
+            font-size: 14px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-left: 3px solid var(--accent-tactical);
+            padding-left: 8px;
+        }
 
-    .intro-text{
-      flex:1;
-      font-size:18px;
-      line-height:1.7;
-    }
+        .card-p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #d4d4d8;
+            margin-bottom: 12px;
+        }
+        .card-p:last-child {
+            margin-bottom: 0;
+        }
 
-    .infobox{
-      width:340px;
-      border:1px solid #a2a9b1;
-      background:#f8f9fa;
-      font-size:14px;
-      flex-shrink:0;
-    }
+        /* Key Facts System List */
+        .fact-list {
+            list-style: none;
+            margin-top: 8px;
+        }
 
-    .infobox-title{
-      background:#eaecf0;
-      text-align:center;
-      font-weight:bold;
-      padding:10px;
-      font-size:18px;
-      border-bottom:1px solid #a2a9b1;
-    }
+        .fact-item {
+            font-size: 13.5px;
+            padding: 8px 0;
+            border-bottom: 1px solid #1c1c24;
+            display: flex;
+            justify-content: space-between;
+        }
 
-    .hero-image{
-      width:100%;
-      display:block;
-      border-bottom:1px solid #a2a9b1;
-      background:white;
-    }
+        .fact-item:last-child {
+            border-bottom: none;
+        }
 
-    .infobox table{
-      width:100%;
-      border-collapse:collapse;
-    }
+        .fact-label {
+            color: var(--text-muted);
+            font-weight: 700;
+        }
 
-    .infobox td{
-      padding:8px 10px;
-      vertical-align:top;
-      border-top:1px solid #eaecf0;
-    }
+        .fact-val {
+            text-align: right;
+            font-weight: 600;
+        }
 
-    .label{
-      font-weight:bold;
-      width:110px;
-    }
+        .fact-val a {
+            color: var(--accent-tactical);
+            text-decoration: none;
+        }
 
-    .section-text{
-      font-size:17px;
-      line-height:1.8;
-    }
+        /* Collapsible Cabinet Tree Node */
+        details {
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            margin-top: 8px;
+            background: var(--bg-card);
+            overflow: hidden;
+        }
 
-    details{
-      border:1px solid #c8ccd1;
-      margin-top:18px;
-      background:#f8f9fa;
-      overflow:hidden;
-    }
+        summary {
+            padding: 14px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            background: #181820;
+            user-select: none;
+            outline: none;
+        }
 
-    summary{
-      padding:14px;
-      font-size:20px;
-      cursor:pointer;
-      font-weight:bold;
-      background:#eaecf0;
-      user-select:none;
-    }
+        .details-content {
+            padding: 16px;
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+        }
 
-    .project-content{
-      padding:20px;
-      background:white;
-    }
+        .cabinet-member {
+            margin-bottom: 14px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #1c1c24;
+        }
 
-    .project{
-      display:flex;
-      gap:18px;
-      align-items:flex-start;
-      margin-bottom:35px;
-      padding-bottom:25px;
-      border-bottom:1px solid #eaecf0;
-    }
+        .cabinet-member:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
 
-    .project:last-child{
-      border-bottom:none;
-      margin-bottom:0;
-      padding-bottom:0;
-    }
+        .cabinet-member h3 {
+            font-size: 13.5px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
 
-    .project-info{
-      flex:1;
-    }
+        .cabinet-member p {
+            font-size: 12.5px;
+            color: #a1a1aa;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
 
-    .project-info h3{
-      margin:0 0 10px;
-      font-size:24px;
-      font-weight:normal;
-    }
+        .btn-link {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-main);
+            background: var(--bg-main);
+            border: 1px solid var(--border-color);
+            padding: 4px 10px;
+            border-radius: 6px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
 
-    .links{
-      margin-top:10px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-    }
+        .btn-link:hover {
+            border-color: var(--accent-tactical);
+        }
 
-    .links a{
-      background:#eaecf0;
-      padding:6px 12px;
-      border-radius:4px;
-      font-size:14px;
-      border:1px solid #c8ccd1;
-    }
-
-    footer{
-      margin-top:60px;
-      padding-top:20px;
-      border-top:1px solid #a2a9b1;
-      color:#54595d;
-      font-size:13px;
-      line-height:1.6;
-    }
-
-    @media(max-width:900px){
-
-      .intro{
-        flex-direction:column-reverse;
-      }
-
-      .infobox{
-        width:100%;
-      }
-
-      .project{
-        flex-direction:column;
-      }
-    }
-
-  </style>
-
-</head>
-
-    }
-
-    .label{
-      font-weight:bold;
-      width:110px;
-    }
-
-    .section-text{
-      font-size:17px;
-      line-height:1.8;
-    }
-
-    details{
-      border:1px solid #c8ccd1;
-      margin-top:18px;
-      background:#f8f9fa;
-      overflow:hidden;
-    }
-
-    summary{
-      padding:14px;
-      font-size:20px;
-      cursor:pointer;
-      font-weight:bold;
-      background:#eaecf0;
-      user-select:none;
-    }
-
-    .project-content{
-      padding:20px;
-      background:white;
-    }
-
-    .project{
-      display:flex;
-      gap:18px;
-      align-items:flex-start;
-      margin-bottom:35px;
-      padding-bottom:25px;
-      border-bottom:1px solid #eaecf0;
-    }
-
-    .project:last-child{
-      border-bottom:none;
-      margin-bottom:0;
-      padding-bottom:0;
-    }
-
-    .project-info{
-      flex:1;
-    }
-
-    .project-info h3{
-      margin:0 0 10px;
-      font-size:24px;
-      font-weight:normal;
-    }
-
-    .links{
-      margin-top:10px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-    }
-
-    .links a{
-      background:#eaecf0;
-      padding:6px 12px;
-      border-radius:4px;
-      font-size:14px;
-      border:1px solid #c8ccd1;
-    }
-
-    footer{
-      margin-top:60px;
-      padding-top:20px;
-      border-top:1px solid #a2a9b1;
-      color:#54595d;
-      font-size:13px;
-      line-height:1.6;
-    }
-
-    @media(max-width:900px){
-
-      .intro{
-        flex-direction:column-reverse;
-      }
-
-      .infobox{
-        width:100%;
-      }
-
-      .project{
-        flex-direction:column;
-      }
-    }
-
-  </style>
-
+        .app-footer {
+            text-align: center;
+            margin-top: auto;
+            padding-top: 24px;
+            font-size: 11px;
+            color: var(--text-muted);
+            font-family: monospace;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="topbar">
+    <div class="app-container">
 
-    <div>
+        <header class="app-header">
+            <p class="system-meta">Archival Node // Powered by <a href="/stazzex">The Stazzex</a></p>
+        </header>
 
-      <div class="logo-title">
-        Stazzboi.com
-      </div>
+        <main>
+            <section class="profile-hero">
+                <img src="mstazzerianpfp.png" class="profile-avatar" alt="John B. Stazzland Photo">
+                <span class="section-tag">[ Command Element ]</span>
+                <h1>John B. Stazzland</h1>
+                <div class="rank-sub">War General of Stazzeria</div>
+            </section>
 
-      <div class="logo-sub">
-        Powered by the Stazzex
-      </div>
+            <section class="content-card">
+                <h2 class="card-title">Role &amp; Authority</h2>
+                <p class="card-p">The War General of Stazzeria serves as the primary military and conflict authority of the sovereign Stazzerian Nation. This executive post acts as the chief tactical protector of internal stability, institutional logic, and corporate strength within the complex structure of the Stazz Universe.</p>
+                <p class="card-p">Operating as a symbolic defender rather than a traditional field commander, the office enforces security alignment, stability metrics, and operational defense mandates across all active network channels.</p>
+            </section>
 
-      <div class="wiki-nav">
+            <section class="content-card">
+                <h2 class="card-title">Key Profile Metrics</h2>
+                <ul class="fact-list">
+                    <li class="fact-item">
+                        <span class="fact-label">Position</span>
+                        <span class="fact-val">War General</span>
+                    </li>
+                    <li class="fact-item">
+                        <span class="fact-label">Authority Assignment</span>
+                        <span class="fact-val" style="color: var(--accent-tactical);">Supreme Military Control</span>
+                    </li>
+                    <li class="fact-item">
+                        <span class="fact-label">Executive Branch</span>
+                        <span class="fact-val"><a href="/Stazzeria">Department of Stazz</a></span>
+                    </li>
+                    <li class="fact-item">
+                        <span class="fact-label">Presiding President</span>
+                        <span class="fact-val"><a href="/stazzboi">Kelvin Stazzland</a></span>
+                    </li>
+                    <li class="fact-item">
+                        <span class="fact-label">Vice President</span>
+                        <span class="fact-val"><a href="https://stazzboi.com/vice-president/">Isaac Ochoa</a></span>
+                    </li>
+                </ul>
+            </section>
 
-        <a href="/stazzeria">
-          Stazzeria
-        </a>
+            <section class="content-card">
+                <h2 class="card-title">Core Directives</h2>
+                <p class="card-p">Key institutional parameters dictate managing rapid strategic responses during network conflicts, safeguarding sovereign symbolism, preserving internal team order, and tracking long-term strategic defensive continuity across active campaigns.</p>
+            </section>
 
-        <a href="/stazzology">
-          Stazzology
-        </a>
+            <section class="content-card">
+                <h2 class="card-title">Cabinet Linkage Array</h2>
+                <p class="card-p" style="color: var(--text-muted); font-size: 13px;">View structural connections within the Department of Stazz command tier:</p>
+                
+                <details>
+                    <summary>Department Positions</summary>
+                    <div class="details-content">
+                        
+                        <div class="cabinet-member">
+                            <h3>President Kelvin Stazzland</h3>
+                            <p>Founder of Stazzeria, architect of structural ideals, and supreme representative of the Nation.</p>
+                            <a href="/stazzboi" class="btn-link">Access Profile</a>
+                        </div>
 
-        <a href="/stazzlies">
-          The Stazzlies
-        </a>
+                        <div class="cabinet-member">
+                            <h3>Vice President Isaac Ochoa</h3>
+                            <p>Principal executive support authority and second-highest operational position within the hierarchy.</p>
+                            <a href="https://stazzboi.com/vice-president/" class="btn-link">Access Profile</a>
+                        </div>
 
-        <a href="/stazzex">
-          The Stazzex
-        </a>
+                        <div class="cabinet-member">
+                            <h3>First Lady Leann Stazzland</h3>
+                            <p>Leading ceremonial female representative, Top Stazzlie, and symbolic partner of the Presidency.</p>
+                            <a href="https://stazzboi.com/1stlady/" class="btn-link">Access Profile</a>
+                        </div>
 
-      </div>
+                    </div>
+                </details>
+            </section>
+        </main>
 
-    </div>
-
-  </div>
-
-  <div class="page">
-
-    <h1>
-      War General of Stazzeria
-    </h1>
-
-    <div class="intro">
-
-      <div class="intro-text">
-
-        <p>
-          The <b>War General of Stazzeria</b> is the primary military and conflict authority of Stazzeria—a sovereign NATION and collective built around the Stazzerian identity, culture, and ideals.
-        </p>
-
-        <p>
-          The role serves as the chief defensive and strategic leadership position within the Stazzerian structure and operates as a protector of national stability, symbolic strength, and internal order.
-        </p>
-
-        <p>
-          The role combines elements of military leadership, strategic authority, defensive coordination, symbolic enforcement, and national protection.
-        </p>
-
-        <h2>
-          Key facts
-        </h2>
-
-        <ul>
-
-          <li>
-            <b>Current Officeholder:</b> John B. Stazzland
-          </li>
-
-          <li>
-            <b>Position:</b> War General of Stazzeria
-          </li>
-
-          <li>
-            <b>Role:</b> Supreme Military Authority
-          </li>
-
-          <li>
-            <b>Affiliation:</b> Department of Stazz
-          </li>
-
-          <li>
-            <b>Known for:</b> Strategic leadership, conflict authority, and national defense
-          </li>
-
-        </ul>
-
-      </div>
-
-      <div class="infobox">
-
-        <div class="infobox-title">
-          War General of Stazzeria
-        </div>
-
-        <img
-          src="mstazzerianpfp.png"
-          class="hero-image"
-          alt="John B. Stazzland, War General of Stazzeria"
-        >
-
-        <table>
-
-          <tr>
-            <td class="label">
-              Officeholder
-            </td>
-
-            <td>
-              John B. Stazzland
-            </td>
-          </tr>
-
-          <tr>
-            <td class="label">
-              Position
-            </td>
-
-            <td>
-              War General of Stazzeria
-            </td>
-          </tr>
-
-          <tr>
-            <td class="label">
-              Role
-            </td>
-
-            <td>
-              Supreme Military Authority
-            </td>
-          </tr>
-
-          <tr>
-            <td class="label">
-              Affiliation
-            </td>
-
-            <td>
-              Department of Stazz
-            </td>
-          </tr>
-
-          <tr>
-            <td class="label">
-              President
-            </td>
-
-            <td>
-
-              <a href="/stazzboi">
-                Kelvin Stazzland
-              </a>
-
-            </td>
-          </tr>
-
-          <tr>
-            <td class="label">
-              Vice President
-            </td>
-
-            <td>
-
-              <a href="/vice-president">
-                Isaac BeachyBird Ochoa
-              </a>
-
-            </td>
-          </tr>
-
-        </table>
-
-      </div>
+        <footer class="app-footer">
+            <p>Page entry logged: June 2, 2026</p>
+            <p>DATA SECURE // STAZZERIAN SECURITY MATRIX</p>
+        </footer>
 
     </div>
-    <h2>
-      Role and Authority
-    </h2>
-
-    <div class="section-text">
-
-      <p>
-        The current War General is <b>John B.</b>, also referred to as <b>John B. Stazzland</b>.
-      </p>
-
-      <p>
-        Unlike a traditional military commander, the War General of Stazzeria operates as the symbolic defender of the Stazzerian NATION, the chief authority during national conflicts and challenges, a strategic enforcer of Stazzerian unity and order, and a major leadership figure within the Stazz Universe.
-      </p>
-
-    </div>
-
-    <h2>
-      Responsibilities
-    </h2>
-
-    <div class="section-text">
-
-      <p>
-        The position oversees conflict response and coordination, defensive strategy, protection of national symbolism and structure, ceremonial and symbolic military authority, internal stability during periods of challenge, and preservation of Stazzerian strength and continuity.
-      </p>
-
-      <p>
-        The War General of Stazzeria serves as the supreme military authority, national defender, and strategic protector of the Stazzerian NATION and collective.
-      </p>
-
-    </div>
-
-    <details>
-
-      <summary>
-        Department of Stazz
-      </summary>
-
-      <div class="project-content">
-
-        <div class="project">
-
-          <div class="project-info">
-
-            <h3>
-              President Kelvin Stazzland
-            </h3>
-
-            <p>
-              Founder of Stazzeria, creator of Stazzism, and President of the Stazzerian NATION.
-            </p>
-
-            <div class="links">
-
-              <a href="/stazzboi">
-                Learn More
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="project">
-
-          <div class="project-info">
-
-            <h3>
-              Vice President Isaac BeachyBird Ochoa
-            </h3>
-
-            <p>
-              Principal executive support authority and secondary leadership position within the Stazzerian structure.
-            </p>
-
-            <div class="links">
-
-              <a href="/vice-president">
-                Learn More
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="project">
-
-          <div class="project-info">
-
-            <h3>
-              First Lady LeAnn Stazzland
-            </h3>
-
-            <p>
-              Head Stazzlie and leading ceremonial female authority of the Stazzerian NATION.
-            </p>
-
-            <div class="links">
-
-              <a href="/1stlady">
-                Learn More
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </details>
-
-    <footer>
-
-      This page was last edited on June 2, 2026.<br><br>
-
-      Powered by the Stazzex archival system.
-
-    </footer>
-
-  </div>
 
 </body>
 </html>
+
+```
+
