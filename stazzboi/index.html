@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>President Kelvin "Stazzboi" Stazzland | Central Hub</title>
 
-    <meta name="description" content="Official executive homepage for Stazzeria. Identity matrices, archetype portfolios, and audio release registries for Stazzerian-American rapper and digital entrepreneur President Kelvin Stazzland.">
-    <meta name="keywords" content="Kelvin Stazzland, Stazzboi, The Khamelion, President of Stazzeria, President Kelvin Stazzland, Stazzerian-American, Stazzeria, Sovereign Nation, Stazzology, Bites and Battles, MegaBites, The Stazzlands, The Stazzlies, Stazzism, The Aimbot, SuicidalYacht, KID14XD">
+    <meta name="description" content="Official executive index for Stazzeria. Identity matrices, media portfolios, and music registries for Stazzerian-American rapper and entrepreneur President Kelvin Stazzland.">
+    <meta name="keywords" content="Kelvin Stazzland, Stazzboi, The Khamelion, President of Stazzeria, Aimbot, Stazzerian-American, Stazzeria, Sovereign Nation, Stazzology, Bites and Battles, MegaBites, The Stazzlands, The Stazzlies, Stazzism">
     <meta name="author" content="The Stazzex Archival System">
     <meta name="robots" content="index, follow">
     
@@ -28,8 +28,7 @@
           "@id": "https://stazzboi.com/#organization",
           "name": "Stazzeria",
           "url": "https://stazzboi.com",
-          "description": "A sovereign nation of the Stazzerian collective.",
-          "knowsAbout": ["Stazzerian Culture", "Digital Sovereignty", "Media Production", "Tactical Security"]
+          "description": "A sovereign nation of the Stazzerian collective."
         },
         {
           "@type": "Person",
@@ -40,48 +39,13 @@
             "Stazzboi", 
             "Kelvin the Khamelion Stazzland", 
             "President Kelvin Stazzland", 
-            "Sovereign President Kelvin Stazzland", 
             "The Aimbot", 
             "SuicidalYacht", 
             "KID14XD"
           ],
           "url": "https://stazzboi.com/stazzboi",
           "worksFor": { "@id": "https://stazzboi.com/#organization" },
-          "description": "Stazzerian-American rapper, content creator, and digital entrepreneur serving as the President of Stazzeria.",
-          "sameAs": [
-            "https://www.instagram.com/stazzboi",
-            "https://www.facebook.com/kelshd",
-            "https://www.facebook.com/StazzboiFB",
-            "https://www.tiktok.com/@stazzboi",
-            "https://www.threads.net/@stazzboi",
-            "https://youtube.com/@stazzboi",
-            "https://music.apple.com/us/artist/stazzboi/1627663453",
-            "https://unitedmasters.com/a/stazzboi",
-            "https://www.youtube.com/channel/UCWwNDkwejQU8ScwwfUXnF1w",
-            "https://youtube.com/@thestazzlands",
-            "https://www.instagram.com/thestazzlands"
-          ],
-          "performerIn": [
-            { "@type": "CreativeWork", "name": "Swerve" },
-            { "@type": "CreativeWork", "name": "Locked In" },
-            { "@type": "CreativeWork", "name": "Up Next" },
-            { "@type": "CreativeWork", "name": "Like That" }
-          ]
-        },
-        {
-          "@type": "Person",
-          "@id": "https://stazzboi.com/#leann",
-          "name": "LeAnn Stazzland",
-          "jobTitle": "First Lady",
-          "worksFor": { "@id": "https://stazzboi.com/#organization" }
-        },
-        {
-          "@type": "Person",
-          "@id": "https://stazzboi.com/#isaac",
-          "name": "Isaac Ochoa",
-          "alternateName": "Beachy Bird",
-          "jobTitle": "Vice President",
-          "worksFor": { "@id": "https://stazzboi.com/#organization" }
+          "description": "Stazzerian-American rapper, content creator, and digital entrepreneur serving as the President of Stazzeria."
         }
       ]
     }
@@ -89,20 +53,21 @@
 
     <style>
         :root {
-            --bg-main: #020202;
-            --bg-card: #080808;
-            --border-color: #1c1c1c;
+            --bg-main: #09090b; 
+            --bg-card: #141419; 
+            --border-color: #27272a;
             --text-main: #ffffff;
-            --text-muted: #666666;
-            --accent-status: #aaaaaa;
-            --app-max-width: 420px;
+            --text-muted: #71717a;
+            --accent-gold: #f59e0b; 
+            --glow-gold: rgba(245, 158, 11, 0.15);
+            --border-radius: 20px;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -116,262 +81,316 @@
 
         .app-container {
             width: 100%;
-            max-width: var(--app-max-width);
-            border-left: 1px solid var(--border-color);
-            border-right: 1px solid var(--border-color);
+            max-width: 440px;
+            background-color: var(--bg-main);
+            padding: 20px 20px 60px 20px;
             display: flex;
             flex-direction: column;
-            padding: 40px 20px 60px 20px;
         }
 
+        /* Search & Navigation Header */
         .app-header {
-            text-align: left;
-            padding-bottom: 20px;
-            border-bottom: 2px solid var(--text-main);
-            margin-bottom: 35px;
+            padding: 10px 0 20px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 24px;
         }
 
-        .app-header h1 {
-            font-size: 1.8rem;
-            font-weight: 900;
-            letter-spacing: -1px;
-            line-height: 1;
-        }
-
-        .clearance-badge {
-            display: inline-block;
-            font-size: 0.6rem;
-            color: var(--text-main);
-            padding: 2px 6px;
-            margin-top: 12px;
-            letter-spacing: 1.5px;
-            border: 1px solid var(--text-main);
-            text-transform: uppercase;
-        }
-
-        .app-section {
-            margin-bottom: 35px;
-        }
-
-        .section-index {
-            font-size: 0.65rem;
-            font-weight: 700;
-            color: var(--text-muted);
-            margin-bottom: 15px;
-            display: block;
-            letter-spacing: 2px;
-        }
-
-        .pillar-node {
-            background: var(--bg-card);
+        .search-bar {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 14px;
             border: 1px solid var(--border-color);
-            padding: 20px;
-            margin-bottom: 15px;
-        }
-
-        .pillar-node h2 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            margin-bottom: 10px;
+            background: var(--bg-card);
+            font-size: 15px;
             color: var(--text-main);
+            outline: none;
         }
 
-        .pillar-node h3 {
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: var(--accent-status);
-            margin-bottom: 6px;
-            letter-spacing: 1px;
+        .search-subtext {
+            text-align: center;
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 6px;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .pillar-node p {
-            font-size: 0.8rem;
-            line-height: 1.6;
-            color: #b3b3b3;
+        .search-subtext a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Profile Hero Banner */
+        .brand-hero {
+            padding: 10px 0 24px 0;
+            border-bottom: 1px dashed var(--border-color);
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .brand-hero img.hero-pfp {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-gold);
+            margin-bottom: 14px;
+            object-fit: cover;
+            background: #000;
+            box-shadow: 0 0 15px var(--glow-gold);
+        }
+
+        .section-tag {
+            font-family: monospace;
+            font-size: 11px;
+            color: var(--accent-gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .brand-hero h1 {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .brand-hero p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #a1a1aa;
+        }
+
+        /* Identity Matrix Grid */
+        .two-column-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+
+        .app-square {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            aspect-ratio: 1 / 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            text-decoration: none;
+            color: var(--text-main);
+            transition: all 0.2s ease;
+        }
+
+        .app-square .icon-wrapper {
+            font-size: 24px;
+            margin-bottom: 6px;
+        }
+
+        .app-square span {
+            font-size: 13px;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .app-square p {
+            font-size: 11px;
+            color: var(--text-muted);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+        }
+
+        .app-square:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px var(--glow-gold);
+        }
+
+        /* Core Overview Information Cards */
+        .content-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .card-title {
+            font-size: 14px;
+            font-weight: 800;
             margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-left: 3px solid var(--accent-gold);
+            padding-left: 8px;
         }
 
-        .pillar-node p:last-child {
+        .card-p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #d4d4d8;
+            margin-bottom: 10px;
+        }
+
+        .card-p:last-child {
             margin-bottom: 0;
         }
 
-        .fact-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-            font-size: 0.75rem;
-        }
-
-        .fact-table td {
-            padding: 6px 0;
-            vertical-align: top;
-            border-bottom: 1px dashed var(--border-color);
-        }
-
-        .fact-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .fact-label {
-            color: var(--text-muted);
-            width: 100px;
-            font-weight: 700;
-        }
-
-        .fact-value {
-            color: #b3b3b3;
-        }
-
-        .fact-value a {
-            color: var(--text-main);
-            text-decoration: underline;
-        }
-
+        /* Dynamic Track List Strips */
         .catalog-strip {
-            background: #040404;
+            background: var(--bg-main);
             border: 1px solid var(--border-color);
-            padding: 10px 14px;
-            font-size: 0.75rem;
+            padding: 12px 16px;
+            font-size: 13px;
             margin-bottom: 8px;
+            border-radius: 12px;
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
 
         .catalog-strip:last-child {
             margin-bottom: 0;
         }
 
-        .quote-block {
-            font-style: italic;
-            margin-top: 12px;
-            padding-top: 12px;
-            border-top: 1px dashed var(--border-color);
+        .track-name {
+            font-weight: 600;
             color: var(--text-main);
-            font-size: 0.75rem;
-            line-height: 1.5;
         }
 
-        footer {
+        .track-code {
+            font-family: monospace;
+            font-size: 11px;
+            color: var(--accent-gold);
+            background: rgba(245, 158, 11, 0.08);
+            padding: 2px 6px;
+            border-radius: 6px;
+        }
+
+        /* System Pillar Tags */
+        .timeline-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .timeline-pill {
+            background: var(--bg-main);
+            border: 1px solid var(--border-color);
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-family: monospace;
+            color: var(--text-main);
+        }
+
+        .app-footer {
+            text-align: center;
             margin-top: auto;
             padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-            font-size: 0.6rem;
+            font-size: 11px;
             color: var(--text-muted);
+            font-family: monospace;
             letter-spacing: 0.5px;
-            line-height: 1.5;
         }
     </style>
 </head>
 <body>
 
     <div class="app-container">
-        
+
         <header class="app-header">
-            <h1>STAZZERIA</h1>
-            <div class="clearance-badge">Executive Registry Node</div>
+            <input type="search" class="search-bar" placeholder="Search identity logs..." autocomplete="off">
+            <p class="search-subtext">Verified by <a href="/stazzex">The Stazzex</a></p>
         </header>
 
         <main>
-            <section class="app-section">
-                <span class="section-index">[REGISTRY // EXECUTIVE PROFILE]</span>
-                <div class="pillar-node" style="border-top: 2px solid var(--text-main);">
-                    <h2>KELVIN STAZZLAND</h2>
-                    <p>Kelvin Stazzland (born September 15, 1998) is a Stazzerian-American rapper, digital creator, and internet entrepreneur. He serves as the sovereign administrative head of the nation of Stazzeria, deploying structural governance, visual media platforms, and cultural protection frameworks across his expanding operational network.</p>
-                    <p>Initiating his digital trajectory in 2013 under the early creative moniker "SuicidalYacht" and developing assets as "KID14XD," Stazzland engineered a massive regional expansion in December 2022. This solidified network checkpoints throughout Menifee, Hemet, Murrieta, Oceanside, San Diego, Riverside, and Los Angeles.</p>
-                    
-                    <table class="fact-table">
-                        <tr>
-                            <td class="fact-label">Nationality</td>
-                            <td class="fact-value">Stazzerian-American</td>
-                        </tr>
-                        <tr>
-                            <td class="fact-label">Occupation</td>
-                            <td class="fact-value">Private Security Officer / Internet Personality</td>
-                        </tr>
-                        <tr>
-                            <td class="fact-label">Affiliates</td>
-                            <td class="fact-value">
-                                <a href="/stazzboi/FirstLady">First Lady LeAnn Stazzland</a><br>
-                                <a href="/stazzboi/VP">Vice President Isaac Ochoa</a><br>
-                                <a href="/Stazzeria/advisor">Advisor Caro</a>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+            <section class="brand-hero">
+                <img src="kelvinstazzboidrink.png" class="hero-pfp" alt="Kelvin Stazzland PFP">
+                <span class="section-tag">[ Identity Index // Master Archive ]</span>
+                <h1>Kelvin Stazzland</h1>
+                <p>Stazzerian-American rapper, digital entrepreneur, and sovereign executive. Orchestrating digital platforms, brand alignments, and regional creative movements from 2013 onward.</p>
             </section>
 
-            <section class="app-section">
-                <span class="section-index">[DIRECTORY // IDENTITY ARCHETYPES]</span>
+            <nav class="two-column-grid">
                 
-                <div class="pillar-node">
-                    <h3>01 // THE PRESIDENT</h3>
-                    <h2>PRESIDENT KELVIN STAZZLAND</h2>
-                    <p>The sovereign executive authority of Stazzeria. He directs national alignment, structural security clearances, and command-line execution for the collective, enforcing an intentional presidential aesthetic across all distribution hubs.</p>
-                </div>
+                <a href="#governance" class="app-square">
+                    <div class="icon-wrapper">👑</div>
+                    <span>The President</span>
+                    <p>President Kelvin Stazzland</p>
+                </a>
 
-                <div class="pillar-node">
-                    <h3>02 // THE CONTENT CREATOR</h3>
-                    <h2>THE KHAMELION</h2>
-                    <p>The core archetype heavily associated with his visual content creation, streaming layouts, and digital branding. The altered "Kh" configuration marks a distinct sovereign status. The signature Khamelion Pose signifies absolute environmental stillness with tactical awareness, controlled composure, and administrative authority across all creator networks.</p>
-                    <p class="quote-block">"The Khamelion does not become the environment. It learns how to move within it without surrendering itself."</p>
-                </div>
+                <a href="#content" class="app-square">
+                    <div class="icon-wrapper">🦎</div>
+                    <span>Content Creator</span>
+                    <p>The Khamelion</p>
+                </a>
 
-                <div class="pillar-node">
-                    <h3>03 // THE RECORDING ARTIST</h3>
-                    <h2>STAZZBOI</h2>
-                    <p>The primary identity utilized when referring to his music, audio distributions, and lyric catalogs. Operating as Stazzboi, he behaves as the public artistic face of the empire, broadcasting custom musical assets across international streaming vectors.</p>
-                </div>
+                <a href="#music" class="app-square">
+                    <div class="icon-wrapper">🎵</div>
+                    <span>Recording Artist</span>
+                    <p>Stazzboi Music</p>
+                </a>
 
-                <div class="pillar-node">
-                    <h3>04 // THE TOURNEY OPERATOR</h3>
-                    <h2>THE AIMBOT</h2>
-                    <p>The competitive gaming persona deployed during Call of Duty Mobile operations and real-world event sequencing. This identity directly governs the <strong>Stazzology</strong> live promotional network, notably staging the dynamic "Bites and Battles" Street Fighter 6 tournament series hosted at MegaBites Arcade in Hemet, California.</p>
-                </div>
+                <a href="#gaming" class="app-square">
+                    <div class="icon-wrapper">🎯</div>
+                    <span>Tournament Operator</span>
+                    <p>Aimbot / Stazzology</p>
+                </a>
+
+            </nav>
+
+            <section class="content-card" id="governance">
+                <h2 class="card-title">Executive Profile</h2>
+                <p class="card-p">Operating as <strong>President Kelvin Stazzland</strong> within the sovereign nation of Stazzeria, he oversees command structures, protective alignments, and asset distribution lines. This network extends checkpoints through Menifee, Hemet, Murrieta, Oceanside, San Diego, Riverside, and Los Angeles.</p>
             </section>
 
-            <section class="app-section">
-                <span class="section-index">[LOG // STAZZBOI AUDIO RELEASES]</span>
-                <div class="pillar-node">
-                    <div class="catalog-strip"><span>Swerve (2025)</span> <span style="color:var(--text-muted);">STZ-03</span></div>
-                    <div class="catalog-strip"><span>Locked In (2025)</span> <span style="color:var(--text-muted);">STZ-02</span></div>
-                    <div class="catalog-strip"><span>Up Next (2025)</span> <span style="color:var(--text-muted);">STZ-01</span></div>
-                    <div class="catalog-strip"><span>Like That (2025)</span> <span style="color:var(--text-muted);">Digital Release</span></div>
-                    <div class="catalog-strip"><span>Robbery</span> <span style="color:var(--text-muted);">Digital Release</span></div>
-                    <div class="catalog-strip"><span>Stazzerian Wrist Flick</span> <span style="color:var(--text-muted);">Track Distribution</span></div>
-                    <div class="catalog-strip"><span>Its My Gun</span> <span style="color:#ef4444;">SuicidalYacht Archive</span></div>
-                </div>
+            <section class="content-card" id="content">
+                <h2 class="card-title">Visual Media Framework</h2>
+                <p class="card-p"><strong>The Khamelion</strong> serves as the premier archetype dedicated to streaming configurations, visual design patterns, and content deployment. The signature <em>Khamelion Pose</em> stands as an emblem of stillness with high tactical awareness across all media feeds.</p>
             </section>
 
-            <section class="app-section">
-                <span class="section-index">[DIRECTORY // FOUNDATIONAL PILLARS]</span>
+            <section class="content-card" id="music">
+                <h2 class="card-title">Audio Release Registry</h2>
+                <p class="card-p" style="margin-bottom: 14px;">Official music drops and audio distributions authorized under the <strong>Stazzboi</strong> catalog:</p>
                 
-                <div class="pillar-node">
-                    <h2>STAZZERIA</h2>
-                    <p>A sovereign collective anchored via specialized digital infrastructure. Stazzeria manifests physically wherever its registered population assembles in the real world under the executive oversight of President Kelvin Stazzland.</p>
-                </div>
+                <div class="catalog-strip"><span class="track-name">Swerve</span><span class="track-code">STZ-03</span></div>
+                <div class="catalog-strip"><span class="track-name">Locked In</span><span class="track-code">STZ-02</span></div>
+                <div class="catalog-strip"><span class="track-name">Up Next</span><span class="track-code">STZ-01</span></div>
+                <div class="catalog-strip"><span class="track-name">Like That</span><span class="track-code">Digital Drop</span></div>
+                <div class="catalog-strip"><span class="track-name">Robbery</span> Downing</span><span class="track-code">Digital Drop</span></div>
+                <div class="catalog-strip"><span class="track-name">Stazzerian Wrist Flick</span><span class="track-code">Distribution</span></div>
+                <div class="catalog-strip"><span class="track-name">Its My Gun</span><span class="track-code" style="color: #ef4444; background: rgba(239, 68, 68, 0.08);">SuicidalYacht</span></div>
+            </section>
 
-                <div class="pillar-node">
-                    <h2>STAZZOLOGY</h2>
-                    <p>The live tournament curation and media deployment engine utilized by The Aimbot archetype to coordinate local combat gaming divisions and sub-channel communities.</p>
-                </div>
+            <section class="content-card" id="gaming">
+                <h2 class="card-title">Competitive Logistics</h2>
+                <p class="card-p">Known as <strong>Aimbot</strong> in tactical configurations (CODM), this execution node commands the <strong>Stazzology</strong> event platform—architecting community assemblies such as the "Bites and Battles" Street Fighter series at MegaBites Arcade in Hemet, California.</p>
+            </section>
 
-                <div class="pillar-node">
-                    <h2>THE STAZZLIES</h2>
-                    <p>The official civil community, registered viewer base, and native citizen population within the Stazzeria ecosystem.</p>
-                </div>
-
-                <div class="pillar-node">
-                    <h2>STAZZISM</h2>
-                    <p>The primary philosophical doctrine tracking individual accountability, strict creative discipline, and execution-based governance.</p>
+            <section class="content-card">
+                <h2 class="card-title">Foundational Network Nodes</h2>
+                <p class="card-p">The architecture coordinates four distinct systemic pillars that sustain the stability of the collective:</p>
+                <div class="timeline-pills">
+                    <span class="timeline-pill">Stazzeria</span>
+                    <span class="timeline-pill">Stazzology</span>
+                    <span class="timeline-pill">The Stazzlies</span>
+                    <span class="timeline-pill">Stazzism</span>
                 </div>
             </section>
         </main>
 
-        <footer>
-            <p>CENTRAL INDEX HOST // SYSTEM OPERATIONAL // JUNE 6, 2026</p>
-            <p style="margin-top: 4px; color: #333;">CRAWL STATUS: ACTIVE // CODENAME: STAZZBOI // INDEXED</p>
+        <footer class="app-footer">
+            <p>ACTIVE RUN // HARDWARE REPLICATED INDEX // 2026</p>
         </footer>
 
     </div>
