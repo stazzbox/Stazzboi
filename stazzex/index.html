@@ -131,6 +131,7 @@
     .search-container {
       max-width: 700px;
       margin: auto;
+      position: relative; /* Maintained for dropdown alignment */
     }
 
     .search-bar {
@@ -149,6 +150,58 @@
     .search-bar:focus {
       border-color: var(--gold);
       box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+    }
+
+    /* PREDICTIVE SEARCH DROPDOWN INTERFACE */
+    .suggestions-box {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #121212;
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      margin-top: 8px;
+      max-height: 280px;
+      overflow-y: auto;
+      z-index: 1000;
+      display: none;
+      text-align: left;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    }
+
+    .suggestion-item {
+      padding: 14px 20px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      color: #e4e4e7;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .suggestion-item:last-child {
+      border-bottom: none;
+    }
+
+    .suggestion-item:hover {
+      background: rgba(212, 175, 55, 0.08);
+      color: white;
+    }
+
+    .suggestion-item .item-title {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .suggestion-item .item-type {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      font-family: monospace;
+      color: #71717a;
+      margin-left: auto;
     }
 
     /* GRID ARCHIVE LAYOUTS */
@@ -308,6 +361,7 @@
 
       <div class="search-container">
         <input type="text" id="searchInput" class="search-bar" placeholder="Query terminology, titles, or event files..." autocomplete="off"/>
+        <div id="suggestionsBox" class="suggestions-box"></div>
       </div>
     </div>
   </section>
@@ -430,20 +484,62 @@
   </footer>
 
   <script>
-    const searchInput = document.getElementById("searchInput");
-    const cards = document.querySelectorAll(".entry-card");
+    document.addEventListener("DOMContentLoaded", function () {
+      const searchInput = document.getElementById("searchInput");
+      const suggestionsBox = document.getElementById("suggestionsBox");
+      const cards = document.querySelectorAll(".entry-card");
 
-    searchInput.addEventListener("input", function() {
-      const value = this.value.toLowerCase().trim();
+      searchInput.addEventListener("input", function() {
+        const value = this.value.toLowerCase().trim();
+        suggestionsBox.innerHTML = "";
 
-      cards.forEach(card => {
-        const matchingPool = card.getAttribute("data-name").toLowerCase();
-        const contentText = card.innerText.toLowerCase();
+        if (value.length === 0) {
+          suggestionsBox.style.display = "none";
+          return;
+        }
 
-        if (matchingPool.includes(value) || contentText.includes(value)) {
-          card.style.display = "flex";
+        let totalMatches = 0;
+
+        cards.forEach(card => {
+          const title = card.querySelector("h3").innerText;
+          const classification = card.querySelector(".entry-classification").innerText;
+          const searchPool = card.getAttribute("data-name").toLowerCase();
+          const targetUrl = card.querySelector(".entry-link").getAttribute("href");
+
+          // Check if value matches title elements or data-name attributes
+          if (title.toLowerCase().includes(value) || searchPool.includes(value)) {
+            totalMatches++;
+
+            // Construct dynamic dropdown line item
+            const item = document.createElement("div");
+            item.className = "suggestion-item";
+            item.innerHTML = `
+              <span>📚</span>
+              <span class="item-title">${title}</span>
+              <span class="item-type">${classification}</span>
+            `;
+
+            // Execute automated routing upon touch or point click
+            item.addEventListener("click", function() {
+              window.location.href = targetUrl;
+            });
+
+            suggestionsBox.appendChild(item);
+          }
+        });
+
+        // Toggle visibility based on matching calculations
+        if (totalMatches > 0) {
+          suggestionsBox.style.display = "block";
         } else {
-          card.style.display = "none";
+          suggestionsBox.style.display = "none";
+        }
+      });
+
+      // Clear layout elements if user triggers an external focus change
+      document.addEventListener("click", function(event) {
+        if (!event.target.closest(".search-container")) {
+          suggestionsBox.style.display = "none";
         }
       });
     });
@@ -451,6 +547,4 @@
 
 </body>
 </html>
-
-```
 
