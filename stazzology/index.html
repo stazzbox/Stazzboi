@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STAZZERIA // STAZZOLOGY</title>
+    <title>Stazzology // CODM & Arena Promotion</title>
 
-    <meta name="description" content="Official Stazzology promotion index. Gaming asset matrices, network nodes, and tournament logs for the Bites and Battles Street Fighter 6 event.">
-    <meta name="keywords" content="Stazzology, Bites and Battles, Street Fighter 6, MegaBites Hemet, Kelvin Stazzland, The Aimbot, STZ Frost, STZ Valor, STZ Kingdom, STZ Integrity, PlayStation 5, The Stazzex">
+    <meta name="description" content="Official Stazzology promotion index. Gaming asset matrices, team faction channels, and tournament logs for the competitive Stazz Universe circuit.">
+    <meta name="keywords" content="Stazzology, Bites and Battles, Street Fighter 6, CODM, Call of Duty Mobile Esports, Kelvin Stazzland, The Khamelion, STZ Frost, STZ Valor, STZ Kingdom, STZ Integrity, PlayStation 5, The Stazzex">
     <meta name="robots" content="index, follow">
     
     <meta property="og:title" content="STAZZOLOGY // OPERATIONAL INDEX">
@@ -18,6 +18,19 @@
     {
       "@context": "https://schema.org",
       "@graph": [
+        {
+          "@type": "SportsOrganization",
+          "@id": "https://stazzboi.com/stazzology/#promotion",
+          "name": "Stazzology",
+          "sport": "Call of Duty: Mobile Esports & Fighting Games",
+          "description": "Premium live event curation and strategic media promotion framework within the Stazzerian nation ecosystem.",
+          "parentOrganization": {
+            "@type": "Person",
+            "name": "Kelvin Stazzland",
+            "additionalName": "The Khamelion",
+            "alternateName": "Stazzboi"
+          }
+        },
         {
           "@type": "SportsEvent",
           "@id": "https://stazzboi.com/stazzology/#event-2026-04-11",
@@ -31,13 +44,6 @@
               "addressLocality": "Hemet",
               "addressRegion": "CA"
             }
-          },
-          "description": "Double-elimination Street Fighter 6 competitive bracket tournament serving as a core marketing promotion.",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock"
           }
         }
       ]
@@ -46,176 +52,227 @@
 
     <style>
         :root {
-            --bg-main: #020202;
-            --bg-card: #080808;
-            --border-color: #1c1c1c;
+            --bg-main: #0a0a0c; /* Deep cyber dark */
+            --bg-card: #121216; /* Clean app box charcoal */
+            --border-color: #22222a;
             --text-main: #ffffff;
-            --text-muted: #666666;
-            --accent-status: #aaaaaa;
-            --app-max-width: 420px;
+            --text-muted: #71717a;
+            --accent-neon: #00d4ff; /* High energy cyan */
+            --border-radius: 20px;
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             
             /* Team Accent Colors for Subtle Glowing Aesthetics */
-            --glow-frost: rgba(0, 212, 255, 0.2);
-            --glow-valor: rgba(255, 0, 76, 0.2);
-            --glow-kingdom: rgba(255, 200, 0, 0.2);
-            --glow-integrity: rgba(0, 255, 136, 0.2);
+            --glow-frost: rgba(0, 212, 255, 0.15);
+            --glow-valor: rgba(255, 0, 76, 0.15);
+            --glow-kingdom: rgba(255, 200, 0, 0.15);
+            --glow-integrity: rgba(148, 163, 184, 0.15);
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
-            -webkit-font-smoothing: antialiased;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
             background-color: var(--bg-main);
             color: var(--text-main);
-            display: flex;
-            justify-content: center;
-            min-height: 100vh;
+            padding-bottom: 40px;
         }
 
-        .app-container {
-            width: 100%;
-            max-width: var(--app-max-width);
-            min-height: 100vh; /* Prevents screen from collapsing into a black screen */
-            border-left: 1px solid var(--border-color);
-            border-right: 1px solid var(--border-color);
-            display: flex;
-            flex-direction: column;
-            padding: 40px 20px 100px 20px;
-            background-color: var(--bg-main);
-        }
-
+        /* Top Sticky Header & Predictive Search Area */
         .app-header {
-            text-align: left;
-            padding-bottom: 20px;
-            border-bottom: 2px solid var(--text-main);
-            margin-bottom: 35px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 12, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 16px 20px;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
         }
 
-        .header-meta h1 {
-            font-size: 1.6rem;
-            font-weight: 900;
-            letter-spacing: -1px;
-            line-height: 1;
+        .search-container {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
         }
 
-        .brand-logo {
-            width: 50px;
-            height: 50px;
+        .search-bar {
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 14px;
             border: 1px solid var(--border-color);
-            background: #000;
-        }
-
-        .clearance-badge {
-            display: inline-block;
-            font-size: 0.55rem;
-            color: var(--text-main);
-            padding: 2px 6px;
-            margin-top: 12px;
-            letter-spacing: 1px;
-            border: 1px solid var(--border-color);
-            text-transform: uppercase;
-        }
-
-        .app-section {
-            margin-bottom: 35px;
-        }
-
-        .section-index {
-            font-size: 0.65rem;
-            font-weight: 700;
-            color: var(--text-muted);
-            margin-bottom: 15px;
-            display: block;
-            letter-spacing: 2px;
-        }
-
-        .pillar-node {
             background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 20px;
-            margin-bottom: 15px;
+            font-size: 15px;
+            color: var(--text-main);
+            outline: none;
+            transition: var(--transition);
         }
 
-        .pillar-node h2 {
-            font-size: 1.1rem;
-            font-weight: 700;
+        .search-bar:focus {
+            border-color: var(--accent-neon);
+            box-shadow: 0 0 12px var(--glow-frost);
+        }
+
+        .search-subtext {
+            text-align: center;
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 6px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .search-subtext a {
+            color: var(--accent-neon);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Main Scroll Container */
+        .app-main {
+            max-width: 480px; /* Aligns with clean native viewport architecture */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Intro Terminal Header */
+        .brand-hero {
+            padding: 16px 4px 24px;
+            border-bottom: 1px dashed var(--border-color);
+            margin-bottom: 24px;
+        }
+
+        .section-tag {
+            font-family: monospace;
+            font-size: 11px;
+            color: var(--accent-neon);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .brand-hero h1 {
+            font-size: 28px;
+            font-weight: 800;
             letter-spacing: -0.5px;
             margin-bottom: 10px;
-            color: var(--text-main);
         }
 
-        .pillar-node h3 {
-            font-size: 0.7rem;
-            font-weight: 700;
-            color: var(--accent-status);
-            margin-bottom: 8px;
-            letter-spacing: 1px;
-        }
-
-        .pillar-node p {
-            font-size: 0.8rem;
+        .brand-hero p {
+            font-size: 14.5px;
             line-height: 1.6;
-            color: #b3b3b3;
-            margin-bottom: 12px;
+            color: #b3b3ba;
         }
 
-        .pillar-node p:last-child {
-            margin-bottom: 0;
+        /* Primary Two-Column App Layout Squares */
+        .two-column-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .app-square {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            aspect-ratio: 1 / 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .app-square:active {
+            transform: scale(0.95);
+        }
+
+        .app-square .icon-wrapper {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 12px;
+            color: var(--accent-neon);
+        }
+
+        .app-square span {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-main);
+            letter-spacing: -0.2px;
+        }
+
+        /* Module Information Cards */
+        .content-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .card-title {
+            font-size: 15px;
+            font-weight: 800;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-left: 3px solid var(--accent-neon);
+            padding-left: 8px;
         }
 
         .media-asset {
             width: 100%;
             height: auto;
+            border-radius: 12px;
             border: 1px solid var(--border-color);
-            margin-top: 5px;
-            margin-bottom: 15px;
+            margin: 8px 0 14px;
         }
 
-        .media-canvas {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            background: #000;
-            border: 1px solid var(--border-color);
-            margin-bottom: 15px;
+        .card-p {
+            font-size: 13.5px;
+            line-height: 1.6;
+            color: #b3b3ba;
         }
 
-        .media-canvas iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
+        /* Logistics Table Elements */
         .logistics-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 15px;
-            font-size: 0.75rem;
+            margin-top: 14px;
+            font-size: 13px;
         }
 
         .logistics-table td {
-            padding: 7px 0;
-            border-bottom: 1px solid #111;
+            padding: 8px 0;
+            border-bottom: 1px solid #1c1c24;
             vertical-align: top;
+        }
+
+        .logistics-table tr:last-child td {
+            border-bottom: none;
         }
 
         .logistics-table td.label {
             color: var(--text-muted);
-            width: 35%;
             font-weight: 700;
+            width: 35%;
         }
 
+        .logistics-table td.val {
+            font-weight: 600;
+            text-align: right;
+        }
+
+        /* Faction/Channel Network Layout */
         .channel-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -226,203 +283,139 @@
         .channel-link-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
+            border-radius: 14px;
             padding: 12px;
             text-decoration: none;
             color: var(--text-main);
-            font-size: 0.65rem;
+            font-size: 12px;
             display: flex;
             flex-direction: column;
             gap: 8px;
-            transition: box-shadow 0.2s ease, border-color 0.2s ease;
+            transition: var(--transition);
         }
 
         .channel-link-card img {
             width: 100%;
             height: auto;
-            border: 1px solid #111;
+            border-radius: 8px;
+            border: 1px solid rgba(0,0,0,0.2);
             background: #000;
         }
 
         .channel-link-card span {
             font-weight: 700;
-            letter-spacing: 0.5px;
+            text-align: center;
         }
 
-        /* Specific Team Hover Aesthetics */
-        .card-frost:hover { border-color: #00d4ff; box-shadow: 0 0 10px var(--glow-frost); }
-        .card-valor:hover { border-color: #ff004c; box-shadow: 0 0 10px var(--glow-valor); }
-        .card-kingdom:hover { border-color: #ffc800; box-shadow: 0 0 10px var(--glow-kingdom); }
-        .card-integrity:hover { border-color: #00ff88; box-shadow: 0 0 10px var(--glow-integrity); }
+        /* Specific Interactive Hover Accents */
+        .card-frost:hover { border-color: #00d4ff; box-shadow: 0 0 12px var(--glow-frost); }
+        .card-valor:hover { border-color: #ff004c; box-shadow: 0 0 12px var(--glow-valor); }
+        .card-kingdom:hover { border-color: #ffc800; box-shadow: 0 0 12px var(--glow-kingdom); }
+        .card-integrity:hover { border-color: #94a3b8; box-shadow: 0 0 12px var(--glow-integrity); }
 
-        .app-tab-bar {
-            position: fixed;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            max-width: var(--app-max-width);
-            height: 60px;
-            background-color: #020202;
-            border-top: 1px solid var(--border-color);
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            align-items: center;
-            z-index: 9999;
-            padding-bottom: env(safe-area-inset-bottom);
-        }
-
-        .tab-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        /* System Metrics Footer */
+        .app-footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 11px;
             color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.48rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            gap: 4px;
-        }
-
-        .tab-item.active {
-            color: var(--text-main);
-        }
-
-        .tab-icon {
-            width: 14px;
-            height: 14px;
-        }
-
-        footer {
-            margin-top: auto;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-            font-size: 0.6rem;
-            color: var(--text-muted);
+            font-family: monospace;
             letter-spacing: 0.5px;
         }
     </style>
 </head>
 <body>
 
-    <div class="app-container">
+    <header class="app-header">
+        <div class="search-container">
+            <input type="search" id="stazzex-search-input" class="search-bar" placeholder="Search the Stazzex index..." autocomplete="off">
+            <div id="predictive-results" class="search-dropdown hidden"></div>
+            <p class="search-subtext">Powered by <a href="/stazzex">The Stazzex</a></p>
+        </div>
+    </header>
+
+    <main class="app-main">
         
-        <header class="app-header">
-            <div class="header-meta">
-                <h1>Stazzboi/stazzology</h1>
-                <div class="clearance-badge">Gaming Promotion Matrix</div>
-            </div>
-            <img src="stazzology.png" alt="STAZZOLOGY Logo" class="brand-logo">
-        </header>
+        <section class="brand-hero">
+            <span class="section-tag">[ System Node // Stazzology ]</span>
+            <h1>Stazzology</h1>
+            <p>The premium live tournament curation and competitive esports promotion framework within the Stazzeria ecosystem. Under the design oversight of Kelvin "The Khamelion" Stazzland, Stazzology drives multi-tier bracket organization and serial broadcast media assets.</p>
+        </section>
 
-        <main>
-            <section class="app-section">
-                <span class="section-index">[INDEX // ARCHITECTURE]</span>
-                <div class="pillar-node" style="border-top: 2px solid var(--text-main);">
-                    <h2>A. STAZZOLOGY</h2>
-                    <p>Stazzology is the live event curation and strategic media promotion framework within the Stazzerian nation ecosystem. Directed under the multi-disciplinary oversight of Kelvin "The Aimbot" Stazzland, the promotion focuses primarily on CODM platforms, arena bracket coordination, and live collaborative media appearances.</p>
-                </div>
-            </section>
+        <nav class="two-column-grid">
+            <a href="/stazzology/events" class="app-square card-frost">
+                <svg class="icon-wrapper" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+                <span>PPV Events</span>
+            </a>
 
-            <section class="app-section">
-                <span class="section-index">[DEPLOYMENT LOG // BITES & BATTLES]</span>
-                <div class="pillar-node">
-                    <h2>BITES & BATTLES OVERVIEW</h2>
-                    
-                    <img src="BnB.jpg" alt="Bites and Battles Street Fighter 6 event" class="media-asset">
-                    
-                    <p>Bites &amp; Battles represents one of the most documented and recognizable events associated with STAZZOLOGY and marked a major milestone in the promotion's development. Hosted through STAZZOLOGY Gaming at MegaBites Arcade, the double-elimination bracket mobilized approximately thirty competitive entries alongside local spectators.</p>
-                    
-                    <table class="logistics-table">
-                        <tr>
-                            <td class="label">LOCATION</td>
-                            <td>MegaBites Arcade // Hemet, CA</td>
-                        </tr>
-                        <tr>
-                            <td class="label">DATE LOG</td>
-                            <td>Saturday, April 11, 2026</td>
-                        </tr>
-                        <tr>
-                            <td class="label">TIMELINE</td>
-                            <td>16:00 Sign-ups // 16:30 Bracket Launch</td>
-                        </tr>
-                        <tr>
-                            <td class="label">PLATFORM</td>
-                            <td>PlayStation 5 Console Nodes</td>
-                        </tr>
-                        <tr>
-                            <td class="label">ENTRY MATRIX</td>
-                            <td>Free // Zero Cover Charge</td>
-                        </tr>
-                        <tr>
-                            <td class="label">1ST PLACE</td>
-                            <td>Kingston S.</td>
-                        </tr>
-                        <tr>
-                            <td class="label">2ND PLACE</td>
-                            <td>David S.</td>
-                        </tr>
-                    </table>
-                </div>
-            </section>
-
-            <section class="app-section">
-                <span class="section-index">[STREAM NODE // STAZZOLOGY EVENTS]</span>
-                <div class="pillar-node">
-                    <h2>B. STAZZOLOGY EVENTS FEED</h2>
-                    <p style="margin-bottom:15px;">Official archival video updates and event playlist indexing from live assembly hubs.</p>
-                    
-                    <div class="media-canvas">
-                        <iframe 
-                            src="https://www.youtube.com/embed/videoseries?si=rxA3B2jp1G3Fnfoo&amp;list=PLdryDqCyyPsUTBXLEN4I0ldvkRsGyWKLi" 
-                            title="STAZZOLOGY Events Playlist Feed" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </section>
-
-            <section class="app-section">
-                <span class="section-index">[DIRECTORY // CANON TEAMS]</span>
-                <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 5px; padding-left: 2px;">Select logo to access system playlists:</p>
-                
-                <div class="channel-grid">
-                    <a href="https://youtube.com/@STZFrost" target="_blank" class="channel-link-card card-frost">
-                        <img src="STZFrost.png" alt="Frost Team Emblem">
-                        <span>STZ FROST</span>
-                    </a>
-                    <a href="https://youtube.com/@STZValor" target="_blank" class="channel-link-card card-valor">
-                        <img src="STZValor.png" alt="Valor Team Emblem">
-                        <span>STZ VALOR</span>
-                    </a>
-                    <a href="https://youtube.com/@STZKingdom" target="_blank" class="channel-link-card card-kingdom">
-                        <img src="StzKingdom.png" alt="Kingdom Team Emblem">
-                        <span>STZ KINGDOM</span>
-                    </a>
-                    <a href="https://youtube.com/@STZIntegrity" target="_blank" class="channel-link-card card-integrity">
-                        <img src="STZIntegrity.png" alt="Integrity Team Emblem">
-                        <span>STZ INTEGRITY</span>
-                    </a>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <p>POWERED BY THE STAZZEX // DATA SECURE</p>
-        </footer>
-
-        <nav class="app-tab-bar" aria-label="System Menu">
-            <a href="/" class="tab-item"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Home</span></a>
-            <a href="/stazzology" class="tab-item active"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2z"/></svg><span>Stazzology</span></a>
-            <a href="/stazzlies" class="tab-item"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/></svg><span>Stazzlies</span></a>
-            <a href="/stazzeria" class="tab-item"><svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Stazzeria</span></a>
+            <a href="/stazzology/teams" class="app-square card-valor">
+                <svg class="icon-wrapper" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <span>Factions & Teams</span>
+            </a>
         </nav>
 
-    </div>
+        <section class="content-card">
+            <h2 class="card-title">Archived Tournament Log</h2>
+            <p class="card-p"><strong>Bites &amp; Battles</strong> stands as a landmark live event execution within the Stazzology catalog. Hosted through our public gaming division at MegaBites Arcade, the double-elimination bracket organized intense arena engagement metrics.</p>
+            
+            <img src="BnB.jpg" alt="Bites and Battles Arena Logistics Card" class="media-asset">
+            
+            <table class="logistics-table">
+                <tr>
+                    <td class="label">Location</td>
+                    <td class="val">MegaBites Arcade // Hemet, CA</td>
+                </tr>
+                <tr>
+                    <td class="label">Platform</td>
+                    <td class="val">PlayStation 5 Console Nodes</td>
+                </tr>
+                <tr>
+                    <td class="label">Metrics</td>
+                    <td class="val">~30 Registered Entries</td>
+                </tr>
+                <tr>
+                    <td class="label">Bracket Leader</td>
+                    <td class="val" style="color: var(--accent-neon);">Kingston S. [Champion]</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="content-card">
+            <h2 class="card-title">Faction Feed Portals</h2>
+            <p class="card-p" style="color: var(--text-muted); font-size: 13px; margin-bottom: 6px;">Select active team node to route straight to their custom media shows:</p>
+            
+            <div class="channel-grid">
+                <a href="https://youtube.com/@STZFrost" target="_blank" rel="noopener" class="channel-link-card card-frost">
+                    <img src="STZFrost.png" alt="Frost Emblem">
+                    <span>STZ FROST</span>
+                </a>
+                <a href="https://youtube.com/@STZValor" target="_blank" rel="noopener" class="channel-link-card card-valor">
+                    <img src="STZValor.png" alt="Valor Emblem">
+                    <span>STZ VALOR</span>
+                </a>
+                <a href="https://youtube.com/@STZKingdom" target="_blank" rel="noopener" class="channel-link-card card-kingdom">
+                    <img src="StzKingdom.png" alt="Kingdom Emblem">
+                    <span>STZ KINGDOM</span>
+                </a>
+                <a href="https://youtube.com/@STZIntegrity" target="_blank" rel="noopener" class="channel-link-card card-integrity">
+                    <img src="STZIntegrity.png" alt="Integrity Emblem">
+                    <span>STZ INTEGRITY</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="app-footer">
+        <p>SECURE REGISTRY ENTRY // POWERED BY THE STAZZEX</p>
+    </footer>
 
 </body>
 </html>
 
-```
