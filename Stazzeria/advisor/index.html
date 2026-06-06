@@ -1,0 +1,357 @@
+Here is the production-ready code for the **Advisor** profile page. It features a custom layout that matches the sleek dark-mode system design of the /Stazzeria ecosystem. It uses fstazzerianpfp.png for the avatar image and integrates her history as the first-term Vice President before Isaac Ochoa succeeded her, as well as a section documenting their successful presidential debate run.
+Save this file as advisor.html or place it in your /Stazzeria/advisor path:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stazzerian Advisor | Caro</title>
+
+    <meta name="description" content="Official profile page of Caro, Stazzerian Advisor and former Vice President during the first term of the Stazzerian Nation.">
+    <meta name="keywords" content="Stazzerian Advisor, Caro, Stazzeria, Department of Stazz, Kelvin Stazzland, Isaac Ochoa, Vice President, Stazz Universe, The Stazzex">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://stazzboi.com/Stazzeria/advisor">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <style>
+        :root {
+            --bg-main: #09090b; 
+            --bg-card: #141419; 
+            --border-color: #27272a;
+            --text-main: #ffffff;
+            --text-muted: #71717a;
+            --accent-advisor: #f59e0b; 
+            --glow-advisor: rgba(245, 158, 11, 0.15);
+            --border-radius: 20px;
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .app-container {
+            width: 100%;
+            max-width: 440px;
+            background-color: var(--bg-main);
+            padding: 20px 20px 60px 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Consistent Top System Header */
+        .app-header {
+            padding: 10px 0 20px 0;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 24px;
+        }
+
+        .system-meta {
+            text-align: center;
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .system-meta a {
+            color: var(--accent-advisor);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Hero Node Block */
+        .profile-hero {
+            text-align: center;
+            padding-bottom: 24px;
+            border-bottom: 1px dashed var(--border-color);
+            margin-bottom: 24px;
+        }
+
+        .profile-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-advisor);
+            box-shadow: 0 0 15px var(--glow-advisor);
+            object-fit: cover;
+            background: #000;
+            margin-bottom: 14px;
+        }
+
+        .section-tag {
+            font-family: monospace;
+            font-size: 11px;
+            color: var(--accent-advisor);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .profile-hero h1 {
+          font-size: 26px;
+          font-weight: 800;
+          letter-spacing: -0.5px;
+          margin-bottom: 4px;
+        }
+
+        .profile-hero .rank-sub {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        /* Content Modules */
+        .content-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .card-title {
+            font-size: 14px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-left: 3px solid var(--accent-advisor);
+            padding-left: 8px;
+        }
+
+        .card-p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #d4d4d8;
+            margin-bottom: 12px;
+        }
+        .card-p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Key Facts System List */
+        .fact-list {
+            list-style: none;
+            margin-top: 8px;
+        }
+
+        .fact-item {
+            font-size: 13.5px;
+            padding: 8px 0;
+            border-bottom: 1px solid #1c1c24;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .fact-item:last-child {
+            border-bottom: none;
+        }
+
+        .fact-label {
+            color: var(--text-muted);
+            font-weight: 700;
+        }
+
+        .fact-val {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        .fact-val a {
+            color: var(--accent-advisor);
+            text-decoration: none;
+        }
+
+        /* Command Hierarchy Accordion */
+        details {
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            margin-top: 8px;
+            background: var(--bg-card);
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 14px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            background: #181820;
+            user-select: none;
+            outline: none;
+        }
+
+        .details-content {
+            padding: 16px;
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .cabinet-member {
+            margin-bottom: 14px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #1c1c24;
+        }
+
+        .cabinet-member:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .cabinet-member h3 {
+            font-size: 13.5px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .cabinet-member p {
+            font-size: 12.5px;
+            color: #a1a1aa;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .btn-link {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-main);
+            background: var(--bg-main);
+            border: 1px solid var(--border-color);
+            padding: 4px 10px;
+            border-radius: 6px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        .btn-link:hover {
+            border-color: var(--accent-advisor);
+        }
+
+        .app-footer {
+            text-align: center;
+            margin-top: auto;
+            padding-top: 24px;
+            font-size: 11px;
+            color: var(--text-muted);
+            font-family: monospace;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+
+        <header class="app-header">
+            <p class="system-meta">Archival Node // Powered by <a href="/stazzex">The Stazzex</a></p>
+        </header>
+
+        <main>
+            <section class="profile-hero">
+                <img src="fstazzerianpfp.png" class="profile-avatar" alt="Caro Photo">
+                <span class="section-tag">[ Strategic Element ]</span>
+                <h1>Caro</h1>
+                <div class="rank-sub">Stazzerian Advisor</div>
+            </section>
+
+            <section class="content-card">
+                <h2 class="card-title">Role &amp; Authority</h2>
+                <p class="card-p"><strong>Caro</strong> serves as the trusted <strong>Stazzerian Advisor</strong>, standing as a foundational executive pillar and senior strategic counselor within the framework of the Department of Stazz.</p>
+                <p class="card-p">Holding deep historical legacy within the high command, Caro originally served as the <strong>Vice President</strong> during President Kelvin Stazzland’s first term. In the current administration, following a structured transition of oversight vectors, Isaac Ochoa succeeded her as Vice President, elevating Caro into her vital senior advisory post to secure systemic continuity.</p>
+            </section>
+
+            <section class="content-card">
+                <h2 class="card-title">Political Legacy</h2>
+                <p class="card-p">The executive synergy between the President and the Advisor traces directly back to their early campaigns. During their historic presidential run, the two established unparalleled rhetorical authority across the network, winning many debates together and shaping the foundational ideas of Stazzerian culture.</p>
+            </section>
+
+            <section class="content-card">
+                <h2 class="card-title">Key Profile Metrics</h2>
+                <ul class="fact-list">
+                    <li class="fact-item">
+                        <span class="fact-label">Identity Name</span>
+                        <span class="fact-val">Caro</span>
+                    </li>
+                    <li class="fact-item">
+                        <span class="fact-label">Active Assignment</span>
+                        <span class="fact-val" style="color: var(--accent-advisor);">Strategic Advisor</span>
+                    </li>
+                    <li class="fact-item">
+                        <span class="fact-label">First Term Rank</span>
+                        <span class="fact-val">Former Vice President</span>
+                    </li>
+                    <li class="fact-item">
+                        <span class="fact-label">Executive Branch</span>
+                        <span class="fact-val"><a href="/Stazzeria">Department of Stazz</a></span>
+                    </li>
+                    <li class="fact-item">
+                        <span class="fact-label">Presiding President</span>
+                        <span class="fact-val"><a href="/stazzboi">Kelvin Stazzland</a></span>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="content-card">
+                <h2 class="card-title">Cabinet Matrix Node</h2>
+                <p class="card-p" style="color: var(--text-muted); font-size: 13px;">View corresponding administrative tiers across the government hub:</p>
+                
+                <details>
+                    <summary>Department Positions</summary>
+                    <div class="details-content">
+                        
+                        <div class="cabinet-member">
+                            <h3>President Kelvin Stazzland</h3>
+                            <p>Founder of Stazzeria, architect of core values, and supreme executive head of the Nation.</p>
+                            <a href="/stazzboi" class="btn-link">Access Profile</a>
+                        </div>
+
+                        <div class="cabinet-member">
+                            <h3>Vice President Isaac Ochoa</h3>
+                            <p>Current second-in-command, succeeding Caro to provide principal administrative support.</p>
+                            <a href="https://stazzboi.com/vice-president/" class="btn-link">Access Profile</a>
+                        </div>
+
+                        <div class="cabinet-member">
+                            <h3>First Lady Leann Stazzland</h3>
+                            <p>Head Stazzlie, primary ceremonial female authority, and partner to the Presidency.</p>
+                            <a href="https://stazzboi.com/1stlady/" class="btn-link">Access Profile</a>
+                        </div>
+
+                    </div>
+                </details>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p>Page entry logged: June 6, 2026</p>
+            <p>DATA SECURE // SECURE ADVISOR LOG ENTRY</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
+```
