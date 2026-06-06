@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The STAZZEX Archive | The Zits Conflict Dossier</title>
+
+  <meta name="description" content="Official STAZZEX archival file tracking the origins, strategic phases, neutralization metrics, and diplomatic resolution of The Zits Conflict." />
+  <meta name="keywords" content="The Zits Conflict, Stazzeria, Kelvin Stazzland, Leann Stazzland, John B., Stazzerian history, Confectionery Projectiles, Neutralization Statistics" />
+  <meta name="author" content="The STAZZEX Archival System" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" href="/stazzex/assets/logos/stazzex-logo.jpg" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #050505;
+      color: white;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: #d4af37;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    :root {
+      --gold: #d4af37;
+      --border: rgba(255, 255, 255, 0.08);
+      --card-bg: #0d0d0d;
+    }
+
+    /* DIRECTORY NAVIGATION BREADCRUMB */
+    .breadcrumb-nav {
+      width: 100%;
+      padding: 20px 6%;
+      background: #000;
+      border-bottom: 1px solid var(--border);
+      font-family: monospace;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+
+    .breadcrumb-nav a {
+      color: #71717a;
+    }
+
+    /* DOSSIER ARCHITECTURE CONTAINER */
+    .dossier-container {
+      max-width: 900px;
+      margin: 40px auto 80px;
+      padding: 0 20px;
+    }
+
+    .dossier-header {
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 20px;
+      margin-bottom: 35px;
+    }
+
+    .classification-tag {
+      color: var(--gold);
+      font-family: monospace;
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    /* STATISTICAL METRIC MATRIX PANEL */
+    .meta-panel {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 35px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      font-size: 0.85rem;
+    }
+
+    .meta-item strong {
+      display: block;
+      color: var(--gold);
+      text-transform: uppercase;
+      font-family: monospace;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .meta-item span {
+      color: #e4e4e7;
+    }
+
+    /* DATA BLOCK REPOSITORIES */
+    .dossier-section {
+      margin-bottom: 40px;
+    }
+
+    .section-num {
+      font-family: monospace;
+      color: #52525b;
+      margin-right: 8px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      border-bottom: 1px dashed var(--border);
+      padding-bottom: 6px;
+      margin-bottom: 16px;
+      letter-spacing: -0.3px;
+    }
+
+    p {
+      color: #d4d4d8;
+      font-size: 1rem;
+      margin-bottom: 18px;
+    }
+
+    /* HISTORICAL ANALYSIS STAT BOXES */
+    .stat-callout-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .stat-card {
+      background: #111115;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--gold);
+      font-family: monospace;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: #a1a1aa;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* SYSTEM HIGHLIGHT INSIGHTS */
+    .stazzex-note-block {
+      background: rgba(212, 175, 55, 0.02);
+      border-left: 3px solid var(--gold);
+      padding: 20px;
+      border-radius: 0 12px 12px 0;
+      margin: 30px 0;
+    }
+
+    .stazzex-note-block strong {
+      color: var(--gold);
+      font-family: monospace;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .stazzex-note-block p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+      font-style: italic;
+      color: #a1a1aa;
+    }
+
+    /* DOCTRINAL CRITERIA LISTING */
+    ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+      color: #d4d4d8;
+    }
+
+    li {
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    li strong {
+      color: white;
+    }
+
+    /* FOOTER DATA STAMP */
+    footer {
+      text-align: center;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+      color: #52525b;
+      font-family: monospace;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="breadcrumb-nav">
+    <a href="/stazzex/">THE STAZZEX INDEX</a> &gt; <span style="color: white;">LOG_FILE_2025_ZITS</span>
+  </div>
+
+  <div class="dossier-container">
+    
+    <header class="dossier-header">
+      <span class="classification-tag">Historical Event Log // System Data File</span>
+      <h1>The Zits Conflict (2025–Current)</h1>
+    </header>
+
+    <div class="meta-panel">
+      <div class="meta-item">
+        <strong>Classification</strong>
+        <span>Social-Political Conflict</span>
+      </div>
+      <div class="meta-item">
+        <strong>Historical Era</strong>
+        <span>Late Expansion / Early Institutional Expansion</span>
+      </div>
+      <div class="meta-item">
+        <strong>Current Status</strong>
+        <span>Resolved / Peace Agreement Active</span>
+      </div>
+      <div class="meta-item">
+        <strong>Strategic Command</strong>
+        <span>President Kelvin // War General John B.</span>
+      </div>
+    </div>
+
+    <section class="dossier-section">
+      <h2><span class="section-num">01.</span>Historical Overview &amp; Nomenclature</h2>
+      <p>
+        The <strong>Zits Conflict</strong> is recognized as one of the most culturally significant social-political confrontations within modern Stazzerian history. Documented chronologically along the boundary line of the late Expansion Era and early Institutional Expansion Era of Stazzeria, the incident serves as a core case study demonstrating how identity structures, loyalty, retaliation, national pride, and structured diplomacy intersect within the broader parameters of the Stazz Universe.
+      </p>
+      <p>
+        <em>Archival Notice on Designation:</em> While the public index notes this event exclusively as the Zits Conflict, official administrative logs treat "Zits" purely as a substitute cipher phrase. The adversary's authentic titles and operational names are intentionally excluded from all public-facing archival registries to maintain network safety.
+      </p>
+    </section>
+
+    <section class="dossier-section">
+      <h2><span class="section-num">02.</span>Origins &amp; The First Retaliation</h2>
+      <p>
+        The conflict originated in 2025 during a social gathering linked directly to the peer group surrounding First Lady Leann Stazzland. Tensions escalated rapidly following dismissive and unaligned remarks regarding the nation of Stazzeria, made in the immediate presence of Kelvin Stazzland.
+      </p>
+      <p>
+        Stazzerian leadership internally evaluated these remarks as direct hostility leveled against the image and absolute legitimacy of Stazzeria itself. On a public level, however, the confrontation manifested as an escalating social challenge between both parties.
+      </p>
+      <p>
+        This flashpoint triggered what historical doctrine cataloged as the <strong>First Retaliation</strong>—a rapid physical engagement consisting of the exchange of confectionery projectiles between opposing lines. Contemporary records note that while the escalation was incredibly fast-moving, competitive, and highly symbolic of rising political friction, it operated under controlled conditions and was not genuinely dangerous to human infrastructure.
+      </p>
+    </section>
+
+    <section class="dossier-section">
+      <h2><span class="section-num">03.</span>Tactical Realignment &amp; Command Performance</h2>
+      <p>
+        As the theater of operations expanded, informal strategic alliances quickly materialized on both sides of the dispute. A primary command figure to step forward during this phase was <strong>John B. Stazzland</strong>, brother of First Lady Leann Stazzland.
+      </p>
+      <p>
+        John B.’s immediate alignment with sovereign Stazzerian interests, joined with his calculated physical responses and high throwing precision during the confrontation, became the turning point of the conflict. This active theater performance contributed directly to his subsequent recognition and rapid ascension within the governing command structure, culminating in his formal appointment to the post of <strong>War General</strong>.
+      </p>
+
+      <div class="stat-callout-grid">
+        <div class="stat-card">
+          <div class="stat-number">75%</div>
+          <div class="stat-label">Initial Opposition Neutralization</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">22%</div>
+          <div class="stat-label">Remaining Opposition Post-Truce</div>
+        </div>
+      </div>
+
+      <p>
+        Operating under the unified tactical direction of President Kelvin Stazzland and John B., Stazzerian operations completely dominated the conflict's momentum. Official historical estimates verify that approximately <strong>75%</strong> of the opposition’s total operational capability was successfully neutralized during the opening stages of the engagement.
+      </p>
+    </section>
+
+    <section class="dossier-section">
+      <h2><span class="section-num">04.</span>The Broken Truce Phase</h2>
+      <p>
+        Following the consolidation of this immense strategic advantage, President Kelvin Stazzland extended a formal truce framework to the opposing faction, aiming to de-escalate the social conflict and stabilize relations between both entities.
+      </p>
+      <p>
+        Verified records state that this truce was actively violated by the opposition within minutes of its acceptance. This violation immediately authorized a joint secondary retaliatory sweep led by President Kelvin Stazzland and John B. The counter-response completely compromised the adversary's standing, reducing the opposition's active capacity to an estimated <strong>22%</strong> before active physical engagement ceased.
+      </p>
+
+      <div class="stazzex-note-block">
+        <strong>STAZZEX DEFENSIVE DIRECTIVE // PROTOCOL ANALYSIS</strong>
+        <p>"The swift reduction from 75% to 22% capability remains the baseline proof of the Stazzerian rapid-response methodology. External violations of an executive truce automatically trigger immediate, symmetric containment loops."</p>
+      </div>
+    </section>
+
+    <section class="dossier-section">
+      <h2><span class="section-num">05.</span>The 2025 Peace Agreement &amp; Cultural Legacy</h2>
+      <p>
+        As systemic friction peaked, First Lady Leann Stazzland stepped forward as the central diplomatic figure necessary to close the theater. In late 2025, she successfully brokered a formal peace agreement between both factions, ending active escalations and establishing permanent terms of mutual respect. This pact remains fully active and recognized by both networks today.
+      </p>
+      <p>
+        The conflict is consistently analyzed by modern Stazzerian historians as a classic manifestation of five core national principles:
+      </p>
+      <ul>
+        <li><strong>Standing on Business:</strong> The absolute mandatory requirement to defend the structural honors and legitimacy of Stazzeria when challenged.</li>
+        <li><strong>Rapid Retaliatory Response:</strong> Immediate physical or systemic counter-measures to check sudden friction vectors.</li>
+        <li><strong>Alliance Loyalty:</strong> Total alignment with the high executive matrix during active engagement.</li>
+        <li><strong>Controlled Escalation:</strong> Managing containment parameters precisely without triggering unrecoverable systemic damage.</li>
+        <li><strong>Pursuit of Stabilization:</strong> Prioritizing a structured, honorable peace over endless division once defensive lines are secured.</li>
+      </ul>
+      <p>
+        The Zits Conflict remains permanently preserved in the archives for solidifying John B.'s public emergence within executive governance and for establishing First Lady Leann Stazzland’s long-term reputation as the premier diplomatic stabilizer of the Stazz Universe.
+      </p>
+    </section>
+
+    <footer>
+      DATA PACKET ID: STZ-ZCV-2025-V2 // ENCRYPTION KEY: STAZZEX STANDARD // MASTER REPOSITORY ONLINE
+    </footer>
+
+  </div>
+
+</body>
+</html>
