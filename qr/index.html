@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelvin Stazzland | Official Digital Business Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --charcoal: #121214;
+            --dark-gray: #1c1c1e;
+            --light-gray: #a2a2b0;
+            --cyber-yellow: #fffb00;
+            --industrial-amber: #ffcc00;
+            --blush-pink: #fadadd;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000000;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Business Card Container */
+        .business-card {
+            background: linear-gradient(135deg, #161618 0%, #0a0a0b 100%);
+            width: 100%;
+            max-width: 450px;
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            border: 1px solid rgba(214, 175, 55, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Subtle Background Overlay for Texture */
+        .business-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(214, 175, 55, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* Header Section */
+        .card-header {
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 20px;
+        }
+
+        .name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .title-subtext {
+            font-size: 0.85rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        /* The Trinity Identity Grid */
+        .identity-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .identity-node {
+            background: var(--dark-gray);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 12px 8px;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .identity-node:hover {
+            transform: translateY(-2px);
+        }
+
+        .node-president { border-bottom: 3px solid var(--gold); }
+        .node-stazzboi { border-bottom: 3px solid var(--industrial-amber); }
+        .node-khamelion { border-bottom: 3px solid var(--cyber-yellow); }
+
+        .identity-node i {
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .identity-node .node-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ffffff;
+            display: block;
+        }
+
+        /* Dynamic Directory Links */
+        .directory-section {
+            margin-bottom: 20px;
+        }
+
+        .section-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--light-gray);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 14px 16px;
+            border-radius: 14px;
+            color: #ffffff;
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .menu-item:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(255,255,255,0.15);
+        }
+
+        .menu-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .menu-left i {
+            width: 20px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .arrow-icon {
+            font-size: 0.8rem;
+            color: var(--light-gray);
+        }
+
+        /* Color Adjustments for Menu Icons */
+        .icon-about { color: var(--gold); }
+        .icon-gaming { color: var(--cyber-yellow); }
+        .icon-collective { color: var(--blush-pink); }
+
+        /* Footer System Branding */
+        .card-footer {
+            text-align: center;
+            margin-top: 15px;
+            font-family: monospace;
+            font-size: 0.65rem;
+            color: rgba(255,255,255,0.3);
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="business-card">
+        
+        <div class="card-header">
+            <h1 class="name">Kelvin Stazzland</h1>
+            <div class="title-subtext">The Trinity of Stazz</div>
+        </div>
+
+        <span class="section-label">Core Vocations</span>
+        <div class="identity-grid">
+            <a href="president-kelvin.html" class="identity-node node-president">
+                <i class="fas fa-star" style="color: var(--gold);"></i>
+                <span class="node-label">President</span>
+            </a>
+            <a href="stazzboi.html" class="identity-node node-stazzboi">
+                <i class="fas fa-bolt" style="color: var(--industrial-amber);"></i>
+                <span class="node-label">STAZZBOI</span>
+            </a>
+            <a href="the-khamelion.html" class="identity-node node-khamelion">
+                <i class="fas fa-dragon" style="color: var(--cyber-yellow);"></i>
+                <span class="node-label">Khamelion</span>
+            </a>
+        </div>
+
+        <div class="directory-section">
+            <span class="section-label">Ecosystem Gateways</span>
+
+            <a href="kelvin-stazzland.html" class="menu-item">
+                <div class="menu-left">
+                    <i class="fas fa-user-crown icon-about"></i>
+                    <span>Foundational Brand Profile</span>
+                </div>
+                <i class="fas fa-chevron-right arrow-icon"></i>
+            </a>
+
+            <a href="stazzology.html" class="menu-item">
+                <div class="menu-left">
+                    <i class="fas fa-gamepad icon-gaming"></i>
+                    <span>Stazzology Esports Arena</span>
+                </div>
+                <i class="fas fa-chevron-right arrow-icon"></i>
+            </a>
+
+            <a href="stazzlies.html" class="menu-item">
+                <div class="menu-left">
+                    <i class="fas fa-award icon-collective"></i>
+                    <span>The Stazzlies Registry</span>
+                </div>
+                <i class="fas fa-chevron-right arrow-icon"></i>
+            </a>
+        </div>
+
+        <div class="card-footer">
+            POWERED BY THE STAZZEX ARCHIVAL INFRASTRUCTURE<br>
+            SYS STATUS: SYNCHRONIZED // 2026
+        </div>
+    </div>
+
+</body>
+</html>
