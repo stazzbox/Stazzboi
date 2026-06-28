@@ -43,204 +43,525 @@
     }
     </script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            --bg-main: #080B11;
+            --bg-card: rgba(17, 24, 39, 0.7);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --text-primary: #F9FAFB;
+            --text-secondary: #9CA3AF;
+            
+            /* High-Energy App Brand Colors */
+            --brand-cyan: #00F2FE;
+            --brand-purple: #4FACFE;
+            --brand-neon: #10B981;
+            
+            /* Social Button Colors */
+            --instagram: #E1306C;
+            --tiktok: #000000;
+            --youtube: #FF0000;
+            --spotify: #1DB954;
+            --apple: #FA243C;
+            --amazon: #FF9900;
+            --united: #FF5A00;
+            --imdb: #F5C518;
+
+            --font-stack: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
         }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
         body {
-            max-width: 900px;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            font-family: var(--font-stack);
+            line-height: 1.6;
+            padding: 0 0 90px 0; /* Bottom spacing for mobile fixed nav */
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* Top Brand Header area */
+        .app-header {
+            padding: 30px 20px 15px 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(79,172,254,0.1) 0%, transparent 100%);
+        }
+
+        .app-header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            margin-bottom: 4px;
+            background: linear-gradient(135deg, var(--brand-cyan) 0%, var(--brand-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .app-header p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Main Content Container */
+        .app-container {
+            max-width: 680px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 15px;
         }
-        /* App Shell Navigation Bar */
-        .app-nav {
-            display: flex;
-            gap: 10px;
-            overflow-x: auto;
-            padding: 10px 0;
-            margin-bottom: 25px;
-            border-bottom: 2px solid var(--border);
-            scrollbar-width: none;
-        }
-        .app-nav::-webkit-scrollbar {
-            display: none;
-        }
-        .nav-btn {
-            background: var(--background-alt);
-            color: var(--text-main);
-            border: 1px solid var(--border);
-            padding: 8px 16px;
-            border-radius: 20px;
-            cursor: pointer;
-            white-space: nowrap;
-            transition: all 0.2s ease;
-        }
-        .nav-btn.active {
-            background: var(--button-main);
-            color: #fff;
-            border-color: var(--button-main);
-            font-weight: bold;
-        }
-        /* View Management */
+
+        /* Screen States - Handled natively like an app view stack */
         .app-view {
             display: none;
-            animation: fadeIn 0.3s ease;
+            animation: appSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
         }
+
         .app-view.active {
             display: block;
         }
+
+        /* Modern Glassmorphic App UI Cards */
         .section-card {
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 25px;
-            background: var(--background-alt);
-            box-shadow: var(--box-shadow);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 24px;
+            background: var(--bg-card);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
         }
-        .spreadsheet-table {
-            width: 100%;
-            margin-top: 15px;
-            font-size: 0.85em;
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #FFF 0%, #D1D5DB 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
+
+        h3 {
+            font-size: 1.05rem;
+            color: var(--brand-cyan);
+            margin-top: 24px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+            font-size: 0.95rem;
+        }
+
+        strong {
+            color: var(--text-primary);
+        }
+
+        /* Identity Context Layout Items */
+        .identity-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .identity-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            padding: 14px;
+            border-radius: 14px;
+            margin-bottom: 10px;
+        }
+
+        .identity-item strong {
+            display: block;
+            color: var(--brand-purple);
+            font-size: 1rem;
+            margin-bottom: 2px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border-color);
+            margin: 24px 0;
+        }
+
+        /* Platform Button Grid Configuration */
         .link-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
             padding: 0;
             list-style: none;
+            margin-top: 15px;
         }
+
         .link-grid li a {
-            display: block;
-            padding: 10px;
-            background: var(--background);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px;
+            border-radius: 16px;
+            color: #FFFFFF;
             text-decoration: none;
-            font-weight: bold;
-            transition: background 0.2s;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
-        .link-grid li a:hover {
-            background: var(--border);
+
+        .link-grid li a:active {
+            transform: scale(0.96);
         }
-        .steps {
-            background: var(--background);
-            padding: 12px 18px;
+
+        /* Color Brand Themes */
+        .btn-instagram { background: linear-gradient(135deg, #F09433 0%, #E1306C 25%, #C13584 50%, #833AB4 75%, #405DE6 100%); }
+        .btn-tiktok { background: #010101; border: 1px solid rgba(255,255,255,0.2); }
+        .btn-youtube { background: #FF0000; }
+        .btn-yt-topic { background: #282828; border: 1px solid rgba(255,255,255,0.1); }
+        .btn-spotify { background: #1DB954; color: #000000 !important; }
+        .btn-apple { background: linear-gradient(135deg, #FF2F56 0%, #FA243C 100%); }
+        .btn-amazon { background: #FF9900; color: #000000 !important; }
+        .btn-united { background: #1A1A1A; border: 1px solid #FF5A00; color: #FF5A00 !important; }
+        .btn-imdb { background: #F5C518; color: #000000 !important; }
+
+        /* Dynamic App Style Content Feeds */
+        .spreadsheet-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 8px;
+            margin-top: 10px;
+        }
+
+        .spreadsheet-table th {
+            display: none; /* Hide standard headers for mobile feed appearance */
+        }
+
+        .spreadsheet-table tr {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+        }
+
+        .spreadsheet-table td {
+            display: block;
+            padding: 8px 16px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .spreadsheet-table td:first-child {
+            padding-top: 14px;
+            color: var(--text-primary);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .spreadsheet-table td:last-child {
+            padding-bottom: 14px;
+            border-bottom: none;
+        }
+
+        code {
+            font-family: var(--font-stack);
+            background: rgba(0, 242, 254, 0.1);
+            padding: 2px 6px;
             border-radius: 6px;
-            font-size: 0.9em;
+            color: var(--brand-cyan);
+            font-weight: 600;
+            font-size: 0.8rem;
         }
+
+        .feed-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--brand-purple);
+            color: #FFFFFF;
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-top: 4px;
+        }
+
+        .steps {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+        }
+
+        .steps ol {
+            padding-left: 20px;
+            color: var(--text-secondary);
+        }
+
+        .steps li {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
         .stazzism-scrollbox {
-            background: var(--background);
-            border-left: 4px solid var(--button-main);
-            padding: 15px;
-            margin: 15px 0;
-            max-height: 450px;
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 4px solid var(--brand-cyan);
+            padding: 16px;
+            margin: 16px 0;
+            max-height: 350px;
             overflow-y: auto;
             white-space: pre-line;
-            font-size: 0.95em;
+            font-size: 0.95rem;
             line-height: 1.6;
+            color: var(--text-secondary);
+            border-radius: 0 16px 16px 0;
         }
+
         .stazzex-num {
             cursor: pointer;
-            color: var(--button-main);
-            text-decoration: underline;
-            font-weight: bold;
-        }
-        .back-btn {
-            margin-bottom: 15px;
+            color: var(--brand-cyan);
+            font-weight: 700;
+            background: rgba(0, 242, 254, 0.1);
+            padding: 4px 10px;
+            border-radius: 8px;
             display: inline-block;
-            cursor: pointer;
+            margin-bottom: 6px;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(4px); }
+
+        .back-btn {
+            background: rgba(255,255,255,0.05);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 10px 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+            display: inline-flex;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        /* Fixed Mobile Tab Bar Menu Interface */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 74px;
+            background: rgba(11, 15, 25, 0.85);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 10px;
+            z-index: 1000;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
+        }
+
+        .tab-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-family: var(--font-stack);
+            font-weight: 700;
+            font-size: 0.7rem;
+            width: 14%;
+            height: 100%;
+            transition: color 0.2s ease;
+            gap: 4px;
+        }
+
+        .tab-icon {
+            font-size: 1.25rem;
+            opacity: 0.6;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .tab-item:active .tab-icon {
+            transform: scale(0.85);
+        }
+
+        .tab-item.active {
+            color: var(--brand-cyan);
+        }
+
+        .tab-item.active .tab-icon {
+            opacity: 1;
+            transform: translateY(-2px);
+        }
+
+        @keyframes appSlideUp {
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Desktop Optimization Framework */
+        @media(min-width: 769px) {
+            body {
+                padding: 40px 0 40px 0;
+            }
+            .bottom-nav {
+                position: sticky;
+                top: 0;
+                bottom: auto;
+                border-top: none;
+                border-bottom: 1px solid var(--border-color);
+                border-radius: 20px;
+                max-width: 680px;
+                margin: 0 auto 30px auto;
+                height: 64px;
+                background: var(--bg-card);
+            }
+            .spreadsheet-table tr {
+                display: table-row;
+                background: transparent;
+            }
+            .spreadsheet-table td {
+                display: table-cell;
+                padding: 12px;
+            }
+            .spreadsheet-table td:first-child {
+                font-size: 0.9rem;
+                padding-top: 12px;
+            }
+            .spreadsheet-table td:last-child {
+                padding-bottom: 12px;
+            }
+            .spreadsheet-table th {
+                display: table-cell;
+                padding: 12px;
+                font-size: 0.85rem;
+                color: var(--text-primary);
+                border-bottom: 1px solid var(--border-color);
+                text-align: left;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Stazz Universe Hub</h1>
-        <p>The Root System Framework: Stazz-ism • Stazz-ology • Stazzerian Authorities</p>
+    <header class="app-header">
+        <h1>Stazz Universe</h1>
+        <p>The Central Root Framework Ecosystem Hub</p>
     </header>
 
-    <nav class="app-nav">
-        <button class="nav-btn active" onclick="switchView('stazzboi')">1. Stazzboi</button>
-        <button class="nav-btn" onclick="switchView('beachybird')">2. BeachyBird</button>
-        <button class="nav-btn" onclick="switchView('stazzlies')">3. The Stazzlies</button>
-        <button class="nav-btn" onclick="switchView('stazzeria')">4. Stazzeria (Stazz-ism)</button>
-        <button class="nav-btn" onclick="switchView('stazzology')">5. Stazzology</button>
-        <button class="nav-btn" onclick="switchView('comics')">6. Comics</button>
-        <button class="nav-btn" onclick="switchView('stazzex')">🗂️ The Stazzex</button>
+    <nav class="bottom-nav">
+        <button class="tab-item active" onclick="switchView('stazzboi')">
+            <span class="tab-icon">🦎</span><span>Stazzboi</span>
+        </button>
+        <button class="tab-item" onclick="switchView('beachybird')">
+            <span class="tab-icon">🦅</span><span>Beachy</span>
+        </button>
+        <button class="tab-item" onclick="switchView('stazzlies')">
+            <span class="tab-icon">👑</span><span>Stazzlies</span>
+        </button>
+        <button class="tab-item" onclick="switchView('stazzeria')">
+            <span class="tab-icon">📜</span><span>Stazzeria</span>
+        </button>
+        <button class="tab-item" onclick="switchView('stazzology')">
+            <span class="tab-icon">📺</span><span>Media</span>
+        </button>
+        <button class="tab-item" onclick="switchView('comics')">
+            <span class="tab-icon">📖</span><span>Comics</span>
+        </button>
+        <button class="tab-item" onclick="switchView('stazzex')">
+            <span class="tab-icon">🗂️</span><span>Stazzex</span>
+        </button>
     </nav>
 
-    <main>
+    <main class="app-container">
 
         <div id="view-stazzboi" class="app-view active">
             <div class="section-card">
-                <h2>1. Stazzboi (Root Identity Context)</h2>
-                <h3>About (Kelvin Stazzland)</h3>
-                <p><strong>Official Definition:</strong> Kelvin Stazzland is a birthright Stazzerian, musician, content creator, and founder of Stazzeria and Stazzism. Depending upon context, he is addressed as President Kelvin Stazzland in affairs of state, STAZZBOI in music and artistic ventures, and The Khamelion in content creation, entertainment, and social events.</p>
-                <ul>
-                    <li><strong>President Kelvin Stazzland:</strong> Government, diplomacy, history, and official national affairs.</li>
-                    <li><strong>STAZZBOI:</strong> Musical releases, recording work, and creative artistry.</li>
-                    <li><strong>The Khamelion:</strong> Content creation, media events, and streaming presence.</li>
-                </ul>
-                <hr>
-                <h3>🦎 The Khamelion Explainer</h3>
-                <p>The Khamelion is the content creation and social identity of Kelvin Stazzland. Signifying the versatility to assume different roles across media formats while preserving core framework identity.</p>
-                <hr>
-                <h3>🤸 The Khamelion Pose Explainer</h3>
+                <h2>Kelvin Stazzland Profile</h2>
+                <p>Kelvin Stazzland is a birthright Stazzerian, musician, content creator, and the foundational root authority of the ecosystem.</p>
+                
+                <div class="identity-list">
+                    <div class="identity-item">
+                        <strong>👑 President Kelvin Stazzland</strong>
+                        Handles legal history, administration, data records, and official national affairs.
+                    </div>
+                    <div class="identity-item">
+                        <strong>🎵 STAZZBOI</strong>
+                        The official creative musical release, production, and audio venture identity.
+                    </div>
+                    <div class="identity-item">
+                        <strong>🦎 The Khamelion</strong>
+                        The central media streaming, digital communication, and social entertainment profile.
+                    </div>
+                </div>
+
+                <h3>🤸 The Khamelion Pose Stance</h3>
                 <div class="steps">
-                    <strong>Standard Stance Protocol:</strong>
                     <ol>
-                        <li>Raise both hands to chest level.</li>
-                        <li>Form dual "V" signs with index and middle fingers.</li>
-                        <li>Rotate hands completely so knuckles face outward toward spectators.</li>
-                        <li>Maintain structural symmetry near shoulders.</li>
+                        <li>Bring both hands upward near chest level.</li>
+                        <li>Extend both index and middle fingers into dual "V" signs.</li>
+                        <li>Rotate your wrists completely so knuckles look outward away from you.</li>
+                        <li>Keep both sides balanced and level near your shoulders.</li>
                     </ol>
                 </div>
-                <hr>
-                <h3>🌐 Official Platforms & Social Networks</h3>
+
+                <h3>🌐 Global Stream Link Grid</h3>
                 <ul class="link-grid">
-                    <li><a href="https://www.instagram.com/stazzboi?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" target="_blank">📸 Instagram</a></li>
-                    <li><a href="https://www.tiktok.com/@stazzboi?_r=1&_t=ZP-96wNq44EgqF" target="_blank">🎵 TikTok</a></li>
-                    <li><a href="https://youtube.com/@stazzboi?si=_MzNQzYlm8TWA8y_" target="_blank">📹 YouTube Main</a></li>
-                    <li><a href="https://m.youtube.com/channel/UCWwNDkwejQU8ScwwfUXnF1w?ra=m" target="_blank">🎼 YouTube Topic</a></li>
-                    <li><a href="https://open.spotify.com/artist/3LdZpssPzwGSkmEK7KL1Hs?si=ZQpRtRb8SPmBDcCWKtOWmQ" target="_blank">🟢 Spotify</a></li>
-                    <li><a href="https://music.apple.com/us/artist/stazzboi/1627663453" target="_blank">🍎 Apple Music</a></li>
-                    <li><a href="https://open.spotify.com/artist/3LdZpssPzwGSkmEK7KL1Hs?si=ZQpRtRb8SPmBDcCWKtOWmQ" target="_blank">📦 Amazon Music</a></li>
-                    <li><a href="https://unitedmasters.com/a/stazzboi" target="_blank">👑 United Masters</a></li>
-                    <li><a href="https://www.imdb.com/name/nm18649478/" target="_blank">🎬 IMDb Profile</a></li>
+                    <li><a href="https://www.instagram.com/stazzboi?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" target="_blank" class="btn-instagram">📸 Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@stazzboi?_r=1&_t=ZP-96wNq44EgqF" target="_blank" class="btn-tiktok">🎵 TikTok</a></li>
+                    <li><a href="https://youtube.com/@stazzboi?si=_MzNQzYlm8TWA8y_" target="_blank" class="btn-youtube">📹 YouTube Main</a></li>
+                    <li><a href="https://m.youtube.com/channel/UCWwNDkwejQU8ScwwfUXnF1w?ra=m" target="_blank" class="btn-yt-topic">🎼 YT Topic</a></li>
+                    <li><a href="https://open.spotify.com/artist/3LdZpssPzwGSkmEK7KL1Hs?si=ZQpRtRb8SPmBDcCWKtOWmQ" target="_blank" class="btn-spotify">🟢 Spotify</a></li>
+                    <li><a href="https://music.apple.com/us/artist/stazzboi/1627663453" target="_blank" class="btn-apple">🍎 Apple Music</a></li>
+                    <li><a href="https://open.spotify.com/artist/3LdZpssPzwGSkmEK7KL1Hs?si=ZQpRtRb8SPmBDcCWKtOWmQ" target="_blank" class="btn-amazon">📦 Amazon Music</a></li>
+                    <li><a href="https://unitedmasters.com/a/stazzboi" target="_blank" class="btn-united">👑 UnitedMasters</a></li>
+                    <li><a href="https://www.imdb.com/name/nm18649478/" target="_blank" class="btn-imdb">🎬 IMDb Profile</a></li>
                 </ul>
             </div>
         </div>
 
         <div id="view-beachybird" class="app-view">
             <div class="section-card">
-                <h2>2. BeachyBird</h2>
-                <h3>About & Continuity Definition</h3>
-                <p><strong>Official Definition:</strong> Isaac Ochoa is a Stazzerian leader and public figure who serves as Vice President of Stazzeria. Depending upon context, he is addressed as Vice President Isaac Ochoa in affairs of state and as Isaac BeachyBird Ochoa, or simply Isaac, in matters relating to culture, media, and the Stazz Universe.</p>
+                <h2>Vice President Isaac Ochoa</h2>
+                <p><strong>Official Context Definition:</strong> Isaac Ochoa is a Stazzerian leader and public figure who serves as Vice President of Stazzeria.</p>
+                <p>Depending upon situational context, he is addressed as Vice President Isaac Ochoa in official affairs of state and as Isaac BeachyBird Ochoa, or simply Isaac, in matters relating to culture, media tracking databases, and the Stazz Universe.</p>
             </div>
         </div>
 
         <div id="view-stazzlies" class="app-view">
             <div class="section-card">
-                <h2>3. The Stazzlies</h2>
-                <h3>Title of StazzQueen & Castle Tradition</h3>
-                <p>Meaning “Lady of the Castle of Stazzeria,” this is the highest feminine distinction within Stazz culture, representing commitment and admiration within the Estate layout framework.</p>
+                <h2>The Stazzlies Registry</h2>
+                <p>Meaning "Lady of the Castle of Stazzeria," this stands as the highest distinction within Stazz culture, validating systemic layout tracking framework rules.</p>
                 <hr>
-                <h3>StazzQueen Directory (Live)</h3>
                 <table class="spreadsheet-table">
-                    <thead><tr><th>Title</th><th>Name</th><th>Dates</th><th>Folder</th></tr></thead>
-                    <tbody id="stazzqueen-table"><tr><td colspan="4">Initializing stream connection...</td></tr></tbody>
+                    <thead><tr><th>Title</th><th>Name</th><th>Dates</th><th>Folder Link</th></tr></thead>
+                    <tbody id="stazzqueen-table"><tr><td colspan="4">Loading runtime framework array...</td></tr></tbody>
                 </table>
             </div>
         </div>
 
         <div id="view-stazzeria" class="app-view">
             <div class="section-card">
-                <h2>4. Stazzeria (Core Stazz-ism Manifest)</h2>
+                <h2>Stazzeria Core & Stazz-ism Manifest</h2>
                 
                 <div class="stazzism-scrollbox"><strong>STAZZISM — Complete Code Framework</strong>
                 Kelvin Stazzland
@@ -281,89 +602,56 @@
                 <strong>Book XII: G.R.A.C.E</strong>
                 Grow. React. Adapt. Continue. Execute. Repeat. For all things are tested by time. And what ceases to adapt eventually declines. What ceases to continue is eventually forgotten. Therefore continue.</div>
 
-                <hr>
-                <h3>Department of Stazz (DoS) Directory (Live)</h3>
+                <h3>Department of Stazz (DoS) Records</h3>
                 <table class="spreadsheet-table">
                     <thead>
-                        <tr>
-                            <th>Title</th>
-                            <th>Name</th>
-                            <th>Term</th>
-                            <th>Dates</th>
-                            <th>Administration</th>
-                            <th>Status</th>
-                            <th>Notes</th>
-                        </tr>
+                        <tr><th>Title</th><th>Name</th><th>Term</th><th>Dates</th><th>Admin</th><th>Status</th><th>Notes</th></tr>
                     </thead>
-                    <tbody id="dos-table"><tr><td colspan="7">Initializing stream connection...</td></tr></tbody>
+                    <tbody id="dos-table"><tr><td colspan="7">Loading server data matrix...</td></tr></tbody>
                 </table>
             </div>
         </div>
 
         <div id="view-stazzology" class="app-view">
             <div class="section-card">
-                <h2>5. Stazzology</h2>
-                <h3>Ecosystem Layout & Central Media Branch</h3>
-                <p>The central study, network layout, and media broadcast branch of the Stazz Universe.</p>
-                <p>📺 <a href="https://youtube.com/@stazzology" target="_blank">Stazzology YouTube Platform Hub</a></p>
+                <h2>Stazzology Broadcasts</h2>
+                <p>The official system analytics tracking study, platform network design, and primary broadcast media grid branch.</p>
+                <p>🔗 <a href="https://youtube.com/@stazzology" target="_blank">Access Official Stazzology Broadcast Portal</a></p>
                 
-                <hr>
-                <h3>Official Episodes & Playlist Directory (Live)</h3>
+                <h3>Episode Catalog Runtime Feed</h3>
                 <table class="spreadsheet-table">
-                    <thead>
-                        <tr>
-                            <th style="width: 15%">Ep #</th>
-                            <th style="width: 25%">Episode Title</th>
-                            <th style="width: 45%">Description / Context</th>
-                            <th style="width: 15%">Broadcast</th>
-                        </tr>
-                    </thead>
-                    <tbody id="playlist-table"><tr><td colspan="4">Initializing stream connection...</td></tr></tbody>
+                    <thead><tr><th>ID</th><th>Episode Name</th><th>Ecosystem Context</th><th>Launch</th></tr></thead>
+                    <tbody id="playlist-table"><tr><td colspan="4">Refreshing platform directory...</td></tr></tbody>
                 </table>
             </div>
         </div>
 
         <div id="view-comics" class="app-view">
             <div class="section-card">
-                <h2>6. Stazzert Comics</h2>
-                <p>Official graphic literature print register and serial tracking base.</p>
+                <h2>Stazzert Comics Print Database</h2>
+                <p>Official historical collection logs, narrative tracking indexes, and issue database numbers.</p>
                 
-                <hr>
-                <h3>Comics Literature Database (Live)</h3>
+                <h3>Literature Entries</h3>
                 <table class="spreadsheet-table">
-                    <thead>
-                        <tr>
-                            <th style="width: 25%">Title</th>
-                            <th style="width: 40%">Description</th>
-                            <th style="width: 20%">Related Book</th>
-                            <th style="width: 15%">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="comics-table"><tr><td colspan="4">Initializing stream connection...</td></tr></tbody>
+                    <thead><tr><th>Comic Title</th><th>Description Context</th><th>Connected Module</th><th>Action</th></tr></thead>
+                    <tbody id="comics-table"><tr><td colspan="4">Syncing active issues...</td></tr></tbody>
                 </table>
             </div>
         </div>
 
         <div id="view-stazzex" class="app-view">
             <div class="section-card">
-                <h2>🗂️ The Stazzex Database</h2>
-                <p>Official register compilation terms. Click on any Stazzex Number to pull its runtime file card profile.</p>
+                <h2>🗂️ The Stazzex Database Archive</h2>
+                <p>Central cultural language dictionary. Select any specific Stazzex identification element below to launch its context dynamic card view container profile.</p>
                 <table class="spreadsheet-table">
-                    <thead>
-                        <tr>
-                            <th>Stazzex #</th>
-                            <th>Term</th>
-                            <th>Definition</th>
-                            <th>Notes</th>
-                        </tr>
-                    </thead>
-                    <tbody id="stazzex-table"><tr><td colspan="4">Syncing database repository...</td></tr></tbody>
+                    <thead><tr><th>Index Identifier</th><th>Term Label</th><th>Definition</th><th>Notes</th></tr></thead>
+                    <tbody id="stazzex-table"><tr><td colspan="4">Downloading definition tree items...</td></tr></tbody>
                 </table>
             </div>
         </div>
 
         <div id="view-termprofile" class="app-view">
-            <button class="back-btn" onclick="switchView('stazzex')">← Back to Stazzex</button>
+            <button class="back-btn" onclick="switchView('stazzex')">← Return to Stazzex Index</button>
             <div class="section-card" id="term-profile-content"></div>
         </div>
 
@@ -372,38 +660,38 @@
     <script>
         let stazzexCache = [];
 
-        // App Shell Navigation Engine
         function switchView(viewId) {
             document.querySelectorAll('.app-view').forEach(view => view.classList.remove('active'));
-            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-item').forEach(btn => btn.classList.remove('active'));
             
             const targetView = document.getElementById(`view-${viewId}`);
             if(targetView) targetView.classList.add('active');
             
-            const matchingBtn = Array.from(document.querySelectorAll('.nav-btn')).find(b => b.getAttribute('onclick').includes(`'${viewId}'`));
+            const matchingBtn = Array.from(document.querySelectorAll('.tab-item')).find(b => b.getAttribute('onclick').includes(`'${viewId}'`));
             if(matchingBtn) matchingBtn.classList.add('active');
+
+            // Automatically scroll window back smoothly to top of active app view container
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Deep Link Dynamic Router for Stazzex Terms
         function viewTerm(stazzexNum) {
             const entry = stazzexCache.find(item => item.num === String(stazzexNum).trim());
             if (!entry) return;
 
             const profileHTML = `
-                <p style="font-size: 0.85em; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Reference Identifier</p>
-                <h1 style="margin-top: 0; color: var(--button-main);">${entry.num}</h1>
-                <hr>
-                <h2>${entry.term}</h2>
-                <h3>Definition</h3>
-                <p>${entry.definition}</p>
-                ${entry.notes ? `<h3>Notes / Context</h3><p><em>${entry.notes}</em></p>` : ''}
+                <p style="font-size: 0.8em; color: var(--brand-cyan); font-weight:700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px;">Reference Identifier</p>
+                <h1 style="margin-top: 0; font-size:2.5rem; font-weight:800; color: #FFFFFF; margin-bottom:15px;">${entry.num}</h1>
+                <hr style="margin:15px 0;">
+                <h2 style="font-size:1.8rem; margin-bottom:10px; color:var(--brand-purple);">${entry.term}</h2>
+                <h3 style="margin-top:20px;">System Definition</h3>
+                <p style="font-size:1.05rem; line-height:1.7; color:var(--text-primary);">${entry.definition}</p>
+                ${entry.notes ? `<h3 style="margin-top:20px;">Notes / Context Record</h3><p style="font-style:italic; color:var(--text-secondary);">${entry.notes}</p>` : ''}
             `;
             
             document.getElementById('term-profile-content').innerHTML = profileHTML;
             switchView('termprofile');
         }
 
-        // Custom CSV parser handling spaces, strings, and quotes cleanly
         function parseCSV(text) {
             let lines = text.split('\n');
             return lines.map(line => {
@@ -426,7 +714,6 @@
             });
         }
 
-        // Pipeline Synchronization Engine
         function fetchCSVData(csvUrl, elementId, processType) {
             fetch(csvUrl)
                 .then(res => res.text())
@@ -439,66 +726,24 @@
                         if (!data[0]) continue; 
 
                         if (processType === 'stazzqueen') {
-                            const col1 = data[0] || '';
-                            const col2 = data[1] || '';
-                            const col3 = data[2] || '';
-                            const col4 = data[3] || '/Stazzlies/StazzQueen';
-                            html += `<tr><td><strong>${col1}</strong></td><td>${col2}</td><td><code>${col3}</code></td><td><a href="${col4}">📁 Folder</a></td></tr>`;
+                            html += `<tr><td><strong>${data[0] || ''}</strong></td><td>${data[1] || ''}</td><td><code>${data[2] || ''}</code></td><td><a class="feed-link" href="${data[3] || '/Stazzlies/StazzQueen'}">📁 View Card</a></td></tr>`;
                         } 
                         else if (processType === 'dos') {
-                            const col1 = data[0] || '';
-                            const col2 = data[1] || '';
-                            const col3 = data[2] || '';
-                            const col4 = data[3] || '';
-                            const col5 = data[4] || '';
-                            const col6 = data[5] || '';
-                            const col7 = data[6] || '';
-                            html += `<tr><td><strong>${col1}</strong></td><td>${col2}</td><td>Term ${col3}</td><td><code>${col4}</code></td><td>${col5}</td><td><em>${col6}</em></td><td>${col7}</td></tr>`;
+                            html += `<tr><td><strong>${data[0] || ''}</strong></td><td>${data[1] || ''}</td><td>Term ${data[2] || ''}</td><td><code>${data[3] || ''}</code></td><td>${data[4] || ''}</td><td><em>${data[5] || ''}</em></td><td>${data[6] || ''}</td></tr>`;
                         }
                         else if (processType === 'stazzology') {
-                            const epNum = data[0] || '';
-                            const epTitle = data[1] || '';
-                            const epDesc = data[2] || '';
-                            const epLink = data[3] || '#';
-                            html += `
-                                <tr>
-                                    <td><code>${epNum}</code></td>
-                                    <td><strong>${epTitle}</strong></td>
-                                    <td>${epDesc}</td>
-                                    <td><a href="${epLink}" target="_blank">🔗 Watch</a></td>
-                                </tr>
-                            `;
+                            html += `<tr><td><code>${data[0] || ''}</code></td><td><strong>${data[1] || ''}</strong></td><td>${data[2] || ''}</td><td><a class="feed-link" href="${data[3] || '#'}" target="_blank">🔗 Watch</a></td></tr>`;
                         }
                         else if (processType === 'comics') {
-                            const comicTitle = data[0] || '';
-                            const comicDesc = data[1] || '';
-                            const comicBook = data[2] || '';
-                            const comicLink = data[3] || '#';
-                            html += `
-                                <tr>
-                                    <td><strong>${comicTitle}</strong></td>
-                                    <td>${comicDesc}</td>
-                                    <td><code>${comicBook}</code></td>
-                                    <td><a href="${comicLink}" target="_blank">📖 Read</a></td>
-                                </tr>
-                            `;
+                            html += `<tr><td><strong>${data[0] || ''}</strong></td><td>${data[1] || ''}</td><td><code>${data[2] || ''}</code></td><td><a class="feed-link" href="${data[3] || '#'}" target="_blank">📖 Read</a></td></tr>`;
                         }
                         else if (processType === 'stazzex') {
                             const term = data[0] || '';
                             const definition = data[1] || '';
                             const notes = data[2] || '';
                             const num = data[3] || '';
-
                             stazzexCache.push({ term, definition, notes, num });
-
-                            html += `
-                                <tr>
-                                    <td><span class="stazzex-num" onclick="viewTerm('${num}')">${num}</span></td>
-                                    <td><strong>${term}</strong></td>
-                                    <td>${definition}</td>
-                                    <td><em>${notes}</em></td>
-                                </tr>
-                            `;
+                            html += `<tr><td><span class="stazzex-num" onclick="viewTerm('${num}')">${num}</span></td><td><strong>${term}</strong></td><td>${definition}</td><td><em>${notes}</em></td></tr>`;
                         }
                     }
                     document.getElementById(elementId).innerHTML = html;
@@ -509,7 +754,6 @@
                 });
         }
 
-        // Fire initialization calls on load
         window.addEventListener('DOMContentLoaded', () => {
             fetchCSVData('https://docs.google.com/spreadsheets/d/e/2PACX-1vRjx00RwpLlsV2q4seD1Fz4aScqZhftnMxjIc9PIYj5ZU22-iHPYR4GTJYURlwyAeTIqn3XSk3l0zO2/pub?output=csv', 'stazzqueen-table', 'stazzqueen');
             fetchCSVData('https://docs.google.com/spreadsheets/d/e/2PACX-1vThFBSzy7n4ade109jbMLyht0ilB-41fjhl2Md6M8o0ZDb6USfh69FHj4ZBWhsm3p9YP3CqOuonrKpG/pub?output=csv', 'dos-table', 'dos');
