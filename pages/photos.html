@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stazzography | Powered by The Stazzex</title>
+    <meta name="description" content="Official Stazzography gallery powered by The Stazzex.">
+    
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    
+    <style>
+        /* Custom layout overrides integrated with our core variables */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            max-width: 1200px;
+            margin: 24px auto 0 auto;
+            width: 100%;
+        }
+
+        .gallery-item {
+            background-color: var(--color-bg-card);
+            border-radius: var(--border-radius-tile);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            aspect-ratio: 1 / 1;
+            position: relative;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-2px);
+            border-color: rgba(230, 255, 0, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.85;
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-item:hover .gallery-image {
+            opacity: 1;
+        }
+
+        /* App-Style System Media Viewer Modal */
+        .viewer {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(11, 11, 11, 0.98);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            z-index: 9999;
+            overflow-y: auto;
+        }
+
+        .viewer-content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .viewer-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .viewer-identity {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .viewer-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            object-fit: cover;
+        }
+
+        .viewer-title {
+            font-weight: var(--font-weight-bold);
+            color: var(--color-text-primary);
+            letter-spacing: 0.05em;
+        }
+
+        .close-action {
+            font-size: 2rem;
+            color: var(--color-text-secondary);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            line-height: 1;
+        }
+
+        .close-action:hover {
+            color: var(--color-accent-neon);
+        }
+
+        .viewer-image-wrapper {
+            width: 100%;
+            max-height: 75vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: var(--border-radius-tile);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            padding: 12px;
+            overflow: hidden;
+        }
+
+        .viewer-main-img {
+            max-width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header class="app-header">
+            <div class="header-container">
+                <a href="/" class="header-title">Stazzography</a>
+                <p class="header-tagline">Powered by The Stazzex</p>
+            </div>
+        </header>
+
+        <main class="main-content section animate-fade-in">
+            
+            <div id="gallery" class="gallery-grid"></div>
+            
+        </main>
+    </div>
+
+    <div id="viewer" class="viewer">
+        <div class="viewer-content">
+            
+            <div class="viewer-header">
+                <div class="viewer-identity">
+                    <img src="../assets/logos/stazzex.svg" alt="The Stazzex" class="viewer-avatar" onerror="this.src='../Stazzex-Logo.jpg'">
+                    <span class="viewer-title">The Stazzex Core Registry</span>
+                </div>
+                <span id="close" class="close-action">&times;</span>
+            </div>
+
+            <div class="viewer-image-wrapper">
+                <img id="viewerImage" class="viewer-main-img" src="" alt="System Asset Archive View">
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch("photos.txt")
+                .then(response => response.text())
+                .then(text => {
+                    const gallery = document.getElementById("gallery");
+                    const lines = text.split("\n");
+
+                    lines.forEach(line => {
+                        const match = line.match(/^\d+\.\s*(.+)$/);
+                        if (!match) return;
+
+                        const file = match[1].trim();
+                        if (file === "") return;
+
+                        // Unified platform image index location mapping
+                        const imagePath = "images/" + file;
+
+                        // Create modern flex/grid modular wrappers matching standard aesthetic
+                        const itemWrapper = document.createElement("div");
+                        itemWrapper.className = "gallery-item";
+
+                        const img = document.createElement("img");
+                        img.className = "gallery-image";
+                        img.src = imagePath;
+                        img.alt = file;
+                        img.loading = "lazy"; // Core efficiency handling
+
+                        itemWrapper.onclick = function() {
+                            document.getElementById("viewer").style.display = "block";
+                            document.getElementById("viewerImage").src = imagePath;
+                            document.body.style.overflow = "hidden"; // Prevent background body drift
+                        };
+
+                        itemWrapper.appendChild(img);
+                        gallery.appendChild(itemWrapper);
+                    });
+                });
+
+            // Modern Overlay Event Matrix Controls
+            const closeViewer = () => {
+                document.getElementById("viewer").style.display = "none";
+                document.body.style.overflow = "";
+            };
+
+            document.getElementById("close").onclick = closeViewer;
+
+            document.getElementById("viewer").onclick = function(e) {
+                if (e.target === this) {
+                    closeViewer();
+                }
+            };
+        });
+    </script>
+    <script src="../js/app.js"></script>
+</body>
+</html>
