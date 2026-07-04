@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Updates | STAZZBOI.COM</title>
+    
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    
+    <style>
+        /* Contextual page overrides for the Updates Stream */
+        .stream-title {
+            color: var(--color-text-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 24px;
+        }
+        .stream-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: var(--grid-gap);
+            margin-top: 24px;
+        }
+        .timestamp {
+            font-size: 0.8rem;
+            color: var(--color-text-secondary);
+            font-weight: var(--font-weight-medium);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header class="app-header">
+            <div class="header-container">
+                <a href="/" class="header-title">STAZZBOI.COM</a>
+                <p class="header-tagline">Ecosystem Broadcast Stream</p>
+            </div>
+        </header>
+
+        <main class="main-content section animate-fade-in">
+            
+            <h2 class="stream-title">Latest // System Dispatches</h2>
+            
+            <div class="stream-timeline">
+                
+                <div class="stazz-card card-official">
+                    <div class="card-header">
+                        <span class="timestamp">2026 // Current Cycle</span>
+                        <span class="stx-badge">System Update</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title" style="margin-bottom: 8px;">Active Cabinet Expansion</h3>
+                        <p>The presidential framework is executing immediate updates to official department files and expanding the Stazzeria structural timeline as planned.</p>
+                    </div>
+                </div>
+
+                <div class="stazz-card">
+                    <div class="card-header">
+                        <span class="timestamp">October 31, 2025</span>
+                        <span class="stx-badge">Milestone</span>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title" style="margin-bottom: 8px;">Sovereign Standardization Achieved</h3>
+                        <p>Core platform specifications, ecosystem branding identity guidelines, and structural design languages have successfully cleared the initialization stage.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>
