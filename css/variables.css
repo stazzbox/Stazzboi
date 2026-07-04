@@ -1,0 +1,45 @@
+/**
+ * STAZZBOI.COM — Version 1.0
+ * Core Design Tokens & Global CSS Variables
+ * Foundation & Development Plan
+ */
+
+:root {
+    /* --- Brand Color Palette --- */
+    --color-bg-dark: #121212;         /* Deep dark charcoal foundation */
+    --color-bg-card: #1c1c1c;         /* Slightly lighter charcoal for app tiles/cards */
+    --color-text-primary: #ffffff;    /* Pure white typography */
+    --color-text-secondary: #aaaaaa;  /* Muted gray for small metadata (like STX numbers) */
+    
+    /* --- Specific Accent Rules --- */
+    --color-accent-neon: #e6ff00;     /* Neon Yellow: STAZZBOI.COM header, official terms, government titles */
+    --color-accent-female: #ff69b4;   /* Pink: Reserved exclusively for First Lady, StazzQueen, female bios/offices */
+    --color-link: #007bff;            /* Blue hyperlinks */
+
+    /* --- Typography (Mobile-First Scalable) --- */
+    --font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-weight-bold: 700;
+    --font-weight-medium: 500;
+    --font-weight-regular: 400;
+
+    /* --- Spatial System (App-style Grid) --- */
+    --grid-gap: 16px;
+    --border-radius-tile: 12px;       /* Smooth premium corners for square app portals */
+
+    /* --- Transitions & Animations --- */
+    --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* --- Base Dark Theme Baseline --- */
+html, body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-primary);
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
