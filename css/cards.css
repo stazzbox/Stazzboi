@@ -1,0 +1,61 @@
+/**
+ * STAZZBOI.COM — Version 1.0
+ * Content Cards — Reusable Profile, Timeline, & Data Windows
+ * Foundation & Development Plan
+ */
+
+/* --- Base Card Surface --- */
+.stazz-card {
+    background-color: var(--color-bg-card);
+    border-radius: var(--border-radius-tile);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    transition: var(--transition-smooth);
+}
+
+.stazz-card:hover {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* --- Card Header & Metadata Alignment --- */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    line-height: 1.2;
+}
+
+/* --- Content Typography Within Cards --- */
+.card-body {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+.card-footer {
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* --- Contextual Border Variations --- */
+.card-official {
+    border-left: 3px solid var(--color-accent-neon);
+}
+
+.card-female {
+    border-left: 3px solid var(--color-accent-female);
+}
