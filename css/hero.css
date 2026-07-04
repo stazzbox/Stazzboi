@@ -1,0 +1,93 @@
+/**
+ * STAZZBOI.COM — Version 1.0
+ * Hero Section — Interactive Identity Banner
+ * Foundation & Development Plan
+ */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: var(--color-bg-card);
+    border-radius: var(--border-radius-tile);
+    margin-bottom: var(--grid-gap);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.hero-section:hover {
+    transform: scale(0.995);
+    box-shadow: 0 0 20px rgba(230, 255, 0, 0.1);
+}
+
+/* --- Hero Visual Base --- */
+.hero-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    transition: var(--transition-smooth);
+}
+
+.hero-section:hover .hero-image {
+    opacity: 0.7;
+}
+
+/* --- Content Overlay --- */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to top, rgba(18, 18, 18, 0.8), transparent);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 2rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    margin-bottom: 8px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+    letter-spacing: 0.05em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* --- Responsive Scaling --- */
+@media (min-width: 768px) {
+    .hero-section {
+        min-height: 50vh;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+}
