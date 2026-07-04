@@ -1,0 +1,62 @@
+/**
+ * STAZZBOI.COM — Version 1.0
+ * Global Base Styles & Element Defaults
+ * Foundation & Development Plan
+ */
+
+/* --- Document Baseline --- */
+html {
+    scroll-behavior: smooth;
+    background-color: var(--color-bg-dark);
+}
+
+body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-primary);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-regular);
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+/* --- Typography Defaults --- */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+/* --- Hyperlink Blueprint --- */
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+a:hover, a:focus {
+    opacity: 0.85;
+}
+
+/* --- Global Selection & Focus States --- */
+::selection {
+    background-color: var(--color-accent-neon);
+    color: var(--color-bg-dark);
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-accent-neon);
+    outline-offset: 4px;
+}
+
+/* --- Component Utilities --- */
+.stx-badge {
+    color: var(--color-accent-neon);
+    font-size: 0.75rem;
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.female-entity {
+    color: var(--color-accent-female) !important;
+}
