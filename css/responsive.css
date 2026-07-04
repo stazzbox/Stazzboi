@@ -1,0 +1,62 @@
+/**
+ * STAZZBOI.COM — Version 1.0
+ * Responsive Utilities & Macro Breakpoint Triggers
+ * Foundation & Development Plan
+ */
+
+/* --- Micro-Devices (Small Phones) --- */
+@media (max-width: 375px) {
+    .header-title {
+        font-size: 1.25rem;
+    }
+    
+    .hero-content {
+        padding: 20px 12px;
+    }
+}
+
+/* --- Mobile / Tablet Boundary (768px) --- */
+@media (min-width: 768px) {
+    .main-content {
+        padding: 0 40px;
+    }
+
+    .portal-grid {
+        gap: 24px; /* Expand grid gaps as viewport increases */
+    }
+}
+
+/* --- Desktop Scaling Optimization (1024px+) --- */
+@media (min-width: 1024px) {
+    .app-header {
+        padding: 20px 40px;
+    }
+
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header-tagline {
+        margin-top: 0;
+    }
+
+    .portal-tile {
+        padding: 24px;
+    }
+}
+
+/* --- Utility Visibility Controls --- */
+.hide-on-mobile {
+    display: none !important;
+}
+
+@media (min-width: 768px) {
+    .hide-on-mobile {
+        display: block !important;
+    }
+    
+    .hide-on-desktop {
+        display: none !important;
+    }
+}
