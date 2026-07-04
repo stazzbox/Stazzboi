@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stazzboi | STAZZBOI.COM</title>
+    
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    
+    <style>
+        /* Contextual page overrides for the Music Identity */
+        .music-title {
+            color: var(--color-text-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 24px;
+        }
+        .discography-matrix {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--grid-gap);
+            margin-top: 24px;
+        }
+        @media (min-width: 768px) {
+            .discography-matrix {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header class="app-header">
+            <div class="header-container">
+                <a href="/" class="header-title">STAZZBOI.COM</a>
+                <p class="header-tagline">Official Music Terminal</p>
+            </div>
+        </header>
+
+        <main class="main-content section animate-fade-in">
+            
+            <h2 class="music-title">Stazzboi // Audio & Discography</h2>
+            
+            <div class="stazz-card">
+                <div class="card-header">
+                    <h3 class="card-title">The Sonic Persona</h3>
+                    <span class="stx-badge">STX #0003</span>
+                </div>
+                <div class="card-body">
+                    <p>The core rap identity and musical manifestation of Kelvin Stazzland. Driving distinct Stazzerian rhythms, localized culture, and official streaming releases directly out of the ecosystem framework.</p>
+                </div>
+            </div>
+
+            <section class="discography-matrix">
+                
+                <div class="stazz-card">
+                    <div class="card-header">
+                        <h4 class="card-title">Latest Drops</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Stream monitoring segments, upcoming track arrangements, and catalog indices are currently mapping directly to primary platform distribution pipelines.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="stx-badge" style="color: var(--color-link);">Streaming Terminal</span>
+                    </div>
+                </div>
+
+                <div class="stazz-card">
+                    <div class="card-header">
+                        <h4 class="card-title">Ecosystem Distribution</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>All music content is cataloged via canonical parameters inside the knowledge index, keeping the discography fully interconnected with the narrative layer.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="stx-badge">Verified Catalog</span>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>
