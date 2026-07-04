@@ -1,0 +1,57 @@
+/**
+ * STAZZBOI.COM — Version 1.0
+ * Modern CSS Reset & Box-Model Normalization
+ * Foundation & Development Plan
+ */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margins and paddings for layout predictability */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. Allow percentage-based heights in the application root */
+html, body {
+    height: 100%;
+}
+
+/* 4. Improve text rendering and structural smoothing */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 5. Improve media defaults for responsive compliance */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 6. Remove built-in form typography inheritance overrides */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows on multi-line text elements */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Reset list styles for application-style navigation arrays */
+ul, ol {
+    list-style: none;
+}
+
+/* 9. Reset button behaviors to act as raw clickable surfaces */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
