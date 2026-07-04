@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stazzert Comics | STAZZBOI.COM</title>
+    
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    
+    <style>
+        /* Contextual page overrides for the Comic Catalog layout */
+        .comics-title {
+            color: var(--color-text-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 24px;
+        }
+        .comic-catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: var(--grid-gap);
+            margin-top: 24px;
+        }
+        .comic-issue-card {
+            background-color: var(--color-bg-card);
+            border-radius: var(--border-radius-tile);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition-smooth);
+        }
+        .comic-issue-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--color-accent-neon);
+        }
+        .comic-cover-wrapper {
+            width: 100%;
+            aspect-ratio: 2 / 3;
+            background-color: rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        .comic-cover {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .comic-details {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex-grow: 1;
+        }
+        .comic-meta {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-text-secondary);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header class="app-header">
+            <div class="header-container">
+                <a href="/" class="header-title">STAZZBOI.COM</a>
+                <p class="header-tagline">Official Creative Print Hub</p>
+            </div>
+        </header>
+
+        <main class="main-content section animate-fade-in">
+            
+            <h2 class="comics-title">Stazzert Comics // Publications</h2>
+            
+            <div class="stazz-card card-official">
+                <div class="card-header">
+                    <h3 class="card-title">The Illustration Branch</h3>
+                    <span class="stx-badge">STX #0008</span>
+                </div>
+                <div class="card-body">
+                    <p>The visual narrative division of Stazzeria. Chronicling ecosystem lore, characters, and custom conceptual universe stories through seasonal illustrative print configurations.</p>
+                </div>
+            </div>
+
+            <section class="comic-catalog-grid">
+                
+                <div class="comic-issue-card">
+                    <div class="comic-cover-wrapper">
+                        <img src="../assets/images/comic-cover-01.jpg" alt="Stazzert Comics Issue #1" class="comic-cover">
+                    </div>
+                    <div class="comic-details">
+                        <span class="comic-meta">Issue #01 // First Edition</span>
+                        <h4 class="card-title" style="font-size: 1.1rem;">Origins of Stazzeria</h4>
+                        <p class="card-body" style="font-size: 0.85rem; padding: 0;">The foundational print launch covering the initial configuration protocols of the Stazzation.</p>
+                    </div>
+                </div>
+
+                <div class="comic-issue-card">
+                    <div class="comic-cover-wrapper" style="display: flex; align-items: center; justify-content: center;">
+                        <span class="stx-badge">Production Stage</span>
+                    </div>
+                    <div class="comic-details">
+                        <span class="comic-meta">Issue #02 // Upcoming Variant</span>
+                        <h4 class="card-title" style="font-size: 1.1rem;">The Khamelion Protocols</h4>
+                        <p class="card-body" style="font-size: 0.85rem; padding: 0;">Exploring the structural background mechanics behind the signature pose and content framework matrix.</p>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>
