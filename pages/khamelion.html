@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Khamelion | STAZZBOI.COM</title>
+    
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    
+    <style>
+        /* Contextual page overrides for the Creator Identity */
+        .creator-title {
+            color: var(--color-text-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 24px;
+        }
+        .content-hub {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--grid-gap);
+            margin-top: 24px;
+        }
+        @media (min-width: 768px) {
+            .content-hub {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .full-width-card {
+                grid-column: span 2;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header class="app-header">
+            <div class="header-container">
+                <a href="/" class="header-title">STAZZBOI.COM</a>
+                <p class="header-tagline">Official Creator Hub</p>
+            </div>
+        </header>
+
+        <main class="main-content section animate-fade-in">
+            
+            <h2 class="creator-title">The Khamelion // Content &amp; Lifestyle</h2>
+            
+            <div class="stazz-card">
+                <div class="card-header">
+                    <h3 class="card-title">The Creator Persona</h3>
+                    <span class="stx-badge">STX #0004</span>
+                </div>
+                <div class="card-body">
+                    <p>The digital epicenter for gaming, modern lifestyle documentation, and community engagement. This sector serves as the high-energy production outlet for the broader Stazzeria ecosystem.</p>
+                </div>
+            </div>
+
+            <section class="content-hub">
+                
+                <div class="stazz-card">
+                    <div class="card-header">
+                        <h4 class="card-title">Gaming &amp; Media</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Stream highlights, gameplay configurations, and dynamic media content tracking across connected creator pipelines.</p>
+                    </div>
+                </div>
+
+                <div class="stazz-card">
+                    <div class="card-header">
+                        <h4 class="card-title">Lifestyle Integration</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Documenting modern culture, physical creative environments, and community interactions within the Stazzation ecosystem.</p>
+                    </div>
+                </div>
+
+                <div class="stazz-card full-width-card">
+                    <div class="card-header">
+                        <h4 class="card-title">The Khamelion Pose</h4>
+                        <span class="stx-badge" style="color: var(--color-accent-neon);">/khamelionpose</span>
+                    </div>
+                    <div class="card-body">
+                        <p>The definitive signature aesthetic move anchoring the visual branding of this creator branch. Fully integrated across standard visual archives and official lore metrics.</p>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>
