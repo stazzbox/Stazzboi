@@ -1,0 +1,51 @@
+/**
+ * STAZZBOI.COM — Version 1.0
+ * Application Header — Sticky, Centered, Neon Yellow
+ * Foundation & Development Plan
+ */
+
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(18, 18, 18, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 16px 20px;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* --- Brand Identity Elements --- */
+.header-title {
+    color: var(--color-accent-neon);
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.header-tagline {
+    color: var(--color-text-primary);
+    font-size: 0.85rem;
+    font-weight: var(--font-weight-medium);
+    margin-top: 4px;
+    letter-spacing: 0.05em;
+}
+
+/* --- Content Padding Compensation --- */
+/* Ensures main layout doesn't slide under the fixed header */
+.app-container {
+    padding-top: 76px; 
+}
