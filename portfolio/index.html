@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | STAZZBOI.COM</title>
+    
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    
+    <style>
+        /* Contextual page overrides for the Creative Tech Matrix */
+        .portfolio-title {
+            color: var(--color-text-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 24px;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--grid-gap);
+            margin-top: 24px;
+        }
+        @media (min-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .tag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-text-secondary);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header class="app-header">
+            <div class="header-container">
+                <a href="/" class="header-title">STAZZBOI.COM</a>
+                <p class="header-tagline">Professional Developer &amp; Project Index</p>
+            </div>
+        </header>
+
+        <main class="main-content section animate-fade-in">
+            
+            <h2 class="portfolio-title">Portfolio // Production Index</h2>
+            
+            <div class="stazz-card card-official">
+                <div class="card-header">
+                    <h3 class="card-title">Creative Tech Stack</h3>
+                    <span class="stx-badge">STX #0009</span>
+                </div>
+                <div class="card-body">
+                    <p>The integrated production overview cataloging technical engineering, web architecture deployments, and system assets built out for the Stazzeria ecosystem and connected clients.</p>
+                    <div class="skill-tags">
+                        <span class="tag">Frontend Architecture</span>
+                        <span class="tag">UI/UX Layouts</span>
+                        <span class="tag">System Engineering</span>
+                        <span class="tag">Digital Branding</span>
+                    </div>
+                </div>
+            </div>
+
+            <section class="portfolio-grid">
+                
+                <div class="stazz-card">
+                    <div class="card-header">
+                        <h4 class="card-title">Ecosystem Portal Deployment</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Designed and built out the modular micro-page structure for STAZZBOI.COM, incorporating custom asynchronous directory management and fluid design rules.</p>
+                    </div>
+                </div>
+
+                <div class="stazz-card">
+                    <div class="card-header">
+                        <h4 class="card-title">The Stazzex Baseline Engine</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Constructed the global registry identification protocols to catalogue structural data nodes, people, and assets with strict verification parameters.</p>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>
