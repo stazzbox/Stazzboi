@@ -1,444 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>The STAZZEX | Official Public Archive of the Stazz Universe</title>
-
-  <meta name="description" content="The STAZZEX is the official public archive, encyclopedia, registry, and lexicon of the Stazz Universe featuring figures, titles, structures, events, doctrine, and Stazzerian terminology." />
-  <meta name="keywords" content="STAZZEX, Stazz Universe, Stazzeria, Stazzboi, Khamelion, STAZZsociety, Stazzation, StazzQueen, Stazzerian archive" />
-  <meta name="author" content="The STAZZEX" />
-  <meta name="robots" content="index, follow" />
-
-  <meta property="og:title" content="The STAZZEX" />
-  <meta property="og:description" content="Official public archive and encyclopedia of the Stazz Universe." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://stazzex.stazzboi.com" />
-  <meta property="og:image" content="https://stazzex.stazzboi.com/assets/logos/stazzex-logo.jpg" />
-
-  <link rel="canonical" href="https://stazzex.stazzboi.com" />
-  <link rel="icon" href="/stazzex/assets/logos/stazzex-logo.jpg" />
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background: #050505;
-      color: white;
-      font-family: Arial, Helvetica, sans-serif;
-      overflow-x: hidden;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    :root {
-      --gold: #d4af37;
-      --border: rgba(255, 255, 255, 0.08);
-      --card-bg: #0d0d0d;
-    }
-
-    /* NAV */
-    nav {
-      width: 100%;
-      padding: 22px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      backdrop-filter: blur(10px);
-      background: rgba(0, 0, 0, 0.82);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .nav-left img {
-      width: 46px;
-      border-radius: 50%;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 28px;
-    }
-
-    .nav-links a:hover {
-      color: var(--gold);
-    }
-
-    /* HERO */
-    .hero {
-      padding: 140px 6% 120px;
-      text-align: center;
-      position: relative;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.92), rgba(0,0,0,0.97));
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .hero-subtitle {
-      color: var(--gold);
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-      font-size: 0.85rem;
-    }
-
-    .hero h1 {
-      font-size: clamp(3rem, 7vw, 6rem);
-      margin-bottom: 28px;
-      line-height: 1;
-    }
-
-    .hero p {
-      color: #c1c1c1;
-      line-height: 1.9;
-      max-width: 850px;
-      margin: auto;
-      margin-bottom: 50px;
-    }
-
-    /* SEARCH */
-    .search-container {
-      max-width: 850px;
-      margin: auto;
-      position: relative;
-    }
-
-    .search-bar {
-      width: 100%;
-      padding: 22px 28px;
-      outline: none;
-      background: #0d0d0d;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      color: white;
-      font-size: 1rem;
-      text-align: center;
-    }
-
-    .search-bar:focus {
-      border-color: var(--gold);
-    }
-
-    /* PREDICTIVE DROPDOWN PANEL */
-    .suggestions-box {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: #0d0d0d;
-      border: 1px solid var(--gold);
-      border-radius: 12px;
-      margin-top: 8px;
-      max-height: 280px;
-      overflow-y: auto;
-      z-index: 1000;
-      display: none;
-      text-align: left;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-    }
-
-    .suggestion-item {
-      padding: 14px 20px;
-      cursor: pointer;
-      font-size: 0.95rem;
-      color: #c1c1c1;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      transition: background 0.2s ease;
-    }
-
-    .suggestion-item:last-child {
-      border-bottom: none;
-    }
-
-    .suggestion-item:hover {
-      background: rgba(212, 175, 55, 0.1);
-      color: white;
-    }
-
-    .suggestion-item .item-title {
-      color: var(--gold);
-      font-weight: bold;
-    }
-
-    .suggestion-item .item-type {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      font-family: monospace;
-      color: #888;
-      margin-left: auto;
-    }
-
-    /* ENTRIES */
-    section {
-      padding: 100px 6%;
-    }
-
-    .section-title {
-      font-size: 2.8rem;
-      margin-bottom: 20px;
-    }
-
-    .gold {
-      color: var(--gold);
-    }
-
-    .section-description {
-      color: #bdbdbd;
-      line-height: 1.9;
-      max-width: 900px;
-      margin-bottom: 50px;
-    }
-
-    .entry-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 28px;
-    }
-
-    .entry-card {
-      background: #0d0d0d;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 32px;
-      display: flex;
-      flex-direction: column;
-      transition: 0.3s ease;
-    }
-
-    .entry-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(212, 175, 55, 0.35);
-    }
-
-    .entry-classification {
-      color: var(--gold);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      font-size: 0.75rem;
-      margin-bottom: 16px;
-    }
-
-    .entry-card h3 {
-      font-size: 1.7rem;
-      margin-bottom: 18px;
-    }
-
-    .entry-card p {
-      color: #c1c1c1;
-      line-height: 1.8;
-      margin-bottom: 24px;
-      flex-grow: 1;
-    }
-
-    .entry-link {
-      color: var(--gold);
-      font-weight: bold;
-    }
-
-    /* FOOTER */
-    footer {
-      padding: 50px 6%;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      color: #9d9d9d;
-    }
-
-    @media(max-width:900px) {
-      .nav-links { display: none; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Stazzex Index | STAZZBOI.COM</title>
+    
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    
+    <style>
+        /* Contextual page overrides for the Stazzex Matrix */
+        .index-title {
+            color: var(--color-accent-neon);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 24px;
+        }
+        .stazzex-table-wrapper {
+            background-color: var(--color-bg-card);
+            border-radius: var(--border-radius-tile);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            overflow-x: auto;
+            margin-top: 24px;
+        }
+        .stazzex-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+        .stazzex-table th, .stazzex-table td {
+            padding: 16px 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .stazzex-table th {
+            font-weight: var(--font-weight-bold);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            color: var(--color-text-secondary);
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        .stazzex-table tr:last-child td {
+            border-bottom: none;
+        }
+        .stazzex-table tr:hover td {
+            background-color: rgba(255, 255, 255, 0.01);
+        }
+    </style>
 </head>
-
 <body>
 
-  <nav>
-    <div class="nav-left">
-      <img src="/stazzex/assets/logos/stazzex-logo.jpg" alt="The STAZZEX" />
-      <strong>The STAZZEX</strong>
+    <div class="app-container">
+        
+        <header class="app-header">
+            <div class="header-container">
+                <a href="/" class="header-title">STAZZBOI.COM</a>
+                <p class="header-tagline">Official Stazzerian Index</p>
+            </div>
+        </header>
+
+        <main class="main-content section animate-fade-in">
+            
+            <h2 class="index-title">The Stazzex // Core Canonical Index</h2>
+            
+            <div class="stazz-card">
+                <div class="card-body">
+                    <p>The system directory documenting all registered people, titles, terms, projects, products, and operational definitions within the ecosystem. Each validated item receives a permanent global serial assignment.</p>
+                </div>
+            </div>
+
+            <div class="stazzex-table-wrapper">
+                <table class="stazzex-table">
+                    <thead>
+                        <tr>
+                            <th>Serial ID</th>
+                            <th>Entity Name</th>
+                            <th>Classification</th>
+                            <th>Canonical Route</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="/stazzex" class="stx-badge">STX #0001</a></td>
+                            <td style="color: var(--color-accent-neon);">The Stazzex Baseline</td>
+                            <td>Index Registry</td>
+                            <td><code>/stazzex</code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/stazzex" class="stx-badge">STX #0002</a></td>
+                            <td style="color: var(--color-accent-neon);">Kelvin Stazzland</td>
+                            <td>Executive / Individual</td>
+                            <td><code>/kelvin</code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/stazzex" class="stx-badge">STX #0003</a></td>
+                            <td>Stazzboi</td>
+                            <td>Music Persona</td>
+                            <td><code>/stazzboi</code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/stazzex" class="stx-badge">STX #0004</a></td>
+                            <td>The Khamelion</td>
+                            <td>Creator Persona</td>
+                            <td><code>/khamelion</code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/stazzex" class="stx-badge">STX #0005</a></td>
+                            <td style="color: var(--color-accent-neon);">Stazzeria Framework</td>
+                            <td>Cultural Ecosystem</td>
+                            <td><code>/Stazzeria</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
     </div>
-    <div class="nav-links">
-      <a href="/">Home</a>
-      <a href="/stazzeria/">Stazzeria</a>
-      <a href="/stazzboi/">Stazzboi</a>
-      <a href="/stazzology/">STAZZOLOGY</a>
-    </div>
-  </nav>
 
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-subtitle">Official Public Archive of the Stazz Universe</div>
-      <h1>The <span class="gold">STAZZEX</span></h1>
-      <p>
-        The STAZZEX functions as the official public archive, encyclopedia, registry, lexicon, and information network of the Stazz Universe. The archive preserves figures, titles, structures, doctrine, symbolic systems, and institutional continuity.
-      </p>
-
-      <div class="search-container">
-        <input type="text" id="searchInput" class="search-bar" placeholder="Search The STAZZEX..." autocomplete="off"/>
-        <div id="suggestionsBox" class="suggestions-box"></div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="section-title">Featured <span class="gold">Entries</span></h2>
-    <p class="section-description">
-      The STAZZEX preserves and categorizes official records associated with the Stazz Universe through structured entry systems and interconnected archival documentation.
-    </p>
-
-    <div class="entry-grid" id="entryGrid">
-
-      <div class="entry-card" data-name="Khamelion Khamelion Pose Adaptability">
-        <div class="entry-classification">Title</div>
-        <h3>The Khamelion</h3>
-        <p>Symbolic title associated with adaptability, environmental awareness, charisma, and identity continuity throughout changing situations.</p>
-        <a href="/stazzex/entries/khamelion.html" class="entry-link">View Entry →</a>
-      </div>
-
-      <div class="entry-card" data-name="Stazzeria Digital Nation">
-        <div class="entry-classification">Structure</div>
-        <h3>Stazzeria</h3>
-        <p>The Digital Nation of Stazzerians functioning as the executive, cultural, and organizational foundation of the Stazz Universe.</p>
-        <a href="/stazzex/entries/stazzeria.html" class="entry-link">View Entry →</a>
-      </div>
-
-      <div class="entry-card" data-name="STAZZsociety Lexeme System">
-        <div class="entry-classification">Polyfunctional Lexeme</div>
-        <h3>STAZZsociety</h3>
-        <p>Cultural framework, operational language system, and connective identity structure associated with Stazzerian participation.</p>
-        <a href="/stazzex/entries/stazzsociety.html" class="entry-link">View Entry →</a>
-      </div>
-
-      <div class="entry-card" data-name="Stazzation Symbolic Transformation Conversion">
-        <div class="entry-classification">Polyfunctional Lexeme</div>
-        <h3>Stazzation</h3>
-        <p>Process associated with symbolic transformation, identity alignment, institutional integration, and Stazzerian conversion.</p>
-        <a href="/stazzex/entries/stazzation.html" class="entry-link">View Entry →</a>
-      </div>
-
-      <div class="entry-card" data-name="President Leadership Governance Executive">
-        <div class="entry-classification">Title</div>
-        <h3>President</h3>
-        <p>Executive title associated with leadership, governance, institutional continuity, and structural authority within Stazzeria.</p>
-        <a href="/stazzex/entries/president.html" class="entry-link">View Entry →</a>
-      </div>
-
-      <div class="entry-card" data-name="StazzQueen Partner Active Term">
-        <div class="entry-classification">Title</div>
-        <h3>StazzQueen</h3>
-        <p>Symbolic title associated with the romantic partner of Stazzboi during an active Stazzerian presidential term.</p>
-        <a href="/stazzex/entries/stazzqueen.html" class="entry-link">View Entry →</a>
-      </div>
-
-      <div class="entry-card" data-name="WARGAMES Tournament Faction Warfare Competitive Event">
-        <div class="entry-classification">Competitive Event</div>
-        <h3>WARGAMES</h3>
-        <p>Large-scale STAZZOLOGY competitive event associated with faction warfare, tactical competition, and rivalry escalation.</p>
-        <a href="/stazzex/entries/wargames.html" class="entry-link">View Entry →</a>
-      </div>
-
-      <div class="entry-card" data-name="The Zits Conflict 2025 Retaliation Peace Accord">
-        <div class="entry-classification">Historical Event Log</div>
-        <h3>The Zits Conflict (2025–Current)</h3>
-        <p>The Zits Conflict is recognized as one of the most culturally significant social-political confrontations within modern Stazzerian history. Officially documented during the late Expansion Era and early Institutional Expansion Era of Stazzeria, the conflict became widely associated with themes of loyalty, retaliation, national pride, and diplomatic resolution within the Stazz Universe.</p>
-        <a href="/stazzex/entries/zits-conflict.html" class="entry-link">View Entry →</a>
-      </div>
-
-    </div>
-  </section>
-
-  <footer>
-    <p>© The STAZZEX — Official Public Archive of the Stazz Universe</p>
-  </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const searchInput = document.getElementById("searchInput");
-      const suggestionsBox = document.getElementById("suggestionsBox");
-      const cards = document.querySelectorAll(".entry-card");
-
-      searchInput.addEventListener("input", function() {
-        const value = this.value.toLowerCase().trim();
-        suggestionsBox.innerHTML = "";
-
-        if (value.length === 0) {
-          suggestionsBox.style.display = "none";
-          return;
-        }
-
-        let totalMatches = 0;
-
-        cards.forEach(card => {
-          const title = card.querySelector("h3").innerText;
-          const classification = card.querySelector(".entry-classification").innerText;
-          const searchPool = card.getAttribute("data-name").toLowerCase();
-          const targetUrl = card.querySelector(".entry-link").getAttribute("href");
-
-          if (title.toLowerCase().includes(value) || searchPool.includes(value)) {
-            totalMatches++;
-
-            const item = document.createElement("div");
-            item.className = "suggestion-item";
-            item.innerHTML = `
-              <span>📚</span>
-              <span class="item-title">${title}</span>
-              <span class="item-type">${classification}</span>
-            `;
-
-            item.addEventListener("click", function() {
-              window.location.href = targetUrl;
-            });
-
-            suggestionsBox.appendChild(item);
-          }
-        });
-
-        if (totalMatches > 0) {
-          suggestionsBox.style.display = "block";
-        } else {
-          suggestionsBox.style.display = "none";
-        }
-      });
-
-      document.addEventListener("click", function(event) {
-        if (!event.target.closest(".search-container")) {
-          suggestionsBox.style.display = "none";
-        }
-      });
-    });
-  </script>
-
+    <script src="../js/app.js"></script>
 </body>
 </html>
-
-```
