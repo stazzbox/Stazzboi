@@ -3,419 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stazzology // CODM & Arena Promotion</title>
-
-    <meta name="description" content="Official Stazzology promotion index. Gaming asset matrices, team faction channels, and tournament logs for the competitive Stazz Universe circuit.">
-    <meta name="keywords" content="Stazzology, Bites and Battles, Street Fighter 6, CODM, Call of Duty Mobile Esports, Kelvin Stazzland, The Khamelion, STZ Frost, STZ Valor, STZ Kingdom, STZ Integrity, PlayStation 5, The Stazzex">
-    <meta name="robots" content="index, follow">
+    <title>STAZZOLOGY | STAZZBOI.COM</title>
     
-    <meta property="og:title" content="STAZZOLOGY // OPERATIONAL INDEX">
-    <meta property="og:description" content="Official tournament logistics, team nodes, and network platform deployment.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://stazzboi.com/stazzology">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
     
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "SportsOrganization",
-          "@id": "https://stazzboi.com/stazzology/#promotion",
-          "name": "Stazzology",
-          "sport": "Call of Duty: Mobile Esports & Fighting Games",
-          "description": "Premium live event curation and strategic media promotion framework within the Stazzerian nation ecosystem.",
-          "parentOrganization": {
-            "@type": "Person",
-            "name": "Kelvin Stazzland",
-            "additionalName": "The Khamelion",
-            "alternateName": "Stazzboi"
-          }
-        },
-        {
-          "@type": "SportsEvent",
-          "@id": "https://stazzboi.com/stazzology/#event-2026-04-11",
-          "name": "Bites and Battles Street Fighter 6 Tournament",
-          "startDate": "2026-04-11T16:00:00-07:00",
-          "location": {
-            "@type": "Place",
-            "name": "MegaBites Arcade",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Hemet",
-              "addressRegion": "CA"
-            }
-          }
-        }
-      ]
-    }
-    </script>
-
     <style>
-        :root {
-            --bg-main: #0a0a0c; /* Deep cyber dark */
-            --bg-card: #121216; /* Clean app box charcoal */
-            --border-color: #22222a;
-            --text-main: #ffffff;
-            --text-muted: #71717a;
-            --accent-neon: #00d4ff; /* High energy cyan */
-            --border-radius: 20px;
-            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-            
-            /* Team Accent Colors for Subtle Glowing Aesthetics */
-            --glow-frost: rgba(0, 212, 255, 0.15);
-            --glow-valor: rgba(255, 0, 76, 0.15);
-            --glow-kingdom: rgba(255, 200, 0, 0.15);
-            --glow-integrity: rgba(148, 163, 184, 0.15);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        body {
-            background-color: var(--bg-main);
-            color: var(--text-main);
-            padding-bottom: 40px;
-        }
-
-        /* Top Sticky Header & Predictive Search Area */
-        .app-header {
-            position: sticky;
-            top: 0;
-            background: rgba(10, 10, 12, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            padding: 16px 20px;
-            z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .search-container {
-            max-width: 500px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .search-bar {
-            width: 100%;
-            padding: 14px 20px;
-            border-radius: 14px;
-            border: 1px solid var(--border-color);
-            background: var(--bg-card);
-            font-size: 15px;
-            color: var(--text-main);
-            outline: none;
-            transition: var(--transition);
-        }
-
-        .search-bar:focus {
-            border-color: var(--accent-neon);
-            box-shadow: 0 0 12px var(--glow-frost);
-        }
-
-        .search-subtext {
-            text-align: center;
-            font-size: 11px;
-            color: var(--text-muted);
-            margin-top: 6px;
+        /* Contextual page overrides for Cultural Frameworks */
+        .lore-title {
+            color: var(--color-accent-neon);
             text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .search-subtext a {
-            color: var(--accent-neon);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        /* Main Scroll Container */
-        .app-main {
-            max-width: 480px; /* Aligns with clean native viewport architecture */
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Intro Terminal Header */
-        .brand-hero {
-            padding: 16px 4px 24px;
-            border-bottom: 1px dashed var(--border-color);
+            letter-spacing: 0.05em;
             margin-bottom: 24px;
         }
-
-        .section-tag {
-            font-family: monospace;
-            font-size: 11px;
-            color: var(--accent-neon);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            display: block;
-            margin-bottom: 6px;
-        }
-
-        .brand-hero h1 {
-            font-size: 28px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            margin-bottom: 10px;
-        }
-
-        .brand-hero p {
-            font-size: 14.5px;
-            line-height: 1.6;
-            color: #b3b3ba;
-        }
-
-        /* Primary Two-Column App Layout Squares */
-        .two-column-grid {
+        .philosophy-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-            margin-bottom: 28px;
+            grid-template-columns: 1fr;
+            gap: var(--grid-gap);
+            margin-top: 24px;
         }
-
-        .app-square {
-            background: var(--bg-card);
-            border-radius: var(--border-radius);
-            aspect-ratio: 1 / 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            text-align: center;
-            border: 1px solid var(--border-color);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .app-square:active {
-            transform: scale(0.95);
-        }
-
-        .app-square .icon-wrapper {
-            width: 48px;
-            height: 48px;
-            margin-bottom: 12px;
-            color: var(--accent-neon);
-        }
-
-        .app-square span {
-            font-size: 14px;
-            font-weight: 700;
-            color: var(--text-main);
-            letter-spacing: -0.2px;
-        }
-
-        /* Module Information Cards */
-        .content-card {
-            background: var(--bg-card);
-            border-radius: var(--border-radius);
-            padding: 20px;
-            margin-bottom: 20px;
-            border: 1px solid var(--border-color);
-        }
-
-        .card-title {
-            font-size: 15px;
-            font-weight: 800;
-            margin-bottom: 14px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border-left: 3px solid var(--accent-neon);
-            padding-left: 8px;
-        }
-
-        .media-asset {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            margin: 8px 0 14px;
-        }
-
-        .card-p {
-            font-size: 13.5px;
-            line-height: 1.6;
-            color: #b3b3ba;
-        }
-
-        /* Logistics Table Elements */
-        .logistics-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 14px;
-            font-size: 13px;
-        }
-
-        .logistics-table td {
-            padding: 8px 0;
-            border-bottom: 1px solid #1c1c24;
-            vertical-align: top;
-        }
-
-        .logistics-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .logistics-table td.label {
-            color: var(--text-muted);
-            font-weight: 700;
-            width: 35%;
-        }
-
-        .logistics-table td.val {
-            font-weight: 600;
-            text-align: right;
-        }
-
-        /* Faction/Channel Network Layout */
-        .channel-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-top: 10px;
-        }
-
-        .channel-link-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 12px;
-            text-decoration: none;
-            color: var(--text-main);
-            font-size: 12px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            transition: var(--transition);
-        }
-
-        .channel-link-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            border: 1px solid rgba(0,0,0,0.2);
-            background: #000;
-        }
-
-        .channel-link-card span {
-            font-weight: 700;
-            text-align: center;
-        }
-
-        /* Specific Interactive Hover Accents */
-        .card-frost:hover { border-color: #00d4ff; box-shadow: 0 0 12px var(--glow-frost); }
-        .card-valor:hover { border-color: #ff004c; box-shadow: 0 0 12px var(--glow-valor); }
-        .card-kingdom:hover { border-color: #ffc800; box-shadow: 0 0 12px var(--glow-kingdom); }
-        .card-integrity:hover { border-color: #94a3b8; box-shadow: 0 0 12px var(--glow-integrity); }
-
-        /* System Metrics Footer */
-        .app-footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 11px;
-            color: var(--text-muted);
-            font-family: monospace;
-            letter-spacing: 0.5px;
+        @media (min-width: 768px) {
+            .philosophy-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
 <body>
 
-    <header class="app-header">
-        <div class="search-container">
-            <input type="search" id="stazzex-search-input" class="search-bar" placeholder="Search the Stazzex index..." autocomplete="off">
-            <div id="predictive-results" class="search-dropdown hidden"></div>
-            <p class="search-subtext">Powered by <a href="/stazzex">The Stazzex</a></p>
-        </div>
-    </header>
-
-    <main class="app-main">
+    <div class="app-container">
         
-        <section class="brand-hero">
-            <span class="section-tag">[ System Node // Stazzology ]</span>
-            <h1>Stazzology</h1>
-            <p>The premium live tournament curation and competitive esports promotion framework within the Stazzeria ecosystem. Under the design oversight of Kelvin "The Khamelion" Stazzland, Stazzology drives multi-tier bracket organization and serial broadcast media assets.</p>
-        </section>
-
-        <nav class="two-column-grid">
-            <a href="/stazzology/events" class="app-square card-frost">
-                <svg class="icon-wrapper" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                    <polyline points="2 17 12 22 22 17"></polyline>
-                    <polyline points="2 12 12 17 22 12"></polyline>
-                </svg>
-                <span>PPV Events</span>
-            </a>
-
-            <a href="/stazzology/teams" class="app-square card-valor">
-                <svg class="icon-wrapper" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-                <span>Factions & Teams</span>
-            </a>
-        </nav>
-
-        <section class="content-card">
-            <h2 class="card-title">Archived Tournament Log</h2>
-            <p class="card-p"><strong>Bites &amp; Battles</strong> stands as a landmark live event execution within the Stazzology catalog. Hosted through our public gaming division at MegaBites Arcade, the double-elimination bracket organized intense arena engagement metrics.</p>
-            
-            <img src="BnB.jpg" alt="Bites and Battles Arena Logistics Card" class="media-asset">
-            
-            <table class="logistics-table">
-                <tr>
-                    <td class="label">Location</td>
-                    <td class="val">MegaBites Arcade // Hemet, CA</td>
-                </tr>
-                <tr>
-                    <td class="label">Platform</td>
-                    <td class="val">PlayStation 5 Console Nodes</td>
-                </tr>
-                <tr>
-                    <td class="label">Metrics</td>
-                    <td class="val">~30 Registered Entries</td>
-                </tr>
-                <tr>
-                    <td class="label">Bracket Leader</td>
-                    <td class="val" style="color: var(--accent-neon);">Kingston S. [Champion]</td>
-                </tr>
-            </table>
-        </section>
-
-        <section class="content-card">
-            <h2 class="card-title">Faction Feed Portals</h2>
-            <p class="card-p" style="color: var(--text-muted); font-size: 13px; margin-bottom: 6px;">Select active team node to route straight to their custom media shows:</p>
-            
-            <div class="channel-grid">
-                <a href="https://youtube.com/@STZFrost" target="_blank" rel="noopener" class="channel-link-card card-frost">
-                    <img src="STZFrost.png" alt="Frost Emblem">
-                    <span>STZ FROST</span>
-                </a>
-                <a href="https://youtube.com/@STZValor" target="_blank" rel="noopener" class="channel-link-card card-valor">
-                    <img src="STZValor.png" alt="Valor Emblem">
-                    <span>STZ VALOR</span>
-                </a>
-                <a href="https://youtube.com/@STZKingdom" target="_blank" rel="noopener" class="channel-link-card card-kingdom">
-                    <img src="StzKingdom.png" alt="Kingdom Emblem">
-                    <span>STZ KINGDOM</span>
-                </a>
-                <a href="https://youtube.com/@STZIntegrity" target="_blank" rel="noopener" class="channel-link-card card-integrity">
-                    <img src="STZIntegrity.png" alt="Integrity Emblem">
-                    <span>STZ INTEGRITY</span>
-                </a>
+        <header class="app-header">
+            <div class="header-container">
+                <a href="/" class="header-title">STAZZBOI.COM</a>
+                <p class="header-tagline">Official Knowledge Base Portal</p>
             </div>
-        </section>
+        </header>
 
-    </main>
+        <main class="main-content section animate-fade-in">
+            
+            <h2 class="lore-title">STAZZOLOGY // Philosophy &amp; Culture</h2>
+            
+            <div class="stazz-card card-official">
+                <div class="card-header">
+                    <h3 class="card-title">Stazzeria</h3>
+                    <span class="stx-badge">STX #0005</span>
+                </div>
+                <div class="card-body">
+                    <p>A digital and physical collective founded by Kelvin “Stazzboi” Stazzland centered around creative expression, cultural identity, and Stazzerian philosophy. Functions as a community, a cultural framework, and an expansive creative ecosystem.</p>
+                </div>
+            </div>
 
-    <footer class="app-footer">
-        <p>SECURE REGISTRY ENTRY // POWERED BY THE STAZZEX</p>
-    </footer>
+            <section class="philosophy-grid">
+                
+                <div class="stazz-card">
+                    <div class="card-header">
+                        <h4 class="card-title">STAZZZsociety</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>The polyfunctional lexeme connecting all Stazzerians through culture, language, and operational structure. It stands as the unified linguistic framework for the collective.</p>
+                    </div>
+                </div>
 
+                <div class="stazz-card">
+                    <div class="card-header">
+                        <h4 class="card-title">The Monarch / Jester Dynamic</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>A unique dual office within the leadership hierarchy. Under disciplinary conditions, the Monarch transitions to a temporary Jester state, returning to full structural status once disciplinary criteria are resolved.</p>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
 </body>
 </html>
-
