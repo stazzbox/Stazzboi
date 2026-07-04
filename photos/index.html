@@ -1,232 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stazzography | Powered by The Stazzex</title>
+    <meta name="description" content="Official Stazzography gallery powered by The Stazzex.">
+    
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    
+    <style>
+        /* Custom layout overrides integrated with our core variables */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            max-width: 1200px;
+            margin: 24px auto 0 auto;
+            width: 100%;
+        }
 
-<title>Stazzography | Powered by The Stazzex</title>
+        .gallery-item {
+            background-color: var(--color-bg-card);
+            border-radius: var(--border-radius-tile);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            aspect-ratio: 1 / 1;
+            position: relative;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
 
-<meta name="description" content="Official Stazzography gallery powered by The Stazzex.">
+        .gallery-item:hover {
+            transform: translateY(-2px);
+            border-color: rgba(230, 255, 0, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
 
-<style>
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.85;
+            transition: var(--transition-smooth);
+        }
 
-*{
-    box-sizing:border-box;
-}
+        .gallery-item:hover .gallery-image {
+            opacity: 1;
+        }
 
-body{
-    margin:0;
-    background:#111;
-    color:white;
-    font-family:Arial,sans-serif;
-}
+        /* App-Style System Media Viewer Modal */
+        .viewer {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(11, 11, 11, 0.98);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            z-index: 9999;
+            overflow-y: auto;
+        }
 
-.header{
-    background:#181818;
-    border-bottom:1px solid #333;
-    padding:20px;
-}
+        .viewer-content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
 
-.header-inner{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
+        .viewer-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
 
-.logo{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    object-fit:cover;
-}
+        .viewer-identity {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-.branding h1{
-    margin:0;
-    font-size:32px;
-}
+        .viewer-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            object-fit: cover;
+        }
 
-.branding p{
-    margin:5px 0 0;
-    color:#999;
-}
+        .viewer-title {
+            font-weight: var(--font-weight-bold);
+            color: var(--color-text-primary);
+            letter-spacing: 0.05em;
+        }
 
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:4px;
-    max-width:1200px;
-    margin:auto;
-    padding:4px;
-}
-.gallery img{
-    width:100%;
-    aspect-ratio:1/1;
-    object-fit:cover;
-    display:block;
-    cursor:pointer;
-    transition:.2s;
-}
+        .close-action {
+            font-size: 2rem;
+            color: var(--color-text-secondary);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            line-height: 1;
+        }
 
-.gallery img:hover{
-    opacity:.85;
-}
+        .close-action:hover {
+            color: var(--color-accent-neon);
+        }
 
-.viewer{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.95);
-    z-index:9999;
-    overflow:auto;
-}
+        .viewer-image-wrapper {
+            width: 100%;
+            max-height: 75vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: var(--border-radius-tile);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            padding: 12px;
+            overflow: hidden;
+        }
 
-.viewer-content{
-    max-width:1200px;
-    margin:30px auto;
-    padding:20px;
-}
+        .viewer-main-img {
+            max-width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+            border-radius: 4px;
+        }
 
-.viewer-header{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:15px;
-}
-
-.viewer-avatar{
-    width:45px;
-    height:45px;
-    border-radius:50%;
-}
-
-.viewer-image{
-    width:100%;
-    max-height:85vh;
-    object-fit:contain;
-}
-
-.close{
-    float:right;
-    font-size:40px;
-    cursor:pointer;
-}
-
-@media(max-width:768px){
-
-    .gallery{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
-
-</style>
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-<header class="header">
+    <div class="app-container">
+        
+        <header class="app-header">
+            <div class="header-container">
+                <a href="/" class="header-title">Stazzography</a>
+                <p class="header-tagline">Powered by The Stazzex</p>
+            </div>
+        </header>
 
-    <div class="header-inner">
-
-        <img src="Stazzex-Logo.jpg"
-             alt="The Stazzex"
-             class="logo">
-
-        <div class="branding">
-            <h1>Stazzography</h1>
-            <p>Powered by The Stazzex</p>
-        </div>
-
+        <main class="main-content section animate-fade-in">
+            
+            <div id="gallery" class="gallery-grid"></div>
+            
+        </main>
     </div>
 
-</header>
+    <div id="viewer" class="viewer">
+        <div class="viewer-content">
+            
+            <div class="viewer-header">
+                <div class="viewer-identity">
+                    <img src="../assets/logos/stazzex.svg" alt="The Stazzex" class="viewer-avatar" onerror="this.src='../Stazzex-Logo.jpg'">
+                    <span class="viewer-title">The Stazzex Core Registry</span>
+                </div>
+                <span id="close" class="close-action">&times;</span>
+            </div>
 
-<div id="gallery" class="gallery"></div>
-<div id="viewer" class="viewer">
-
-    <div class="viewer-content">
-
-        <span id="close" class="close">&times;</span>
-
-        <div class="viewer-header">
-
-            <img src="Stazzex-Logo.jpg"
-                 alt="The Stazzex"
-                 class="viewer-avatar">
-
-            <strong>The Stazzex</strong>
-
+            <div class="viewer-image-wrapper">
+                <img id="viewerImage" class="viewer-main-img" src="" alt="System Asset Archive View">
+            </div>
+            
         </div>
-
-        <img id="viewerImage"
-             class="viewer-image"
-             src=""
-             alt="">
-
     </div>
 
-</div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch("photos.txt")
+                .then(response => response.text())
+                .then(text => {
+                    const gallery = document.getElementById("gallery");
+                    const lines = text.split("\n");
 
-<script>
+                    lines.forEach(line => {
+                        const match = line.match(/^\d+\.\s*(.+)$/);
+                        if (!match) return;
 
-fetch("photos.txt")
-.then(response => response.text())
-.then(text => {
+                        const file = match[1].trim();
+                        if (file === "") return;
 
-    const gallery = document.getElementById("gallery");
+                        // Unified platform image index location mapping
+                        const imagePath = "images/" + file;
 
-    const lines = text.split("\n");
+                        // Create modern flex/grid modular wrappers matching standard aesthetic
+                        const itemWrapper = document.createElement("div");
+                        itemWrapper.className = "gallery-item";
 
-    lines.forEach(line => {
+                        const img = document.createElement("img");
+                        img.className = "gallery-image";
+                        img.src = imagePath;
+                        img.alt = file;
+                        img.loading = "lazy"; // Core efficiency handling
 
-        const match = line.match(/^\d+\.\s*(.+)$/);
+                        itemWrapper.onclick = function() {
+                            document.getElementById("viewer").style.display = "block";
+                            document.getElementById("viewerImage").src = imagePath;
+                            document.body.style.overflow = "hidden"; // Prevent background body drift
+                        };
 
-        if(!match) return;
+                        itemWrapper.appendChild(img);
+                        gallery.appendChild(itemWrapper);
+                    });
+                });
 
-        const file = match[1].trim();
+            // Modern Overlay Event Matrix Controls
+            const closeViewer = () => {
+                document.getElementById("viewer").style.display = "none";
+                document.body.style.overflow = "";
+            };
 
-        if(file === "") return;
+            document.getElementById("close").onclick = closeViewer;
 
-        const imagePath = "images/" + file;
-
-        const img = document.createElement("img");
-
-        img.src = imagePath;
-
-        img.alt = file;
-
-        img.onclick = function(){
-
-            document.getElementById("viewer").style.display = "block";
-
-            document.getElementById("viewerImage").src = imagePath;
-
-        };
-
-        gallery.appendChild(img);
-
-    });
-
-});
-document.getElementById("close").onclick = function(){
-
-    document.getElementById("viewer").style.display = "none";
-
-};
-
-document.getElementById("viewer").onclick = function(e){
-
-    if(e.target === this){
-
-        this.style.display = "none";
-
-    }
-
-};
-
-</script>
-
+            document.getElementById("viewer").onclick = function(e) {
+                if (e.target === this) {
+                    closeViewer();
+                }
+            };
+        });
+    </script>
+    <script src="../js/app.js"></script>
 </body>
 </html>
