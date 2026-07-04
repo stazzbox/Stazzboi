@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Stazzex Index | STAZZBOI.COM</title>
+    
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    
+    <style>
+        /* Contextual page overrides for the Stazzex Matrix */
+        .index-title {
+            color: var(--color-accent-neon);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 24px;
+        }
+        .stazzex-table-wrapper {
+            background-color: var(--color-bg-card);
+            border-radius: var(--border-radius-tile);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            overflow-x: auto;
+            margin-top: 24px;
+        }
+        .stazzex-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+        .stazzex-table th, .stazzex-table td {
+            padding: 16px 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .stazzex-table th {
+            font-weight: var(--font-weight-bold);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            color: var(--color-text-secondary);
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        .stazzex-table tr:last-child td {
+            border-bottom: none;
+        }
+        .stazzex-table tr:hover td {
+            background-color: rgba(255, 255, 255, 0.01);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header class="app-header">
+            <div class="header-container">
+                <a href="/" class="header-title">STAZZBOI.COM</a>
+                <p class="header-tagline">Official Stazzerian Index</p>
+            </div>
+        </header>
+
+        <main class="main-content section animate-fade-in">
+            
+            <h2 class="index-title">The Stazzex // Core Canonical Index</h2>
+            
+            <div class="stazz-card">
+                <div class="card-body">
+                    <p>The system directory documenting all registered people, titles, terms, projects, products, and operational definitions within the ecosystem. Each validated item receives a permanent global serial assignment.</p>
+                </div>
+            </div>
+
+            <div class="stazzex-table-wrapper">
+                <table class="stazzex-table">
+                    <thead>
+                        <tr>
+                            <th>Serial ID</th>
+                            <th>Entity Name</th>
+                            <th>Classification</th>
+                            <th>Canonical Route</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="/stazzex" class="stx-badge">STX #0001</a></td>
+                            <td style="color: var(--color-accent-neon);">The Stazzex Baseline</td>
+                            <td>Index Registry</td>
+                            <td><code>/stazzex</code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/stazzex" class="stx-badge">STX #0002</a></td>
+                            <td style="color: var(--color-accent-neon);">Kelvin Stazzland</td>
+                            <td>Executive / Individual</td>
+                            <td><code>/kelvin</code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/stazzex" class="stx-badge">STX #0003</a></td>
+                            <td>Stazzboi</td>
+                            <td>Music Persona</td>
+                            <td><code>/stazzboi</code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/stazzex" class="stx-badge">STX #0004</a></td>
+                            <td>The Khamelion</td>
+                            <td>Creator Persona</td>
+                            <td><code>/khamelion</code></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/stazzex" class="stx-badge">STX #0005</a></td>
+                            <td style="color: var(--color-accent-neon);">Stazzeria Framework</td>
+                            <td>Cultural Ecosystem</td>
+                            <td><code>/Stazzeria</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>
