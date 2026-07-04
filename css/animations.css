@@ -1,0 +1,57 @@
+/**
+ * STAZZBOI.COM — Version 1.0
+ * Animations — Premium, Minimal Application Transitions
+ * Foundation & Development Plan
+ */
+
+/* --- Keyframe Definitions --- */
+
+/* Smooth app-style fade upward for loading states */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Subtle pulse for critical interactive neon markers */
+@keyframes neonPulse {
+    0% {
+        box-shadow: 0 0 4px rgba(230, 255, 0, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 12px rgba(230, 255, 0, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 4px rgba(230, 255, 0, 0.2);
+    }
+}
+
+/* --- Animation Classes --- */
+
+.animate-fade-in {
+    animation: fadeInUp 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+.animate-pulse-neon {
+    animation: neonPulse 2s infinite ease-in-out;
+}
+
+/* --- Reduced Motion Override --- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+        animation-delay: -1ms !important;
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        background-attachment: scroll !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0s !important;
+        transition-delay: 0s !important;
+    }
+}
