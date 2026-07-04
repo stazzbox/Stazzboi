@@ -1,0 +1,90 @@
+/**
+ * STAZZBOI.COM — Version 1.0
+ * Portal Grid — 3-Column App-Style Square Logo Matrix
+ * Foundation & Development Plan
+ */
+
+/* --- Grid Container --- */
+.portal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--grid-gap);
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+/* --- App-Style Tile --- */
+.portal-tile {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Guarantees perfect square execution */
+    background-color: var(--color-bg-card);
+    border-radius: var(--border-radius-tile);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    overflow: hidden;
+    padding: 16px;
+}
+
+.portal-tile:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    background-color: #242424;
+}
+
+/* --- Centered Logo Asset --- */
+.portal-logo-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-height: 65%;
+}
+
+.portal-logo {
+    max-width: 80%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: var(--transition-smooth);
+}
+
+.portal-tile:hover .portal-logo {
+    transform: scale(1.05);
+}
+
+/* --- Clean Under-Tile Label --- */
+.portal-label {
+    color: var(--color-text-primary);
+    font-size: 0.85rem;
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* --- Mobile-First Layout Tuning --- */
+@media (max-width: 576px) {
+    .portal-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2x2 layout fallback on micro viewports if text protection requires it */
+    }
+}
+
+@media (min-width: 768px) {
+    .portal-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .portal-label {
+        font-size: 0.95rem;
+    }
+}
