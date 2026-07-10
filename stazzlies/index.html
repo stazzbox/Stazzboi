@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Stazzlies | Official Collective</title>
+  <title>Mrs. Stazzland & The Stazzlies | Official Collective</title>
   
-  <meta name="description" content="Official page of The Stazzlies — the female collective of Stazzeria focused on unity, advancement, feminine leadership, and cultural development within the Stazz Universe." />
-  <meta name="keywords" content="The Stazzlies, Stazzlies, Stazzeria, StazzQueen, First Lady of Stazzeria, Leann Stazzland, female Stazzerians, Stazz Universe" />
+  <meta name="description" content="Official page of Mrs. Stazzland records and The Stazzlies — the female collective of Stazzeria focused on unity, advancement, feminine leadership, and cultural development within the Stazz Universe." />
+  <meta name="keywords" content="The Stazzlies, Stazzlies, Stazzeria, Mrs. Stazzland, Amy Stazzland, Leann Stazzland, female Stazzerians, Stazz Universe" />
   <meta name="author" content="Stazzeria" />
 
-  <meta property="og:title" content="The Stazzlies | Stazzboi.com" />
-  <meta property="og:description" content="Official female collective of Stazzeria." />
+  <meta property="og:title" content="Mrs. Stazzland & The Stazzlies | Stazzboi.com" />
+  <meta property="og:description" content="Official records of Mrs. Stazzland and the female collective of Stazzeria." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://stazzboi.com/stazzlies" />
   <meta property="og:image" content="https://stazzboi.com/Stazzlies-Logo.jpg" />
@@ -90,12 +90,12 @@
     .search-subtext a {
       color: var(--accent-pink);
       text-decoration: none;
-      font-weight: 6px;
+      font-weight: bold;
     }
 
     /* Main Scroll Container */
     .app-main {
-      max-width: 600px; /* Gives it an authentic native mobile app layout look on desktop */
+      max-width: 600px; 
       margin: 0 auto;
       padding: 10px 20px;
     }
@@ -104,6 +104,23 @@
     .brand-hero {
       text-align: center;
       padding: 24px 10px 32px;
+    }
+
+    /* Target Logo Styling */
+    .logo-container {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 16px;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(255, 143, 163, 0.2);
+      border: 2px solid var(--accent-pink);
+    }
+
+    .logo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .brand-hero h1 {
@@ -120,6 +137,11 @@
       font-size: 16px;
       line-height: 1.6;
       color: var(--text-muted);
+    }
+
+    .pink-highlight {
+      color: #ff4d6d;
+      font-weight: 700;
     }
 
     /* Two-Column App Squares */
@@ -147,7 +169,7 @@
     }
 
     .app-square:active {
-      transform: scale(0.94); /* Smooth app-press physics feedback */
+      transform: scale(0.94);
     }
 
     .app-square img {
@@ -177,10 +199,58 @@
     .card-title {
       font-size: 18px;
       font-weight: 700;
+      color: #ff4d6d; 
       margin-bottom: 14px;
       display: flex;
       align-items: center;
       gap: 8px;
+    }
+
+    /* History Timeline / List Styles */
+    .chronology-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    .chronology-item {
+      background: var(--bg-color);
+      padding: 16px;
+      border-radius: 16px;
+      border-left: 4px solid var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .chronology-item.current {
+      border-left-color: var(--accent-pink);
+      background: var(--accent-soft);
+    }
+
+    .chronology-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .chronology-meta .status-past { color: var(--text-muted); }
+    .chronology-meta .status-current { color: #ff4d6d; }
+
+    .chronology-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .chronology-desc {
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--text-muted);
     }
 
     /* Principles List View */
@@ -200,6 +270,7 @@
     .principle-item h3 {
       font-size: 15px;
       font-weight: 700;
+      color: #ff4d6d; 
       margin-bottom: 4px;
     }
 
@@ -209,17 +280,19 @@
       color: var(--text-muted);
     }
 
-    /* First Lady Extended Profile Module */
+    /* Graphics Components */
     .profile-hero {
       position: relative;
       border-radius: 20px;
       overflow: hidden;
       margin-bottom: 16px;
+      background-color: var(--bg-color);
+      border: 1px solid rgba(255, 143, 163, 0.2);
     }
 
     .profile-hero img {
       width: 100%;
-      height: 240px;
+      height: 270px;
       object-fit: cover;
       display: block;
     }
@@ -228,13 +301,13 @@
       position: absolute;
       bottom: 16px;
       left: 16px;
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(8px);
       padding: 6px 14px;
       border-radius: 20px;
       font-size: 12px;
       font-weight: 700;
-      color: var(--text-main);
+      color: #ff4d6d; 
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
 
@@ -333,8 +406,11 @@
   <main class="app-main">
 
     <section class="brand-hero">
+      <div class="logo-container">
+        <img src="Stazzlies-Logo.jpg" alt="The Stazzlies Official Logo">
+      </div>
       <h1>The Stazzlies</h1>
-      <p>The official female collective of Stazzeria. Rooted in feminine unity, leadership, and cultural advancement within the Stazz Universe.</p>
+      <p>The official female collective of Stazzeria. Rooted in <span class="pink-highlight">feminine unity</span>, <span class="pink-highlight">leadership</span>, and <span class="pink-highlight">cultural advancement</span> within the Stazz Universe.</p>
     </section>
 
     <nav class="two-column-grid">
@@ -350,23 +426,71 @@
     </nav>
 
     <section class="content-card">
-      <h2 class="card-title">Leadership Profile</h2>
+      <h2 class="card-title">Mrs. Stazzland Registry</h2>
       
       <div class="profile-hero">
-        <img src="flos.png" alt="Leann Stazzland">
-        <span class="profile-badge">Head Stazzlie</span>
+        <img src="mrs-stazzland-current.png" alt="Presiding Mrs. Stazzland Portrait">
+        <span class="profile-badge">Registry Title Portrait</span>
+      </div>
+
+      <p class="bio-p" style="color: var(--text-muted); font-size: 14px; margin-bottom: 16px;">
+        Historical timeline records tracking individuals who have held the title of <span class="pink-highlight">Mrs. Stazzland</span> within the public framework.
+      </p>
+
+      <div class="chronology-list">
+        
+        <div class="chronology-item">
+          <div class="chronology-meta">
+            <span class="status-past">Prior Holder</span>
+            <span>Classified: OSQ</span>
+          </div>
+          <div class="chronology-name">Amy Stazzland</div>
+          <div class="chronology-desc">
+            Documented historically as <strong>Mrs. Stazzland</strong>, <strong>First Lady</strong>, and attained the elite organizational rank of <strong>StazzQueen (Official StazzQueen - OSQ)</strong>.
+          </div>
+        </div>
+
+        <div class="chronology-item">
+          <div class="chronology-meta">
+            <span class="status-past">Prior Holder</span>
+            <span>Structural Status</span>
+          </div>
+          <div class="chronology-name">Leann Stazzland</div>
+          <div class="chronology-desc">
+            Recognized as former <strong>First Lady</strong> and <strong>Mrs. Stazzland</strong>. Historical registries confirm the executive rank of <em>StazzQueen</em> was never achieved, structurally indicating that leadership parameters did not project long-term alignment for this tenure.
+          </div>
+        </div>
+
+        <div class="chronology-item current">
+          <div class="chronology-meta">
+            <span class="status-current">Current Standing</span>
+            <span>Active Title</span>
+          </div>
+          <div class="chronology-name">Vacant</div>
+          <div class="chronology-desc">The presiding title holder will systematically assume executive oversight of the associated structural initiatives.</div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="content-card">
+      <h2 class="card-title">The Stazzlies Collective</h2>
+      
+      <div class="profile-hero">
+        <img src="the-stazzlies-collective.jpg" alt="The Stazzlies Collective Picture">
+        <span class="profile-badge">Collective Division Group Photo</span>
       </div>
 
       <p class="bio-p">
-        <strong>Leann Stazzland</strong>, also celebrated as the current <strong>StazzQueen</strong>, serves as the First Lady of Stazzeria and the foundational lead of The Stazzlies.
+        <strong>The Stazzlies</strong> is the unified operational collective representing structural feminine presence, institutional collaboration, and community morale within the Stazz Universe.
       </p>
 
       <p class="bio-p" style="color: var(--text-muted); font-size: 14px;">
-        In her role, she collaborates closely across key Stazzerian initiatives, representing structural feminine elegance, institutional intelligence, and community morale. 
+        The group coordinates closely across key initiatives, offering a framework for growth, strategic development, and direct representation. Executive oversight of the collective is systematically managed by the active registry title holder.
       </p>
 
       <div class="stazzex-badge-box">
-        <strong>📌 Core Stazzex Classification:</strong> All StazzQueens hold the title of First Lady, though not all historical First Ladies achieve the rank of StazzQueen.
+        <strong>📌 System Parameter Update:</strong> The "First Lady" designation is officially deprecated. Structural alignment is verified solely through the active <span class="pink-highlight">Mrs. Stazzland designation</span> and verified <span class="pink-highlight">StazzQueen classifications</span>.
       </div>
 
       <div class="btn-container">
@@ -386,8 +510,8 @@
         <span class="fact-value">Stazzeria</span>
       </div>
       <div class="fact-row">
-        <span class="fact-label">Executive Lead</span>
-        <span class="fact-value">First Lady of Stazzeria</span>
+        <span class="fact-label">Executive Oversight</span>
+        <span class="fact-value" style="color: #ff4d6d;">Mrs. Stazzland Registry</span>
       </div>
       <div class="fact-row">
         <span class="fact-label">Status</span>
@@ -425,8 +549,8 @@
   </main>
 
   <footer class="app-footer">
-    <p>Database Ref: STAZZEX-STZ-09</p>
-    <p>Terminal Update: May 25, 2026</p>
+    <p>Database Ref: STAZZEX-STZ-09_UPDATED_V2</p>
+    <p>Terminal Update: July 2026</p>
   </footer>
 
 </body>
