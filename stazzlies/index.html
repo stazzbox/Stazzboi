@@ -17,16 +17,17 @@
   <link rel="icon" href="Stazzlies-Logo.jpg" />
 
   <style>
-    /* Modern Global App Styles */
+    /* Premium, Streamlined Global Styles */
     :root {
-      --bg-color: #fcf8f9; /* Soft, warm tint cream */
+      --bg-color: #fcf8f9; 
       --card-bg: #ffffff;
-      --accent-pink: #ff8fa3; /* Gentle, modern aesthetic pink */
+      --accent-pink: #ff8fa3; 
+      --accent-dark: #ff4d6d;
       --accent-soft: #fff0f3;
-      --text-main: #2b2d42; /* Soft dark charcoal */
+      --text-main: #2b2d42; 
       --text-muted: #6c757d;
-      --border-radius: 24px; /* Native iOS style hyper-rounded corners */
-      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --border-radius: 32px; /* Ultra-clean, modern rounded borders */
+      --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     * {
@@ -40,81 +41,83 @@
       background-color: var(--bg-color);
       color: var(--text-main);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      padding-bottom: 40px;
+      padding-bottom: 60px;
     }
 
-    /* Top Sticky Header & Predictive Search */
+    /* Sticky Navigation Blur */
     .app-header {
       position: sticky;
       top: 0;
-      background: rgba(252, 248, 249, 0.85);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      padding: 16px 20px;
+      background: rgba(252, 248, 249, 0.80);
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      padding: 20px;
       z-index: 1000;
+      border-bottom: 1px solid rgba(255, 143, 163, 0.1);
     }
 
     .search-container {
-      max-width: 500px;
+      max-width: 600px;
       margin: 0 auto;
       position: relative;
     }
 
     .search-bar {
       width: 100%;
-      padding: 14px 20px;
-      border-radius: 16px;
-      border: 1px solid rgba(255, 143, 163, 0.3);
+      padding: 16px 24px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 143, 163, 0.25);
       background: var(--card-bg);
-      font-size: 15px;
+      font-size: 16px;
       color: var(--text-main);
-      box-shadow: 0 4px 12px rgba(255, 143, 163, 0.05);
+      box-shadow: 0 4px 20px rgba(255, 143, 163, 0.04);
       outline: none;
       transition: var(--transition);
     }
 
     .search-bar:focus {
       border-color: var(--accent-pink);
-      box-shadow: 0 4px 16px rgba(255, 143, 163, 0.15);
+      box-shadow: 0 10px 30px rgba(255, 143, 163, 0.12);
     }
 
     .search-subtext {
       text-align: center;
       font-size: 11px;
       color: var(--text-muted);
-      margin-top: 6px;
+      margin-top: 8px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
     }
 
     .search-subtext a {
-      color: var(--accent-pink);
+      color: var(--accent-dark);
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
     }
 
-    /* Main Scroll Container */
+    /* Main Container (Spacious Layout Feel) */
     .app-main {
-      max-width: 600px; 
+      max-width: 640px; 
       margin: 0 auto;
-      padding: 10px 20px;
+      padding: 20px;
     }
 
-    /* Intro Section */
+    /* Clean Hero Alignment */
     .brand-hero {
       text-align: center;
-      padding: 24px 10px 32px;
+      padding: 40px 20px 48px;
     }
 
-    /* Target Logo Styling */
+    /* Dynamic Logo Frame */
     .logo-container {
-      width: 90px;
-      height: 90px;
-      margin: 0 auto 16px;
-      border-radius: 22px;
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 24px;
+      border-radius: 28px;
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(255, 143, 163, 0.2);
-      border: 2px solid var(--accent-pink);
+      box-shadow: 0 12px 32px rgba(255, 143, 163, 0.25);
+      border: 3px solid #ffffff;
+      outline: 2px solid var(--accent-pink);
     }
 
     .logo-container img {
@@ -124,109 +127,111 @@
     }
 
     .brand-hero h1 {
-      font-size: 32px;
+      font-size: 38px;
       font-weight: 800;
-      letter-spacing: -0.5px;
+      letter-spacing: -1px;
       background: linear-gradient(135deg, #ff8fa3, #ff4d6d);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
 
     .brand-hero p {
-      font-size: 16px;
+      font-size: 17px;
       line-height: 1.6;
       color: var(--text-muted);
     }
 
     .pink-highlight {
-      color: #ff4d6d;
-      font-weight: 700;
+      color: var(--accent-dark);
+      font-weight: 600;
     }
 
-    /* Two-Column App Squares */
+    /* Grid Navigation */
     .two-column-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      margin-bottom: 24px;
+      gap: 20px;
+      margin-bottom: 32px;
     }
 
     .app-square {
       background: var(--card-bg);
       border-radius: var(--border-radius);
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 1.1 / 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 24px;
       text-align: center;
-      border: 1px solid rgba(0, 0, 0, 0.02);
-      box-shadow: 0 8px 24px rgba(142, 133, 135, 0.04);
+      border: 1px solid rgba(255, 143, 163, 0.1);
+      box-shadow: 0 10px 30px rgba(142, 133, 135, 0.05);
       text-decoration: none;
       transition: var(--transition);
     }
 
-    .app-square:active {
-      transform: scale(0.94);
+    .app-square:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(255, 143, 163, 0.1);
     }
 
     .app-square img {
-      width: 50px;
-      height: 50px;
+      width: 56px;
+      height: 56px;
       object-fit: cover;
-      border-radius: 14px;
-      margin-bottom: 12px;
+      border-radius: 16px;
+      margin-bottom: 16px;
     }
 
     .app-square span {
-      font-size: 15px;
-      font-weight: 600;
+      font-size: 16px;
+      font-weight: 700;
       color: var(--text-main);
     }
 
-    /* Section Cards */
+    /* Premium Content Blocks */
     .content-card {
       background: var(--card-bg);
       border-radius: var(--border-radius);
-      padding: 24px;
-      margin-bottom: 20px;
-      box-shadow: 0 8px 24px rgba(142, 133, 135, 0.04);
-      border: 1px solid rgba(0, 0, 0, 0.01);
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 12px 36px rgba(142, 133, 135, 0.04);
+      border: 1px solid rgba(255, 143, 163, 0.05);
     }
 
     .card-title {
-      font-size: 18px;
-      font-weight: 700;
-      color: #ff4d6d; 
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 18px;
+      border-left: 5px solid var(--accent-pink);
+      padding-left: 14px;
+      letter-spacing: -0.3px;
     }
 
-    /* History Timeline / List Styles */
+    /* Cleaned Up Chronology Deck */
     .chronology-list {
       display: flex;
       flex-direction: column;
-      gap: 16px;
-      margin-top: 14px;
+      gap: 20px;
+      margin-top: 20px;
     }
 
     .chronology-item {
       background: var(--bg-color);
-      padding: 16px;
-      border-radius: 16px;
-      border-left: 4px solid var(--text-muted);
+      padding: 20px;
+      border-radius: 20px;
+      border: 1px solid rgba(0, 0, 0, 0.02);
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 8px;
+      transition: var(--transition);
     }
 
     .chronology-item.current {
-      border-left-color: var(--accent-pink);
-      background: var(--accent-soft);
+      border: 1px solid rgba(255, 143, 163, 0.3);
+      background: linear-gradient(to bottom right, #ffffff, var(--accent-soft));
     }
 
     .chronology-meta {
@@ -235,139 +240,142 @@
       font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
     }
 
     .chronology-meta .status-past { color: var(--text-muted); }
-    .chronology-meta .status-current { color: #ff4d6d; }
+    .chronology-meta .status-current { color: var(--accent-dark); }
 
     .chronology-name {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 700;
       color: var(--text-main);
     }
 
     .chronology-desc {
-      font-size: 13px;
-      line-height: 1.5;
+      font-size: 14px;
+      line-height: 1.6;
       color: var(--text-muted);
     }
 
-    /* Principles List View */
+    /* Principles Presentation */
     .principles-list {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 16px;
     }
 
     .principle-item {
       background: var(--bg-color);
-      padding: 16px;
-      border-radius: 16px;
+      padding: 20px;
+      border-radius: 20px;
       border-left: 4px solid var(--accent-pink);
     }
 
     .principle-item h3 {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 700;
-      color: #ff4d6d; 
-      margin-bottom: 4px;
+      color: var(--text-main);
+      margin-bottom: 6px;
     }
 
     .principle-item p {
-      font-size: 13.5px;
-      line-height: 1.5;
+      font-size: 14px;
+      line-height: 1.6;
       color: var(--text-muted);
     }
 
-    /* Graphics Components */
+    /* Visual Media Hub Elements */
     .profile-hero {
       position: relative;
-      border-radius: 20px;
+      border-radius: 24px;
       overflow: hidden;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       background-color: var(--bg-color);
-      border: 1px solid rgba(255, 143, 163, 0.2);
+      box-shadow: inset 0 0 20px rgba(0,0,0,0.02);
     }
 
     .profile-hero img {
       width: 100%;
-      height: 270px;
+      height: 290px;
       object-fit: cover;
       display: block;
     }
 
     .profile-badge {
       position: absolute;
-      bottom: 16px;
-      left: 16px;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(8px);
+      top: 16px;
+      right: 16px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 12px;
+      border-radius: 30px;
+      font-size: 11px;
       font-weight: 700;
-      color: #ff4d6d; 
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      color: var(--accent-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     .bio-p {
-      font-size: 15px;
+      font-size: 15.5px;
       line-height: 1.6;
       color: var(--text-main);
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     .stazzex-badge-box {
       background: var(--accent-soft);
-      border-radius: 16px;
-      padding: 16px;
-      font-size: 13px;
-      line-height: 1.5;
+      border-radius: 20px;
+      padding: 18px;
+      font-size: 13.5px;
+      line-height: 1.6;
       color: var(--text-main);
-      border: 1px dashed rgba(255, 143, 163, 0.4);
+      border: 1px dashed rgba(255, 143, 163, 0.5);
     }
 
-    /* Action Buttons Area */
+    /* Button Interfaces */
     .btn-container {
       display: flex;
-      gap: 12px;
-      margin-top: 16px;
+      gap: 14px;
+      margin-top: 20px;
     }
 
     .action-btn {
       flex: 1;
       text-align: center;
-      padding: 14px;
-      border-radius: 16px;
-      font-size: 14px;
-      font-weight: 600;
+      padding: 16px;
+      border-radius: 18px;
+      font-size: 15px;
+      font-weight: 700;
       text-decoration: none;
       transition: var(--transition);
     }
 
     .action-btn.primary {
-      background: var(--accent-pink);
+      background: linear-gradient(135deg, #ff8fa3, #ff4d6d);
       color: white;
+      box-shadow: 0 8px 24px rgba(255, 77, 109, 0.2);
     }
 
     .action-btn.secondary {
       background: var(--bg-color);
       color: var(--text-main);
-      border: 1px solid rgba(0,0,0,0.05);
+      border: 1px solid rgba(255, 143, 163, 0.2);
     }
 
-    .action-btn:active {
-      transform: scale(0.97);
+    .action-btn:hover {
+      transform: translateY(-2px);
     }
 
-    /* Quick Facts Table Pill */
+    /* Metric Data Rows */
     .fact-row {
       display: flex;
       justify-content: space-between;
-      padding: 10px 0;
-      font-size: 14px;
-      border-bottom: 1px solid rgba(0,0,0,0.04);
+      padding: 12px 0;
+      font-size: 14.5px;
+      border-bottom: 1px solid rgba(255, 143, 163, 0.1);
     }
 
     .fact-row:last-child {
@@ -382,13 +390,13 @@
       font-weight: 600;
     }
 
-    /* Footer Meta */
+    /* Footer Metadata */
     .app-footer {
       text-align: center;
-      margin-top: 30px;
+      margin-top: 40px;
       font-size: 12px;
       color: var(--text-muted);
-      line-height: 1.5;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -398,7 +406,6 @@
   <header class="app-header">
     <div class="search-container">
       <input type="search" id="stazzex-search-input" class="search-bar" placeholder="Search the Stazz Universe..." autocomplete="off">
-      <div id="predictive-results" class="search-dropdown hidden"></div>
       <p class="search-subtext">Powered by <a href="/stazzex">The Stazzex</a></p>
     </div>
   </header>
@@ -430,11 +437,11 @@
       
       <div class="profile-hero">
         <img src="mrs-stazzland-current.png" alt="Presiding Mrs. Stazzland Portrait">
-        <span class="profile-badge">Registry Title Portrait</span>
+        <span class="profile-badge">Registry Portrait</span>
       </div>
 
-      <p class="bio-p" style="color: var(--text-muted); font-size: 14px; margin-bottom: 16px;">
-        Historical timeline records tracking individuals who have held the title of <span class="pink-highlight">Mrs. Stazzland</span> within the public framework.
+      <p class="bio-p" style="color: var(--text-muted); font-size: 14.5px; margin-bottom: 20px;">
+        Historical timeline tracking public entities holding the title of <span class="pink-highlight">Mrs. Stazzland</span> alongside recognized personal milestones.
       </p>
 
       <div class="chronology-list">
@@ -442,32 +449,32 @@
         <div class="chronology-item">
           <div class="chronology-meta">
             <span class="status-past">Prior Holder</span>
-            <span>Classified: OSQ</span>
+            <span>Honor: OSQ</span>
           </div>
           <div class="chronology-name">Amy Stazzland</div>
           <div class="chronology-desc">
-            Documented historically as <strong>Mrs. Stazzland</strong>, <strong>First Lady</strong>, and attained the elite organizational rank of <strong>StazzQueen (Official StazzQueen - OSQ)</strong>.
+            Documented historically as <strong>Mrs. Stazzland</strong> and <strong>First Lady</strong>. Held the distinct accolade of <strong>Original StazzQueen (OSQ)</strong>—representing the ultimate honor of romantic alignment on the Stazzboi platform.
           </div>
         </div>
 
         <div class="chronology-item">
           <div class="chronology-meta">
             <span class="status-past">Prior Holder</span>
-            <span>Structural Status</span>
+            <span>Historical Record</span>
           </div>
           <div class="chronology-name">Leann Stazzland</div>
           <div class="chronology-desc">
-            Recognized as former <strong>First Lady</strong> and <strong>Mrs. Stazzland</strong>. Historical registries confirm the executive rank of <em>StazzQueen</em> was never achieved, structurally indicating that leadership parameters did not project long-term alignment for this tenure.
+            Recognized as former <strong>First Lady</strong> and <strong>Mrs. Stazzland</strong>. Records indicate that the milestone of <em>StazzQueen</em> was never achieved during this tenure, signifying a structural lack of long-term projected alignment within the personal framework.
           </div>
         </div>
 
         <div class="chronology-item current">
           <div class="chronology-meta">
-            <span class="status-current">Current Standing</span>
-            <span>Active Title</span>
+            <span class="status-current">Current Status</span>
+            <span>Registry Active</span>
           </div>
           <div class="chronology-name">Vacant</div>
-          <div class="chronology-desc">The presiding title holder will systematically assume executive oversight of the associated structural initiatives.</div>
+          <div class="chronology-desc">The next presiding title holder will systematically assume executive oversight of the associated structural initiatives.</div>
         </div>
 
       </div>
@@ -478,19 +485,19 @@
       
       <div class="profile-hero">
         <img src="the-stazzlies-collective.jpg" alt="The Stazzlies Collective Picture">
-        <span class="profile-badge">Collective Division Group Photo</span>
+        <span class="profile-badge">Group Division</span>
       </div>
 
       <p class="bio-p">
-        <strong>The Stazzlies</strong> is the unified operational collective representing structural feminine presence, institutional collaboration, and community morale within the Stazz Universe.
+        <strong>The Stazzlies</strong> serves as the unified operational collective representing structural feminine presence, institutional collaboration, and community morale within the Stazz Universe.
       </p>
 
-      <p class="bio-p" style="color: var(--text-muted); font-size: 14px;">
-        The group coordinates closely across key initiatives, offering a framework for growth, strategic development, and direct representation. Executive oversight of the collective is systematically managed by the active registry title holder.
+      <p class="bio-p" style="color: var(--text-muted); font-size: 14.5px;">
+        The group coordinates across key initiatives, offering a framework for growth and direct representation. Executive oversight of the collective is managed by the active registry title holder.
       </p>
 
       <div class="stazzex-badge-box">
-        <strong>📌 System Parameter Update:</strong> The "First Lady" designation is officially deprecated. Structural alignment is verified solely through the active <span class="pink-highlight">Mrs. Stazzland designation</span> and verified <span class="pink-highlight">StazzQueen classifications</span>.
+        <strong>📌 System Parameter Update:</strong> The legacy "First Lady" designation has been officially deprecated. Alignment is verified strictly through active <span class="pink-highlight">Mrs. Stazzland designation</span> and personal romantic <span class="pink-highlight">StazzQueen status</span>.
       </div>
 
       <div class="btn-container">
@@ -510,12 +517,12 @@
         <span class="fact-value">Stazzeria</span>
       </div>
       <div class="fact-row">
-        <span class="fact-label">Executive Oversight</span>
-        <span class="fact-value" style="color: #ff4d6d;">Mrs. Stazzland Registry</span>
+        <span class="fact-label">Highest Personal Distinction</span>
+        <span class="fact-value" style="color: var(--accent-dark);">StazzQueen (Relationship Honor)</span>
       </div>
       <div class="fact-row">
-        <span class="fact-label">Status</span>
-        <span class="fact-value">Formally Documented</span>
+        <span class="fact-label">Executive Oversight</span>
+        <span class="fact-value">Mrs. Stazzland Registry</span>
       </div>
     </section>
 
@@ -549,7 +556,7 @@
   </main>
 
   <footer class="app-footer">
-    <p>Database Ref: STAZZEX-STZ-09_UPDATED_V2</p>
+    <p>Database Ref: STAZZEX-STZ-09_REFINED_V3</p>
     <p>Terminal Update: July 2026</p>
   </footer>
 
