@@ -3,101 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Khamelion | STAZZBOI.COM</title>
-    
-    <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/cards.css">
-    <link rel="stylesheet" href="../css/animations.css">
-    <link rel="stylesheet" href="../css/responsive.css">
-    
+    <title>The Khamelion - Public Creative Identity</title>
     <style>
-        /* Contextual page overrides for the Creator Identity */
-        .creator-title {
-            color: var(--color-text-primary);
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 3px solid #facc15;
+            padding-bottom: 30px;
+        }
+        h1 {
+            color: #facc15;
+            font-size: 3em;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 24px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
         }
-        .content-hub {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--grid-gap);
-            margin-top: 24px;
+        .subtitle {
+            font-size: 1.2em;
+            color: #cccccc;
+            max-width: 700px;
+            margin: 0 auto;
         }
-        @media (min-width: 768px) {
-            .content-hub {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .full-width-card {
-                grid-column: span 2;
-            }
+        h2 {
+            color: #facc15;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border-left: 5px solid #facc15;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #facc15;
+            font-size: 1.3em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #e0e0e0;
+        }
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #e0e0e0;
+        }
+        li strong {
+            color: #facc15;
+        }
+        .highlight {
+            color: #facc15;
+            font-weight: bold;
+        }
+        blockquote {
+            background-color: #1e1e1e;
+            border-left: 5px solid #facc15;
+            padding: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            border-radius: 4px;
+        }
+        blockquote strong {
+            color: #facc15;
+            display: block;
+            margin-bottom: 5px;
+            font-style: normal;
+        }
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid #444;
+        }
+        .image-caption {
+            margin-top: 10px;
+            font-size: 0.95em;
+            color: #facc15;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <div class="app-container">
-        
-        <header class="app-header">
-            <div class="header-container">
-                <a href="/" class="header-title">STAZZBOI.COM</a>
-                <p class="header-tagline">Official Creator Hub</p>
-            </div>
+    <div class="container">
+        <header>
+            <h1>The Khamelion</h1>
+            <p class="subtitle">Public Creative Identity & Philosophy</p>
         </header>
 
-        <main class="main-content section animate-fade-in">
-            
-            <h2 class="creator-title">The Khamelion // Content &amp; Lifestyle</h2>
-            
-            <div class="stazz-card">
-                <div class="card-header">
-                    <h3 class="card-title">The Creator Persona</h3>
-                    <span class="stx-badge">STX #0004</span>
-                </div>
-                <div class="card-body">
-                    <p>The digital epicenter for gaming, modern lifestyle documentation, and community engagement. This sector serves as the high-energy production outlet for the broader Stazzeria ecosystem.</p>
-                </div>
-            </div>
-
-            <section class="content-hub">
+        <main>
+            <section>
+                <p><strong>The Khamelion</strong> is the public creative identity adopted by Kelvin Stazzland for content creation, entertainment, media production, public appearances, and community engagement. The identity represents adaptability across multiple creative disciplines while maintaining a consistent personal philosophy and visual brand.</p>
                 
-                <div class="stazz-card">
-                    <div class="card-header">
-                        <h4 class="card-title">Gaming &amp; Media</h4>
-                    </div>
-                    <div class="card-body">
-                        <p>Stream highlights, gameplay configurations, and dynamic media content tracking across connected creator pipelines.</p>
-                    </div>
-                </div>
-
-                <div class="stazz-card">
-                    <div class="card-header">
-                        <h4 class="card-title">Lifestyle Integration</h4>
-                    </div>
-                    <div class="card-body">
-                        <p>Documenting modern culture, physical creative environments, and community interactions within the Stazzation ecosystem.</p>
-                    </div>
-                </div>
-
-                <div class="stazz-card full-width-card">
-                    <div class="card-header">
-                        <h4 class="card-title">The Khamelion Pose</h4>
-                        <span class="stx-badge" style="color: var(--color-accent-neon);">/khamelionpose</span>
-                    </div>
-                    <div class="card-body">
-                        <p>The definitive signature aesthetic move anchoring the visual branding of this creator branch. Fully integrated across standard visual archives and official lore metrics.</p>
-                    </div>
-                </div>
-
+                <p>When matters concerning content creation, entertainment, social events, and media ventures are being discussed, he is known as The Khamelion. Under this identity, he is recognized as a content creator, an entertainer, a media personality, a host and participant in social events, and a promoter of community, humor, and creativity. This identity is used specifically in matters relating to digital media, social interaction, and public engagement.</p>
             </section>
 
+            <section>
+                <h2>Philosophy & Guiding Principles</h2>
+                <p>The philosophy of The Khamelion embodies the belief that a person may occupy many roles without compromising who they are. It serves as the ultimate social bridge, emphasizing creativity, engagement, and the fluid ability to thrive in diverse environments without losing self-authenticity.</p>
+                
+                <p>At its heart, this identity isn’t about wearing a mask or being fake; it’s entirely about advanced adaptability, utilized mostly on camera or during social events. The underlying philosophy highlights that true confidence is the ability to shift seamlessly between different rooms, cameras, and social settings while keeping your core charisma intact.</p>
+                
+                <h3>The Five Guiding Principles</h3>
+                <ul>
+                    <li><span class="highlight">Adaptability</span>: Fluid transitions across diverse environments seamlessly.</li>
+                    <li><span class="highlight">Authenticity</span>: Remaining deeply rooted in the core identity always.</li>
+                    <li><span class="highlight">Creativity</span>: An innovative approach to media and public expression.</li>
+                    <li><span class="highlight">Confidence</span>: Absolute self-assurance without any aggression.</li>
+                    <li><span class="highlight">Social Connection</span>: Building meaningful bridges across communities.</li>
+                </ul>
+
+                <blockquote>
+                    <strong>The Core Essence:</strong> During a social outing, a posted photo with a subtle peace sign, combined with a smirk, became an iconic in-context photo. Displaying untouchable confidence with oneself, this signature look has become a charismatic staple.
+                </blockquote>
+            </section>
+
+            <section>
+                <h2>Visual Identity</h2>
+                <ul>
+                    <li><strong>Signature Pose:</strong> The Khamelion Pose</li>
+                    <li><strong>Expression:</strong> Relaxed smirk or confident smile</li>
+                    <li><strong>Hand Gesture:</strong> Dual Peace Sign with knuckles facing outward</li>
+                    <li><strong>Common Themes:</strong> charisma, confidence, lifestyle, leadership</li>
+                    <li><strong>Media:</strong> Photography, video, livestreams, interviews, social media</li>
+                </ul>
+
+                <div class="image-container">
+                    <img src="http://googleusercontent.com/image_collection/image_retrieval/8062225600523836469" alt="Kelvin Stazzland performing the Khamelion Pose">
+                    <div class="image-caption">The Signature Gesture: The Khamelion Pose</div>
+                </div>
+            </section>
+
+            <section>
+                <h2>The Khamelion Pose (Dual Peace-Sign Stance)</h2>
+                <p>The Khamelion Pose, also known as the Dual Peace-Sign Stance, is the signature pose associated with The Khamelion. It serves as one of the most recognizable gestures and is commonly used in content creation, photography, social events, and public appearances.</p>
+                
+                <p>Unlike the traditional peace sign, which is typically performed with a single hand and with the palm facing outward, the Khamelion Pose is distinguished by the use of both hands and by presenting the knuckles toward the spectators.</p>
+                
+                <p>The Khamelion Pose symbolizes confidence without aggression, individuality without isolation, and adaptability without sacrificing authenticity. Within The Khamelion philosophy, the gesture serves as a visual representation of approaching public life with creativity, openness, and self-assurance.</p>
+
+                <h3>Performing the Khamelion Pose</h3>
+                <ol>
+                    <li><strong>Step 1: Raise Both Hands</strong> – Raise both hands to approximately shoulder or chest level.</li>
+                    <li><strong>Step 2: Form Dual Peace Signs</strong> – Extend the index and middle fingers on each hand to create two “V” signs while keeping the remaining fingers folded.</li>
+                    <li><strong>Step 3: Rotate the Hands</strong> – Turn both hands so that the backs of the hands and the knuckles face the spectators or camera. Unlike the traditional peace sign, the palms do not face outward.</li>
+                    <li><strong>Step 4: Position the Hands</strong> – Place the hands symmetrically on either side of the body, usually near the shoulders or face. The pose is performed with a relaxed stance, a relaxed smirk or confident smile, and confident eye contact with the audience or camera.</li>
+                    <li><strong>Step 5: Hold the Pose</strong> – Maintain the dual peace-sign stance while facing the audience or camera. The posture is intended to appear natural, friendly, and expressive.</li>
+                </ol>
+
+                <div class="image-container">
+                    <img src="http://googleusercontent.com/image_collection/image_retrieval/13834604173514362396" alt="The Khamelion Pose Stance">
+                    <div class="image-caption">Visual Representation of Confidence & Authenticity</div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Characteristics & Summary</h2>
+                <p>The Khamelion Pose is characterized by the use of both hands rather than one, dual “V” signs, knuckles facing the spectators, symmetry, balance, and a relaxed, playful demeanor. Within the culture, the pose embodies the belief that entertainment and public engagement should be approached with enthusiasm, individuality, and authenticity.</p>
+                
+                <p>In its simplest form, <span class="highlight">The Khamelion Pose</span> is a dual peace-sign gesture performed with both hands, with the knuckles facing the audience rather than the palms, serving as the definitive signature stance of The Khamelion.</p>
+            </section>
         </main>
     </div>
 
-    <script src="../js/app.js"></script>
 </body>
 </html>
