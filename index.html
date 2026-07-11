@@ -3,111 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STAZZBOI.COM | Welcome to the Stazzation</title>
-    
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/portal-grid.css">
-    <link rel="stylesheet" href="css/cards.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <title>Stazz App Launcher</title>
+    <style>
+        :root {
+            --neon-yellow: #f39c12;
+            --neon-pink: #ff6b6b;
+            --neon-red: #e74c3c;
+            --neon-blue: #3498db;
+            --bg-dark: #1a1a1a;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* 9:16 Neon Frame Container */
+        .phone-container {
+            width: 360px;
+            height: 640px;
+            background-color: var(--bg-dark);
+            border-radius: 30px;
+            position: relative;
+            box-shadow: 0 0 20px var(--neon-yellow), inset 0 0 10px var(--neon-yellow);
+            border: 4px solid var(--neon-yellow);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Periodic Flash Animation Trigger */
+        @keyframes neon-flash {
+            0%, 90%, 94%, 98%, 100% { opacity: 1; filter: drop-shadow(0 0 10px var(--neon-yellow)); }
+            92%, 96% { opacity: 0.3; filter: none; }
+        }
+
+        .flash-active {
+            animation: neon-flash 2s ease-in-out;
+        }
+
+        /* Horizontal Swipe Wrapper */
+        .swiper-viewport {
+            flex: 1;
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+        }
+
+        /* Hide Scrollbars */
+        .swiper-viewport::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Pages */
+        .page {
+            min-width: 100%;
+            height: 100%;
+            scroll-snap-align: start;
+            box-sizing: border-box;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Grid for Grid Apps */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            width: 100%;
+        }
+
+        /* App Box Styling */
+        .app-box {
+            aspect-ratio: 1;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+            cursor: pointer;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .app-box:active {
+            transform: scale(0.95);
+        }
+
+        /* App Specific Borders/Glows */
+        .yellow-app { border: 2px solid var(--neon-yellow); box-shadow: inset 0 0 10px rgba(243, 156, 18, 0.3); }
+        .pink-app { border: 2px solid var(--neon-pink); box-shadow: inset 0 0 10px rgba(255, 107, 107, 0.3); }
+        .red-app { border: 2px solid var(--neon-red); box-shadow: inset 0 0 10px rgba(231, 76, 60, 0.3); }
+        .blue-app { border: 2px solid var(--neon-blue); box-shadow: inset 0 0 10px rgba(52, 152, 219, 0.3); }
+
+        /* Sub-navigation style for inside Stazzboi */
+        .sub-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .menu-item {
+            background: #2a2a2a;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            border: 1px solid #444;
+        }
+
+        /* Page Dots Indicator */
+        .page-dots {
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            transition: background 0.3s;
+        }
+
+        .dot.active {
+            background: white;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="app-container">
-        
-        <header class="app-header">
-            <div class="header-container">
-                <h1 class="header-title">STAZZBOI.COM</h1>
-                <p class="header-tagline">Welcome to the Stazzation.</p>
-            </div>
-        </header>
-
-        <main class="main-content section">
+    <div class="phone-container" id="phoneFrame">
+        <div class="swiper-viewport" id="viewport">
             
-            <section class="hero-section" data-route="/kelvin">
-                <div class="hero-image-wrapper">
-                    <img src="assets/images/hero-kelvin.jpg" alt="Kelvin Stazzland" class="hero-image">
+            <div class="page" id="page-home">
+                <h2>Home</h2>
+                <div class="app-grid">
+                    <a href="#stazzboi-menu" class="app-box yellow-app" style="background-image: url('');">Stazzboi</a>
+                    <a href="/" class="app-box pink-app" style="background-image: url('');">The Stazzlies</a>
+                    <div class="app-box red-app" style="background-image: url('');">Stazzeria</div>
+                    <a href="/stazzex" class="app-box yellow-app" style="background-image: url('');">The Stazzex</a>
                 </div>
-                <div class="hero-content">
-                    <h2 class="hero-title">Kelvin “Stazzboi” Stazzland</h2>
-                    <p class="hero-subtitle">President of Stazzeria • Rapper • Content Creator</p>
+            </div>
+
+            <div class="page" id="page-qr">
+                <h2>QR</h2>
+                <p style="text-align: center; color: #aaa;">Landing Page for the QR Code</p>
+                <div style="width: 150px; height: 150px; border: 2px dashed #666; margin-top: 40px; display: flex; justify-content: center; align-items: center; color: #666;">
+                    [QR Target]
                 </div>
-            </section>
+            </div>
 
-            <section class="portal-grid">
-                
-                <a href="/president" class="portal-tile" data-route="/president">
-                    <div class="portal-logo-wrapper">
-                        <img src="assets/logos/president.svg" alt="President of Stazzeria Logo" class="portal-logo">
+            <div class="page" id="page-photos">
+                <h2>Photos</h2>
+                <div class="app-grid">
+                    <div class="app-box yellow-app">Stazzboi</div>
+                    <div class="app-box pink-app">Stazzlies</div>
+                    <div class="app-box red-app">Stazzeria</div>
+                </div>
+            </div>
+
+            <div class="page" id="page-info">
+                <h2>Information</h2>
+                <div class="sub-menu">
+                    <a href="/stazzology" class="menu-item blue-app" style="color: var(--neon-blue)">Stazzology</a>
+                    <div id="stazzboi-menu" style="margin-top: 10px;">
+                        <p style="font-size: 0.8rem; color: #888; margin-bottom: 5px;">Stazzboi Navigation:</p>
+                        <a href="/Khamelion" class="menu-item" style="display: block; margin-bottom: 10px;">About: Kelvin “The Khamelion” Stazzland</a>
+                        <div class="menu-item" style="margin-bottom: 10px;">Music Catalog</div>
+                        <div class="menu-item">Socials</div>
                     </div>
-                    <span class="portal-label">President of Stazzeria</span>
-                </a>
+                </div>
+            </div>
 
-                <a href="/stazzboi" class="portal-tile" data-route="/stazzboi">
-                    <div class="portal-logo-wrapper">
-                        <img src="assets/logos/stazzboi.svg" alt="Stazzboi Logo" class="portal-logo">
-                    </div>
-                    <span class="portal-label">Stazzboi</span>
-                </a>
+        </div>
 
-                <a href="/khamelion" class="portal-tile" data-route="/khamelion">
-                    <div class="portal-logo-wrapper">
-                        <img src="assets/logos/khamelion.svg" alt="The Khamelion Logo" class="portal-logo">
-                    </div>
-                    <span class="portal-label">The Khamelion</span>
-                </a>
-
-                <a href="/stazzology" class="portal-tile" data-route="/stazzology">
-                    <div class="portal-logo-wrapper">
-                        <img src="assets/logos/stazzology.svg" alt="STAZZOLOGY Logo" class="portal-logo">
-                    </div>
-                    <span class="portal-label">STAZZOLOGY</span>
-                </a>
-
-                <a href="/stazzex" class="portal-tile" data-route="/stazzex">
-                    <div class="portal-logo-wrapper">
-                        <img src="assets/logos/stazzex.svg" alt="The Stazzex Logo" class="portal-logo">
-                    </div>
-                    <span class="portal-label">The Stazzex</span>
-                </a>
-
-                <a href="/latest" class="portal-tile" data-route="/latest">
-                    <div class="portal-logo-wrapper">
-                        <img src="assets/logos/latest.svg" alt="Latest Updates Logo" class="portal-logo">
-                    </div>
-                    <span class="portal-label">Latest</span>
-                </a>
-
-                <a href="/photos" class="portal-tile" data-route="/photos">
-                    <div class="portal-logo-wrapper">
-                        <img src="assets/logos/gallery.svg" alt="Gallery Logo" class="portal-logo">
-                    </div>
-                    <span class="portal-label">Gallery</span>
-                </a>
-
-                <a href="/comics" class="portal-tile" data-route="/comics">
-                    <div class="portal-logo-wrapper">
-                        <img src="assets/logos/comics.svg" alt="Stazzert Comics Logo" class="portal-logo">
-                    </div>
-                    <span class="portal-label">Stazzert Comics</span>
-                </a>
-
-                <a href="/portfolio" class="portal-tile" data-route="/portfolio">
-                    <div class="portal-logo-wrapper">
-                        <img src="assets/logos/portfolio.svg" alt="Portfolio Logo" class="portal-logo">
-                    </div>
-                    <span class="portal-label">Portfolio</span>
-                </a>
-
-            </section>
-        </main>
+        <div class="page-dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
     </div>
 
-    <script src="js/app.js"></script>
+    <script>
+        // --- 1. Neon Flickering / Flashing Effect every 45 seconds ---
+        const phoneFrame = document.getElementById('phoneFrame');
+        
+        function triggerNeonFlash() {
+            phoneFrame.classList.add('flash-active');
+            // Remove class after animation finishes (2 seconds) so it can be re-triggered
+            setTimeout(() => {
+                phoneFrame.classList.remove('flash-active');
+            }, 2000);
+        }
+
+        // Run every 45 seconds (45000 milliseconds)
+        setInterval(triggerNeonFlash, 45000);
+
+
+        // --- 2. Track Active Dots on Swiping ---
+        const viewport = document.getElementById('viewport');
+        const dots = document.querySelectorAll('.dot');
+        const pageWidth = 360; // Matches CSS phone-container width
+
+        viewport.addEventListener('scroll', () => {
+            const scrollLeft = viewport.scrollLeft;
+            const activePage = Math.round(scrollLeft / pageWidth);
+            
+            dots.forEach((dot, index) => {
+                if (index === activePage) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
