@@ -74,6 +74,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            overflow-y: auto;
+        }
+
+        /* Hide page scrollbars */
+        .page::-webkit-scrollbar {
+            display: none;
         }
 
         h2 {
@@ -82,7 +88,7 @@
             letter-spacing: 2px;
             font-size: 1.5rem;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         /* Grid for Grid Apps */
@@ -112,9 +118,10 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            box-sizing: border-box;
         }
 
-        .app-box:active {
+        .app-box:active, .menu-item:active {
             transform: scale(0.95);
         }
 
@@ -124,22 +131,24 @@
         .red-app { border: 2px solid var(--neon-red); box-shadow: inset 0 0 10px rgba(231, 76, 60, 0.3); }
         .blue-app { border: 2px solid var(--neon-blue); box-shadow: inset 0 0 10px rgba(52, 152, 219, 0.3); }
 
-        /* Sub-navigation style for inside Stazzboi */
+        /* Menu List Styles for Page 4 */
         .sub-menu {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
             width: 100%;
         }
 
         .menu-item {
             background: #2a2a2a;
-            padding: 15px;
+            padding: 12px;
             border-radius: 10px;
             text-align: center;
             text-decoration: none;
             color: white;
             border: 1px solid #444;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
         }
 
         /* Page Dots Indicator */
@@ -163,6 +172,24 @@
         .dot.active {
             background: white;
         }
+        
+        /* Direct link style for the QR box zone */
+        .qr-zone {
+            width: 160px;
+            height: 160px;
+            border: 2px dashed #666;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #aaa;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: border-color 0.2s;
+        }
+        .qr-zone:hover {
+            border-color: var(--neon-yellow);
+        }
     </style>
 </head>
 <body>
@@ -173,40 +200,41 @@
             <div class="page" id="page-home">
                 <h2>Home</h2>
                 <div class="app-grid">
-                    <a href="#stazzboi-menu" class="app-box yellow-app" style="background-image: url('');">Stazzboi</a>
-                    <a href="/" class="app-box pink-app" style="background-image: url('');">The Stazzlies</a>
-                    <div class="app-box red-app" style="background-image: url('');">Stazzeria</div>
-                    <a href="/stazzex" class="app-box yellow-app" style="background-image: url('');">The Stazzex</a>
+                    <a href="/stazzboi" class="app-box yellow-app">Stazzboi</a>
+                    <a href="/stazzlies" class="app-box pink-app">The Stazzlies</a>
+                    <a href="/Stazzeria" class="app-box red-app">Stazzeria</a>
+                    <a href="/stazzology" class="app-box blue-app">Stazzology</a>
+                    <a href="/stazzex" class="app-box yellow-app">The Stazzex</a>
                 </div>
             </div>
 
             <div class="page" id="page-qr">
                 <h2>QR</h2>
-                <p style="text-align: center; color: #aaa;">Landing Page for the QR Code</p>
-                <div style="width: 150px; height: 150px; border: 2px dashed #666; margin-top: 40px; display: flex; justify-content: center; align-items: center; color: #666;">
-                    [QR Target]
-                </div>
+                <a href="/QR" class="qr-zone">
+                    <div>Tap for QR Link</div>
+                </a>
             </div>
 
             <div class="page" id="page-photos">
-                <h2>Photos</h2>
+                <h2><a href="/photos" style="color: white; text-decoration: none;">Photos</a></h2>
                 <div class="app-grid">
-                    <div class="app-box yellow-app">Stazzboi</div>
-                    <div class="app-box pink-app">Stazzlies</div>
-                    <div class="app-box red-app">Stazzeria</div>
+                    <a href="/stazzboi" class="app-box yellow-app">Stazzboi</a>
+                    <a href="/stazzlies" class="app-box pink-app">Stazzlies</a>
+                    <a href="/Stazzeria" class="app-box red-app">Stazzeria</a>
                 </div>
             </div>
 
-            <div class="page" id="page-info">
-                <h2>Information</h2>
+            <div class="page" id="page-the-stazzex">
+                <h2>The Stazzex</h2>
                 <div class="sub-menu">
-                    <a href="/stazzology" class="menu-item blue-app" style="color: var(--neon-blue)">Stazzology</a>
-                    <div id="stazzboi-menu" style="margin-top: 10px;">
-                        <p style="font-size: 0.8rem; color: #888; margin-bottom: 5px;">Stazzboi Navigation:</p>
-                        <a href="/Khamelion" class="menu-item" style="display: block; margin-bottom: 10px;">About: Kelvin “The Khamelion” Stazzland</a>
-                        <div class="menu-item" style="margin-bottom: 10px;">Music Catalog</div>
-                        <div class="menu-item">Socials</div>
-                    </div>
+                    <a href="/stazzism" class="menu-item">Stazzism</a>
+                    <a href="/stazzerian" class="menu-item">Stazzerian</a>
+                    <a href="/stazzboi" class="menu-item">Stazzboi</a>
+                    <a href="/beachybird" class="menu-item">BeachyBird</a>
+                    <a href="/mrsstazzland" class="menu-item">Mrs. Stazzland</a>
+                    <a href="/khamelion" class="menu-item">The Khamelion</a>
+                    <a href="/president" class="menu-item">Stazzerian President</a>
+                    <a href="/council" class="menu-item">Stazzerian Council</a>
                 </div>
             </div>
 
@@ -221,25 +249,21 @@
     </div>
 
     <script>
-        // --- 1. Neon Flickering / Flashing Effect every 45 seconds ---
+        // Neon Flickering / Flashing Effect every 45 seconds
         const phoneFrame = document.getElementById('phoneFrame');
         
         function triggerNeonFlash() {
             phoneFrame.classList.add('flash-active');
-            // Remove class after animation finishes (2 seconds) so it can be re-triggered
             setTimeout(() => {
                 phoneFrame.classList.remove('flash-active');
             }, 2000);
         }
-
-        // Run every 45 seconds (45000 milliseconds)
         setInterval(triggerNeonFlash, 45000);
 
-
-        // --- 2. Track Active Dots on Swiping ---
+        // Track Active Dots on Swiping
         const viewport = document.getElementById('viewport');
         const dots = document.querySelectorAll('.dot');
-        const pageWidth = 360; // Matches CSS phone-container width
+        const pageWidth = 360; 
 
         viewport.addEventListener('scroll', () => {
             const scrollLeft = viewport.scrollLeft;
