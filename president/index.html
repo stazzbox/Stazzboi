@@ -58,3 +58,260 @@
             display: flex;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+        }
+
+        /* Hide Scrollbars */
+        .swiper-viewport::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Individual Pages inside the device */
+        .page {
+            min-width: 100%;
+            height: 100%;
+            scroll-snap-align: start;
+            box-sizing: border-box;
+            padding: 35px 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Hide page vertical scrollbar while allowing scrolling */
+        .page::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Header & Text Adjustments to fit mobile scale */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--neon-yellow);
+            padding-bottom: 15px;
+        }
+
+        h1 {
+            color: var(--neon-yellow);
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-size: 0.85rem;
+            color: #cccccc;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        h2 {
+            color: var(--neon-yellow);
+            font-size: 1.15rem;
+            margin-top: 15px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            border-left: 3px solid var(--neon-yellow);
+            padding-left: 10px;
+        }
+
+        p {
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+
+        ol {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            line-height: 1.4;
+        }
+
+        li strong {
+            color: var(--neon-yellow);
+            display: block;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        blockquote {
+            background-color: #222;
+            border-left: 3px solid var(--neon-yellow);
+            padding: 12px;
+            margin: 15px 0;
+            font-style: italic;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        blockquote strong {
+            color: var(--neon-yellow);
+            display: block;
+            margin-bottom: 5px;
+            font-style: normal;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        /* Hero Image Container optimized for 9:16 aspect ratio */
+        .image-container {
+            text-align: center;
+            margin-bottom: 15px;
+            background-color: #222;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid #444;
+        }
+
+        .image-caption {
+            margin-top: 8px;
+            font-size: 0.75rem;
+            color: var(--neon-yellow);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Page Indicator Dots */
+        .page-dots {
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0,0,0,0.3);
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            transition: background 0.3s;
+        }
+
+        .dot.active {
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="phone-container" id="phoneFrame">
+        <div class="swiper-viewport" id="viewport">
+            
+            <div class="page">
+                <header>
+                    <h1>Kelvin Stazzland</h1>
+                    <p class="subtitle">Founder & President</p>
+                </header>
+
+                <div class="image-container">
+                    <img src="preset-image.jpg" alt="President Kelvin Stazzland">
+                    <div class="image-caption">President Kelvin Stazzland (of Stazzeria)</div>
+                </div>
+                
+                <p>Based on the <strong>Stazzerian Doctrine of Sovereign Preservation</strong>, Kelvin Stazzland’s role as Stazzerian President is a philosophical and civic position centered on maintaining order, sovereignty, responsibility, and the preservation of Stazzerian identity.</p>
+                
+                <p>As the founding figure responsible for establishing the philosophical foundation of Stazzeria, he serves as the guardian of Stazzerian order and cultural continuity.</p>
+            </div>
+
+            <div class="page">
+                <h2>Role & Directives</h2>
+                <ol>
+                    <li>
+                        <strong>1. Guardian of Sovereignty</strong>
+                        The President serves as the protector of Stazzeria’s independence, allowing its people to preserve their values without surrendering control to outside forces.
+                    </li>
+                    <li>
+                        <strong>2. Keeper of Order</strong>
+                        Leadership must prevent chaos from becoming the force that determines society’s future, creating conditions where true freedom can exist.
+                    </li>
+                    <li>
+                        <strong>3. Symbol of Responsibility</strong>
+                        Embodying the principle that leadership begins with self-governance. Those who seek liberty must accept the duty of preserving it.
+                    </li>
+                    <li>
+                        <strong>4. Protector of Unity</strong>
+                        Serving as a unifying figure to ensure individual differences do not destroy the shared identity of the community.
+                    </li>
+                    <li>
+                        <strong>5. Steward of Generations</strong>
+                        Preserving Stazzeria’s structural principles so future generations inherit an ordered, self-determined society.
+                    </li>
+                </ol>
+            </div>
+
+            <div class="page">
+                <h2>The Philosophy</h2>
+                <p>The President’s purpose is built upon the belief that freedom is not sustained by unlimited individual action alone, but through a disciplined society capable of governing itself.</p>
+                
+                <p>The President therefore represents the balance between liberty and responsibility — ensuring that freedom is protected by the structures, values, and commitments required to maintain it.</p>
+
+                <blockquote>
+                    <strong>The Leadership Creed</strong>
+                    "Freedom requires order. Order requires responsibility. Responsibility preserves sovereignty."
+                </blockquote>
+
+                <p>A Stazzerian leader does not measure success by the power they hold, but by whether the people remain capable of governing themselves.</p>
+                
+                <p>Kelvin Stazzland’s presidency represents the transition from an idea into an institution: the embodiment of the Stazzerian belief that a civilization survives when its people have the discipline to protect what they value.</p>
+            </div>
+
+        </div>
+
+        <div class="page-dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <script>
+        // --- 1. Neon Flickering / Flashing Effect every 45 seconds ---
+        const phoneFrame = document.getElementById('phoneFrame');
+        
+        function triggerNeonFlash() {
+            phoneFrame.classList.add('flash-active');
+            setTimeout(() => {
+                phoneFrame.classList.remove('flash-active');
+            }, 2000);
+        }
+        setInterval(triggerNeonFlash, 45000);
+
+        // --- 2. Track Active Navigation Dots via Swipe Axis ---
+        const viewport = document.getElementById('viewport');
+        const dots = document.querySelectorAll('.dot');
+        const pageWidth = 360; 
+
+        viewport.addEventListener('scroll', () => {
+            const scrollLeft = viewport.scrollLeft;
+            const activePage = Math.round(scrollLeft / pageWidth);
+            
+            dots.forEach((dot, index) => {
+                if (index === activePage) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
