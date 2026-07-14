@@ -3,88 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STAZZOLOGY | STAZZBOI.COM</title>
-    
-    <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/cards.css">
-    <link rel="stylesheet" href="../css/animations.css">
-    <link rel="stylesheet" href="../css/responsive.css">
-    
+    <title>Stazzology - Kelvin "The Khamelion" Stazzland</title>
     <style>
-        /* Contextual page overrides for Cultural Frameworks */
-        .lore-title {
-            color: var(--color-accent-neon);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 24px;
+        :root {
+            --neon-yellow: #f39c12;
+            --neon-red: #e74c3c;
+            --bg-dark: #1a1a1a;
         }
-        .philosophy-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--grid-gap);
-            margin-top: 24px;
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: white;
+            overflow: hidden;
         }
-        @media (min-width: 768px) {
-            .philosophy-grid {
-                grid-template-columns: repeat(2, 1fr);
+
+        /* Shifting Neon Border Animation for the main Phone Frame */
+        @keyframes frame-glow {
+            0%, 100% { 
+                border-color: var(--neon-yellow); 
+                box-shadow: 0 0 20px var(--neon-yellow), inset 0 0 10px var(--neon-yellow); 
             }
+            50% { 
+                border-color: var(--neon-red); 
+                box-shadow: 0 0 20px var(--neon-red), inset 0 0 10px var(--neon-red); 
+            }
+        }
+
+        /* 9:16 Phone Frame Container */
+        .phone-container {
+            width: 360px;
+            height: 640px;
+            background-color: var(--bg-dark);
+            border-radius: 30px;
+            position: relative;
+            border: 4px solid var(--neon-yellow);
+            box-sizing: border-box;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            animation: frame-glow 6s linear infinite;
+        }
+
+        /* Header Style */
+        .red-header {
+            color: var(--neon-red);
+            text-shadow: 0 0 12px rgba(231, 76, 60, 0.7);
+            font-size: 1.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 0 0 5px 0;
+            text-align: center;
+        }
+
+        /* Powered By text */
+        .sub-header {
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        /* Embedded Reel Box styled exactly as a square */
+        .embed-box {
+            width: 280px;
+            height: 280px;
+            background-color: #0c0c0c;
+            border-radius: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        /* Make the Behold widget completely responsive to the 280x280 block */
+        .embed-box behold-widget {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        /* Back Navigation Link */
+        .back-link {
+            margin-top: 40px;
+            text-decoration: none;
+            color: #777;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: white;
         }
     </style>
 </head>
 <body>
 
-    <div class="app-container">
+    <div class="phone-container">
         
-        <header class="app-header">
-            <div class="header-container">
-                <a href="/" class="header-title">STAZZBOI.COM</a>
-                <p class="header-tagline">Official Knowledge Base Portal</p>
-            </div>
-        </header>
+        <h1 class="red-header">STAZZOLOGY</h1>
+        
+        <div class="sub-header">
+            <span style="color: white;">powered by </span>
+            <span style="color: var(--neon-yellow); font-weight: bold;">The Stazzex</span>
+        </div>
 
-        <main class="main-content section animate-fade-in">
-            
-            <h2 class="lore-title">STAZZOLOGY // Philosophy &amp; Culture</h2>
-            
-            <div class="stazz-card card-official">
-                <div class="card-header">
-                    <h3 class="card-title">Stazzeria</h3>
-                    <span class="stx-badge">STX #0005</span>
-                </div>
-                <div class="card-body">
-                    <p>A digital and physical collective founded by Kelvin “Stazzboi” Stazzland centered around creative expression, cultural identity, and Stazzerian philosophy. Functions as a community, a cultural framework, and an expansive creative ecosystem.</p>
-                </div>
-            </div>
+        <div class="embed-box">
+            <behold-widget feed-id="jNfUaQQBmFFfrTQ6XpI4"></behold-widget>
+            <script>
+                (() => {
+                    if(window.__bhldScript) return;
+                    window.__bhldScript = true;
+                    const d = document, s = d.createElement("script");
+                    s.type = "module";
+                    s.src = "https://w.behold.so/widget.js";
+                    setTimeout(() => { d.head.append(s); }, 0);
+                })();
+            </script>
+        </div>
 
-            <section class="philosophy-grid">
-                
-                <div class="stazz-card">
-                    <div class="card-header">
-                        <h4 class="card-title">STAZZZsociety</h4>
-                    </div>
-                    <div class="card-body">
-                        <p>The polyfunctional lexeme connecting all Stazzerians through culture, language, and operational structure. It stands as the unified linguistic framework for the collective.</p>
-                    </div>
-                </div>
+        <a href="/" class="back-link">← Home Launcher</a>
 
-                <div class="stazz-card">
-                    <div class="card-header">
-                        <h4 class="card-title">The Monarch / Jester Dynamic</h4>
-                    </div>
-                    <div class="card-body">
-                        <p>A unique dual office within the leadership hierarchy. Under disciplinary conditions, the Monarch transitions to a temporary Jester state, returning to full structural status once disciplinary criteria are resolved.</p>
-                    </div>
-                </div>
-
-            </section>
-
-        </main>
     </div>
 
-    <script src="../js/app.js"></script>
 </body>
 </html>
