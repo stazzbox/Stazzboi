@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stazz App Launcher</title>
+    <title>Kelvin "The Khamelion" Stazzland Stazzboi's StazzApp</title>
     <style>
         :root {
             --neon-yellow: #f39c12;
@@ -70,7 +70,7 @@
             height: 100%;
             scroll-snap-align: start;
             box-sizing: border-box;
-            padding: 30px 20px;
+            padding: 25px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -86,76 +86,110 @@
             margin-top: 0;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             text-align: center;
             margin-bottom: 15px;
         }
 
-        /* Bio Box styling */
-        .bio-container {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        /* Top Banner Image Style */
+        .banner-placeholder {
+            width: 100%;
+            height: 100px;
             border-radius: 12px;
-            padding: 15px;
-            margin-bottom: 20px;
-            font-size: 0.85rem;
-            line-height: 1.4;
-            color: #ddd;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            
+            /* BANNER IMAGE PLACEHOLDER: Replace this URL */
+            background-image: url('Kelvin-Stazzland-Stazzboi.png');
         }
 
-        .bio-container h3 {
-            margin-top: 0;
+        /* Compact Bio styling */
+        .bio-compact {
+            text-align: center;
+            font-size: 0.78rem;
+            line-height: 1.35;
+            color: #ccc;
+            margin-bottom: 15px;
+            padding: 0 5px;
+        }
+
+        .bio-compact strong {
             color: var(--neon-yellow);
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-
-        .bio-container ol {
-            margin: 10px 0 0 0;
-            padding-left: 20px;
-            color: #fff;
         }
 
         /* Grid for Grid Apps */
         .app-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+            gap: 12px;
             width: 100%;
         }
 
-        /* App Box Styling */
+        /* Clickable App Image Box Styling */
         .app-box {
-            aspect-ratio: 1.2;
-            border-radius: 16px;
+            aspect-ratio: 1.3;
+            border-radius: 14px;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 10px;
+            padding: 5px;
             text-decoration: none;
             color: white;
             font-weight: bold;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             transition: transform 0.2s;
             cursor: pointer;
             box-sizing: border-box;
+            
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Dark overlay for text readability over your custom folder images */
+        .app-box::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 1;
+            transition: background 0.2s;
+        }
+
+        .app-box:hover::before {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .app-box span {
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
 
         .app-box:active, .menu-item:active {
             transform: scale(0.95);
         }
 
-        /* App Specific Borders/Glows */
-        .yellow-app { border: 2px solid var(--neon-yellow); box-shadow: inset 0 0 10px rgba(243, 156, 18, 0.3); }
-        .pink-app { border: 2px solid var(--neon-pink); box-shadow: inset 0 0 10px rgba(255, 107, 107, 0.3); }
-        .red-app { border: 2px solid var(--neon-red); box-shadow: inset 0 0 10px rgba(231, 76, 60, 0.3); }
-        .blue-app { border: 2px solid var(--neon-blue); box-shadow: inset 0 0 10px rgba(52, 152, 219, 0.3); }
+        /* Neon Borders */
+        .yellow-app { border: 2px solid var(--neon-yellow); }
+        .pink-app { border: 2px solid var(--neon-pink); }
+        .red-app { border: 2px solid var(--neon-red); }
+        .blue-app { border: 2px solid var(--neon-blue); }
 
-        /* Menu List Styles */
+        /* ICON IMAGE PLACEHOLDERS: Replace these URLs with your images */
+        #img-stazzboi { background-image: url('stazzboiicon.png'); }
+        #img-stazzlies { background-image: url('stazzliesicon.png'); }
+        #img-stazzeria { background-image: url('stazzeriaicon.png'); }
+        #img-stazzology { background-image: url('stazzologyicon.png'); }
+        #img-stazzex { background-image: url('stazzexicon.png'); }
+        #img-beachybird { background-image: url('beachybirdicon.png'); }
+
+        /* Navigation List Styles */
         .sub-menu {
             display: flex;
             flex-direction: column;
@@ -196,24 +230,6 @@
         .dot.active {
             background: white;
         }
-        
-        /* Direct link style for the QR box zone */
-        .qr-zone {
-            width: 160px;
-            height: 160px;
-            border: 2px dashed #666;
-            margin-top: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #aaa;
-            text-decoration: none;
-            border-radius: 12px;
-            transition: border-color 0.2s;
-        }
-        .qr-zone:hover {
-            border-color: var(--neon-yellow);
-        }
     </style>
 </head>
 <body>
@@ -222,51 +238,40 @@
         <div class="swiper-viewport" id="viewport">
             
             <div class="page" id="page-home">
-                <h2>Home</h2>
+                <div class="banner-placeholder"></div>
                 
-                <div class="bio-container">
-                    <h3>Kelvin Stazzland</h3>
-                    <p>
-                        Kelvin Stazzland is a "Birthright Stazzerian", content creator, musician, the 50th president of Stazzeria, and founder of the philosophy of Stazzism. He serves as President of Stazzeria and is recognized as one of the most influential persons of the Stazz Universe.
-                    </p>
-                    <p>
-                        Throughout his various endeavors, Kelvin Stazzland is known by different names and titles depending upon the context and capacities through which he operates:
-                    </p>
-                    <ol>
-                        <li>President Kelvin Stazzland of Stazzeria</li>
-                        <li>Kelvin "Stazzboi" Stazzland the artist</li>
-                        <li>Kelvin "The Khamelion" Stazzland the content creator</li>
-                    </ol>
+                <div class="bio-compact">
+                    <strong>Kelvin Stazzland</strong> is a Birthright Stazzerian, content creator, musician, the 50th president of Stazzeria, and founder of Stazzism. He is recognized as one of the most influential figures of the Stazz Universe.
                 </div>
 
                 <div class="app-grid">
-                    <a href="/stazzboi" class="app-box yellow-app">Stazzboi</a>
-                    <a href="/stazzlies" class="app-box pink-app">The Stazzlies</a>
-                    <a href="/Stazzeria" class="app-box red-app">Stazzeria</a>
-                    <a href="/stazzology" class="app-box blue-app">Stazzology</a>
-                    <a href="/stazzex" class="app-box yellow-app">The Stazzex</a>
-                    <a href="/beachybird" class="app-box pink-app">BeachyBird</a>
+                    <a href="/stazzboi" class="app-box yellow-app" id="img-stazzboi"><span>Stazzboi</span></a>
+                    <a href="/stazzlies" class="app-box pink-app" id="img-stazzlies"><span>The Stazzlies</span></a>
+                    <a href="/Stazzeria" class="app-box red-app" id="img-stazzeria"><span>Stazzeria</span></a>
+                    <a href="/stazzology" class="app-box blue-app" id="img-stazzology"><span>Stazzology</span></a>
+                    <a href="/stazzex" class="app-box yellow-app" id="img-stazzex"><span>The Stazzex</span></a>
+                    <a href="/beachybird" class="app-box pink-app" id="img-beachybird"><span>BeachyBird</span></a>
                 </div>
             </div>
 
             <div class="page" id="page-qr">
                 <h2>QR</h2>
-                <a href="/QR" class="qr-zone">
-                    <div style="text-align: center;">Tap for QR Link<br><small style="font-size: 11px; color: #777;">/QR Contents</small></div>
-                </a>
+                <div class="sub-menu" style="margin-top: 40px;">
+                    <a href="/QR" class="menu-item" style="border-color: var(--neon-yellow); font-weight: bold; letter-spacing: 1px;">QR CONTENTS</a>
+                </div>
             </div>
 
             <div class="page" id="page-photos">
                 <h2>Photos</h2>
-                <div class="sub-menu">
-                    <a href="/photos" class="menu-item" style="border-color: var(--neon-pink); font-weight: bold;">View Photo Gallery (/photos)</a>
+                <div class="sub-menu" style="margin-top: 40px;">
+                    <a href="/photos" class="menu-item" style="border-color: var(--neon-pink); font-weight: bold; letter-spacing: 1px;">VIEW STAZZOGRAPHY</a>
                 </div>
             </div>
 
             <div class="page" id="page-the-stazzex">
                 <h2>The Stazzex</h2>
                 <div class="sub-menu">
-                    <a href="/stazzex" class="menu-item" style="border-color: var(--neon-yellow); font-weight: bold; margin-bottom: 10px;">Go to /stazzex</a>
+                    <a href="/stazzex" class="menu-item" style="border-color: var(--neon-yellow); font-weight: bold; margin-bottom: 5px;">Go to /stazzex</a>
                     <a href="/stazzism" class="menu-item">Stazzism</a>
                     <a href="/stazzerian" class="menu-item">Stazzerian</a>
                     <a href="/stazzboi" class="menu-item">Stazzboi</a>
@@ -294,29 +299,3 @@
         
         function triggerNeonFlash() {
             phoneFrame.classList.add('flash-active');
-            setTimeout(() => {
-                phoneFrame.classList.remove('flash-active');
-            }, 2000);
-        }
-        setInterval(triggerNeonFlash, 45000);
-
-        // Track Active Dots on Swiping
-        const viewport = document.getElementById('viewport');
-        const dots = document.querySelectorAll('.dot');
-        const pageWidth = 360; 
-
-        viewport.addEventListener('scroll', () => {
-            const scrollLeft = viewport.scrollLeft;
-            const activePage = Math.round(scrollLeft / pageWidth);
-            
-            dots.forEach((dot, index) => {
-                if (index === activePage) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
-            });
-        });
-    </script>
-</body>
-</html>
