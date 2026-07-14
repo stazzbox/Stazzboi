@@ -140,71 +140,20 @@
             color: white;
             font-weight: bold;
             font-size: 0.85rem;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.2s;
             cursor: pointer;
             box-sizing: border-box;
-            
-            /* Placeholders Background Setup */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Overlay to make text readable over images */
-        .app-box::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.5);
-            border-radius: 16px;
-            z-index: 1;
-        }
-
-        .app-box span {
-            position: relative;
-            z-index: 2;
         }
 
         .app-box:active, .menu-item:active {
             transform: scale(0.95);
         }
 
-        /* App Specific Borders/Glows & Placeholders (Using placeholder images) */
-        .yellow-app { 
-            border: 2px solid var(--neon-yellow); 
-            box-shadow: inset 0 0 10px rgba(243, 156, 18, 0.3);
-            /* Placeholder: Yellow Stazzboi/Stazzex */
-            background-image: url('https://via.placeholder.com/150/1a1a1a/f39c12?text=STAZZ+YELLOW');
-        }
-        .pink-app { 
-            border: 2px solid var(--neon-pink); 
-            box-shadow: inset 0 0 10px rgba(255, 107, 107, 0.3);
-            /* Placeholder: Pink Stazzlies/BeachyBird */
-            background-image: url('https://via.placeholder.com/150/1a1a1a/ff6b6b?text=STAZZ+PINK');
-        }
-        .red-app { 
-            border: 2px solid var(--neon-red); 
-            box-shadow: inset 0 0 10px rgba(231, 76, 60, 0.3);
-            /* Placeholder: Red Stazzeria */
-            background-image: url('https://via.placeholder.com/150/1a1a1a/e74c3c?text=STAZZ+RED');
-        }
-        .blue-app { 
-            border: 2px solid var(--neon-blue); 
-            box-shadow: inset 0 0 10px rgba(52, 152, 219, 0.3);
-            /* Placeholder: Blue Stazzology */
-            background-image: url('https://via.placeholder.com/150/1a1a1a/3498db?text=STAZZ+BLUE');
-        }
-
-        /* Specific Placeholder assignments for main buttons */
-        #btn-stazzboi { background-image: url('https://via.placeholder.com/150/1a1a1a/f39c12?text=Stazzboi'); }
-        #btn-stazzlies { background-image: url('https://via.placeholder.com/150/1a1a1a/ff6b6b?text=Stazzlies'); }
-        #btn-stazzeria { background-image: url('https://via.placeholder.com/150/1a1a1a/e74c3c?text=Stazzeria'); }
-        #btn-stazzology { background-image: url('https://via.placeholder.com/150/1a1a1a/3498db?text=Stazzology'); }
-        #btn-stazzex { background-image: url('https://via.placeholder.com/150/1a1a1a/f39c12?text=The+Stazzex'); }
-        #btn-beachybird { background-image: url('https://via.placeholder.com/150/1a1a1a/ff6b6b?text=BeachyBird'); }
-
+        /* App Specific Borders/Glows */
+        .yellow-app { border: 2px solid var(--neon-yellow); box-shadow: inset 0 0 10px rgba(243, 156, 18, 0.3); }
+        .pink-app { border: 2px solid var(--neon-pink); box-shadow: inset 0 0 10px rgba(255, 107, 107, 0.3); }
+        .red-app { border: 2px solid var(--neon-red); box-shadow: inset 0 0 10px rgba(231, 76, 60, 0.3); }
+        .blue-app { border: 2px solid var(--neon-blue); box-shadow: inset 0 0 10px rgba(52, 152, 219, 0.3); }
 
         /* Menu List Styles */
         .sub-menu {
@@ -291,12 +240,12 @@
                 </div>
 
                 <div class="app-grid">
-                    <a href="/stazzboi" class="app-box yellow-app" id="btn-stazzboi"><span>Stazzboi</span></a>
-                    <a href="/stazzlies" class="app-box pink-app" id="btn-stazzlies"><span>The Stazzlies</span></a>
-                    <a href="/Stazzeria" class="app-box red-app" id="btn-stazzeria"><span>Stazzeria</span></a>
-                    <a href="/stazzology" class="app-box blue-app" id="btn-stazzology"><span>Stazzology</span></a>
-                    <a href="/stazzex" class="app-box yellow-app" id="btn-stazzex"><span>The Stazzex</span></a>
-                    <a href="/beachybird" class="app-box pink-app" id="btn-beachybird"><span>BeachyBird</span></a>
+                    <a href="/stazzboi" class="app-box yellow-app">Stazzboi</a>
+                    <a href="/stazzlies" class="app-box pink-app">The Stazzlies</a>
+                    <a href="/Stazzeria" class="app-box red-app">Stazzeria</a>
+                    <a href="/stazzology" class="app-box blue-app">Stazzology</a>
+                    <a href="/stazzex" class="app-box yellow-app">The Stazzex</a>
+                    <a href="/beachybird" class="app-box pink-app">BeachyBird</a>
                 </div>
             </div>
 
