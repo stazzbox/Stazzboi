@@ -70,7 +70,7 @@
             height: 100%;
             scroll-snap-align: start;
             box-sizing: border-box;
-            padding: 40px 20px;
+            padding: 30px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -86,22 +86,49 @@
             margin-top: 0;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
+        }
+
+        /* Bio Box styling */
+        .bio-container {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            color: #ddd;
+        }
+
+        .bio-container h3 {
+            margin-top: 0;
+            color: var(--neon-yellow);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .bio-container ol {
+            margin: 10px 0 0 0;
+            padding-left: 20px;
+            color: #fff;
         }
 
         /* Grid for Grid Apps */
         .app-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            gap: 15px;
             width: 100%;
         }
 
         /* App Box Styling */
         .app-box {
-            aspect-ratio: 1;
+            aspect-ratio: 1.2;
             border-radius: 16px;
             display: flex;
             flex-direction: column;
@@ -112,30 +139,78 @@
             text-decoration: none;
             color: white;
             font-weight: bold;
-            font-size: 0.9rem;
-            transition: transform 0.2s;
+            font-size: 0.85rem;
+            transition: transform 0.2s, box-shadow 0.2s;
             cursor: pointer;
+            box-sizing: border-box;
+            
+            /* Placeholders Background Setup */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Overlay to make text readable over images */
+        .app-box::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.5);
+            border-radius: 16px;
+            z-index: 1;
+        }
+
+        .app-box span {
+            position: relative;
+            z-index: 2;
         }
 
         .app-box:active, .menu-item:active {
             transform: scale(0.95);
         }
 
-        /* App Specific Borders/Glows */
-        .yellow-app { border: 2px solid var(--neon-yellow); box-shadow: inset 0 0 10px rgba(243, 156, 18, 0.3); }
-        .pink-app { border: 2px solid var(--neon-pink); box-shadow: inset 0 0 10px rgba(255, 107, 107, 0.3); }
-        .red-app { border: 2px solid var(--neon-red); box-shadow: inset 0 0 10px rgba(231, 76, 60, 0.3); }
-        .blue-app { border: 2px solid var(--neon-blue); box-shadow: inset 0 0 10px rgba(52, 152, 219, 0.3); }
+        /* App Specific Borders/Glows & Placeholders (Using placeholder images) */
+        .yellow-app { 
+            border: 2px solid var(--neon-yellow); 
+            box-shadow: inset 0 0 10px rgba(243, 156, 18, 0.3);
+            /* Placeholder: Yellow Stazzboi/Stazzex */
+            background-image: url('https://via.placeholder.com/150/1a1a1a/f39c12?text=STAZZ+YELLOW');
+        }
+        .pink-app { 
+            border: 2px solid var(--neon-pink); 
+            box-shadow: inset 0 0 10px rgba(255, 107, 107, 0.3);
+            /* Placeholder: Pink Stazzlies/BeachyBird */
+            background-image: url('https://via.placeholder.com/150/1a1a1a/ff6b6b?text=STAZZ+PINK');
+        }
+        .red-app { 
+            border: 2px solid var(--neon-red); 
+            box-shadow: inset 0 0 10px rgba(231, 76, 60, 0.3);
+            /* Placeholder: Red Stazzeria */
+            background-image: url('https://via.placeholder.com/150/1a1a1a/e74c3c?text=STAZZ+RED');
+        }
+        .blue-app { 
+            border: 2px solid var(--neon-blue); 
+            box-shadow: inset 0 0 10px rgba(52, 152, 219, 0.3);
+            /* Placeholder: Blue Stazzology */
+            background-image: url('https://via.placeholder.com/150/1a1a1a/3498db?text=STAZZ+BLUE');
+        }
 
-        /* Menu List Styles for Page 4 */
+        /* Specific Placeholder assignments for main buttons */
+        #btn-stazzboi { background-image: url('https://via.placeholder.com/150/1a1a1a/f39c12?text=Stazzboi'); }
+        #btn-stazzlies { background-image: url('https://via.placeholder.com/150/1a1a1a/ff6b6b?text=Stazzlies'); }
+        #btn-stazzeria { background-image: url('https://via.placeholder.com/150/1a1a1a/e74c3c?text=Stazzeria'); }
+        #btn-stazzology { background-image: url('https://via.placeholder.com/150/1a1a1a/3498db?text=Stazzology'); }
+        #btn-stazzex { background-image: url('https://via.placeholder.com/150/1a1a1a/f39c12?text=The+Stazzex'); }
+        #btn-beachybird { background-image: url('https://via.placeholder.com/150/1a1a1a/ff6b6b?text=BeachyBird'); }
+
+
+        /* Menu List Styles */
         .sub-menu {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 10px;
             width: 100%;
         }
 
@@ -199,34 +274,50 @@
             
             <div class="page" id="page-home">
                 <h2>Home</h2>
+                
+                <div class="bio-container">
+                    <h3>Kelvin Stazzland</h3>
+                    <p>
+                        Kelvin Stazzland is a "Birthright Stazzerian", content creator, musician, the 50th president of Stazzeria, and founder of the philosophy of Stazzism. He serves as President of Stazzeria and is recognized as one of the most influential persons of the Stazz Universe.
+                    </p>
+                    <p>
+                        Throughout his various endeavors, Kelvin Stazzland is known by different names and titles depending upon the context and capacities through which he operates:
+                    </p>
+                    <ol>
+                        <li>President Kelvin Stazzland of Stazzeria</li>
+                        <li>Kelvin "Stazzboi" Stazzland the artist</li>
+                        <li>Kelvin "The Khamelion" Stazzland the content creator</li>
+                    </ol>
+                </div>
+
                 <div class="app-grid">
-                    <a href="/stazzboi" class="app-box yellow-app">Stazzboi</a>
-                    <a href="/stazzlies" class="app-box pink-app">The Stazzlies</a>
-                    <a href="/Stazzeria" class="app-box red-app">Stazzeria</a>
-                    <a href="/stazzology" class="app-box blue-app">Stazzology</a>
-                    <a href="/stazzex" class="app-box yellow-app">The Stazzex</a>
+                    <a href="/stazzboi" class="app-box yellow-app" id="btn-stazzboi"><span>Stazzboi</span></a>
+                    <a href="/stazzlies" class="app-box pink-app" id="btn-stazzlies"><span>The Stazzlies</span></a>
+                    <a href="/Stazzeria" class="app-box red-app" id="btn-stazzeria"><span>Stazzeria</span></a>
+                    <a href="/stazzology" class="app-box blue-app" id="btn-stazzology"><span>Stazzology</span></a>
+                    <a href="/stazzex" class="app-box yellow-app" id="btn-stazzex"><span>The Stazzex</span></a>
+                    <a href="/beachybird" class="app-box pink-app" id="btn-beachybird"><span>BeachyBird</span></a>
                 </div>
             </div>
 
             <div class="page" id="page-qr">
                 <h2>QR</h2>
                 <a href="/QR" class="qr-zone">
-                    <div>Tap for QR Link</div>
+                    <div style="text-align: center;">Tap for QR Link<br><small style="font-size: 11px; color: #777;">/QR Contents</small></div>
                 </a>
             </div>
 
             <div class="page" id="page-photos">
-                <h2><a href="/photos" style="color: white; text-decoration: none;">Photos</a></h2>
-                <div class="app-grid">
-                    <a href="/stazzboi" class="app-box yellow-app">Stazzboi</a>
-                    <a href="/stazzlies" class="app-box pink-app">Stazzlies</a>
-                    <a href="/Stazzeria" class="app-box red-app">Stazzeria</a>
+                <h2>Photos</h2>
+                <div class="sub-menu">
+                    <a href="/photos" class="menu-item" style="border-color: var(--neon-pink); font-weight: bold;">View Photo Gallery (/photos)</a>
                 </div>
             </div>
 
             <div class="page" id="page-the-stazzex">
                 <h2>The Stazzex</h2>
                 <div class="sub-menu">
+                    <a href="/stazzex" class="menu-item" style="border-color: var(--neon-yellow); font-weight: bold; margin-bottom: 10px;">Go to /stazzex</a>
                     <a href="/stazzism" class="menu-item">Stazzism</a>
                     <a href="/stazzerian" class="menu-item">Stazzerian</a>
                     <a href="/stazzboi" class="menu-item">Stazzboi</a>
