@@ -70,7 +70,7 @@
             height: 100%;
             scroll-snap-align: start;
             box-sizing: border-box;
-            padding: 25px 20px;
+            padding: 15px 20px 25px 20px; /* Margins optimized for high placement */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -91,20 +91,23 @@
             margin-bottom: 15px;
         }
 
-        /* Centered Circular Icon Style (Replacing the wide banner) */
-        .avatar-placeholder {
+        /* NEW: Square Profile Frame Layout */
+        .avatar-placeholder-square {
             width: 90px;
             height: 90px;
-            border-radius: 50%;
+            border-radius: 12px; /* Smooth square corners */
             border: 3px solid var(--neon-yellow);
-            margin: 0 auto 15px auto;
-            background-size: cover;
-            background-position: center;
+            margin: -5px auto 15px auto; /* Slightly raised top layout */
+            background-color: #0c0c0c; /* Black backdrop for contained photos */
+            
+            /* 'contain' ensures your full image fits inside the frame boundaries perfectly */
+            background-size: contain; 
+            background-position: center top;
             background-repeat: no-repeat;
             box-shadow: 0 0 10px rgba(243, 156, 18, 0.4);
             box-sizing: border-box;
             
-            /* Fits the exact image path perfectly as a profile circle */
+            /* Fits the image path */
             background-image: url('Kelvin-Stazzland-Stazzboi.png');
         }
 
@@ -241,7 +244,7 @@
         <div class="swiper-viewport" id="viewport">
             
             <div class="page" id="page-home">
-                <div class="avatar-placeholder"></div>
+                <div class="avatar-placeholder-square"></div>
                 
                 <div class="bio-compact">
                     <strong>Kelvin Stazzland</strong> is a Birthright Stazzerian, content creator, musician, the 50th president of Stazzeria, and founder of Stazzism. He is recognized as one of the most influential figures of the Stazz Universe.
