@@ -1,96 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stazzboi | STAZZBOI.COM</title>
-    
-    <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/cards.css">
-    <link rel="stylesheet" href="../css/animations.css">
-    <link rel="stylesheet" href="../css/responsive.css">
-    
-    <style>
-        /* Contextual page overrides for the Music Identity */
-        .music-title {
-            color: var(--color-text-primary);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 24px;
-        }
-        .discography-matrix {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: var(--grid-gap);
-            margin-top: 24px;
-        }
-        @media (min-width: 768px) {
-            .discography-matrix {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stazzboi — Kelvin Stazzland. Content creator, founder of Stazzboi, Kelvin TV, and Stazzism.">
+  <title>Stazzboi — STAZZBOI.COM</title>
+  <style>
+    :root {
+      --wiki-blue: #36c;
+      --wiki-blue-hover: #2156a6;
+      --wiki-border: #a2a9b1;
+      --wiki-light: #f8f9fa;
+      --wiki-lighter: #fff;
+      --wiki-text: #202122;
+      --wiki-muted: #54595d;
+      --stazz-yellow: #f2c94c;
+      --stazz-dark: #181818;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: #eaecf0;
+      color: var(--wiki-text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    a { color: var(--wiki-blue); text-decoration: none; }
+    a:hover { color: var(--wiki-blue-hover); text-decoration: underline; }
+
+    .phone {
+      width: min(100vw, 1080px);
+      aspect-ratio: 6 / 19;
+      min-height: 100vh;
+      margin: 0 auto;
+      background: var(--wiki-lighter);
+      overflow-x: hidden;
+      overflow-y: auto;
+      box-shadow: 0 0 0 1px #c8ccd1;
+    }
+
+    .topbar {
+      background: var(--stazz-dark);
+      color: #fff;
+      padding: 12px 14px;
+      border-bottom: 4px solid var(--stazz-yellow);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .brand {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+
+    .brand:hover { color: var(--stazz-yellow); text-decoration: none; }
+
+    .tagline {
+      color: #c8ccd1;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      white-space: nowrap;
+    }
+
+    main { padding: 12px; }
+
+    .breadcrumbs {
+      font-size: 11px;
+      color: var(--wiki-muted);
+      margin-bottom: 8px;
+    }
+
+    .title-row {
+      border-bottom: 1px solid var(--wiki-border);
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 29px;
+      line-height: 1.15;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .subtitle {
+      margin: 4px 0 0;
+      color: var(--wiki-muted);
+      font-size: 12px;
+    }
+
+    .hero {
+      border: 1px solid var(--wiki-border);
+      background: var(--wiki-light);
+      padding: 6px;
+      margin: 0 0 14px;
+    }
+
+    .hero-photo {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      background: #d8d9da;
+    }
+
+    .hero-caption {
+      font-size: 10px;
+      color: var(--wiki-muted);
+      padding: 5px 3px 1px;
+    }
+
+    .infobox {
+      border: 1px solid var(--wiki-border);
+      background: var(--wiki-light);
+      margin-bottom: 14px;
+    }
+
+    .infobox-title {
+      background: #eaecf0;
+      border-bottom: 1px solid var(--wiki-border);
+      text-align: center;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 7px 6px;
+    }
+
+    .infobox-subtitle {
+      text-align: center;
+      font-size: 11px;
+      color: var(--wiki-muted);
+      padding: 3px 7px 7px;
+    }
+
+    .infobox table { width: 100%; border-collapse: collapse; }
+    .infobox th, .infobox td { padding: 6px 7px; vertical-align: top; border-top: 1px solid #c8ccd1; }
+    .infobox th { width: 38%; text-align: left; font-weight: 700; }
+
+    .social-list a { display: block; margin-bottom: 2px; }
+
+    .notice {
+      border: 1px solid #a2a9b1;
+      background: #f8f9fa;
+      padding: 8px 10px;
+      font-size: 11px;
+      margin-bottom: 15px;
+    }
+
+    .notice strong { color: #000; }
+
+    .section-title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 21px;
+      font-weight: 400;
+      border-bottom: 1px solid var(--wiki-border);
+      margin: 18px 0 8px;
+      padding-bottom: 3px;
+    }
+
+    p { margin: 0 0 10px; }
+
+    .lead:first-letter { font-size: 26px; }
+
+    .topic-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 10px 0 16px;
+    }
+
+    .topic-card {
+      display: block;
+      min-height: 86px;
+      border: 1px solid var(--wiki-border);
+      background: #fff;
+      padding: 9px;
+      color: var(--wiki-text);
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+
+    .topic-card:hover {
+      text-decoration: none;
+      border-color: var(--wiki-blue);
+      box-shadow: 0 2px 7px rgba(0,0,0,.12);
+      transform: translateY(-1px);
+    }
+
+    .topic-card strong {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      color: var(--wiki-blue);
+      margin-bottom: 3px;
+    }
+
+    .topic-card span {
+      display: block;
+      font-size: 10px;
+      color: var(--wiki-muted);
+      line-height: 1.35;
+    }
+
+    .topic-card.stazzex { border-top: 4px solid var(--stazz-yellow); }
+    .topic-card.stazzeria { border-top: 4px solid #d33; }
+    .topic-card.stazzology { border-top: 4px solid #36c; }
+    .topic-card.stazzlies { border-top: 4px solid #e754b5; }
+    .topic-card.stazzism { border-top: 4px solid #222; }
+
+    .contents {
+      border: 1px solid var(--wiki-border);
+      background: var(--wiki-light);
+      padding: 8px 10px;
+      margin: 12px 0;
+    }
+
+    .contents-title { font-weight: 700; margin-bottom: 5px; }
+    .contents a { display: block; font-size: 12px; padding: 2px 0; }
+
+    .social-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+      margin-top: 8px;
+    }
+
+    .social-button {
+      border: 1px solid var(--wiki-border);
+      background: #fff;
+      padding: 7px 5px;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .footer {
+      margin-top: 20px;
+      border-top: 1px solid var(--wiki-border);
+      background: var(--wiki-light);
+      padding: 12px;
+      font-size: 10px;
+      color: var(--wiki-muted);
+    }
+
+    .footer strong { color: var(--wiki-text); }
+
+    @media (min-width: 700px) {
+      body { padding: 20px 0; }
+      .phone { min-height: 0; border: 1px solid #c8ccd1; }
+      main { padding: 18px; }
+      .hero-photo { aspect-ratio: 16 / 9; }
+      h1 { font-size: 38px; }
+      .topic-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 360px) {
+      main { padding: 9px; }
+      .topic-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 25px; }
+    }
+  </style>
 </head>
 <body>
+  <div class="phone">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="/">STAZZBOI.COM</a>
+        <span class="tagline">The Stazzboi Encyclopedia</span>
+      </div>
+    </header>
 
-    <div class="app-container">
-        
-        <header class="app-header">
-            <div class="header-container">
-                <a href="/" class="header-title">STAZZBOI.COM</a>
-                <p class="header-tagline">Official Music Terminal</p>
-            </div>
-        </header>
+    <main>
+      <div class="breadcrumbs"><a href="/">Home</a> &nbsp;›&nbsp; Stazzboi</div>
 
-        <main class="main-content section animate-fade-in">
-            
-            <h2 class="music-title">Stazzboi // Audio & Discography</h2>
-            
-            <div class="stazz-card">
-                <div class="card-header">
-                    <h3 class="card-title">The Sonic Persona</h3>
-                    <span class="stx-badge">STX #0003</span>
-                </div>
-                <div class="card-body">
-                    <p>The core rap identity and musical manifestation of Kelvin Stazzland. Driving distinct Stazzerian rhythms, localized culture, and official streaming releases directly out of the ecosystem framework.</p>
-                </div>
-            </div>
+      <div class="title-row">
+        <h1>Stazzboi</h1>
+        <p class="subtitle">Kelvin Stazzland • Content Creator • Stazzboi</p>
+      </div>
 
-            <section class="discography-matrix">
-                
-                <div class="stazz-card">
-                    <div class="card-header">
-                        <h4 class="card-title">Latest Drops</h4>
-                    </div>
-                    <div class="card-body">
-                        <p>Stream monitoring segments, upcoming track arrangements, and catalog indices are currently mapping directly to primary platform distribution pipelines.</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="stx-badge" style="color: var(--color-link);">Streaming Terminal</span>
-                    </div>
-                </div>
+      <figure class="hero">
+        <img class="hero-photo" src="../placeholder.png" alt="Stazzboi hero photo — placeholder.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div style="display:none; aspect-ratio:4/3; background:#d8d9da; align-items:center; justify-content:center; text-align:center; padding:20px; color:#54595d; font-size:12px;">Hero photo: placeholder.png</div>
+        <figcaption class="hero-caption">Stazzboi — official profile image.</figcaption>
+      </figure>
 
-                <div class="stazz-card">
-                    <div class="card-header">
-                        <h4 class="card-title">Ecosystem Distribution</h4>
-                    </div>
-                    <div class="card-body">
-                        <p>All music content is cataloged via canonical parameters inside the knowledge index, keeping the discography fully interconnected with the narrative layer.</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="stx-badge">Verified Catalog</span>
-                    </div>
-                </div>
+      <aside class="infobox">
+        <div class="infobox-title">Stazzboi</div>
+        <div class="infobox-subtitle">Kelvin Stazzland</div>
+        <table>
+          <tr><th>Born</th><td>09-15-1998</td></tr>
+          <tr><th>Occupation</th><td>Content Creator</td></tr>
+          <tr><th>Years active</th><td>2014–present</td></tr>
+          <tr><th>Known for</th><td>Stazzboi (brand)<br>Kelvin TV (series)<br>Stazzism (philosophy)</td></tr>
+          <tr><th>YouTube</th><td class="social-list"><a href="https://youtube.com/@stazzboi?si=vdsL2nfHh-ivWv2R" target="_blank" rel="noopener">@Stazzboi</a></td></tr>
+          <tr><th>Facebook</th><td class="social-list"><a href="https://www.facebook.com/StazzboiFB?mibextid=wwXIfr" target="_blank" rel="noopener">@Stazzboi</a></td></tr>
+          <tr><th>Instagram</th><td class="social-list"><a href="https://www.instagram.com/stazzboi?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">@Stazzboi</a></td></tr>
+          <tr><th>TikTok</th><td class="social-list"><a href="https://www.tiktok.com/@stazzboi?_r=1&_t=ZP-98pov85Irkc" target="_blank" rel="noopener">@Stazzboi</a></td></tr>
+        </table>
+      </aside>
 
-            </section>
+      <div class="notice"><strong>STAZZBOI.COM</strong> is the Stazzboi-centered reference page and gateway to the wider Stazz Universe. The sections below replace the traditional biographical navigation with the principal Stazzex domains.</div>
 
-        </main>
-    </div>
+      <div class="contents">
+        <div class="contents-title">Contents</div>
+        <a href="#stazzex">1. The Stazzex</a>
+        <a href="#stazzeria">2. Stazzeria</a>
+        <a href="#stazzology">3. Stazzology</a>
+        <a href="#stazzlies">4. The Stazzlies</a>
+        <a href="#stazzism">5. Stazzism</a>
+      </div>
 
-    <script src="../js/app.js"></script>
+      <section id="stazzex">
+        <h2 class="section-title">The Stazzex</h2>
+        <p class="lead">The Stazzex is the index and archival framework of the Stazz Universe, organizing its terminology, people, roles, concepts, institutions, and cultural references.</p>
+        <a class="topic-card stazzex" href="/stazzex">
+          <strong>Explore The Stazzex →</strong>
+          <span>Open the dedicated Stazzex index at /stazzex.</span>
+        </a>
+      </section>
+
+      <section id="stazzeria">
+        <h2 class="section-title">Stazzeria</h2>
+        <p>Stazzeria is the digital and physical collective represented throughout the Stazz Universe. Its pages document its identity, structure, history, institutions, and people.</p>
+        <a class="topic-card stazzeria" href="/stazzeria">
+          <strong>Explore Stazzeria →</strong>
+          <span>Open the Stazzeria section at /stazzeria.</span>
+        </a>
+      </section>
+
+      <section id="stazzology">
+        <h2 class="section-title">Stazzology</h2>
+        <p>Stazzology is the gaming and competitive entertainment branch of the Stazz ecosystem, including events, teams, tournaments, and gaming culture.</p>
+        <a class="topic-card stazzology" href="/stazzology">
+          <strong>Explore Stazzology →</strong>
+          <span>Open the Stazzology section at /stazzology.</span>
+        </a>
+      </section>
+
+      <section id="stazzlies">
+        <h2 class="section-title">The Stazzlies</h2>
+        <p>The Stazzlies is a dedicated Stazz Universe category and community identity with its own people, culture, references, and associated material.</p>
+        <a class="topic-card stazzlies" href="/stazzlies">
+          <strong>Explore The Stazzlies →</strong>
+          <span>Open the Stazzlies section at /stazzlies.</span>
+        </a>
+      </section>
+
+      <section id="stazzism">
+        <h2 class="section-title">Stazzism</h2>
+        <p>Stazzism is the philosophy associated with Stazzboi and the Stazz Universe. It provides a conceptual framework for action, sovereignty, order, continuity, and legacy.</p>
+        <a class="topic-card stazzism" href="/stazzism">
+          <strong>Explore Stazzism →</strong>
+          <span>Open the Stazzism section at /stazzism.</span>
+        </a>
+      </section>
+
+      <section>
+        <h2 class="section-title">Social media</h2>
+        <div class="social-buttons">
+          <a class="social-button" href="https://youtube.com/@stazzboi?si=vdsL2nfHh-ivWv2R" target="_blank" rel="noopener">YouTube</a>
+          <a class="social-button" href="https://www.facebook.com/StazzboiFB?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
+          <a class="social-button" href="https://www.instagram.com/stazzboi?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a>
+          <a class="social-button" href="https://www.tiktok.com/@stazzboi?_r=1&_t=ZP-98pov85Irkc" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <strong>STAZZBOI.COM</strong><br>
+      Stazzboi • Kelvin Stazzland • The Stazz Universe<br>
+      This page is designed as a Wikipedia-inspired reference interface for the Stazzboi website.
+    </footer>
+  </div>
 </body>
 </html>
