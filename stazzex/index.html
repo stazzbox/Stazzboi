@@ -1,129 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Stazzex Index | STAZZBOI.COM</title>
-    
-    <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/cards.css">
-    <link rel="stylesheet" href="../css/animations.css">
-    <link rel="stylesheet" href="../css/responsive.css">
-    
-    <style>
-        /* Contextual page overrides for the Stazzex Matrix */
-        .index-title {
-            color: var(--color-accent-neon);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 24px;
-        }
-        .stazzex-table-wrapper {
-            background-color: var(--color-bg-card);
-            border-radius: var(--border-radius-tile);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            overflow-x: auto;
-            margin-top: 24px;
-        }
-        .stazzex-table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-            font-size: 0.95rem;
-        }
-        .stazzex-table th, .stazzex-table td {
-            padding: 16px 24px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .stazzex-table th {
-            font-weight: var(--font-weight-bold);
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 0.05em;
-            color: var(--color-text-secondary);
-            background-color: rgba(0, 0, 0, 0.2);
-        }
-        .stazzex-table tr:last-child td {
-            border-bottom: none;
-        }
-        .stazzex-table tr:hover td {
-            background-color: rgba(255, 255, 255, 0.01);
-        }
-    </style>
-</head>
-<body>
-
-    <div class="app-container">
-        
-        <header class="app-header">
-            <div class="header-container">
-                <a href="/" class="header-title">STAZZBOI.COM</a>
-                <p class="header-tagline">Official Stazzerian Index</p>
-            </div>
-        </header>
-
-        <main class="main-content section animate-fade-in">
-            
-            <h2 class="index-title">The Stazzex // Core Canonical Index</h2>
-            
-            <div class="stazz-card">
-                <div class="card-body">
-                    <p>The system directory documenting all registered people, titles, terms, projects, products, and operational definitions within the ecosystem. Each validated item receives a permanent global serial assignment.</p>
-                </div>
-            </div>
-
-            <div class="stazzex-table-wrapper">
-                <table class="stazzex-table">
-                    <thead>
-                        <tr>
-                            <th>Serial ID</th>
-                            <th>Entity Name</th>
-                            <th>Classification</th>
-                            <th>Canonical Route</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a href="/stazzex" class="stx-badge">STX #0001</a></td>
-                            <td style="color: var(--color-accent-neon);">The Stazzex Baseline</td>
-                            <td>Index Registry</td>
-                            <td><code>/stazzex</code></td>
-                        </tr>
-                        <tr>
-                            <td><a href="/stazzex" class="stx-badge">STX #0002</a></td>
-                            <td style="color: var(--color-accent-neon);">Kelvin Stazzland</td>
-                            <td>Executive / Individual</td>
-                            <td><code>/kelvin</code></td>
-                        </tr>
-                        <tr>
-                            <td><a href="/stazzex" class="stx-badge">STX #0003</a></td>
-                            <td>Stazzboi</td>
-                            <td>Music Persona</td>
-                            <td><code>/stazzboi</code></td>
-                        </tr>
-                        <tr>
-                            <td><a href="/stazzex" class="stx-badge">STX #0004</a></td>
-                            <td>The Khamelion</td>
-                            <td>Creator Persona</td>
-                            <td><code>/khamelion</code></td>
-                        </tr>
-                        <tr>
-                            <td><a href="/stazzex" class="stx-badge">STX #0005</a></td>
-                            <td style="color: var(--color-accent-neon);">Stazzeria Framework</td>
-                            <td>Cultural Ecosystem</td>
-                            <td><code>/Stazzeria</code></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-        </main>
-    </div>
-
-    <script src="../js/app.js"></script>
-</body>
-</html>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Stazzex | Stazzian Index | STAZZBOI.COM</title>
+<style>
+:root{--bg:#080a0d;--card:#11151a;--card2:#171c22;--line:#27303a;--text:#f4f6f8;--muted:#9ba6b2;--yellow:#f2c94c;--blue:#5aa9ff;--green:#65d68b}*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#07090c,#10151b);color:var(--text);font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}.app{width:min(100%,1080px);margin:auto;min-height:100vh}.header{position:sticky;top:0;z-index:10;background:rgba(8,10,13,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:14px}.brand{color:#fff;text-decoration:none;font-weight:900;font-size:18px;letter-spacing:.04em}.brand span{color:var(--yellow)}.tag{display:block;color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.14em;margin-top:2px}.main{padding:16px}.hero{border:1px solid var(--line);background:linear-gradient(135deg,#151b22,#0d1116);border-radius:18px;padding:18px;margin-bottom:18px}.eyebrow{color:var(--yellow);font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.hero h1{font-size:30px;margin:5px 0}.hero p{color:var(--muted);margin:0}.architecture{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}.pill{border:1px solid var(--line);background:#0b0f14;border-radius:999px;padding:5px 9px;font-size:10px;color:var(--muted)}.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--card)}table{width:100%;border-collapse:collapse;min-width:680px}th,td{padding:11px 12px;border-bottom:1px solid var(--line);text-align:left}th{font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);background:#0c1015}tr:hover td{background:#171d24}.stx{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--yellow);font-weight:800;white-space:nowrap}.term{color:#fff;font-weight:700;text-decoration:none}.term:hover{color:var(--yellow)}.class{color:var(--muted);font-size:11px}.section td{background:#0c1116;color:var(--yellow);font-weight:900;text-transform:uppercase;letter-spacing:.1em;font-size:10px}.footer{padding:22px 16px;color:var(--muted);font-size:10px;text-align:center}
+</style></head><body><div class="app"><header class="header"><a class="brand" href="/">Stazzboi.com</a><span class="tag">Powered by the STAZZEX • Stazzian Index</span></header><main class="main"><section class="hero"><div class="eyebrow">THE STAZZERIAN INDEX</div><h1>The Stazzex</h1><p>Master canonical database of Stazzian language, identity, society, doctrine, governance, citizenship, culture, history, gaming, creative media, and lore.</p><div class="architecture"><span class="pill">STAZZ → alignment</span><span class="pill">STAZZERIA → nation</span><span class="pill">STAZZIAN → language</span><span class="pill">STAZZISM → philosophy</span><span class="pill">STAZZATION → transformation</span></div></section><div class="tablewrap"><table><thead><tr><th>STX</th><th>Term</th><th>Classification</th><th>Status</th></tr></thead><tbody>
+<tr class="section"><td colspan="4">I. Stazzian Language</td></tr>
+<tr><td class="stx">STX #0001</td><td><a class="term" href="/stazzex/entries/stazz.html">Stazz</a></td><td class="class">Language / Core Concept</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0002</td><td><a class="term" href="/stazzex/entries/stazzing.html">Stazzing</a></td><td class="class">Verb / Action</td><td>Definition open</td></tr>
+<tr><td class="stx">STX #0003</td><td><a class="term" href="/stazzex/entries/stazzed.html">Stazzed</a></td><td class="class">State / Adjective</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0004</td><td><a class="term" href="/stazzex/entries/stazzate.html">Stazzate</a></td><td class="class">Ongoing Action</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0005</td><td><a class="term" href="/stazzex/entries/stazzation.html">Stazzation</a></td><td class="class">Transformation Mechanism</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0006</td><td><a class="term" href="/stazzex/entries/stazzian.html">Stazzian</a></td><td class="class">Language</td><td>Canonical</td></tr>
+<tr class="section"><td colspan="4">II. Stazzeria & Identity</td></tr>
+<tr><td class="stx">STX #0007</td><td><a class="term" href="/stazzex/entries/stazzeria.html">Stazzeria</a></td><td class="class">Nation</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0008</td><td><a class="term" href="/stazzex/entries/stazzerian.html">Stazzerian</a></td><td class="class">Identity / Adjective</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0009</td><td><a class="term" href="/stazzex/entries/stazzerians.html">Stazzerians</a></td><td class="class">People</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0010</td><td><a class="term" href="/stazzex/entries/stazzboi.html">Stazzboi</a></td><td class="class">Persona / Leader</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0011</td><td><a class="term" href="/stazzex/entries/stazzland.html">Stazzland</a></td><td class="class">Family / Lineage</td><td>Definition open</td></tr>
+<tr class="section"><td colspan="4">III. Society & Culture</td></tr>
+<tr><td class="stx">STX #0012</td><td><a class="term" href="/stazzex/entries/stazzsociety.html">STAZZsociety</a></td><td class="class">Polyfunctional Lexeme</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0013</td><td><a class="term" href="/stazzex/entries/stazzism.html">Stazzism</a></td><td class="class">Philosophy / Doctrine</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0014</td><td><a class="term" href="/stazzex/entries/stazzist.html">Stazzist</a></td><td class="class">Adherent / Adjective</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0015</td><td><a class="term" href="/stazzex/entries/stazzlies.html">Stazzlies</a></td><td class="class">Society / Category</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0016</td><td><a class="term" href="/stazzex/entries/stazzerian-tribalism.html">Stazzerian Tribalism</a></td><td class="class">Society / Culture</td><td>Canonical</td></tr>
+<tr class="section"><td colspan="4">IV. The Stazzex & Knowledge</td></tr>
+<tr><td class="stx">STX #0017</td><td><a class="term" href="/stazzex">The Stazzex</a></td><td class="class">Index / Archive</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0018</td><td><a class="term" href="/stazzex/entries/stazzerian-index.html">Stazzerian Index</a></td><td class="class">Archive Function</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0019</td><td><a class="term" href="/stazzex/entries/stazzian-lexicon.html">Stazzian Lexicon</a></td><td class="class">Language / Knowledge</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0020</td><td><a class="term" href="/stazzex/entries/stazzian-vocabulary.html">Stazzian Vocabulary</a></td><td class="class">Language / Knowledge</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0021</td><td><a class="term" href="/stazzex/entries/stazzerian-framework.html">Stazzerian Framework</a></td><td class="class">Framework</td><td>Canonical</td></tr>
+<tr class="section"><td colspan="4">V. Stazzism & Doctrine</td></tr>
+<tr><td class="stx">STX #0022</td><td><a class="term" href="/stazzex/entries/action-over-knowledge.html">Action Over Knowledge</a></td><td class="class">Principle</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0023</td><td><a class="term" href="/stazzex/entries/knowledge-without-action.html">“Knowledge without action changes nothing.”</a></td><td class="class">Maxim</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0024</td><td><a class="term" href="/stazzex/entries/if-the-answer-is-obvious.html">“If the answer is obvious, implement it.”</a></td><td class="class">Principle</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0025</td><td><a class="term" href="/stazzex/entries/stazzist-doctrine.html">Stazzist Doctrine</a></td><td class="class">Doctrine</td><td>Definition open</td></tr>
+<tr class="section"><td colspan="4">VI. Stazzerian Executive Roles</td></tr>
+<tr><td class="stx">STX #0026</td><td><a class="term" href="/stazzex/entries/president.html">Stazzerian President</a></td><td class="class">Executive Role</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0027</td><td><a class="term" href="/VP">Stazzerian Vice President</a></td><td class="class">Executive Role</td><td>Canonical • /VP</td></tr>
+<tr><td class="stx">STX #0028</td><td><a class="term" href="/stazzex/entries/monarch.html">Stazzerian Monarch</a></td><td class="class">Executive Role</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0029</td><td><a class="term" href="/stazzex/entries/advisor.html">Stazzerian Advisor</a></td><td class="class">Executive Role</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0030</td><td><a class="term" href="/stazzex/entries/war-general.html">Stazzerian War General</a></td><td class="class">Executive Role</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0031</td><td><a class="term" href="/stazzex/entries/mediator.html">Stazzerian Mediator</a></td><td class="class">Executive Role</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0032</td><td><a class="term" href="/stazzex/entries/first-lady.html">First Lady of Stazzeria</a></td><td class="class">Executive Counterpart</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0033</td><td><a class="term" href="/stazzex/entries/second-lady.html">Second Lady of Stazzeria</a></td><td class="class">Executive Counterpart</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0034</td><td><a class="term" href="/stazzex/entries/first-gentleman.html">First Gentleman of Stazzeria</a></td><td class="class">Executive Counterpart</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0035</td><td><a class="term" href="/stazzex/entries/second-gentleman.html">Second Gentleman of Stazzeria</a></td><td class="class">Executive Counterpart</td><td>Canonical</td></tr>
+<tr class="section"><td colspan="4">VII. Other Stazzerian Institutions</td></tr>
+<tr><td class="stx">STX #0036</td><td><a class="term" href="/stazzex/entries/stazzerian-presidential-collectivism.html">Stazzerian Presidential Collectivism</a></td><td class="class">Governance</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0037</td><td><a class="term" href="/stazzex/entries/stazzerian-governance.html">Stazzerian Governance</a></td><td class="class">Government</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0038</td><td><a class="term" href="/stazzex/entries/stazzerian-assembly.html">Stazzerian Assembly</a></td><td class="class">Institution</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0039</td><td><a class="term" href="/stazzex/entries/stazziciary.html">Stazziciary</a></td><td class="class">Judicial Institution</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0040</td><td><a class="term" href="/stazzex/entries/ssac.html">Stazziciary Authoritarian Court (SSAC)</a></td><td class="class">Court</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0041</td><td><a class="term" href="/stazzex/entries/patrols.html">Patrols</a></td><td class="class">Institution / Security</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0042</td><td><a class="term" href="/stazzex/entries/patrol-1.html">Patrol 1</a></td><td class="class">Institution</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0043</td><td><a class="term" href="/stazzex/entries/kiza-co.html">Kiza Co</a></td><td class="class">Government Affairs</td><td>Canonical</td></tr>
+<tr class="section"><td colspan="4">VIII. Citizenship</td></tr>
+<tr><td class="stx">STX #0044</td><td><a class="term" href="/stazzex/entries/birthright.html">Birthright</a></td><td class="class">Citizenship</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0045</td><td><a class="term" href="/stazzex/entries/direct-lineage.html">Direct Lineage</a></td><td class="class">Citizenship Basis</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0046</td><td><a class="term" href="/stazzex/entries/adopted.html">Adopted</a></td><td class="class">Citizenship</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0047</td><td><a class="term" href="/stazzex/entries/endorsed.html">Endorsed</a></td><td class="class">Citizenship Mechanism</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0048</td><td><a class="term" href="/stazzex/entries/supporter.html">Supporter</a></td><td class="class">Non-citizen Support</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0049</td><td><a class="term" href="/stazzex/entries/citizen.html">Citizen</a></td><td class="class">Membership</td><td>Canonical</td></tr>
+<tr class="section"><td colspan="4">IX. Stazzboi Cultural Concepts</td></tr>
+<tr><td class="stx">STX #0050</td><td><a class="term" href="/stazzex/entries/khamelion.html">The Khamelion</a></td><td class="class">Identity / Cultural Concept</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0051</td><td><a class="term" href="/stazzex/entries/khamelion-pose.html">Khamelion Pose</a></td><td class="class">Visual Concept</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0052</td><td><a class="term" href="/stazzex/entries/stazzian-estate.html">Stazzian Estate</a></td><td class="class">Presidential Residence</td><td>Canonical</td></tr>
+<tr class="section"><td colspan="4">X. History & Lore</td></tr>
+<tr><td class="stx">STX #0053</td><td><a class="term" href="/stazzex/entries/zitsconflict.html">Zits Conflict</a></td><td class="class">History / Lore</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0054</td><td><a class="term" href="/stazzex/entries/stazzerian-conflict.html">Stazzerian Conflict</a></td><td class="class">History / Lore</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0055</td><td><a class="term" href="/stazzex/entries/mm-pellets.html">M&amp;M Pellets</a></td><td class="class">History / Lore</td><td>Canonical</td></tr>
+<tr class="section"><td colspan="4">XI. STAZZOLOGY</td></tr>
+<tr><td class="stx">STX #0056</td><td><a class="term" href="/stazzex/entries/stazzology.html">STAZZOLOGY</a></td><td class="class">Gaming / Esports</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0057</td><td><a class="term" href="/stazzex/entries/hitbox.html">Hitbox</a></td><td class="class">Season Starter</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0058</td><td><a class="term" href="/stazzex/entries/showdown.html">Showdown</a></td><td class="class">Tournament Stage</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0059</td><td><a class="term" href="/stazzex/entries/takeover.html">Takeover</a></td><td class="class">Championship Stage</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0060</td><td><a class="term" href="/stazzex/entries/wargames.html">WarGames</a></td><td class="class">Open-Roster Competition</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0061</td><td><a class="term" href="/stazzex/entries/against-all-odds.html">Against All Odds</a></td><td class="class">Final PPV / Event</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0062</td><td><a class="term" href="/stazzex/entries/stazzex-series-finals.html">Stazzex Series Finals</a></td><td class="class">Championship Event</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0063</td><td><a class="term" href="/stazzex/entries/frost.html">Frost</a></td><td class="class">STAZZOLOGY Team</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0064</td><td><a class="term" href="/stazzex/entries/valor.html">Valor</a></td><td class="class">STAZZOLOGY Team</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0065</td><td><a class="term" href="/stazzex/entries/kingdom.html">Kingdom</a></td><td class="class">STAZZOLOGY Team</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0066</td><td><a class="term" href="/stazzex/entries/parabox.html">Parabox</a></td><td class="class">STAZZOLOGY Team</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0067</td><td><a class="term" href="/stazzex/entries/kazik.html">Kazik</a></td><td class="class">STAZZOLOGY Team</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0068</td><td><a class="term" href="/stazzex/entries/integrity.html">Integrity</a></td><td class="class">STAZZOLOGY Team</td><td>Canonical</td></tr>
+<tr class="section"><td colspan="4">XII. Creative & Media</td></tr>
+<tr><td class="stx">STX #0069</td><td><a class="term" href="/stazzex/entries/stazzert-comics.html">Stazzert Comics (ASC)</a></td><td class="class">Comics / Manga / Production</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0070</td><td><a class="term" href="/stazzex/entries/stazzerian-academy.html">Stazzerian Academy</a></td><td class="class">Education / Content Review</td><td>Canonical</td></tr>
+<tr><td class="stx">STX #0071</td><td><a class="term" href="/stazzex/entries/stazzboi-tv.html">Stazzboi TV</a></td><td class="class">Media / Content Platform</td><td>Canonical</td></tr>
+</tbody></table></div></main><footer class="footer">STAZZBOI.COM • The Stazzex • 71 registered master terms • STX #0001–STX #0071</footer></div></body></html>
