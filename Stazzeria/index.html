@@ -1,323 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stazzeria // Executive Cabinet Portal</title>
-
-    <meta name="description" content="Official Department of Stazz executive cabinet registry. Access national leadership records, operational clearance paths, and cabinet data portfolios.">
-    <meta name="keywords" content="Stazzeria, Department of Stazz, Kelvin Stazzland, The Khamelion, Stazzboi, Isaac Ochoa, Leann Stazzland, Stazz Universe, Cabinet Portal, The Stazzex">
-    <meta name="robots" content="index, follow">
-    
-    <meta property="og:title" content="STAZZERIA // EXECUTIVE AUTHORITY">
-    <meta property="og:description" content="Official cabinet logistics, national hierarchy matrices, and operational data paths.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://stazzboi.com/Stazzeria">
-
-    <style>
-        :root {
-            --bg-main: #09090b; 
-            --bg-card: #141419; 
-            --border-color: #27272a;
-            --text-main: #ffffff;
-            --text-muted: #71717a;
-            --accent-gold: #f59e0b; 
-            --glow-gold: rgba(245, 158, 11, 0.15);
-            --border-radius: 20px;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-main);
-            color: var(--text-main);
-            display: flex;
-            justify-content: center;
-            min-height: 100vh;
-        }
-
-        /* Fixed App Container Architecture to Prevent Screen Drops */
-        .app-container {
-            width: 100%;
-            max-width: 440px;
-            background-color: var(--bg-main);
-            padding: 20px 20px 60px 20px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Top Search Header */
-        .app-header {
-            padding: 10px 0 20px 0;
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 24px;
-        }
-
-        .search-bar {
-            width: 100%;
-            padding: 14px 20px;
-            border-radius: 14px;
-            border: 1px solid var(--border-color);
-            background: var(--bg-card);
-            font-size: 15px;
-            color: var(--text-main);
-            outline: none;
-        }
-
-        .search-subtext {
-            text-align: center;
-            font-size: 11px;
-            color: var(--text-muted);
-            margin-top: 6px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .search-subtext a {
-            color: var(--accent-gold);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        /* Hero Header */
-        .brand-hero {
-            padding: 10px 0 24px 0;
-            border-bottom: 1px dashed var(--border-color);
-            margin-bottom: 24px;
-            text-align: center;
-        }
-
-        .brand-hero img.logo {
-            width: 70px;
-            height: auto;
-            margin-bottom: 14px;
-        }
-
-        .section-tag {
-            font-family: monospace;
-            font-size: 11px;
-            color: var(--accent-gold);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            display: block;
-            margin-bottom: 6px;
-        }
-
-        .brand-hero h1 {
-            font-size: 26px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            margin-bottom: 8px;
-        }
-
-        .brand-hero p {
-            font-size: 14px;
-            line-height: 1.5;
-            color: #a1a1aa;
-        }
-
-        /* Highly Dynamic Grid Block */
-        .two-column-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 14px;
-            margin-bottom: 24px;
-        }
-
-        .app-square {
-            background: var(--bg-card);
-            border-radius: var(--border-radius);
-            aspect-ratio: 1 / 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 12px;
-            text-align: center;
-            border: 1px solid var(--border-color);
-            text-decoration: none;
-            color: var(--text-main);
-            transition: all 0.2s ease;
-        }
-
-        .app-square img {
-            width: 52px;
-            height: 52px;
-            border-radius: 50%; 
-            border: 2px solid var(--border-color);
-            margin-bottom: 8px;
-            object-fit: cover;
-            background: #000;
-        }
-
-        .app-square span {
-            font-size: 13px;
-            font-weight: 700;
-            display: block;
-            margin-bottom: 2px;
-        }
-
-        .app-square p {
-            font-size: 11px;
-            color: var(--text-muted);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            width: 100%;
-        }
-
-        .app-square:hover {
-            border-color: var(--accent-gold);
-            transform: translateY(-2px);
-        }
-
-        /* Classified Styling Overrides */
-        .classified-lock img {
-            filter: brightness(0.4) sepia(1) hue-rotate(-30deg) saturate(3);
-        }
-        .classified-lock:hover {
-            border-color: #ef4444 !important;
-        }
-
-        /* Overview Text Card Blocks */
-        .content-card {
-            background: var(--bg-card);
-            border-radius: var(--border-radius);
-            padding: 20px;
-            margin-bottom: 20px;
-            border: 1px solid var(--border-color);
-        }
-
-        .card-title {
-            font-size: 14px;
-            font-weight: 800;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border-left: 3px solid var(--accent-gold);
-            padding-left: 8px;
-        }
-
-        .card-p {
-            font-size: 14px;
-            line-height: 1.6;
-            color: #d4d4d8;
-        }
-
-        .timeline-pills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 12px;
-        }
-
-        .timeline-pill {
-            background: var(--bg-main);
-            border: 1px solid var(--border-color);
-            padding: 6px 12px;
-            border-radius: 12px;
-            font-size: 11px;
-            font-family: monospace;
-            color: var(--accent-gold);
-        }
-
-        .app-footer {
-            text-align: center;
-            margin-top: auto;
-            padding-top: 20px;
-            font-size: 11px;
-            color: var(--text-muted);
-            font-family: monospace;
-            letter-spacing: 0.5px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Digital Republic of Stazzeria | Department of Stazz | STAZZBOI.COM</title>
+<meta name="description" content="The Digital Republic of Stazzeria, powered by The Stazzex. Explore the Department of Stazz and its offices of national leadership, defense, counsel, monarchy, and state.">
+<meta name="keywords" content="Stazzeria, Digital Republic of Stazzeria, Department of Stazz, The Stazzex, President of Stazzeria, Vice President of Stazzeria, First Lady, Second Lady of Stazzeria, Stazzerian War General, Stazzerian Advisor, Stazzerian Monarch, Head of State">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://stazzboi.com/Stazzeria/">
+<meta property="og:title" content="The Digital Republic of Stazzeria | Department of Stazz">
+<meta property="og:description" content="The Digital Republic of Stazzeria, powered by The Stazzex. Official Department of Stazz leadership directory.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://stazzboi.com/Stazzeria/">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "name":"The Digital Republic of Stazzeria",
+  "headline":"The Digital Republic of Stazzeria | Department of Stazz",
+  "description":"The Digital Republic of Stazzeria, powered by The Stazzex, with the Department of Stazz leadership directory.",
+  "url":"https://stazzboi.com/Stazzeria/",
+  "isPartOf":{"@type":"WebSite","name":"STAZZBOI.COM","url":"https://stazzboi.com/"},
+  "about":{"@type":"Organization","name":"Stazzeria","description":"The Digital Republic of Stazzeria"}
+}
+</script>
+<style>
+:root{--bg-main:#09090b;--bg-card:#141419;--border-color:#27272a;--text-main:#fff;--text-muted:#71717a;--accent-gold:#f59e0b;--border-radius:20px}
+*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+body{background:var(--bg-main);color:var(--text-main);display:flex;justify-content:center;min-height:100vh}
+.app-container{width:100%;max-width:440px;background:var(--bg-main);padding:20px 20px 60px;display:flex;flex-direction:column}
+.app-header{padding:10px 0 20px;border-bottom:1px solid var(--border-color);margin-bottom:24px}
+.search-bar{width:100%;padding:14px 20px;border-radius:14px;border:1px solid var(--border-color);background:var(--bg-card);font-size:15px;color:var(--text-main);outline:none}
+.search-subtext{text-align:center;font-size:11px;color:var(--text-muted);margin-top:6px;text-transform:uppercase;letter-spacing:1px}.search-subtext a{color:var(--accent-gold);text-decoration:none;font-weight:600}
+.brand-hero{padding:10px 0 24px;border-bottom:1px dashed var(--border-color);margin-bottom:24px;text-align:center}.brand-hero img.logo{width:70px;height:auto;margin-bottom:14px}.section-tag{font-family:monospace;font-size:11px;color:var(--accent-gold);letter-spacing:2px;text-transform:uppercase;display:block;margin-bottom:6px}.brand-hero h1{font-size:26px;font-weight:800;letter-spacing:-.5px;margin-bottom:8px}.brand-hero .powered{font-size:13px;color:var(--accent-gold);font-weight:700;margin-bottom:8px}.brand-hero p{font-size:14px;line-height:1.5;color:#a1a1aa}
+.department-heading{font-size:18px;font-weight:800;margin:0 0 14px;padding-left:10px;border-left:3px solid var(--accent-gold)}
+.two-column-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:24px}.app-square{background:var(--bg-card);border-radius:var(--border-radius);aspect-ratio:1/1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px;text-align:center;border:1px solid var(--border-color);text-decoration:none;color:var(--text-main);transition:all .2s ease}.app-square img{width:52px;height:52px;border-radius:50%;border:2px solid var(--border-color);margin-bottom:8px;object-fit:cover;background:#000}.app-square span{font-size:13px;font-weight:700;display:block;margin-bottom:2px}.app-square p{font-size:11px;color:var(--text-muted);width:100%;line-height:1.35}.app-square:hover{border-color:var(--accent-gold);transform:translateY(-2px)}
+.content-card{background:var(--bg-card);border-radius:var(--border-radius);padding:20px;margin-bottom:20px;border:1px solid var(--border-color)}.card-title{font-size:14px;font-weight:800;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px;border-left:3px solid var(--accent-gold);padding-left:8px}.card-p{font-size:14px;line-height:1.6;color:#d4d4d8}.timeline-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.timeline-pill{background:var(--bg-main);border:1px solid var(--border-color);padding:6px 12px;border-radius:12px;font-size:11px;font-family:monospace;color:var(--accent-gold)}.app-footer{text-align:center;margin-top:auto;padding-top:20px;font-size:11px;color:var(--text-muted);font-family:monospace;letter-spacing:.5px}
+@media(max-width:360px){.app-container{padding-left:14px;padding-right:14px}.two-column-grid{gap:10px}.app-square span{font-size:12px}}
+</style>
 </head>
 <body>
-
-    <div class="app-container">
-
-        <header class="app-header">
-            <input type="search" class="search-bar" placeholder="Search cabinet logs..." autocomplete="off">
-            <p class="search-subtext">Powered by <a href="/stazzex">The Stazzex</a></p>
-        </header>
-
-        <main>
-            <section class="brand-hero">
-                <img src="stztriton.png" class="logo" alt="Department of Stazz Logo">
-                <span class="section-tag">[ Executive Node // Cabinet Office ]</span>
-                <h1>Department of Stazz</h1>
-                <p>The primary governing framework and executive leadership division of Stazzeria. Centralized to manage institutional continuity, cultural representation, and national initiatives.</p>
-            </section>
-
-            <nav class="two-column-grid">
-                
-                <a href="https://stazzboi.com/Stazzeria/president" class="app-square">
-                    <img src="Presi.JPEG" alt="President">
-                    <span>President</span>
-                    <p>Kelvin Stazzland</p>
-                </a>
-
-                <a href="https://stazzboi.com/vice-president/" class="app-square">
-                    <img src="vpos.png" alt="Vice President">
-                    <span>Vice President</span>
-                    <p>Isaac Ochoa</p>
-                </a>
-
-                <a href="https://stazzboi.com/1stlady/" class="app-square">
-                    <img src="flos.png" alt="First Lady">
-                    <span>First Lady</span>
-                    <p>Leann Stazzland</p>
-                </a>
-
-                <a href="https://stazzboi.com/Stazzeria/advisor" class="app-square">
-                    <img src="fstazzerianpfp.png" alt="Advisor">
-                    <span>Advisor</span>
-                    <p>Caro (Former VP)</p>
-                </a>
-
-                <a href="https://stazzboi.com/Stazzeria/monarch" class="app-square classified-lock">
-                    <img src="mstazzerianpfp.png" alt="Monarch">
-                    <span style="color: #ef4444;">[ Classified ]</span>
-                    <p>Office of Monarch</p>
-                </a>
-
-                <a href="https://stazzboi.com/war-general" class="app-square">
-                    <img src="mstazzerianpfp.png" alt="War General">
-                    <span>War General</span>
-                    <p>John B.</p>
-                </a>
-
-            </nav>
-
-            <section class="content-card">
-                <h2 class="card-title">Institutional Overview</h2>
-                <p class="card-p">The Department handles centralized planning and oversight vectors across the Stazz Universe, ensuring that public representation, cultural diplomacy, defense coordination, and archival updates remain tightly aligned under executive order.</p>
-            </section>
-
-            <section class="content-card">
-                <h2 class="card-title">System Evolution Logs</h2>
-                <p class="card-p">The framework developed systematically through progressive historical milestones, defining the active roles and responsibilities assigned to each profile card above.</p>
-                <div class="timeline-pills">
-                    <span class="timeline-pill">Formation Era</span>
-                    <span class="timeline-pill">Expansion Era</span>
-                    <span class="timeline-pill">Transition Era</span>
-                    <span class="timeline-pill">Institutional Era</span>
-                </div>
-            </section>
-        </main>
-
-        <footer class="app-footer">
-            <p>FOR THE STAZZIE, BY THE STAZZIE // SECURE ACCESS LOG</p>
-        </footer>
-
-    </div>
-
+<div class="app-container">
+<header class="app-header">
+<input type="search" class="search-bar" placeholder="Search Department of Stazz..." autocomplete="off" aria-label="Search Department of Stazz">
+<p class="search-subtext">Powered by <a href="/stazzex">The Stazzex</a></p>
+</header>
+<main>
+<section class="brand-hero" aria-labelledby="republic-title">
+<img src="stztriton.png" class="logo" alt="Department of Stazz insignia">
+<span class="section-tag">[ Stazzerian Republic // Department of Stazz ]</span>
+<h1 id="republic-title">The Digital Republic of Stazzeria</h1>
+<p class="powered">Powered by the Stazzex</p>
+<p>Stazzeria is the digital and physical collective of the Stazzerian Framework. The Department of Stazz serves as the central directory for the offices, titles, and leadership roles of the Digital Republic of Stazzeria.</p>
+</section>
+<h2 class="department-heading">Department of Stazz</h2>
+<nav class="two-column-grid" aria-label="Department of Stazz offices">
+<a href="https://stazzboi.com/Stazzeria/president" class="app-square"><img src="placeholder.png" alt="President of Stazzeria portrait placeholder"><span>President of Stazzeria</span><p>First Lady</p></a>
+<a href="https://stazzboi.com/vice-president/" class="app-square"><img src="placeholder.png" alt="Vice President of Stazzeria portrait placeholder"><span>Vice President of Stazzeria</span><p>Second Lady of Stazzeria</p></a>
+<a href="https://stazzboi.com/war-general" class="app-square"><img src="placeholder.png" alt="Stazzerian War General portrait placeholder"><span>Stazzerian War General</span><p>Office of War General</p></a>
+<a href="https://stazzboi.com/Stazzeria/advisor" class="app-square"><img src="placeholder.png" alt="Stazzerian Advisor portrait placeholder"><span>Stazzerian Advisor</span><p>Office of the Advisor</p></a>
+<a href="https://stazzboi.com/Stazzeria/monarch" class="app-square"><img src="placeholder.png" alt="Stazzerian Monarch portrait placeholder"><span>Stazzerian Monarch</span><p>Office of Monarch</p></a>
+<a href="https://stazzboi.com/Stazzeria/head-of-state" class="app-square"><img src="placeholder.png" alt="Head of State portrait placeholder"><span>Head of State</span><p>Office of the Head of State</p></a>
+</nav>
+<section class="content-card"><h2 class="card-title">Institutional Overview</h2><p class="card-p">The Department of Stazz organizes the principal offices of Stazzeria and provides a structured public reference for its leadership, institutional roles, national direction, defense, counsel, and continuity.</p></section>
+<section class="content-card"><h2 class="card-title">Stazzerian Framework</h2><p class="card-p">The Stazzex is the official Stazzerian Index and structured reference system for the Stazzerian Framework. This page connects the Department of Stazz with the broader terminology, people, institutions, and historical records documented throughout the Stazzex.</p><div class="timeline-pills"><span class="timeline-pill">Stazzex</span><span class="timeline-pill">Stazzeria</span><span class="timeline-pill">Department of Stazz</span><span class="timeline-pill">Stazzerian Framework</span></div></section>
+</main>
+<footer class="app-footer"><p>THE DIGITAL REPUBLIC OF STAZZERIA // POWERED BY THE STAZZEX</p></footer>
+</div>
 </body>
 </html>
-
-```
