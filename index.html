@@ -6,7 +6,7 @@
 <meta name="description" content="Stazzboi.com powered by the STAZZEX — official Stazzboi reference interface and gateway into the Stazz Universe.">
 <title>Stazzboi.com powered by the STAZZEX</title>
 <style>
-:root{--yellow:#f2c94c;--dark:#181818;--black:#080808;--panel:#fff;--light:#f8f9fa;--text:#202122;--muted:#666;--border:#a2a9b1;--red:#d33;--blue:#36c;--pink:#e754b5}
+:root{--gold:#d6ad42;--gold-hi:#f7df86;--gold-lo:#8f6b20;--dark:#111;--black:#050505;--panel:#101010;--light:#141414;--text:#f5f5f5;--muted:#9b9b9b;--border:#303030;--red:#d33;--blue:#36c;--pink:#e754b5}
 *{box-sizing:border-box}
 html,body{margin:0;width:100%;height:100%;overflow:hidden}
 body{background:var(--black);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--text)}
@@ -20,8 +20,8 @@ a{color:inherit;text-decoration:none}
 .landing-inner{width:min(92%,760px);min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px}
 .landing-brand{font-size:clamp(32px,8vw,70px);font-weight:900;letter-spacing:-.04em;line-height:1}
 .landing-powered{margin-top:12px;font-size:clamp(12px,2.5vw,18px);letter-spacing:.12em;text-transform:uppercase;color:#ddd}
-.landing-powered b{color:var(--yellow)}
-.landing-rule{width:min(440px,70%);height:3px;background:var(--yellow);margin:28px auto}
+.landing-powered b{color:var(--gold-hi)}
+.landing-rule{width:min(440px,70%);height:3px;background:linear-gradient(135deg,var(--gold-hi),var(--gold),var(--gold-lo));margin:28px auto}
 .landing-sub{max-width:600px;color:#aaa;font-size:14px;line-height:1.7}
 .swipe-indicator{margin-top:44px;display:flex;flex-direction:column;align-items:center;gap:8px;color:#fff;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
 .swipe-arrow{color:var(--yellow);font-size:32px;line-height:1;animation:slideRight 1.3s ease-in-out infinite}
@@ -39,11 +39,11 @@ a{color:inherit;text-decoration:none}
 .wiki-title{border-bottom:1px solid var(--border);padding:5px 0 12px;margin-bottom:12px}
 .wiki-title h1{font:400 30px/1.1 Georgia,"Times New Roman",serif;margin:0;color:var(--text)}
 .wiki-title p{margin:5px 0 0;color:var(--muted);font-size:12px}
-.hero{border:1px solid var(--border);background:var(--light);padding:6px;margin:0 0 14px}
+.hero{border:1px solid var(--border);background:var(--panel);padding:6px;margin:0 0 14px}
 .hero img{display:block;width:100%;height:auto;max-height:680px;object-fit:cover;object-position:center}
-.caption{font-size:10px;color:var(--muted);padding:5px 3px 0}
-.infobox{border:1px solid var(--border);background:var(--light);margin-bottom:14px}
-.ibox-title{background:#eaecf0;border-bottom:1px solid var(--border);text-align:center;font-size:18px;font-weight:700;padding:7px}
+.stx-term{color:var(--gold-hi);font-weight:800}.caption{font-size:10px;color:var(--muted);padding:5px 3px 0}
+.infobox{border:1px solid var(--border);background:var(--panel);margin-bottom:14px}
+.ibox-title{background:#171717;border-bottom:1px solid var(--border);text-align:center;font-size:18px;font-weight:700;padding:7px}
 .ibox-sub{text-align:center;color:var(--muted);font-size:11px;padding:3px 7px 7px}
 .infobox table{width:100%;border-collapse:collapse}
 .infobox th,.infobox td{padding:6px 7px;vertical-align:top;border-top:1px solid #c8ccd1;font-size:12px}
@@ -51,20 +51,20 @@ a{color:inherit;text-decoration:none}
 .section-title{font:400 22px/1.2 Georgia,"Times New Roman",serif;border-bottom:1px solid var(--border);margin:20px 0 9px;padding-bottom:4px}
 .wiki-text{font-size:14px;line-height:1.65}
 .wiki-text p{margin:0 0 12px}
-.contents{border:1px solid var(--border);background:var(--light);padding:9px 11px;margin:14px 0}
+.contents{border:1px solid var(--border);background:var(--panel);padding:9px 11px;margin:14px 0}
 .contents-title{font-weight:800;margin-bottom:5px}
-.contents a{display:block;font-size:12px;padding:3px 0;color:var(--blue)}
+.contents a{display:block;font-size:12px;padding:3px 0;color:var(--gold-hi)}
 .media-frame{border:1px solid var(--border);background:var(--yellow);padding:9px;margin:16px 0}
 .video-shell{background:#000;aspect-ratio:16/9;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .video-shell video{width:100%;height:100%;display:block;object-fit:cover;background:#000}
 .video-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:clamp(20px,6vw,42px);font-weight:900;pointer-events:none}
-.video-status{font-size:10px;color:#333;background:var(--yellow);padding:5px 4px 0;text-align:center}
-.video-credit{font-size:9px;color:#555;background:#fff;padding:5px 3px 0}
+.video-status{font-size:10px;color:#111;background:linear-gradient(135deg,var(--gold-hi),var(--gold),var(--gold-lo));padding:5px 4px 0;text-align:center}
+.video-credit{font-size:9px;color:#aaa;background:#101010;padding:5px 3px 0}
 .directs-header{background:var(--dark);color:#fff;border-bottom:4px solid var(--yellow);padding:20px 16px;margin:-18px -14px 18px}
 .directs-header h1{margin:0;font:400 30px/1.1 Georgia,"Times New Roman",serif}
 .directs-header p{margin:7px 0 0;color:#aaa;font-size:12px}
 .direct-list{display:grid;gap:10px}
-.direct-card{display:flex;align-items:center;gap:12px;border:1px solid var(--border);background:#fff;padding:11px;color:var(--text);transition:.15s}
+.direct-card{display:flex;align-items:center;gap:12px;border:1px solid var(--border);background:#101010;padding:11px;color:var(--text);transition:.15s}
 .direct-card:hover{border-color:var(--yellow);box-shadow:0 3px 12px #0002;text-decoration:none}
 .direct-icon{width:48px;height:48px;flex:0 0 48px;border-radius:7px;background:var(--yellow);display:flex;align-items:center;justify-content:center;overflow:hidden;color:#111;font-weight:900}
 .direct-icon img{width:100%;height:100%;object-fit:cover}
@@ -111,21 +111,21 @@ a{color:inherit;text-decoration:none}
 </table></aside>
 
 <div class="wiki-text">
-<p><strong>Stazzboi</strong> is the creator identity and media brand of Kelvin Stazzland. The name connects the public-facing creator with the wider Stazz Universe, including <strong>Stazzeria</strong>, <strong>Stazzology</strong>, <strong>The Stazzlies</strong>, and the archival reference system known as <strong>The Stazzex</strong>.</p>
+<p><strong class="stx-term">Stazzboi</strong> is the creator identity and media brand of Kelvin Stazzland. The name connects the public-facing creator with the wider Stazz Universe, including <strong class="stx-term">Stazzeria</strong>, <strong class="stx-term">Stazzology</strong>, <strong class="stx-term">The Stazzlies</strong>, and the archival reference system known as <strong class="stx-term">The Stazzex</strong>.</p>
 <p>The Stazzex provides the structured reference layer for the Stazz Universe, documenting its terminology, people, roles, institutions, history, culture, and related concepts.</p>
 </div>
 
 <div class="contents"><div class="contents-title">Contents</div><a href="#identity">1. Identity</a><a href="#framework">2. Stazzerian Framework</a><a href="#media">3. Featured Media</a><a href="#branches">4. Major Branches</a></div>
 
-<section id="identity"><h2 class="section-title">Identity</h2><div class="wiki-text"><p><strong>Kelvin Stazzland</strong> is the person behind the Stazzboi creator identity. <strong>Stazzboi</strong> functions as the public brand and creator persona, while Stazzeria represents the world, nation, collective, and cultural framework developed around it.</p></div></section>
+<section id="identity"><h2 class="section-title">Identity</h2><div class="wiki-text"><p><strong>Kelvin Stazzland</strong> is the person behind the Stazzboi creator identity. <strong class="stx-term">Stazzboi</strong> functions as the public brand and creator persona, while <strong class="stx-term">Stazzeria</strong> represents the world, nation, collective, and cultural framework developed around it.</p></div></section>
 
-<section id="framework"><h2 class="section-title">The Stazzerian Framework</h2><div class="wiki-text"><p>The Stazzerian Framework is the connected system surrounding Stazzboi, Stazzeria, Stazzian culture, and The Stazzex. It provides the terminology and relationships used throughout the site.</p></div></section>
+<section id="framework"><h2 class="section-title">The Stazzerian Framework</h2><div class="wiki-text"><p>The Stazzerian Framework is the connected system surrounding <span class="stx-term">Stazzboi</span>, <span class="stx-term">Stazzeria</span>, Stazzian culture, and <span class="stx-term">The Stazzex</span>. It provides the terminology and relationships used throughout the site.</p></div></section>
 
 <section id="media"><h2 class="section-title">Featured Media</h2>
 <div class="media-frame"><div class="video-shell"><video id="featuredVideo" autoplay muted playsinline controls preload="metadata"></video><div id="videoPlaceholder" class="video-placeholder">VIDEO PLAYER</div></div><div id="videoStatus" class="video-status">Loading featured media…</div><div class="video-credit">Random homepage media is selected from <strong>/videos/</strong>.</div></div>
 </section>
 
-<section id="branches"><h2 class="section-title">Major Branches</h2><div class="wiki-text"><p>The public gateway is organized around five primary destinations: <strong>Stazzboi</strong>, <strong>Stazzeria</strong>, <strong>Stazzology</strong>, <strong>The Stazzlies</strong>, and <strong>The Stazzex</strong>.</p></div></section>
+<section id="branches"><h2 class="section-title">Major Branches</h2><div class="wiki-text"><p>The public gateway is organized around five primary destinations: <strong class="stx-term">Stazzboi</strong>, <strong class="stx-term">Stazzeria</strong>, <strong class="stx-term">Stazzology</strong>, <strong class="stx-term">The Stazzlies</strong>, and <strong class="stx-term">The Stazzex</strong>.</p></div></section>
 
 <footer class="footer">Stazzboi.com powered by the STAZZEX · Official Stazzboi reference interface.</footer>
 </div>
