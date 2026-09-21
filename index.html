@@ -24,15 +24,15 @@ a{color:inherit;text-decoration:none}
 .landing-rule{width:min(440px,70%);height:3px;background:linear-gradient(135deg,var(--gold-hi),var(--gold),var(--gold-lo));margin:28px auto}
 .landing-sub{max-width:600px;color:#aaa;font-size:14px;line-height:1.7}
 .swipe-indicator{margin-top:44px;display:flex;flex-direction:column;align-items:center;gap:8px;color:#fff;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
-.swipe-arrow{color:var(--yellow);font-size:32px;line-height:1;animation:slideRight 1.3s ease-in-out infinite}
+.swipe-arrow{color:var(--gold-hi);font-size:32px;line-height:1;animation:slideRight 1.3s ease-in-out infinite}
 @keyframes slideRight{0%,100%{transform:translateX(-5px);opacity:.55}50%{transform:translateX(9px);opacity:1}}
 .dots{display:flex;gap:7px;margin-top:26px}
 .dot{width:7px;height:7px;border-radius:50%;background:#555}
-.dot.active{background:var(--yellow);box-shadow:0 0 10px #f2c94c66}
-.topbar{position:sticky;top:0;z-index:10;background:var(--dark);color:#fff;padding:12px 14px;border-bottom:4px solid var(--yellow)}
+.dot.active{background:var(--gold-hi);box-shadow:0 0 10px #f2c94c66}
+.topbar{position:sticky;top:0;z-index:10;background:var(--dark);color:#fff;padding:12px 14px;border-bottom:4px solid var(--gold)}
 .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:10px}
 .brand{font-size:17px;font-weight:900}
-.brand:hover{color:var(--yellow)}
+.brand:hover{color:var(--gold-hi)}
 .powered{font-size:9px;color:#ddd;text-transform:uppercase;letter-spacing:.08em;text-align:right}
 .powered b{color:var(--yellow)}
 .crumb{font-size:11px;color:var(--muted);margin-bottom:8px}
@@ -54,7 +54,7 @@ a{color:inherit;text-decoration:none}
 .contents{border:1px solid var(--border);background:var(--panel);padding:9px 11px;margin:14px 0}
 .contents-title{font-weight:800;margin-bottom:5px}
 .contents a{display:block;font-size:12px;padding:3px 0;color:var(--gold-hi)}
-.media-frame{border:1px solid var(--border);background:var(--yellow);padding:9px;margin:16px 0}
+.media-frame{border:1px solid var(--border);background:var(--gold);padding:9px;margin:16px 0}
 .video-shell{background:#000;aspect-ratio:16/9;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .video-shell video{width:100%;height:100%;display:block;object-fit:cover;background:#000}
 .video-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:clamp(20px,6vw,42px);font-weight:900;pointer-events:none}
@@ -65,7 +65,7 @@ a{color:inherit;text-decoration:none}
 .directs-header p{margin:7px 0 0;color:#aaa;font-size:12px}
 .direct-list{display:grid;gap:10px}
 .direct-card{display:flex;align-items:center;gap:12px;border:1px solid var(--border);background:#101010;padding:11px;color:var(--text);transition:.15s}
-.direct-card:hover{border-color:var(--yellow);box-shadow:0 3px 12px #0002;text-decoration:none}
+.direct-card:hover{border-color:var(--gold);box-shadow:0 3px 12px #0002;text-decoration:none}
 .direct-icon{width:48px;height:48px;flex:0 0 48px;border-radius:7px;background:var(--yellow);display:flex;align-items:center;justify-content:center;overflow:hidden;color:#111;font-weight:900}
 .direct-icon img{width:100%;height:100%;object-fit:cover}
 .direct-copy{min-width:0}
@@ -86,7 +86,8 @@ a{color:inherit;text-decoration:none}
 <div class="landing-powered">POWERED BY: <b>THE STAZZEX</b></div>
 <div class="landing-rule"></div>
 <div class="landing-sub">The official gateway into Stazzboi, Stazzeria, Stazzology, The Stazzlies, and The Stazzex.</div>
-<div class="swipe-indicator" aria-hidden="true"><span>SWIPE RIGHT</span><span class="swipe-arrow">→</span></div>
+<div class="media-frame" style="width:min(720px,100%);margin:28px auto 0"><div class="video-shell"><video id="featuredVideo" autoplay muted playsinline controls preload="metadata"></video><div id="videoPlaceholder" class="video-placeholder">VIDEO PLAYER</div></div><div id="videoStatus" class="video-status">Loading featured media…</div><div class="video-credit">Random homepage media is selected from <strong>/videos/</strong>.</div></div>
+<div class="swipe-indicator" aria-hidden="true"><span>SWIPE LEFT</span><span class="swipe-arrow">→</span></div>
 <div class="dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
 </div>
 </section>
@@ -121,9 +122,6 @@ a{color:inherit;text-decoration:none}
 
 <section id="framework"><h2 class="section-title">The Stazzerian Framework</h2><div class="wiki-text"><p>The Stazzerian Framework is the connected system surrounding <span class="stx-term">Stazzboi</span>, <span class="stx-term">Stazzeria</span>, Stazzian culture, and <span class="stx-term">The Stazzex</span>. It provides the terminology and relationships used throughout the site.</p></div></section>
 
-<section id="media"><h2 class="section-title">Featured Media</h2>
-<div class="media-frame"><div class="video-shell"><video id="featuredVideo" autoplay muted playsinline controls preload="metadata"></video><div id="videoPlaceholder" class="video-placeholder">VIDEO PLAYER</div></div><div id="videoStatus" class="video-status">Loading featured media…</div><div class="video-credit">Random homepage media is selected from <strong>/videos/</strong>.</div></div>
-</section>
 
 <section id="branches"><h2 class="section-title">Major Branches</h2><div class="wiki-text"><p>The public gateway is organized around five primary destinations: <strong class="stx-term">Stazzboi</strong>, <strong class="stx-term">Stazzeria</strong>, <strong class="stx-term">Stazzology</strong>, <strong class="stx-term">The Stazzlies</strong>, and <strong class="stx-term">The Stazzex</strong>.</p></div></section>
 
@@ -133,15 +131,15 @@ a{color:inherit;text-decoration:none}
 
 <section class="page" aria-label="Stazzboi direct links">
 <div class="page-inner">
-<div class="directs-header"><h1>Directs</h1><p>Quick access to the primary Stazz Universe destinations.</p></div>
+<div class="directs-header"><h1>Directory</h1><p>Quick access to the primary Stazz Universe destinations.</p></div>
 <div class="direct-list">
-<a class="direct-card" href="/"><span class="direct-icon">⌂</span><span class="direct-copy"><strong>A. Stazzboi</strong><span>Home · stazzboi.com</span></span><span class="direct-arrow">→</span></a>
-<a class="direct-card" href="/stazzeria"><span class="direct-icon"><img src="/stazzeriaicon.png" alt=""></span><span class="direct-copy"><strong>B. Stazzeria</strong><span>The Digital Republic of Stazzeria</span></span><span class="direct-arrow">→</span></a>
-<a class="direct-card" href="/stazzology"><span class="direct-icon"><img src="/stazzologyicon.png" alt=""></span><span class="direct-copy"><strong>C. Stazzology</strong><span>Gaming and competitive entertainment</span></span><span class="direct-arrow">→</span></a>
-<a class="direct-card" href="/stazzlies"><span class="direct-icon"><img src="/stazzliesicon.png" alt=""></span><span class="direct-copy"><strong>D. The Stazzlies</strong><span>Stazzrian female collective and culture</span></span><span class="direct-arrow">→</span></a>
-<a class="direct-card" href="/stazzex"><span class="direct-icon"><img src="/stazzexicon.png" alt=""></span><span class="direct-copy"><strong>E. The Stazzex</strong><span>Official Stazzrian Index and archive</span></span><span class="direct-arrow">→</span></a>
+<a class="direct-card" href="/"><span class="direct-icon">⌂</span><span class="direct-copy"><strong>Stazzboi</strong><span>Home · stazzboi.com</span></span><span class="direct-arrow">→</span></a>
+<a class="direct-card" href="/stazzeria"><span class="direct-icon"><img src="/stazzeriaicon.png" alt=""></span><span class="direct-copy"><strong>Stazzeria</strong><span>The Digital Republic of Stazzeria</span></span><span class="direct-arrow">→</span></a>
+<a class="direct-card" href="/stazzology"><span class="direct-icon"><img src="/stazzologyicon.png" alt=""></span><span class="direct-copy"><strong>Stazzology</strong><span>Gaming and competitive entertainment</span></span><span class="direct-arrow">→</span></a>
+<a class="direct-card" href="/stazzlies"><span class="direct-icon"><img src="/stazzliesicon.png" alt=""></span><span class="direct-copy"><strong>The Stazzlies</strong><span>Stazzrian female collective and culture</span></span><span class="direct-arrow">→</span></a>
+<a class="direct-card" href="/stazzex"><span class="direct-icon"><img src="/stazzexicon.png" alt=""></span><span class="direct-copy"><strong>The Stazzex</strong><span>Official Stazzrian Index and archive</span></span><span class="direct-arrow">→</span></a>
 </div>
-<footer class="footer">Swipe right or left to move between interface pages.</footer>
+<footer class="footer">Swipe left to advance and swipe right to return.</footer>
 </div>
 </section>
 
@@ -160,7 +158,7 @@ a{color:inherit;text-decoration:none}
   }
   function swipe(dx,dy){
     if(Math.abs(dx)<55 || Math.abs(dx)<Math.abs(dy)*1.15) return;
-    if(dx>0) go(page+1);
+    if(dx<0) go(page+1);
     else go(page-1);
   }
   stage.addEventListener('touchstart',e=>{
