@@ -2,83 +2,199 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Stazzboi.com powered by the STAZZEX — official Stazzboi reference page and media gateway.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Stazzboi.com powered by the STAZZEX — official Stazzboi reference interface and gateway into the Stazz Universe.">
 <title>Stazzboi.com powered by the STAZZEX</title>
 <style>
-:root{--blue:#36c;--border:#a2a9b1;--light:#f8f9fa;--text:#202122;--muted:#54595d;--yellow:#f2c94c;--dark:#181818;--panel:#fff;--video:#080808}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#eaecf0;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:14px;line-height:1.5}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.phone{width:min(100vw,1080px);min-height:100vh;margin:auto;background:#fff;overflow:hidden;box-shadow:0 0 0 1px #c8ccd1}.topbar{position:sticky;top:0;z-index:10;background:var(--dark);color:#fff;padding:13px 14px;border-bottom:4px solid var(--yellow)}.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:10px}.brand{color:#fff;font-size:17px;font-weight:800}.brand:hover{color:var(--yellow);text-decoration:none}.powered{font-size:9px;color:#ddd;text-transform:uppercase;letter-spacing:.08em;text-align:right}.powered b{color:var(--yellow)}main{padding:12px}.crumb{font-size:11px;color:var(--muted);margin-bottom:8px}.title{text-align:center;border-bottom:1px solid var(--border);padding:8px 0 14px;margin-bottom:12px}.title h1{font:400 29px/1.15 Georgia,"Times New Roman",serif;margin:0}.title p{margin:5px 0 0;color:var(--muted);font-size:12px}.nav-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin:8px 0 14px}.nav-tile{display:flex;min-height:64px;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:1px solid var(--border);background:var(--dark);color:#fff;border-radius:7px;padding:7px 3px;font-size:9px;font-weight:800}.nav-tile:hover{border-color:var(--yellow);color:var(--yellow);text-decoration:none}.nav-icon{width:30px;height:30px;border-radius:5px;background:var(--yellow);color:#111;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:12px;margin-bottom:4px}.media-frame{border:1px solid var(--border);background:var(--yellow);padding:10px;margin:0 0 16px}.video-shell{background:var(--video);aspect-ratio:16/9;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}.video-shell video{width:100%;height:100%;display:block;object-fit:cover;background:#000}.video-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font:700 clamp(20px,6vw,42px)/1 Arial,sans-serif;text-align:center;letter-spacing:.03em;pointer-events:none}.video-status{font-size:10px;color:#333;background:var(--yellow);padding:5px 4px 0;text-align:center}.video-credit{font-size:9px;color:#54595d;background:#fff;padding:5px 3px 0}.bio-card{border:1px solid #111;background:var(--yellow);margin:0 0 16px}.bio-head{padding:16px;text-align:center;border-bottom:1px solid #111}.bio-head h2{margin:0;font:700 22px Georgia,"Times New Roman",serif}.bio-head p{margin:4px 0 0;font-size:11px;color:#333}.bio-body{background:#fff;border-top:1px solid #111;padding:14px}.bio-body p{margin:0 0 10px}.bio-body p:last-child{margin-bottom:0}.infobox{border:1px solid var(--border);background:var(--light);margin-bottom:14px}.ibox-title{background:#eaecf0;border-bottom:1px solid var(--border);text-align:center;font-size:18px;font-weight:700;padding:7px}.ibox-sub{text-align:center;color:var(--muted);font-size:11px;padding:3px 7px 7px}.infobox table{width:100%;border-collapse:collapse}.infobox th,.infobox td{padding:6px 7px;vertical-align:top;border-top:1px solid #c8ccd1}.infobox th{width:38%;text-align:left}.contents{border:1px solid var(--border);background:var(--light);padding:8px 10px;margin:12px 0}.contents-title{font-weight:700;margin-bottom:4px}.contents a{display:block;font-size:12px;padding:2px 0}.section-title{font:400 21px Georgia,"Times New Roman",serif;border-bottom:1px solid var(--border);margin:18px 0 8px;padding-bottom:3px}.topic-card{display:block;border:1px solid var(--border);background:#fff;padding:10px;margin:8px 0 15px;color:var(--text)}.topic-card:hover{border-color:var(--blue);box-shadow:0 2px 7px #0002;text-decoration:none}.topic-card strong{display:block;color:var(--blue);font:700 16px Georgia,"Times New Roman",serif}.topic-card span{display:block;color:var(--muted);font-size:10px;margin-top:3px}.stazzex{border-top:4px solid var(--yellow)}.stazzeria{border-top:4px solid #d33}.stazzology{border-top:4px solid #36c}.stazzlies{border-top:4px solid #e754b5}.stazzism{border-top:4px solid #222}.social{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:8px 0 18px}.social a{border:1px solid var(--border);padding:7px;text-align:center;font-size:11px;font-weight:700}.footer{border-top:1px solid var(--border);background:var(--light);padding:12px;font-size:10px;color:var(--muted)}.footer strong{color:var(--text)}@media(min-width:700px){body{padding:20px 0}.phone{border:1px solid #c8ccd1}.nav-grid{gap:10px}main{padding:18px}.media-frame{padding:16px}.bio-head{padding:20px}.bio-body{padding:18px}}@media(max-width:430px){.nav-tile{font-size:8px}.nav-icon{width:27px;height:27px}}
+:root{--yellow:#f2c94c;--dark:#181818;--black:#080808;--panel:#fff;--light:#f8f9fa;--text:#202122;--muted:#666;--border:#a2a9b1;--red:#d33;--blue:#36c;--pink:#e754b5}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{background:var(--black);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--text)}
+button,a{font:inherit}
+a{color:inherit;text-decoration:none}
+.app{position:relative;width:100%;height:100dvh;overflow:hidden;background:var(--black)}
+.stage{display:flex;width:300%;height:100%;transform:translateX(0);transition:transform .42s cubic-bezier(.22,.61,.36,1);will-change:transform}
+.page{width:33.333333%;height:100%;flex:0 0 33.333333%;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior-x:none}
+.page-inner{width:min(100%,1080px);min-height:100%;margin:auto;padding:18px 14px 40px}
+.landing{background:linear-gradient(180deg,#080808 0%,#111 55%,#181818 100%);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center}
+.landing-inner{width:min(92%,760px);min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px}
+.landing-brand{font-size:clamp(32px,8vw,70px);font-weight:900;letter-spacing:-.04em;line-height:1}
+.landing-powered{margin-top:12px;font-size:clamp(12px,2.5vw,18px);letter-spacing:.12em;text-transform:uppercase;color:#ddd}
+.landing-powered b{color:var(--yellow)}
+.landing-rule{width:min(440px,70%);height:3px;background:var(--yellow);margin:28px auto}
+.landing-sub{max-width:600px;color:#aaa;font-size:14px;line-height:1.7}
+.swipe-indicator{margin-top:44px;display:flex;flex-direction:column;align-items:center;gap:8px;color:#fff;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.swipe-arrow{color:var(--yellow);font-size:32px;line-height:1;animation:slideRight 1.3s ease-in-out infinite}
+@keyframes slideRight{0%,100%{transform:translateX(-5px);opacity:.55}50%{transform:translateX(9px);opacity:1}}
+.dots{display:flex;gap:7px;margin-top:26px}
+.dot{width:7px;height:7px;border-radius:50%;background:#555}
+.dot.active{background:var(--yellow);box-shadow:0 0 10px #f2c94c66}
+.topbar{position:sticky;top:0;z-index:10;background:var(--dark);color:#fff;padding:12px 14px;border-bottom:4px solid var(--yellow)}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{font-size:17px;font-weight:900}
+.brand:hover{color:var(--yellow)}
+.powered{font-size:9px;color:#ddd;text-transform:uppercase;letter-spacing:.08em;text-align:right}
+.powered b{color:var(--yellow)}
+.crumb{font-size:11px;color:var(--muted);margin-bottom:8px}
+.wiki-title{border-bottom:1px solid var(--border);padding:5px 0 12px;margin-bottom:12px}
+.wiki-title h1{font:400 30px/1.1 Georgia,"Times New Roman",serif;margin:0;color:var(--text)}
+.wiki-title p{margin:5px 0 0;color:var(--muted);font-size:12px}
+.hero{border:1px solid var(--border);background:var(--light);padding:6px;margin:0 0 14px}
+.hero img{display:block;width:100%;height:auto;max-height:680px;object-fit:cover;object-position:center}
+.caption{font-size:10px;color:var(--muted);padding:5px 3px 0}
+.infobox{border:1px solid var(--border);background:var(--light);margin-bottom:14px}
+.ibox-title{background:#eaecf0;border-bottom:1px solid var(--border);text-align:center;font-size:18px;font-weight:700;padding:7px}
+.ibox-sub{text-align:center;color:var(--muted);font-size:11px;padding:3px 7px 7px}
+.infobox table{width:100%;border-collapse:collapse}
+.infobox th,.infobox td{padding:6px 7px;vertical-align:top;border-top:1px solid #c8ccd1;font-size:12px}
+.infobox th{width:38%;text-align:left}
+.section-title{font:400 22px/1.2 Georgia,"Times New Roman",serif;border-bottom:1px solid var(--border);margin:20px 0 9px;padding-bottom:4px}
+.wiki-text{font-size:14px;line-height:1.65}
+.wiki-text p{margin:0 0 12px}
+.contents{border:1px solid var(--border);background:var(--light);padding:9px 11px;margin:14px 0}
+.contents-title{font-weight:800;margin-bottom:5px}
+.contents a{display:block;font-size:12px;padding:3px 0;color:var(--blue)}
+.media-frame{border:1px solid var(--border);background:var(--yellow);padding:9px;margin:16px 0}
+.video-shell{background:#000;aspect-ratio:16/9;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.video-shell video{width:100%;height:100%;display:block;object-fit:cover;background:#000}
+.video-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:clamp(20px,6vw,42px);font-weight:900;pointer-events:none}
+.video-status{font-size:10px;color:#333;background:var(--yellow);padding:5px 4px 0;text-align:center}
+.video-credit{font-size:9px;color:#555;background:#fff;padding:5px 3px 0}
+.directs-header{background:var(--dark);color:#fff;border-bottom:4px solid var(--yellow);padding:20px 16px;margin:-18px -14px 18px}
+.directs-header h1{margin:0;font:400 30px/1.1 Georgia,"Times New Roman",serif}
+.directs-header p{margin:7px 0 0;color:#aaa;font-size:12px}
+.direct-list{display:grid;gap:10px}
+.direct-card{display:flex;align-items:center;gap:12px;border:1px solid var(--border);background:#fff;padding:11px;color:var(--text);transition:.15s}
+.direct-card:hover{border-color:var(--yellow);box-shadow:0 3px 12px #0002;text-decoration:none}
+.direct-icon{width:48px;height:48px;flex:0 0 48px;border-radius:7px;background:var(--yellow);display:flex;align-items:center;justify-content:center;overflow:hidden;color:#111;font-weight:900}
+.direct-icon img{width:100%;height:100%;object-fit:cover}
+.direct-copy{min-width:0}
+.direct-copy strong{display:block;font:700 18px Georgia,"Times New Roman",serif}
+.direct-copy span{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+.direct-arrow{margin-left:auto;color:var(--yellow);font-size:24px;font-weight:900}
+.footer{border-top:1px solid var(--border);margin-top:18px;padding:14px 0;font-size:10px;color:var(--muted)}
+@media(min-width:700px){.page-inner{padding:20px 18px 50px}.hero img{max-height:720px}.landing-inner{padding:60px}.directs-header{margin:-20px -18px 22px;padding:24px 18px}}
 </style>
 </head>
 <body>
-<div class="phone">
+<div class="app" id="app">
+<div class="stage" id="stage">
+
+<section class="page landing" aria-label="Stazzboi.com opening page">
+<div class="landing-inner">
+<div class="landing-brand">STAZZBOI.COM</div>
+<div class="landing-powered">POWERED BY: <b>THE STAZZEX</b></div>
+<div class="landing-rule"></div>
+<div class="landing-sub">The official gateway into Stazzboi, Stazzeria, Stazzology, The Stazzlies, and The Stazzex.</div>
+<div class="swipe-indicator" aria-hidden="true"><span>SWIPE RIGHT</span><span class="swipe-arrow">→</span></div>
+<div class="dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</section>
+
+<section class="page" aria-label="Stazzboi wiki explainer">
+<div class="page-inner">
 <header class="topbar"><div class="topbar-inner"><a class="brand" href="/">Stazzboi.com</a><span class="powered">powered by <b>the STAZZEX</b></span></div></header>
-<main>
-<div class="crumb"><a href="/">Home</a> › Stazzboi</div>
-<div class="title"><h1>Stazzboi</h1><p>Kelvin Stazzland • The Khamelion • Creator of the Stazzerian Framework</p></div>
+<div class="crumb">Home › Stazzboi › Reference</div>
+<div class="wiki-title"><h1>Stazzboi</h1><p>Kelvin Stazzland • The Khamelion • Creator of the Stazzerian Framework</p></div>
 
-<nav class="nav-grid" aria-label="Stazzboi navigation">
-<a class="nav-tile" href="/"><span class="nav-icon">⌂</span>HOME</a>
-<a class="nav-tile" href="/stazzeria"><span class="nav-icon">S</span>STAZZERIA</a>
-<a class="nav-tile" href="/stazzology"><span class="nav-icon">G</span>STAZZOLOGY</a>
-<a class="nav-tile" href="/stazzlies"><span class="nav-icon">✦</span>STAZZLIES</a>
-<a class="nav-tile" href="/stazzex"><span class="nav-icon">X</span>THE STAZZEX</a>
-</nav>
-
-<section class="media-frame" aria-label="Featured Stazzboi video">
-<div class="video-shell">
-<video id="featuredVideo" autoplay muted playsinline controls preload="auto"></video>
-<div id="videoPlaceholder" class="video-placeholder">VIDEO PLAYER</div>
-</div>
-<div id="videoStatus" class="video-status">Selecting a random Stazzboi video…</div>
-<div class="video-credit">Homepage media is randomly selected from <strong>/videos/</strong>.</div>
-</section>
-
-<section class="bio-card">
-<div class="bio-head"><h2>STAZZBOI</h2><p>The Khamelion • Founder of Stazzeria • Creator of the Stazzerian Framework</p></div>
-<div class="bio-body">
-<p><strong>Stazzboi</strong> is the creator identity and media brand of Kelvin Stazzland, connecting Stazzeria, Stazzism, Stazzology, the Stazzlies, and the archival system known as <strong>The Stazzex</strong>.</p>
-<p>This homepage functions as the public gateway into the Stazz Universe, with the STAZZEX providing the structured reference layer behind the site's people, places, roles, culture, and history.</p>
-</div>
-</section>
+<figure class="hero">
+<img src="IMG_9052.jpeg" alt="Stazzboi official hero photograph" fetchpriority="high" decoding="async">
+<figcaption class="caption">Stazzboi — official profile image.</figcaption>
+</figure>
 
 <aside class="infobox"><div class="ibox-title">Stazzboi</div><div class="ibox-sub">Kelvin Stazzland</div><table>
-<tr><th>Born</th><td>09-15-1998</td></tr><tr><th>Occupation</th><td>Content Creator</td></tr><tr><th>Years active</th><td>2014–present</td></tr><tr><th>Known for</th><td>Stazzboi (brand)<br>Kelvin TV (series)<br>Stazzism (philosophy)</td></tr>
-<tr><th>YouTube</th><td><a href="https://youtube.com/@stazzboi?si=vdsL2nfHh-ivWv2R" target="_blank" rel="noopener">@Stazzboi</a></td></tr><tr><th>Facebook</th><td><a href="https://www.facebook.com/StazzboiFB?mibextid=wwXIfr" target="_blank" rel="noopener">@Stazzboi</a></td></tr><tr><th>Instagram</th><td><a href="https://www.instagram.com/stazzboi?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">@Stazzboi</a></td></tr><tr><th>TikTok</th><td><a href="https://www.tiktok.com/@stazzboi?_r=1&_t=ZP-98pov85Irkc" target="_blank" rel="noopener">@Stazzboi</a></td></tr>
+<tr><th>Occupation</th><td>Content Creator, Entertainer, Producer, Musician, Digital Entrepreneur</td></tr>
+<tr><th>Known as</th><td>Stazzboi · The Khamelion</td></tr>
+<tr><th>Founded</th><td>Stazzeria</td></tr>
+<tr><th>Created</th><td>Stazzerian Framework · The Stazzex · Stazzism</td></tr>
+<tr><th>Active</th><td>2014–present</td></tr>
 </table></aside>
 
-<div class="contents"><div class="contents-title">Contents</div><a href="#stazzex">1. The Stazzex</a><a href="#stazzeria">2. Stazzeria</a><a href="#stazzology">3. Stazzology</a><a href="#stazzlies">4. The Stazzlies</a><a href="#stazzism">5. Stazzism</a></div>
-<section id="stazzex"><h2 class="section-title">The Stazzex</h2><p>The Stazzex is the index and archival framework of the Stazz Universe.</p><a class="topic-card stazzex" href="/stazzex"><strong>The Stazzex →</strong><span>Open /stazzex</span></a></section>
-<section id="stazzeria"><h2 class="section-title">Stazzeria</h2><p>Stazzeria is the digital and physical collective represented throughout the Stazz Universe.</p><a class="topic-card stazzeria" href="/stazzeria"><strong>Stazzeria →</strong><span>Open /stazzeria</span></a></section>
-<section id="stazzology"><h2 class="section-title">Stazzology</h2><p>Stazzology is the gaming and competitive entertainment branch of the Stazz ecosystem.</p><a class="topic-card stazzology" href="/stazzology"><strong>Stazzology →</strong><span>Open /stazzology</span></a></section>
-<section id="stazzlies"><h2 class="section-title">The Stazzlies</h2><p>The Stazzlies is a dedicated Stazz Universe category and community identity.</p><a class="topic-card stazzlies" href="/stazzlies"><strong>The Stazzlies →</strong><span>Open /stazzlies</span></a></section>
-<section id="stazzism"><h2 class="section-title">Stazzism</h2><p>Stazzism is the philosophy associated with Stazzboi and the Stazz Universe.</p><a class="topic-card stazzism" href="/stazzism"><strong>Stazzism →</strong><span>Open /stazzism</span></a></section>
-<h2 class="section-title">Social media</h2><div class="social"><a href="https://youtube.com/@stazzboi?si=vdsL2nfHh-ivWv2R" target="_blank" rel="noopener">YouTube</a><a href="https://www.facebook.com/StazzboiFB?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/stazzboi?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@stazzboi?_r=1&_t=ZP-98pov85Irkc" target="_blank" rel="noopener">TikTok</a></div>
-</main>
-<footer class="footer"><strong>Stazzboi.com powered by the STAZZEX</strong><br>Official Stazzboi reference interface.</footer>
+<div class="wiki-text">
+<p><strong>Stazzboi</strong> is the creator identity and media brand of Kelvin Stazzland. The name connects the public-facing creator with the wider Stazz Universe, including <strong>Stazzeria</strong>, <strong>Stazzology</strong>, <strong>The Stazzlies</strong>, and the archival reference system known as <strong>The Stazzex</strong>.</p>
+<p>The Stazzex provides the structured reference layer for the Stazz Universe, documenting its terminology, people, roles, institutions, history, culture, and related concepts.</p>
 </div>
+
+<div class="contents"><div class="contents-title">Contents</div><a href="#identity">1. Identity</a><a href="#framework">2. Stazzerian Framework</a><a href="#media">3. Featured Media</a><a href="#branches">4. Major Branches</a></div>
+
+<section id="identity"><h2 class="section-title">Identity</h2><div class="wiki-text"><p><strong>Kelvin Stazzland</strong> is the person behind the Stazzboi creator identity. <strong>Stazzboi</strong> functions as the public brand and creator persona, while Stazzeria represents the world, nation, collective, and cultural framework developed around it.</p></div></section>
+
+<section id="framework"><h2 class="section-title">The Stazzerian Framework</h2><div class="wiki-text"><p>The Stazzerian Framework is the connected system surrounding Stazzboi, Stazzeria, Stazzian culture, and The Stazzex. It provides the terminology and relationships used throughout the site.</p></div></section>
+
+<section id="media"><h2 class="section-title">Featured Media</h2>
+<div class="media-frame"><div class="video-shell"><video id="featuredVideo" autoplay muted playsinline controls preload="metadata"></video><div id="videoPlaceholder" class="video-placeholder">VIDEO PLAYER</div></div><div id="videoStatus" class="video-status">Loading featured media…</div><div class="video-credit">Random homepage media is selected from <strong>/videos/</strong>.</div></div>
+</section>
+
+<section id="branches"><h2 class="section-title">Major Branches</h2><div class="wiki-text"><p>The public gateway is organized around five primary destinations: <strong>Stazzboi</strong>, <strong>Stazzeria</strong>, <strong>Stazzology</strong>, <strong>The Stazzlies</strong>, and <strong>The Stazzex</strong>.</p></div></section>
+
+<footer class="footer">Stazzboi.com powered by the STAZZEX · Official Stazzboi reference interface.</footer>
+</div>
+</section>
+
+<section class="page" aria-label="Stazzboi direct links">
+<div class="page-inner">
+<div class="directs-header"><h1>Directs</h1><p>Quick access to the primary Stazz Universe destinations.</p></div>
+<div class="direct-list">
+<a class="direct-card" href="/"><span class="direct-icon">⌂</span><span class="direct-copy"><strong>A. Stazzboi</strong><span>Home · stazzboi.com</span></span><span class="direct-arrow">→</span></a>
+<a class="direct-card" href="/stazzeria"><span class="direct-icon"><img src="/stazzeriaicon.png" alt=""></span><span class="direct-copy"><strong>B. Stazzeria</strong><span>The Digital Republic of Stazzeria</span></span><span class="direct-arrow">→</span></a>
+<a class="direct-card" href="/stazzology"><span class="direct-icon"><img src="/stazzologyicon.png" alt=""></span><span class="direct-copy"><strong>C. Stazzology</strong><span>Gaming and competitive entertainment</span></span><span class="direct-arrow">→</span></a>
+<a class="direct-card" href="/stazzlies"><span class="direct-icon"><img src="/stazzliesicon.png" alt=""></span><span class="direct-copy"><strong>D. The Stazzlies</strong><span>Stazzrian female collective and culture</span></span><span class="direct-arrow">→</span></a>
+<a class="direct-card" href="/stazzex"><span class="direct-icon"><img src="/stazzexicon.png" alt=""></span><span class="direct-copy"><strong>E. The Stazzex</strong><span>Official Stazzrian Index and archive</span></span><span class="direct-arrow">→</span></a>
+</div>
+<footer class="footer">Swipe right or left to move between interface pages.</footer>
+</div>
+</section>
+
+</div>
+</div>
+
 <script>
-(async function(){
+(function(){
+  const stage=document.getElementById('stage');
+  const dots=[...document.querySelectorAll('.dot')];
+  let page=0,startX=0,startY=0,tracking=false;
+  function go(n){
+    page=Math.max(0,Math.min(2,n));
+    stage.style.transform='translateX('+(-page*33.3333333333)+'%)';
+    dots.forEach((d,i)=>d.classList.toggle('active',i===page));
+  }
+  function swipe(dx,dy){
+    if(Math.abs(dx)<55 || Math.abs(dx)<Math.abs(dy)*1.15) return;
+    if(dx>0) go(page+1);
+    else go(page-1);
+  }
+  stage.addEventListener('touchstart',e=>{
+    if(!e.touches[0])return;
+    startX=e.touches[0].clientX;startY=e.touches[0].clientY;tracking=true;
+  },{passive:true});
+  stage.addEventListener('touchend',e=>{
+    if(!tracking||!e.changedTouches[0])return;
+    swipe(e.changedTouches[0].clientX-startX,e.changedTouches[0].clientY-startY);
+    tracking=false;
+  },{passive:true});
+  window.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight')go(page+1);
+    if(e.key==='ArrowLeft')go(page-1);
+  });
+  dots.forEach((d,i)=>d.addEventListener('click',()=>go(i)));
+
   const video=document.getElementById('featuredVideo');
   const placeholder=document.getElementById('videoPlaceholder');
   const status=document.getElementById('videoStatus');
-  try{
-    const response=await fetch('/videos/videos.json',{cache:'no-store'});
-    if(!response.ok) throw new Error('Playlist unavailable');
-    const data=await response.json();
-    const files=Array.isArray(data.videos)?data.videos.filter(Boolean):[];
-    if(!files.length){
-      status.textContent='Add video filenames to /videos/videos.json to activate random homepage playback.';
-      return;
-    }
-    const selected=files[Math.floor(Math.random()*files.length)];
-    video.src='/videos/'+encodeURIComponent(selected);
-    placeholder.style.display='none';
-    status.textContent='Now playing: '+selected;
-    video.load();
-    try{await video.play();}catch(e){status.textContent='Ready to play: '+selected+' — tap play if your browser blocks autoplay.';}
-  }catch(error){
-    status.textContent='Video playlist unavailable.';
+  if(video){
+    fetch('/videos/videos.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject())
+      .then(data=>{
+        const files=Array.isArray(data.videos)?data.videos.filter(Boolean):[];
+        if(!files.length){status.textContent='Add video filenames to /videos/videos.json to activate playback.';return;}
+        const selected=files[Math.floor(Math.random()*files.length)];
+        video.src='/videos/'+encodeURIComponent(selected);
+        video.load();
+        placeholder.style.display='none';
+        status.textContent='Now playing: '+selected;
+        const p=video.play();
+        if(p&&p.catch)p.catch(()=>{status.textContent='Ready to play: '+selected+' — tap play if autoplay is blocked.';});
+      })
+      .catch(()=>{status.textContent='Video playlist unavailable.';});
   }
 })();
 </script>
