@@ -173,6 +173,16 @@
         .executive-name{margin-top:8px;color:#fff;font-weight:800;font-size:.78rem;text-align:center}
         .executive-title{margin-top:2px;color:var(--neon-yellow);font-size:.62rem;text-transform:uppercase;letter-spacing:.5px;text-align:center}
 
+        .presidential-registry{background:#141414;border:1px solid #303030;border-radius:14px;padding:18px;margin:0 0 18px}
+        .presidential-registry h1{margin:0 0 12px;font-size:1.35rem;line-height:1.25}
+        .registry-officeholder{margin-bottom:14px;font-size:.9rem}
+        .registry-officeholder strong{color:var(--neon-yellow)}
+        .registry-photo{margin:0;background:#0b0b0b;border:1px solid #303030;border-radius:10px;overflow:hidden}
+        .registry-photo img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}
+        .registry-title{display:flex;flex-direction:column;gap:3px;padding:12px 2px 4px}
+        .registry-title span{font-size:.7rem;color:#999;text-transform:uppercase;letter-spacing:.12em;font-weight:800}
+        .registry-title strong{font-size:1rem;color:#fff}
+        .presidents-button{display:inline-block;margin-top:14px;padding:10px 14px;border-radius:7px;background:var(--neon-yellow);color:#111;font-weight:900;font-size:.82rem}
         .presidential-authority{margin:14px 0 8px;padding:14px;background:#171717;border:1px solid #333;border-left:3px solid var(--neon-yellow);border-radius:8px}
         .presidential-authority h2{margin:0 0 10px;color:#fff;font-size:1.05rem;line-height:1.3}
         .presidential-authority h3{margin:15px 0 8px;color:var(--neon-yellow);font-size:.9rem}
@@ -258,25 +268,15 @@
         <div class="swiper-viewport" id="viewport">
             
             <div class="page">
-                <header>
-                    <h1>President Kelvin Stazzland</h1>
-                    <p class="subtitle">President of Stazzeria — Executive Head of State and Government</p>
-                </header>
-
-                <div class="executive-pair" aria-label="Stazzerian President and First Lady">
-                    <a class="executive-card president-card" href="/president/">
-                        <span class="executive-frame">PRESIDENT</span>
-                        <img src="PresidentStazzlandSitting.jpg" alt="President Kelvin Stazzland">
-                        <span class="executive-name">Kelvin Stazzland</span>
-                        <span class="executive-title">Stazzerian President</span>
-                    </a>
-                    <a class="executive-card first-lady-card" href="/1stlady/">
-                        <span class="executive-frame">FIRST LADY</span>
-                        <div class="first-lady-portrait"><img src="LeAnnStazzland.svg" alt="First Lady LeAnn Stazzland"></div></div>
-                        <span class="executive-name">LeAnn Stazzland</span>
-                        <span class="executive-title">Stazzerian First Lady</span>
-                    </a>
-                </div>
+                <section class="presidential-registry" aria-labelledby="presidential-entry-title">
+                    <h1 id="presidential-entry-title">STX-050: President of Stazzeria</h1>
+                    <div class="registry-officeholder"><strong>Officeholder:</strong> <a href="/stazzex/entry-v2.html?stx=002">Kelvin Stazzland <span class="stx-ref">(STX-002)</span></a></div>
+                    <figure class="registry-photo">
+                        <img src="/IMG_1632.jpeg" alt="President Kelvin Stazzland">
+                    </figure>
+                    <div class="registry-title"><span>Title</span><strong>Stazzerian President</strong></div>
+                    <a class="presidents-button" href="/stazzex/presidents.html">List of Presidents</a>
+                </section>
                 
                 <div class="presidential-authority">
                     <h2>President of Stazzeria — Executive Head of State and Government</h2>
