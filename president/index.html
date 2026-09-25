@@ -162,6 +162,17 @@
             letter-spacing: 1px;
         }
 
+        /* Paired Presidential Hero */
+        .executive-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:15px}
+        .executive-card{display:flex;flex-direction:column;align-items:center;text-decoration:none;background:#222;border:2px solid #333;border-radius:10px;padding:9px;min-width:0;transition:border-color .2s,transform .2s}
+        .executive-card:hover{border-color:var(--neon-yellow);transform:translateY(-1px)}
+        .executive-frame{width:100%;padding:7px 4px;margin-bottom:8px;border:2px solid var(--neon-yellow);border-radius:5px;color:var(--neon-yellow);font-weight:900;font-size:.68rem;letter-spacing:1.2px;text-align:center;text-transform:uppercase}
+        .executive-card img,.first-lady-placeholder{width:100%;aspect-ratio:9/12;object-fit:cover;border-radius:6px;border:1px solid #444}
+        .first-lady-placeholder{display:flex;align-items:center;justify-content:center;text-align:center;background:#151515;color:#666;font-weight:900;font-size:.75rem;letter-spacing:1px;line-height:1.5}
+        .first-lady-placeholder small{font-size:.55rem;color:#888;letter-spacing:.8px}
+        .executive-name{margin-top:8px;color:#fff;font-weight:800;font-size:.78rem;text-align:center}
+        .executive-title{margin-top:2px;color:var(--neon-yellow);font-size:.62rem;text-transform:uppercase;letter-spacing:.5px;text-align:center}
+
         /* Hero Image Container optimized for 9:16 aspect ratio */
         .image-container {
             text-align: center;
@@ -244,9 +255,19 @@
                     <p class="subtitle">Founder & President</p>
                 </header>
 
-                <div class="image-container">
-                    <img src="PresidentStazzlandSitting.jpg" alt="President Kelvin Stazzland">
-                    <div class="image-caption">President Kelvin Stazzland (of Stazzeria)</div>
+                <div class="executive-pair" aria-label="Stazzerian President and First Lady">
+                    <a class="executive-card president-card" href="/president/">
+                        <span class="executive-frame">PRESIDENT</span>
+                        <img src="PresidentStazzlandSitting.jpg" alt="President Kelvin Stazzland">
+                        <span class="executive-name">Kelvin Stazzland</span>
+                        <span class="executive-title">Stazzerian President</span>
+                    </a>
+                    <a class="executive-card first-lady-card" href="/1stlady/">
+                        <span class="executive-frame">FIRST LADY</span>
+                        <div class="first-lady-placeholder" aria-label="First Lady portrait pending">FIRST LADY<br><small>PORTRAIT PENDING</small></div>
+                        <span class="executive-name">LeAnn Stazzland</span>
+                        <span class="executive-title">Stazzerian First Lady</span>
+                    </a>
                 </div>
                 
                 <p><a class="stx-inline" href="/stazzex/entry-v2.html?stx=050">President of Stazzeria <span class="stx-ref">(STX-050)</span></a> is the highest executive office within <a class="stx-inline" href="/stazzex/entry-v2.html?stx=009">Stazzeria <span class="stx-ref">(STX-009)</span></a>. Through <a class="stx-inline" href="/stazzex/entry-v2.html?stx=051">Stazzerian Presidential Collectivism <span class="stx-ref">(STX-051)</span></a>, the President provides executive leadership while collaborating with <a class="stx-inline" href="/stazzex/entry-v2.html?stx=008">Stazzerian citizens <span class="stx-ref">(STX-008)</span></a> by receiving proposals, considering residents’ interests and needs, coordinating institutional action, and implementing the collective direction of Stazzeria.</p>
