@@ -1,0 +1,17 @@
+(()=>{if(window.__STAZZ_APP_SHELL__)return;window.__STAZZ_APP_SHELL__=true;
+const path=location.pathname.replace(/\\/g,'/').replace(/\\/+$/,'')||'/';
+const home=path==='/';
+const section=path.toLowerCase().startsWith('/stazzeria')?'stazzeria':path.toLowerCase().startsWith('/stazzology')?'stazzology':path.toLowerCase().startsWith('/stazzlies')?'stazzlies':path.toLowerCase().startsWith('/stazzex')?'stazzex':path.toLowerCase().startsWith('/president')?'president':path.toLowerCase().startsWith('/1stlady')?'firstlady':'';
+const nav=document.createElement('nav');nav.className='stazz-app-nav';nav.setAttribute('aria-label','Stazzboi app navigation');
+nav.innerHTML='<a href="/" class="'+(home?'active':'')+'" aria-label="Home"><span class="ico">⌂</span><span>Home</span></a><button type="button" id="stazz-global-chat" aria-label="Stazz Chat"><span class="ico">💬</span><span>Chat</span></button><button type="button" id="stazz-global-search" class="search '+(section==='stazzex'?'active':'')+'" aria-label="Search The Stazzex"><span class="ico">⌕</span><span>Search</span></button>';
+document.body.appendChild(nav);
+const overlay=document.createElement('div');overlay.className='stazz-search-overlay';overlay.innerHTML='<div class="stazz-search-card" role="dialog" aria-modal="true" aria-labelledby="stazz-search-title"><div class="stazz-search-head"><div><div class="stazz-search-kicker">THE STAZZEX</div><h2 class="stazz-search-title" id="stazz-search-title">Search the archive</h2></div><button class="stazz-search-close" type="button" aria-label="Close">×</button></div><form class="stazz-search-form"><input class="stazz-search-input" autocomplete="off" placeholder="Search STX, people, offices, terms…" aria-label="Search Stazzex"><button class="stazz-search-submit">Search</button></form><div class="stazz-search-links"><a href="/stazzex/">Open The Stazzex<small>Browse the canonical archive</small></a><a href="/stazzex/presidents.html">Presidents<small>Presidential registry</small></a></div><div class="stazz-search-status"></div></div>';
+document.body.appendChild(overlay);
+const input=overlay.querySelector('.stazz-search-input'),status=overlay.querySelector('.stazz-search-status');
+const openSearch=()=>{overlay.classList.add('open');setTimeout(()=>input.focus(),30)};
+const closeSearch=()=>overlay.classList.remove('open');
+document.getElementById('stazz-global-search').onclick=openSearch;overlay.querySelector('.stazz-search-close').onclick=closeSearch;
+overlay.addEventListener('click',e=>{if(e.target===overlay)closeSearch()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSearch()});
+overlay.querySelector('form').addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim();if(!q)return;const stx=q.match(/^stx[-\\s]?0*(\\d+)$/i);if(stx){location.href='/stazzex/entry-v2.html?stx='+stx[1];return}status.textContent='Searching The Stazzex for “'+q+'”…';location.href='/stazzex/?q='+encodeURIComponent(q)});
+document.getElementById('stazz-global-chat').onclick=()=>{const launcher=document.getElementById('stazz-chat-launcher')||document.getElementById('stazz-floating-launcher');if(launcher){launcher.click();return}const panel=document.getElementById('stazz-chat-panel');if(panel){panel.classList.toggle('open');return}alert('Stazz Chat is loading. Please try again in a moment.')};
+})();
