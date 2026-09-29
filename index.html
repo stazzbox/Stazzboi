@@ -13,8 +13,8 @@ body{background:var(--black);font-family:-apple-system,BlinkMacSystemFont,"Segoe
 button,a{font:inherit}
 a{color:inherit;text-decoration:none}
 .app{position:relative;width:100%;height:100dvh;overflow:hidden;background:var(--black)}
-.stage{display:flex;width:300%;height:100%;transform:translateX(0);transition:transform .42s cubic-bezier(.22,.61,.36,1);will-change:transform}
-.page{width:33.333333%;height:100%;flex:0 0 33.333333%;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior-x:none}
+.stage{display:flex;width:600%;height:100%;transform:translateX(0);transition:transform .42s cubic-bezier(.22,.61,.36,1);will-change:transform}
+.page{width:16.666667%;height:100%;flex:0 0 16.666667%;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior-x:none}
 .page-inner{width:min(100%,1080px);min-height:100%;margin:auto;padding:18px 14px 40px}
 .landing{background:linear-gradient(180deg,#080808 0%,#111 55%,#181818 100%);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center}
 .landing-inner{width:min(92%,760px);min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px}
@@ -93,44 +93,66 @@ a{color:inherit;text-decoration:none}
 <div class="app" id="app">
 <div class="stage" id="stage">
 
-<section class="page landing" aria-label="Stazzboi.com opening page">
+<section class="page landing" aria-label="Stazzboi opening media">
 <div class="landing-inner">
 <div class="landing-brand">STAZZBOI.COM</div>
 <div class="landing-powered">POWERED BY: <b>THE STAZZEX</b></div>
 <div class="landing-rule"></div>
-<div class="landing-sub">The official gateway into Stazzboi, Stazzeria, Stazzology, The Stazzlies, and The Stazzex.</div>
-<div class="media-frame" style="width:min(720px,100%);margin:28px auto 0"><div class="video-shell"><video id="featuredVideo" autoplay muted playsinline controls preload="metadata"></video><div id="videoPlaceholder" class="video-placeholder">VIDEO PLAYER</div></div><div id="videoStatus" class="video-status">Loading featured media…</div><div class="video-credit">Random homepage media is selected from <strong>/videos/</strong>.</div></div>
-<div class="swipe-indicator" aria-hidden="true"><span>SWIPE LEFT</span><span class="swipe-arrow">→</span></div>
-<div class="dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+<div class="landing-sub">Welcome to the Stazz Universe.</div>
+<div class="media-frame" style="width:min(860px,100%);margin:28px auto 0"><div class="video-shell"><video id="featuredVideo" autoplay muted playsinline controls preload="metadata"></video><div id="videoPlaceholder" class="video-placeholder">VIDEO PLAYER</div></div><div id="videoStatus" class="video-status">Loading featured media…</div><div class="video-credit">Featured media from <strong>/videos/</strong>.</div></div>
+<div class="swipe-indicator" aria-hidden="true"><span>SWIPE LEFT TO ENTER</span><span class="swipe-arrow">→</span></div>
+<div class="dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
 </div>
 </section>
 
-<section class="page" aria-label="Stazzboi reference gateway">
+<section class="page" aria-label="Stazzboi home screen">
 <div class="page-inner">
-<header class="topbar"><div class="topbar-inner"><a class="brand" href="/">Stazzboi.com</a><span class="powered">powered by <b>the STAZZEX</b></span></div></header>
-<div class="crumb">Home › Stazzboi</div>
-<div class="wiki-title"><h1>Stazzboi</h1><p>Kelvin Stazzland • The Khamelion • Creator of the Stazzerian Framework</p></div>
-<figure class="hero"><img src="IMG_9052.jpeg" alt="Stazzboi official hero photograph" fetchpriority="high" decoding="async"><figcaption class="caption">Stazzboi — official profile image.</figcaption></figure>
-<div class="wiki-text">
-<p><a class="stx-inline" href="/stazzex/entries/stazzboi.html">Stazzboi <span class="stx-ref">(STX-011)</span></a> is the creator identity and media brand of <a class="stx-inline" href="/stazzex/entry-v2.html?stx=002">Kelvin Stazzland <span class="stx-ref">(STX-002)</span></a>. <a class="stx-inline" href="/stazzex/entries/president.html">Kelvin Stazzland <span class="stx-ref">(STX-002)</span></a> is the <a class="stx-inline" href="/stazzex/entry-v2.html?stx=050">President of Stazzeria <span class="stx-ref">(STX-050)</span></a> through <a class="stx-inline" href="/stazzex/entry-v2.html?stx=051">Stazzerian Presidential Collectivism <span class="stx-ref">(STX-051)</span></a>, collaborating with <a class="stx-inline" href="/stazzex/entry-v2.html?stx=008">Stazzerian citizens <span class="stx-ref">(STX-008)</span></a>. This page is the gateway to the dedicated informative profile; the homepage remains the main launcher for the Stazzboi Universe.</p>
-</div>
-<a class="direct-card" href="/stazzboi/"><span class="direct-icon"><img src="/IMG_9052.jpeg" alt=""></span><span class="direct-copy"><strong>Open the Stazzboi Profile</strong><span>Informative profile, identity, framework, and canonical references</span></span><span class="direct-arrow">→</span></a>
-<div class="contents"><div class="contents-title">Primary destinations</div><a href="/stazzeria/">Stazzeria</a><a href="/stazzology/">Stazzology</a><a href="/stazzlies/">The Stazzlies</a><a href="/stazzex/">The Stazzex</a></div>
-<footer class="footer">Stazzboi.com powered by the STAZZEX · Main launcher and gateway.</footer>
-</div>
-</section>
-
-<section class="page" aria-label="Stazzboi direct links">
-<div class="page-inner">
-<div class="directs-header"><h1>Directory</h1><p>Quick access to the primary Stazz Universe destinations.</p></div>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="/">STAZZBOI.COM</a><span class="powered">THE STAZZ UNIVERSE</span></div></header>
+<div class="directs-header"><h1>Home</h1><p>Your gateway to the Stazz Universe. Swipe left to explore.</p></div>
 <div class="direct-list">
-<a class="direct-card" href="/stazzboi/"><span class="direct-icon"><img src="/IMG_9052.jpeg" alt=""></span><span class="direct-copy"><strong>A. Stazzboi</strong><span>Informative profile of Kelvin Stazzland</span></span><span class="direct-arrow">→</span></a>
-<a class="direct-card" href="/stazzeria"><span class="direct-icon"><img src="/stazzeriaicon.png" alt=""></span><span class="direct-copy"><strong>Stazzeria</strong><span>The Digital Republic of Stazzeria</span></span><span class="direct-arrow">→</span></a>
-<a class="direct-card" href="/stazzology"><span class="direct-icon"><img src="/stazzologyicon.png" alt=""></span><span class="direct-copy"><strong>Stazzology</strong><span>Gaming and competitive entertainment</span></span><span class="direct-arrow">→</span></a>
-<a class="direct-card" href="/stazzlies"><span class="direct-icon"><img src="/stazzliesicon.png" alt=""></span><span class="direct-copy"><strong>The Stazzlies</strong><span>Stazzerian female collective and culture</span></span><span class="direct-arrow">→</span></a>
-<a class="direct-card" href="/stazzex"><span class="direct-icon"><img src="/stazzexicon.png" alt=""></span><span class="direct-copy"><strong>The Stazzex</strong><span>Official Stazzerian Index and archive</span></span><span class="direct-arrow">→</span></a>
+<a class="direct-card" href="/stazzboi/"><span class="direct-icon"><img src="/IMG_9052.jpeg" alt=""></span><span class="direct-copy"><strong>Stazzboi</strong><span>Kelvin Stazzland · Creator identity and media brand</span></span><span class="direct-arrow">→</span></a>
+<a class="direct-card" href="/stazzeria/"><span class="direct-icon"><img src="/stazzeriaicon.png" alt=""></span><span class="direct-copy"><strong>Stazzeria</strong><span>The Digital Republic of Stazzeria</span></span><span class="direct-arrow">→</span></a>
+<a class="direct-card" href="/stazzology/"><span class="direct-icon"><img src="/stazzologyicon.png" alt=""></span><span class="direct-copy"><strong>Stazzology</strong><span>Gaming and competitive entertainment</span></span><span class="direct-arrow">→</span></a>
+<a class="direct-card" href="/stazzlies/"><span class="direct-icon"><img src="/stazzliesicon.png" alt=""></span><span class="direct-copy"><strong>The Stazzlies</strong><span>Stazzerian female collective and culture</span></span><span class="direct-arrow">→</span></a>
+<a class="direct-card" href="/stazzex/"><span class="direct-icon"><img src="/stazzexicon.png" alt=""></span><span class="direct-copy"><strong>The Stazzex</strong><span>Official Stazzerian index and archive</span></span><span class="direct-arrow">→</span></a>
 </div>
-<footer class="footer">Swipe left to advance and swipe right to return.</footer>
+<footer class="footer">Swipe left through the ecosystem · Swipe right to return · Use the bottom navigation anytime.</footer>
+</div>
+</section>
+
+<section class="page" aria-label="Stazzeria">
+<div class="page-inner">
+<div class="directs-header"><h1>Stazzeria</h1><p>The Digital Republic of Stazzeria.</p></div>
+<div class="hero"><img src="/stazzeriaicon.png" alt="Stazzeria"></div>
+<div class="wiki-text"><p>Explore the Department of Stazz, Stazzerian institutions, leadership, offices, and the framework of Stazzeria.</p></div>
+<a class="direct-card" href="/stazzeria/"><span class="direct-icon">🇺🇸</span><span class="direct-copy"><strong>Enter Stazzeria</strong><span>Open the full Stazzeria experience</span></span><span class="direct-arrow">→</span></a>
+</div>
+</section>
+
+<section class="page" aria-label="Stazzology">
+<div class="page-inner">
+<div class="directs-header"><h1>Stazzology</h1><p>Gaming · competition · events.</p></div>
+<div class="hero"><img src="/stazzologyicon.png" alt="Stazzology"></div>
+<div class="wiki-text"><p>Explore STAZZOLOGY, gaming culture, competitive events, teams, tournaments, and the Stazzology ecosystem.</p></div>
+<a class="direct-card" href="/stazzology/"><span class="direct-icon">🎮</span><span class="direct-copy"><strong>Enter Stazzology</strong><span>Open the gaming ecosystem</span></span><span class="direct-arrow">→</span></a>
+</div>
+</section>
+
+<section class="page" aria-label="The Stazzlies">
+<div class="page-inner">
+<div class="directs-header"><h1>The Stazzlies</h1><p>Culture · representation · collective.</p></div>
+<div class="hero"><img src="/stazzliesicon.png" alt="The Stazzlies"></div>
+<div class="wiki-text"><p>Explore The Stazzlies, its people, culture, leadership, records, and connection to the Stazzerian ecosystem.</p></div>
+<a class="direct-card" href="/stazzlies/"><span class="direct-icon">💗</span><span class="direct-copy"><strong>Enter The Stazzlies</strong><span>Open the Stazzlies experience</span></span><span class="direct-arrow">→</span></a>
+</div>
+</section>
+
+<section class="page" aria-label="The Stazzex">
+<div class="page-inner">
+<div class="directs-header"><h1>The Stazzex</h1><p>The canonical Stazzerian index and archive.</p></div>
+<div class="hero"><img src="/stazzexicon.png" alt="The Stazzex"></div>
+<div class="wiki-text"><p>Search and explore STX records, people, offices, institutions, terminology, and the archival framework behind the Stazz Universe.</p></div>
+<a class="direct-card" href="/stazzex/"><span class="direct-icon">📚</span><span class="direct-copy"><strong>Enter The Stazzex</strong><span>Open the canonical archive</span></span><span class="direct-arrow">→</span></a>
 </div>
 </section>
 
@@ -143,8 +165,8 @@ a{color:inherit;text-decoration:none}
   const dots=[...document.querySelectorAll('.dot')];
   let page=0,startX=0,startY=0,tracking=false;
   function go(n){
-    page=Math.max(0,Math.min(2,n));
-    stage.style.transform='translateX('+(-page*33.3333333333)+'%)';
+    page=Math.max(0,Math.min(5,n));
+    stage.style.transform='translateX('+(-page*16.6666666667)+'%)';
     dots.forEach((d,i)=>d.classList.toggle('active',i===page));
   }
   function swipe(dx,dy){
