@@ -14,44 +14,75 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "url": "https://stazzboi.com/stazzboi/",
-  "mainEntity": {
-    "@type": "Person",
-    "@id": "https://stazzboi.com/stazzboi/#kelvin-stazzland",
-    "name": "Kelvin Stazzland",
-    "alternateName": [
-      "Stazzboi",
-      "The Khamelion",
-      "Aimbot",
-      "The Authoritarian"
-    ],
-    "url": "https://stazzboi.com/stazzboi/",
-    "description": "Kelvin Stazzland is a Stazzerian-American creator, entertainer, producer, musician, digital entrepreneur, and founder of Stazzeria, professionally known as Stazzboi.",
-    "image": [
-      "https://stazzboi.com/IMG_9052.jpeg",
-      "https://stazzboi.com/Stazzboi-Offical-Portrait-Kelvin-Stazzland.jpg"
-    ],
-    "jobTitle": "President of Stazzeria",
-    "affiliation": {
-      "@id": "https://stazzboi.com/Stazzeria/#stazzeria"
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": "https://stazzboi.com/stazzboi/#profile",
+      "url": "https://stazzboi.com/stazzboi/",
+      "name": "Stazzboi — Kelvin Stazzland",
+      "mainEntity": {
+        "@id": "https://stazzboi.com/stazzboi/#kelvin-stazzland"
+      },
+      "about": {
+        "@id": "https://stazzboi.com/stazzboi/#stazzboi-brand"
+      }
     },
-    "sameAs": [
-      "https://www.facebook.com/StazzboiFB",
-      "https://www.instagram.com/stazzboi/",
-      "https://www.tiktok.com/@stazzboi",
-      "https://youtube.com/@stazzboi",
-      "https://open.spotify.com/artist/3LdZpssPzwGSkmEK7KL1Hs",
-      "https://music.apple.com/us/artist/stazzboi/1627663453",
-      "https://music.amazon.com/artists/B0DYP8GJJ3/stazzboi",
-      "https://musicbrainz.org/artist/2f17a5d8-5d1f-4b97-b3b6-d1a9ea1b2432",
-      "https://www.imdb.com/name/nm18649478/",
-      "https://www.linkedin.com/in/kelvin-stazzland-3b7b70391"
-    ]
-  },
-  "about": {
-    "@id": "https://stazzboi.com/Stazzeria/#stazzeria"
-  }
+    {
+      "@type": "Person",
+      "@id": "https://stazzboi.com/stazzboi/#kelvin-stazzland",
+      "name": "Kelvin Stazzland",
+      "alternateName": [
+        "The Khamelion",
+        "Aimbot",
+        "The Authoritarian"
+      ],
+      "url": "https://stazzboi.com/stazzboi/",
+      "description": "Kelvin Stazzland is a Stazzerian-American creator, entertainer, producer, musician, digital entrepreneur, and founder of Stazzeria, professionally known as Stazzboi.",
+      "image": [
+        "https://stazzboi.com/IMG_9052.jpeg",
+        "https://stazzboi.com/Stazzboi-Offical-Portrait-Kelvin-Stazzland.jpg"
+      ],
+      "jobTitle": "President of Stazzeria",
+      "brand": {
+        "@id": "https://stazzboi.com/stazzboi/#stazzboi-brand"
+      },
+      "affiliation": {
+        "@id": "https://stazzboi.com/Stazzeria/#stazzeria"
+      },
+      "sameAs": [
+        "https://www.facebook.com/StazzboiFB",
+        "https://www.instagram.com/stazzboi/",
+        "https://www.tiktok.com/@stazzboi",
+        "https://youtube.com/@stazzboi",
+        "https://open.spotify.com/artist/3LdZpssPzwGSkmEK7KL1Hs",
+        "https://music.apple.com/us/artist/stazzboi/1627663453",
+        "https://music.amazon.com/artists/B0DYP8GJJ3/stazzboi",
+        "https://musicbrainz.org/artist/2f17a5d8-5d1f-4b97-b3b6-d1a9ea1b2432",
+        "https://www.imdb.com/name/nm18649478/",
+        "https://www.linkedin.com/in/kelvin-stazzland-3b7b70391"
+      ]
+    },
+    {
+      "@type": "Brand",
+      "@id": "https://stazzboi.com/stazzboi/#stazzboi-brand",
+      "name": "Stazzboi",
+      "alternateName": [
+        "STAZZBOI",
+        "Stazzboi.com"
+      ],
+      "url": "https://stazzboi.com/",
+      "description": "Stazzboi is the personal brand and creator identity of Kelvin Stazzland through which his entertainment, music, gaming, media, and Stazzerian projects are presented.",
+      "logo": "https://stazzboi.com/E077FAF4-651A-4818-BCEC-4137F9A7603E.png",
+      "owner": {
+        "@id": "https://stazzboi.com/stazzboi/#kelvin-stazzland"
+      },
+      "sameAs": [
+        "https://www.instagram.com/stazzboi/",
+        "https://www.tiktok.com/@stazzboi",
+        "https://youtube.com/@stazzboi"
+      ]
+    }
+  ]
 }
 </script>
 <script src="/js/stazz-chat-loader.js?v=20260928" defer></script><link rel="stylesheet" href="/assets/stazz-app.css?v=20260928"></head>
