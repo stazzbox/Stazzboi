@@ -194,24 +194,6 @@ a{color:inherit;text-decoration:none}
   });
   dots.forEach((d,i)=>d.addEventListener('click',()=>go(i)));
 
-  const video=document.getElementById('featuredVideo');
-  const placeholder=document.getElementById('videoPlaceholder');
-  const status=document.getElementById('videoStatus');
-  if(video){
-    fetch('/videos/videos.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject())
-      .then(data=>{
-        const files=Array.isArray(data.videos)?data.videos.filter(Boolean):[];
-        if(!files.length){status.textContent='Add video filenames to /videos/videos.json to activate playback.';return;}
-        const selected=files[Math.floor(Math.random()*files.length)];
-        video.src='/videos/'+encodeURIComponent(selected);
-        video.load();
-        placeholder.style.display='none';
-        status.textContent='Now playing: '+selected;
-        const p=video.play();
-        if(p&&p.catch)p.catch(()=>{status.textContent='Ready to play: '+selected+' — tap play if autoplay is blocked.';});
-      })
-      .catch(()=>{status.textContent='Video playlist unavailable.';});
-  }
 })();
 </script>
 <script src="/assets/stazz-app.js?v=20260928" defer></script></body>
