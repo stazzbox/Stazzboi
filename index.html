@@ -17,12 +17,10 @@ a{color:inherit;text-decoration:none}
 .page{width:20%;height:100%;flex:0 0 20%;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior-x:none}
 .page-inner{width:min(100%,1080px);min-height:100%;margin:auto;padding:18px 14px 40px}
 .landing{background:linear-gradient(180deg,#080808 0%,#111 55%,#181818 100%);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center}
-.home-logo-wrap{display:flex;align-items:center;justify-content:center;padding:12px 20px 22px}
-.home-logo{display:block;width:min(72vw,420px);max-width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 10px 28px #0008)}
-.home-socials{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin:0 auto 20px;max-width:560px}
-.social-btn{width:44px;height:44px;border:1px solid #383838;border-radius:12px;background:#151515;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:17px;transition:.18s;box-shadow:0 5px 18px #0005}
-.social-btn:hover,.social-btn:focus-visible{transform:translateY(-2px);border-color:var(--gold-hi);color:var(--gold-hi);outline:none}
-.social-btn span{font-size:10px;letter-spacing:.02em}
+.home-logo-wrap{display:flex;align-items:center;justify-content:center;padding:12px 20px 18px}
+.home-social-section{width:min(100%,720px);margin:0 auto 16px;padding:10px 12px 12px;border:1px solid #303030;border-radius:15px;background:#0d0d0d}
+.home-section-label{font-size:9px;letter-spacing:.16em;font-weight:900;color:var(--gold-hi);margin-bottom:9px}
+.home-socials{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin:0 auto;max-width:560px}
 .home-bio{max-width:720px;margin:0 auto 20px;padding:18px 18px;border:1px solid #303030;border-radius:16px;background:#101010;color:#bdbdbd;font-size:13px;line-height:1.65;text-align:left;box-shadow:0 8px 30px #0005}
 .home-bio strong{color:#fff}
 .home-bio .bio-title{display:block;color:var(--gold-hi);font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;margin-bottom:7px}
@@ -108,16 +106,21 @@ a{color:inherit;text-decoration:none}
 <div class="home-logo-wrap" aria-label="Stazzboi.com">
   <img class="home-logo" src="/E077FAF4-651A-4818-BCEC-4137F9A7603E.png" alt="Stazzboi.com">
 </div>
-<div class="home-socials" aria-label="Stazzboi social media">
+<section class="home-social-section" aria-labelledby="socials-title">
+  <div id="socials-title" class="home-section-label">STAZZBOI SOCIALS</div>
+  <div class="home-socials" aria-label="Stazzboi social media">
   <a class="social-btn" href="https://x.com/stazzboi" target="_blank" rel="noopener" aria-label="Stazzboi on X"><span>𝕏</span></a>
   <a class="social-btn" href="https://www.instagram.com/stazzboi/" target="_blank" rel="noopener" aria-label="Stazzboi on Instagram"><span>IG</span></a>
   <a class="social-btn" href="https://www.facebook.com/stazzboi" target="_blank" rel="noopener" aria-label="Stazzboi on Facebook"><span>f</span></a>
   <a class="social-btn" href="https://www.youtube.com/@stazzboi" target="_blank" rel="noopener" aria-label="Stazzboi on YouTube"><span>▶</span></a>
   <a class="social-btn" href="https://www.tiktok.com/@stazzboi" target="_blank" rel="noopener" aria-label="Stazzboi on TikTok"><span>♪</span></a>
 </div>
+</section>
 <div class="home-bio">
   <span class="bio-title">About Stazzboi</span>
-  <strong>Stazzboi is the personal brand of Kelvin Stazzland.</strong> Through Stazzboi, the Stazz Universe takes form: Stazzland leads his nation of Stazzeria as its President while building a broader ecosystem of entertainment, gaming, culture, and archival records. Stazzland is known for Stazzology, his gaming promotion primarily focused on Call of Duty: Mobile (CODM), and for collaborations such as <strong>Bites &amp; Battles</strong> with Megabites Arcade in Hemet, California. His female co-stars, known as <strong>The Stazzlies</strong>, collaborate with him across content and the wider Stazzian creative ecosystem. The Stazzex serves as the Stazzerian index of records and documents, preserving the people, institutions, terminology, milestones, and developing history of the Stazz Universe.
+  <p><strong>Stazzboi is the personal brand of Kelvin Stazzland</strong> in which the Stazz Universe forms, where Stazzland leads his nation of <strong>Stazzeria</strong> as its <strong>PRESIDENT</strong>.</p>
+  <p>Stazzland is known for his gaming promotion, <strong>Stazzology</strong>, which primarily focuses on <strong>Call of Duty: Mobile (CODM)</strong> and gained attention from the <strong>Megabites Arcade</strong> collaboration <strong>Bites &amp; Battles</strong>, hosted in Hemet, California.</p>
+  <p>Stazzland and his female costars, known as <strong>The Stazzlies</strong>, collaborate in content, while the Stazzerian index known as <strong>The Stazzex</strong> records and documents the process, becoming Stazzerian history.</p>
 </div>
 <div class="swipe-indicator home-swipe" aria-hidden="true"><span>SWIPE LEFT TO EXPLORE</span><span class="swipe-arrow">→</span></div>
 <div class="dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
