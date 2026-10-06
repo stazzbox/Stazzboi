@@ -8,27 +8,27 @@
 <div class="section" id="caps"><div class="head"><h2>Baseball Caps</h2><span>$20 BASE</span></div><div class="grid" id="cap-grid"></div></div>
 <div class="section" id="bracelets"><div class="head"><h2>Bracelets</h2><span>$6.99 BASE</span></div><div class="grid" id="bracelet-grid"></div></div>
 <div class="section"><div class="bundle"><div class="eyebrow">COLLECTION FEATURE</div><h3>STAZZEX CLASSIC — COMPLETE SET</h3><p>Beanie + Tee + Hoodie + Baseball Cap</p><div>Estimated individual value: $100 before any yellow premium</div><small>No price · showcase only · not clickable</small><br><button disabled>SHOWCASE ONLY</button></div></div>
-<section class="studio" id="studio"></section><div class="footer">Stazzboi Shop · Powered by The Stazzex · Product images will be connected after the repository filenames are supplied.</div></main>
+<section class="studio" id="studio"></section><div class="footer">Stazzboi Shop · Powered by The Stazzex · Product imagery mapped to the official product assets.</div></main>
 <script>
 var products=[
-{id:"beanie-1111",cat:"beanie",name:"Stazzerians 11:11",price:20},
-{id:"beanie-stazzeria",cat:"beanie",name:"Stazzeria",price:20},
-{id:"beanie-stazzex",cat:"beanie",name:"Stazzex Classic",price:20},
-{id:"hoodie-1111",cat:"hoodie",name:"Stazzerians 11:11",price:35},
-{id:"hoodie-stazzeria",cat:"hoodie",name:"Stazzeria",price:35},
-{id:"hoodie-stazzex",cat:"hoodie",name:"Stazzex Classic",price:35},
-{id:"tee-1111",cat:"tee",name:"Stazzerians 11:11",price:25},
-{id:"tee-stazzex",cat:"tee",name:"Stazzex Classic",price:25},
-{id:"tee-stazzeria",cat:"tee",name:"Stazzeria",price:25},
-{id:"cap-stazzex",cat:"cap",name:"Stazzex Classic Cap",price:20},
-{id:"cap-1111",cat:"cap",name:"Stazzerians 11:11",price:20},
+{id:"beanie-1111",cat:"beanie",name:"Stazzerians 11:11",price:20,image:"/stazzeria.png"},
+{id:"beanie-stazzboi-com",cat:"beanie",name:"Stazzboi.com",price:20,image:"/stazzboicaps.png"},
+{id:"beanie-stazzex",cat:"beanie",name:"Stazzex Classic",price:20,image:"/stazzexcaps.png"},
+{id:"hoodie-1111",cat:"hoodie",name:"Stazzerians 11:11",price:35,image:"/stazzeriatee.png"},
+{id:"hoodie-stazzboi-com",cat:"hoodie",name:"Stazzboi.com",price:35,image:"/Stazzboisiteshirt.png"},
+{id:"hoodie-stazzex",cat:"hoodie",name:"Stazzex Classic",price:35,image:"/stazzextee.png"},
+{id:"tee-1111",cat:"tee",name:"Stazzerians 11:11",price:25,image:"/stazzeriatee.png"},
+{id:"tee-stazzex",cat:"tee",name:"Stazzex Classic",price:25,image:"/stazzextee.png"},
+{id:"tee-stazzboi-com",cat:"tee",name:"Stazzboi.com",price:25,image:"/Stazzboisiteshirt.png"},
+{id:"cap-stazzex",cat:"cap",name:"Stazzex Classic Cap",price:20,image:"/stazzexcaps.png"},
+{id:"cap-1111",cat:"cap",name:"Stazzerians 11:11",price:20,image:"/stazzeria.png"},
 {id:"bracelet-stazzboi",cat:"bracelet",name:"Stazzboi",price:6.99,orderable:true},
 {id:"bracelet-stazzboi-com",cat:"bracelet",name:"Stazzboi.com",price:6.99,orderable:true}
 ];
 var colors=[["Black","#050505"],["White","#f2f2f2"],["Red","#a71919"],["Grey","#777"],["Pink","#d95aa8"],["Green","#24734c"],["Blue","#345c9b"],["Yellow","#f2c500"]];
 var sizes=["XS","S","M","L","XL","2XL"];
 function money(n){return "$"+n.toFixed(2).replace(/\.00$/,"")}
-function card(p){return '<article class="card" onclick="openStudio(\''+p.id+'\')"><div class="thumb">PRODUCT IMAGE<br>PENDING</div><div class="body"><div class="name">'+p.name+'</div><div class="meta"><span>'+money(p.price)+'</span><span class="sold">'+(p.orderable?"ORDERABLE":"SOLD OUT")+'</span></div></div></article>'}
+function card(p){return '<article class="card" onclick="openStudio(\''+p.id+'\')"><div class="thumb">'+(p.image?'<img src="'+p.image+'" alt="'+p.name+'" style="width:100%;height:100%;object-fit:cover">':'PRODUCT IMAGE<br>PENDING')+'</div><div class="body"><div class="name">'+p.name+'</div><div class="meta"><span>'+money(p.price)+'</span><span class="sold">'+(p.orderable?"ORDERABLE":"SOLD OUT")+'</span></div></div></article>'}
 function render(id,cat){document.querySelector(id).innerHTML=products.filter(function(p){return p.cat===cat}).map(card).join("")}
 render("#beanie-grid","beanie");render("#hoodie-grid","hoodie");render("#tee-grid","tee");render("#cap-grid","cap");render("#bracelet-grid","bracelet");
 function openStudio(id){
