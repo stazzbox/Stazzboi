@@ -22,13 +22,14 @@ var products=[
 {id:"tee-stazzboi-com",cat:"tee",name:"Stazzboi.com",price:25,image:"/Stazzboisiteshirt.png"},
 {id:"cap-stazzex",cat:"cap",name:"Stazzex Classic Cap",price:20,image:"/stazzexcaps.png"},
 {id:"cap-1111",cat:"cap",name:"Stazzerians 11:11",price:20,image:"/stazzeria.png"},
+{id:"cap-stazzboi-com",cat:"cap",name:"Stazzboi.com",price:20,image:"/stazzboicaps.png"},
 {id:"bracelet-stazzboi",cat:"bracelet",name:"Stazzboi",price:6.99,orderable:true},
 {id:"bracelet-stazzboi-com",cat:"bracelet",name:"Stazzboi.com",price:6.99,orderable:true}
 ];
 var colors=[["Black","#050505"],["White","#f2f2f2"],["Red","#a71919"],["Grey","#777"],["Pink","#d95aa8"],["Green","#24734c"],["Blue","#345c9b"],["Yellow","#f2c500"]];
 var sizes=["XS","S","M","L","XL","2XL"];
 function money(n){return "$"+n.toFixed(2).replace(/\.00$/,"")}
-function card(p){return '<article class="card" onclick="openStudio(\''+p.id+'\')"><div class="thumb">'+(p.image?'<img src="'+p.image+'" alt="'+p.name+'" style="width:100%;height:100%;object-fit:cover">':'PRODUCT IMAGE<br>PENDING')+'</div><div class="body"><div class="name">'+p.name+'</div><div class="meta"><span>'+money(p.price)+'</span><span class="sold">'+(p.orderable?"ORDERABLE":"SOLD OUT")+'</span></div></div></article>'}
+function card(p){return '<article class="card" onclick="openStudio(\''+p.id+'\')"><div class="thumb">'+(p.image?'<img src="'+p.image+'" alt="'+p.name+'" style="width:100%;height:100%;object-fit:contain">':'PRODUCT IMAGE<br>PENDING')+'</div><div class="body"><div class="name">'+p.name+'</div><div class="meta"><span>'+money(p.price)+'</span><span class="sold">'+(p.orderable?"ORDERABLE":"SOLD OUT")+'</span></div></div></article>'}
 function render(id,cat){document.querySelector(id).innerHTML=products.filter(function(p){return p.cat===cat}).map(card).join("")}
 render("#beanie-grid","beanie");render("#hoodie-grid","hoodie");render("#tee-grid","tee");render("#cap-grid","cap");render("#bracelet-grid","bracelet");
 function openStudio(id){
@@ -37,7 +38,7 @@ var size=p.cat==="tee"||p.cat==="hoodie"?"<div class='control'><label>Size</labe
 var garment=p.cat==="tee"?"<div class='control'><label>Garment</label><select><option>TEE · $25 BASE</option><option>HOODIE · $35 BASE</option></select></div>":"";
 var sw=colors.map(function(c){return '<button class="sw" title="'+c[0]+'" style="background:'+c[1]+'" onclick="setColor(this,'+p.price+',\''+c[0]+'\')"></button>'}).join("");
 document.querySelector("#studio").style.display="block";
-document.querySelector("#studio").innerHTML='<div class="sthead"><div><h2>'+p.name+'</h2><small style="color:#777">'+p.cat.toUpperCase()+' · INTERACTIVE DESIGN STUDIO</small></div><button class="close" onclick="closeStudio()">×</button></div><div class="studio-grid"><div class="preview"><div class="previewmark">'+p.name+'</div><div class="pending">FINAL PRODUCT IMAGE WILL BE INSERTED FROM REPOSITORY ASSET</div></div><div><div class="control"><label>Color</label><div class="swatches">'+sw+'</div></div>'+garment+size+'<div class="control"><label>Current price</label><div class="price" id="live-price">'+money(p.price)+' <small>base</small></div></div><div>'+(p.orderable?'<a class="action primary" href="https://www.instagram.com/stazzboi/" target="_blank" rel="noopener">ORDER ON INSTAGRAM @STAZZBOI</a>':'<button class="action disabled" disabled>SOLD OUT — CHECKOUT UNAVAILABLE</button>')+'<button class="action" onclick="closeStudio()">CLOSE STUDIO</button></div></div></div>';
+document.querySelector("#studio").innerHTML='<div class="sthead"><div><h2>'+p.name+'</h2><small style="color:#777">'+p.cat.toUpperCase()+' · INTERACTIVE DESIGN STUDIO</small></div><button class="close" onclick="closeStudio()">×</button></div><div class="studio-grid"><div class="preview"><img src="'+p.image+'" alt="'+p.name+'" style="width:100%;height:100%;object-fit:contain;display:block"><div class="pending" style="display:none">PRODUCT IMAGE PENDING</div></div><div><div class="control"><label>Color</label><div class="swatches">'+sw+'</div></div>'+garment+size+'<div class="control"><label>Current price</label><div class="price" id="live-price">'+money(p.price)+' <small>base</small></div></div><div>'+(p.orderable?'<a class="action primary" href="https://www.instagram.com/stazzboi/" target="_blank" rel="noopener">ORDER ON INSTAGRAM @STAZZBOI</a>':'<button class="action disabled" disabled>SOLD OUT — CHECKOUT UNAVAILABLE</button>')+'<button class="action" onclick="closeStudio()">CLOSE STUDIO</button></div></div></div>';
 document.querySelector("#studio").scrollIntoView({behavior:"smooth",block:"start"})
 }
 function setColor(el,base,color){document.querySelectorAll(".sw").forEach(function(x){x.classList.remove("active")});el.classList.add("active");var price=color==="Yellow"?base*1.4:base;document.querySelector("#live-price").innerHTML=money(price)+' <small>'+(color==="Yellow"?"yellow premium +40%":"base color")+"</small>"}
