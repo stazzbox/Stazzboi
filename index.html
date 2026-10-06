@@ -13,8 +13,8 @@ body{background:var(--black);font-family:-apple-system,BlinkMacSystemFont,"Segoe
 button,a{font:inherit}
 a{color:inherit;text-decoration:none}
 .app{position:relative;width:100%;height:100dvh;overflow:hidden;background:var(--black)}
-.stage{display:flex;width:500%;height:100%;transform:translateX(0);transition:transform .42s cubic-bezier(.22,.61,.36,1);will-change:transform}
-.page{width:20%;height:100%;flex:0 0 20%;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior-x:none}
+.stage{display:flex;width:600%;height:100%;transform:translateX(0);transition:transform .42s cubic-bezier(.22,.61,.36,1);will-change:transform}
+.page{width:16.6666667%;height:100%;flex:0 0 16.6666667%;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior-x:none}
 .page-inner{width:min(100%,1080px);min-height:100%;margin:auto;padding:18px 14px 40px}
 .landing{background:linear-gradient(180deg,#080808 0%,#111 55%,#181818 100%);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center}
 .home-logo-wrap{display:flex;align-items:center;justify-content:center;padding:4px 20px 10px}
@@ -82,7 +82,9 @@ a{color:inherit;text-decoration:none}
 .direct-arrow{margin-left:auto;color:var(--yellow);font-size:24px;font-weight:900}
 .footer{border-top:1px solid var(--border);margin-top:18px;padding:14px 0;font-size:10px;color:var(--muted)}
 @media(min-width:700px){.page-inner{padding:20px 18px 50px}.hero img{max-height:720px}.landing-inner{padding:60px}.directs-header{margin:-20px -18px 22px;padding:24px 18px}}
-.stx-citation{display:block;margin:0 0 10px;padding:8px 11px;border-left:3px solid var(--gold,#f2c94c);background:#141414;color:var(--gold,#f2c94c);font:800 11px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase}.stx-citation:hover{color:#f7df86;border-color:#f7df86}.stazzboi-term{color:var(--gold,#f2c94c);font-weight:800}.stx-inline{color:var(--gold-hi);font-weight:800;text-decoration:none;border-bottom:1px dotted var(--gold-hi)}.stx-inline:hover{color:#fff}.stx-ref{white-space:nowrap;font-size:.78em;letter-spacing:.03em;color:var(--gold-hi)}</style>
+.stx-citation{display:block;margin:0 0 10px;padding:8px 11px;border-left:3px solid var(--gold,#f2c94c);background:#141414;color:var(--gold,#f2c94c);font:800 11px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase}.stx-citation:hover{color:#f7df86;border-color:#f7df86}.stazzboi-term{color:var(--gold,#f2c94c);font-weight:800}.stx-inline{color:var(--gold-hi);font-weight:800;text-decoration:none;border-bottom:1px dotted var(--gold-hi)}.stx-inline:hover{color:#fff}.stx-ref{white-space:nowrap;font-size:.78em;letter-spacing:.03em;color:var(--gold-hi)}
+.shop-hero{border:1px solid var(--border);background:linear-gradient(135deg,#171717,#090909);padding:24px 18px;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;gap:14px}.shop-hero strong{display:block;font-size:25px;letter-spacing:-.03em}.shop-hero span{display:block;color:#aaa;font-size:11px;margin-top:5px}.shop-hero a{border:1px solid var(--gold);padding:10px 12px;color:var(--gold-hi);font-size:10px;font-weight:900;white-space:nowrap}.shop-mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.shop-mini-card{border:1px solid var(--border);background:#101010;padding:15px 12px;min-height:82px;transition:.15s}.shop-mini-card:hover{border-color:var(--gold-hi);transform:translateY(-1px)}.shop-mini-card strong{display:block;font-size:12px}.shop-mini-card span{display:block;color:#888;font-size:10px;margin-top:4px}.shop-bundle{margin-top:14px;border:1px solid var(--gold-lo);background:#141414;padding:16px;text-align:center}.shop-bundle span{display:block;color:var(--gold-hi);font-size:9px;letter-spacing:.16em;font-weight:900}.shop-bundle strong{display:block;font-size:19px;margin-top:4px}.shop-bundle small{display:block;color:#888;font-size:9px;margin-top:5px}.dots{flex-wrap:wrap;justify-content:center}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -131,7 +133,7 @@ a{color:inherit;text-decoration:none}
   <p>Stazzland and his female costars, known as <a class="home-branch" href="/stazzlies/">The Stazzlies</a>, collaborate in content, while the Stazzerian index known as <a class="home-branch" href="/stazzex/">The Stazzex</a> records and documents the process, becoming Stazzerian history.</p>
 </div>
 <div class="swipe-indicator home-swipe" aria-hidden="true"><span>SWIPE LEFT TO EXPLORE</span><span class="swipe-arrow">→</span></div>
-<div class="dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+<div class="dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
 
 </div>
 </section>
@@ -172,6 +174,21 @@ a{color:inherit;text-decoration:none}
 </div>
 </section>
 
+<section class="page" aria-label="Stazzboi Shop">
+<div class="page-inner">
+<div class="directs-header"><h1>Stazzboi Shop</h1><p>Design the collection. Current apparel inventory is sold out.</p></div>
+<div class="shop-hero"><div><strong>STAZZBOI SHOP</strong><span>Wear the Stazz Universe.</span></div><a href="/shop/">ENTER SHOP →</a></div>
+<div class="shop-mini-grid">
+  <a class="shop-mini-card" href="/shop/#beanies"><strong>BEANIES</strong><span>3 designs · $20</span></a>
+  <a class="shop-mini-card" href="/shop/#hoodies"><strong>HOODIES</strong><span>3 designs · $35</span></a>
+  <a class="shop-mini-card" href="/shop/#tees"><strong>TEES</strong><span>3 designs · $25</span></a>
+  <a class="shop-mini-card" href="/shop/#caps"><strong>BASEBALL CAPS</strong><span>2 designs · $20</span></a>
+  <a class="shop-mini-card" href="/shop/#bracelets"><strong>BRACELETS</strong><span>2 designs · $6.99</span></a>
+</div>
+<div class="shop-bundle"><span>STAZZEX CLASSIC</span><strong>COMPLETE SET</strong><small>Beanie + tee + hoodie + cap · estimated bundle value shown inside</small></div>
+</div>
+</section>
+
 </div>
 </div>
 
@@ -181,8 +198,8 @@ a{color:inherit;text-decoration:none}
   const dots=[...document.querySelectorAll('.dot')];
   let page=0,startX=0,startY=0,tracking=false;
   function go(n){
-    page=Math.max(0,Math.min(4,n));
-    stage.style.transform='translateX('+(-page*20)+'%)';
+    page=Math.max(0,Math.min(5,n));
+    stage.style.transform='translateX('+(-page*(100/6))+'%)';
     dots.forEach((d,i)=>d.classList.toggle('active',i===page));
   }
   function swipe(dx,dy){
