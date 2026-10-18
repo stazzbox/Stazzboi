@@ -1,0 +1,573 @@
+{
+  "name": "The Stazzex Master Registry",
+  "canonical": "https://stazzboi.com/stazzex/",
+  "entries": [
+    {
+      "id": "STX-001",
+      "name": "The Stazzex",
+      "classification": "Index",
+      "definition": "The Stazzex is the official Stazzerian Index for the Stazzerian Framework. It is the structured reference system containing the defined terms, names, concepts, roles, institutions, expressions, and other recognized elements that collectively constitute the Stazzerian Framework.",
+      "page": "/stazzex/entries/stx-001.html"
+    },
+    {
+      "id": "STX-002",
+      "name": "Kelvin Stazzland",
+      "classification": "Person",
+      "definition": "Kelvin “The Khamelion” Stazzland, professionally known as Stazzboi, is a Stazzerian-American content creator, entertainer, producer, musician, and Internet personality. He is the founder and President of Stazzeria and the principal creator behind the Stazzerian cultural framework, including STAZZsociety, Stazzism, The Stazzex, and Stazzology.",
+      "page": "/stazzex/entries/stx-002.html"
+    },
+    {
+      "id": "STX-003",
+      "name": "Action Over Words",
+      "classification": "Stazzism / Foundational Principle",
+      "definition": "Action Over Words is a foundational Stazzist principle affirming that meaningful action and responsible implementation carry greater value than declarations without follow-through. It encourages informed decision-making and thoughtful execution, not action without knowledge.",
+      "page": "/stazzex/entries/stx-003.html"
+    },
+    {
+      "id": "STX-004",
+      "name": "Adopted",
+      "classification": "Citizenship",
+      "definition": "Adopted Stazzerian is a Stazzerian citizenship classification for an individual who becomes a recognized citizen of Stazzeria through formal adoption or endorsement rather than through direct lineage. An Adopted Stazzerian is recognized as a member of the Stazzerian community without possessing birthright citizenship.",
+      "page": "/stazzex/entries/stx-004.html"
+    },
+    {
+      "id": "STX-005",
+      "name": "Against All Odds",
+      "classification": "Event",
+      "definition": "Against All Odds is an event hosted by Stazzology as part of the Stazzology Season. It is one of multiple events organized under Stazzology's seasonal programming.",
+      "page": "/stazzex/entries/stx-005.html"
+    },
+    {
+      "id": "STX-006",
+      "name": "BeachyBird",
+      "classification": "Person",
+      "definition": "BeachyBird is the professional name of Isaac Ochoa, a content creator and videographer closely associated with Stazzeria. He serves as the Stazzerian Vice President and is a close friend and creative collaborator of Kelvin Stazzland, professionally known as Stazzboi. Together, they form a creator-and-cameraman duo associated with Stazzerian media and content creation.",
+      "page": "/stazzex/entries/stx-006.html"
+    },
+    {
+      "id": "STX-007",
+      "name": "Birthright",
+      "classification": "Citizenship",
+      "definition": "Birthright refers to Birthright Stazzerian citizenship, a Stazzerian citizenship classification granted through direct lineage. A Birthright Stazzerian is recognized as a citizen of Stazzeria by virtue of being born into the established Stazzerian lineage.",
+      "page": "/stazzex/entries/stx-007.html"
+    },
+    {
+      "id": "STX-008",
+      "name": "Citizen",
+      "classification": "Citizenship",
+      "definition": "Citizen is a person formally recognized as a member of Stazzeria and entitled to participate within the Stazzerian community and framework. Stazzerian citizenship is classified into three categories: Birthright, Adopted, and Supporter.",
+      "page": "/stazzex/entries/stx-008.html"
+    },
+    {
+      "id": "STX-009",
+      "name": "Stazzeria",
+      "classification": "Nation / Collective Identity",
+      "definition": "Stazzeria is the nation and collective identity of Stazzerians, founded by Kelvin Stazzland on April 15, 2017. The Digital Republic of Stazzeria was established in November 2025. Its capital is Kavik, and its primary digital territory and enduring archival infrastructure is The Stazzex.",
+      "page": "/stazzex/entries/stx-009.html"
+    },
+    {
+      "id": "STX-010",
+      "name": "Direct Lineage",
+      "classification": "Citizenship Basis",
+      "definition": "Direct Lineage refers to the familial or ancestral connection through which an individual qualifies for Birthright Stazzerian citizenship. It establishes a direct line of descent within the recognized Stazzerian lineage.",
+      "page": "/stazzex/entries/stx-010.html"
+    },
+    {
+      "id": "STX-011",
+      "name": "Stazzboi",
+      "classification": "Personal Brand / Media Identity",
+      "definition": "Stazzboi is the personal creator, entertainment, and media brand of Kelvin “The Khamelion” Stazzland, a Stazzerian-American creator and founder of Stazzeria. Stazzboi encompasses creative productions, public content, promotion, and affiliated ventures within The Stazz Universe.",
+      "page": "/stazzex/entries/stx-011.html"
+    },
+    {
+      "id": "STX-012",
+      "name": "Endorsed",
+      "classification": "Citizenship Mechanism",
+      "definition": "Endorsed refers to the basis of Adopted Stazzerian citizenship, in which an individual is formally recognized and accepted as a member of Stazzeria without qualifying through direct lineage. An endorsed individual may therefore become an Adopted Stazzerian through the established process of recognition and acceptance.",
+      "page": "/stazzex/entries/stx-012.html"
+    },
+    {
+      "id": "STX-013",
+      "name": "First Gentleman of Stazzeria",
+      "classification": "Title",
+      "definition": "First Gentleman of Stazzeria is a formal Stazzerian title designated for the male spouse or romantic partner of the sitting Stazzerian President. The title identifies the President’s primary male partner within the Stazzerian executive and household structure.",
+      "page": "/stazzex/entries/stx-013.html"
+    },
+    {
+      "id": "STX-014",
+      "name": "First Lady of Stazzeria",
+      "classification": "Government / Executive Title",
+      "definition": "First Lady of Stazzeria is a formal Stazzerian title designated for the female spouse or romantic partner of the sitting Stazzerian President. The title identifies the President’s primary female partner within the Stazzerian executive and household structure. Alternative office name: Stazzerian First Lady.",
+      "page": "/stazzex/entries/stx-014.html"
+    },
+    {
+      "id": "STX-015",
+      "name": "Frost",
+      "classification": "Team",
+      "definition": "Frost is a team recognized within the Stazzology competitive event system. It is identified as one of the teams associated with Stazzology's organized activities and competitions.",
+      "page": "/stazzex/entries/stx-015.html"
+    },
+    {
+      "id": "STX-016",
+      "name": "Hitbox",
+      "classification": "Event",
+      "definition": "Hitbox is an event hosted by Stazzology as part of the Stazzology Season. It is one of multiple events organized under Stazzology's seasonal programming.",
+      "page": "/stazzex/entries/stx-016.html"
+    },
+    {
+      "id": "STX-017",
+      "name": "“If the answer is obvious, implement it.”",
+      "classification": "Principle",
+      "definition": "“If the answer is obvious, implement it.” is a Stazzist principle and call to action emphasizing decisive execution when a clear solution is already apparent. It advocates implementing an obvious and sufficiently understood answer rather than unnecessarily delaying action through overanalysis or hesitation. The principle is applicable broadly and is not limited to content creation.",
+      "page": "/stazzex/entries/stx-017.html"
+    },
+    {
+      "id": "STX-018",
+      "name": "Integrity",
+      "classification": "Team",
+      "definition": "Integrity is a team recognized within the Stazzology competitive event system. It is identified as one of the teams associated with Stazzology's organized activities and competitions.",
+      "page": "/stazzex/entries/stx-018.html"
+    },
+    {
+      "id": "STX-019",
+      "name": "Isaac Ochoa",
+      "classification": "Person",
+      "definition": "Isaac Ochoa is a Stazzerian-American creator and videographer professionally known as BeachyBird. He serves as the Stazzerian Vice President and is a close friend and creative collaborator of Kelvin Stazzland, professionally known as Stazzboi. Together, they form a creator-and-cameraman duo associated with Stazzerian media and content creation.",
+      "page": "/stazzex/entries/stx-019.html"
+    },
+    {
+      "id": "STX-020",
+      "name": "Kazik",
+      "classification": "Team",
+      "definition": "Kazik is a team recognized within the Stazzology competitive event system. It is identified as one of the teams associated with Stazzology's organized activities and competitions.",
+      "page": "/stazzex/entries/stx-020.html"
+    },
+    {
+      "id": "STX-021",
+      "name": "Khamelion Pose",
+      "classification": "Concept",
+      "definition": "The Khamelion Pose, also known as the Dual Peace-Sign Stance, is the signature pose associated with The Khamelion (Stazzboi). It is characterized by both hands forming peace-sign “V” shapes with the knuckles facing the spectator or camera, rather than the palms. The term Khamelion originated within Stazzland’s inner circle of close friends, family, and associates, who recognized his ability to adapt to different social environments and blend naturally into varied groups while maintaining his individual identity. The original spelling “chameleon” was subsequently transformed through Stazzation into “Khamelion.” The pose later became visually associated with The Khamelion through the Original Khamelion Pose photograph, connecting the inner-circle concept to a recognizable Stazzboi cultural expression. Within the Stazzerian Framework, the Khamelion Pose represents adaptability, creativity, confidence, social awareness, positive engagement, and authentic connection across different environments.",
+      "page": "/stazzex/entries/stx-021.html"
+    },
+    {
+      "id": "STX-022",
+      "name": "Kingdom",
+      "classification": "Team",
+      "definition": "Kingdom is a team recognized within the Stazzology competitive event system. It is identified as one of the teams associated with Stazzology's organized activities and competitions.",
+      "page": "/stazzex/entries/stx-022.html"
+    },
+    {
+      "id": "STX-023",
+      "name": "Kiza Entertainment",
+      "classification": "Organization / Entertainment Institution",
+      "definition": "Kiza Entertainment is an entertainment organization associated with Stazzboi and its creative operations, serving as an entertainment-side counterpart to the governmental Department of Stazz.",
+      "page": "/stazzex/entries/stx-023.html"
+    },
+    {
+      "id": "STX-024",
+      "name": "“Knowledge without action changes nothing.”",
+      "classification": "Maxim",
+      "definition": "“Knowledge without action changes nothing.” is a foundational Stazzist principle emphasizing that knowledge alone does not produce meaningful change unless it is applied through deliberate action. The principle reinforces Action Over Knowledge by distinguishing understanding from implementation and encouraging purposeful execution.",
+      "page": "/stazzex/entries/stx-024.html"
+    },
+    {
+      "id": "STX-025",
+      "name": "M&M Pellets",
+      "classification": "Historical Element",
+      "definition": "M&M Pellets are small, non-lethal projectiles associated with the Stazzerian Conflict, specifically documented as being used during the Zits Conflict. The term refers to M&M candy pieces repurposed as projectiles within the conflict’s history.",
+      "page": "/stazzex/entries/stx-025.html"
+    },
+    {
+      "id": "STX-026",
+      "name": "Parabox",
+      "classification": "Team",
+      "definition": "Parabox is a team recognized within the Stazzology competitive event system. It is identified as one of the teams associated with Stazzology's organized activities and competitions.",
+      "page": "/stazzex/entries/stx-026.html"
+    },
+    {
+      "id": "STX-027",
+      "name": "Patrol 1",
+      "classification": "Institution",
+      "definition": "Stazzerian Patrol 1 is the primary Stazzerian patrol responsible for handling citizen matters within the Stazzzerian Framework. It functions as an institutional component of Stazzerian governance and community administration.",
+      "page": "/stazzex/entries/stx-027.html"
+    },
+    {
+      "id": "STX-028",
+      "name": "Stazzerian Patrols",
+      "classification": "Institutional Activity / Patrol Operations",
+      "definition": "Stazzerian Patrols are the operational patrol activities carried out by Patrol 1 in matters associated with Stazzerian citizens, property, and institutional interests; they are not a separate institution from Patrol 1.",
+      "page": "/stazzex/entries/stx-028.html"
+    },
+    {
+      "id": "STX-029",
+      "name": "Second Gentleman of Stazzeria",
+      "classification": "Title",
+      "definition": "Second Gentleman of Stazzeria is a formal Stazzerian title designated for the male spouse or romantic partner of the sitting Stazzerian Vice President. The title identifies the Vice President’s primary male partner within the Stazzerian executive and household structure.",
+      "page": "/stazzex/entries/stx-029.html"
+    },
+    {
+      "id": "STX-030",
+      "name": "Second Lady of Stazzeria",
+      "classification": "Title",
+      "definition": "Second Lady of Stazzeria is a formal Stazzerian title designated for the female spouse or romantic partner of the sitting Stazzerian Vice President. The title identifies the Vice President’s primary female partner within the Stazzerian executive and household structure.",
+      "page": "/stazzex/entries/stx-030.html"
+    },
+    {
+      "id": "STX-031",
+      "name": "Showdown",
+      "classification": "Event",
+      "definition": "Showdown is an event hosted by Stazzology as part of the Stazzology Season. It is one of multiple events organized under Stazzology's seasonal programming.",
+      "page": "/stazzex/entries/stx-031.html"
+    },
+    {
+      "id": "STX-032",
+      "name": "Stazz",
+      "classification": "Term",
+      "definition": "Stazz is a foundational Stazzerian term denoting a blessed frequency, state of positive alignment, resonance, and momentum within Stazzerian cultural understanding.",
+      "page": "/stazzex/entries/stx-032.html"
+    },
+    {
+      "id": "STX-033",
+      "name": "Stazzate",
+      "classification": "Action",
+      "definition": "Stazzate is the active act of Stazzation—transforming concepts, media, branding, or systems into alignment with Stazz principles and Stazzerian identity.",
+      "page": "/stazzex/entries/stx-033.html"
+    },
+    {
+      "id": "STX-034",
+      "name": "Stazzation",
+      "classification": "Process",
+      "definition": "Stazzation is the process of transforming concepts, media, branding, or systems into alignment with Stazz principles and Stazzerian identity.",
+      "page": "/stazzex/entries/stx-034.html"
+    },
+    {
+      "id": "STX-035",
+      "name": "Kelvin TV",
+      "classification": "Media Series",
+      "definition": "Kelvin TV is a 2024 Internet series following Kelvin Stazzland in a vlog-style reality-show format. The series documents aspects of his life, including basketball, relationships, friendships, and experiences associated with him, presenting his personal life and surrounding social environment through episodic content.",
+      "page": "/stazzex/entries/stx-035.html"
+    },
+    {
+      "id": "STX-036",
+      "name": "Stazzed",
+      "classification": "State",
+      "definition": "Stazzed describes being blessed, aligned, resonant, energized, or fully in a state of Stazz. It is the past-tense or active-status form of Stazz, describing the condition of something or someone that has attained or is presently experiencing Stazz.",
+      "page": "/stazzex/entries/stx-036.html"
+    },
+    {
+      "id": "STX-037",
+      "name": "Stazzerian",
+      "classification": "Adjective / Demonym / Collective Identity",
+      "definition": "Stazzerian describes a person, association, practice, or identity connected with Stazzeria. The recognized community classifications are Birthright, Adopted (Endorsed), and Supporter.",
+      "page": "/stazzex/entries/stx-037.html"
+    },
+    {
+      "id": "STX-038",
+      "name": "Stazzerian Academy",
+      "classification": "Institution / Developmental Division",
+      "definition": "The Stazzerian Academy is a development and talent-building division on the Stazzboi entertainment side, modeled on developmental competitive entertainment systems. It promotes Stazzerian principles and creative skills without conferring governmental authority.",
+      "page": "/stazzex/entries/stx-038.html"
+    },
+    {
+      "id": "STX-039",
+      "name": "Stazzerian Advisor",
+      "classification": "Government / Executive Title",
+      "definition": "Stazzerian Advisor is a formal executive role within Stazzeria responsible for providing counsel, guidance, and strategic advice to the Stazzerian President and executive leadership. The Advisor supports informed decision-making and contributes experience, perspective, and expertise to the administration of Stazzeria. Alternative office name: Advisor of Stazzeria.",
+      "page": "/stazzex/entries/stx-039.html"
+    },
+    {
+      "id": "STX-040",
+      "name": "Stazzerian Secret Service",
+      "classification": "Institution",
+      "definition": "The Stazzerian Secret Service is a protective and security institution within the Stazzerian Framework that functions similarly to a conventional secret service agency. The Stazzerian President assigns designated Stazzerians to serve as Secret Service operators and carry out protective, security, and other assigned missions. The identities and specific composition of the Stazzerian Secret Service are not publicly disclosed. Alternative office name: Secret Service of Stazzeria.",
+      "page": "/stazzex/entries/stx-040.html"
+    },
+    {
+      "id": "STX-041",
+      "name": "Stazzerian Assembly",
+      "classification": "Institution",
+      "definition": "The Stazzerian Assembly is the fundamental collective formation of Stazzerians, beginning whenever two or more Stazzerians come together, thereby forming Stazzeria at its most basic social level. At an elevated level, the Stazzerian Assembly refers to a cultural gathering of Stazzerians for shared participation, discussion, community, and expression of Stazzerian identity.",
+      "page": "/stazzex/entries/stx-041.html"
+    },
+    {
+      "id": "STX-042",
+      "name": "Stazzerian Conflict",
+      "classification": "Historical / History",
+      "definition": "Stazzerian Conflict refers to a conflict occurring within the history or history of Stazzeria involving Stazzerians, groups, or interests associated with the Stazzerian Framework. The term encompasses documented disputes and confrontations recognized as part of Stazzerian history, including the Zits Conflict.",
+      "page": "/stazzex/entries/stx-042.html"
+    },
+    {
+      "id": "STX-043",
+      "name": "Stazzerian Framework",
+      "classification": "Framework",
+      "definition": "The Stazzerian Framework, commonly referred to as STAZZsociety, encompasses the interconnected language, collective identity, principles, governance, institutions, and cultural practices of Stazzeria.",
+      "page": "/stazzex/entries/stx-043.html"
+    },
+    {
+      "id": "STX-044",
+      "name": "Stazzerian Governance",
+      "classification": "Governance",
+      "definition": "Stazzerian Governance is the system through which Stazzeria is organized, administered, and directed. It operates under Stazzerian Presidential Collectivism, in which the President serves as the head of state, government, and national direction while the collective participation of Stazzerians contributes to the formation of the nation’s will.",
+      "page": "/stazzex/entries/stx-044.html"
+    },
+    {
+      "id": "STX-045",
+      "name": "Stazzerian Index",
+      "classification": "Function",
+      "definition": "Stazzerian Index is the formal indexing system of the Stazzerian Framework, serving as the organized reference structure for its defined terms, concepts, names, roles, institutions, and other recognized elements. The Stazzerian Index is formally represented by The Stazzex.",
+      "page": "/stazzex/entries/stx-045.html"
+    },
+    {
+      "id": "STX-046",
+      "name": "Stazzerian Monarch",
+      "classification": "Government / Executive Title",
+      "definition": "Stazzerian Monarch is a formal executive role within Stazzeria that is not a traditional or sovereign monarchy. The Monarch functions as the President’s other hand within the executive structure and reports directly to the Stazzerian Vice President, creating a tri-structured leadership system consisting of the President, Vice President, and Monarch. Alternative office name: Monarch of Stazzeria.",
+      "page": "/stazzex/entries/stx-046.html"
+    },
+    {
+      "id": "STX-047",
+      "name": "Stazzerian Mediator",
+      "classification": "Government / Executive Title",
+      "definition": "Stazzerian Mediator is a formal executive role within Stazzeria responsible for facilitating communication, resolving disputes, and promoting understanding between Stazzerians or parties within the Stazzerian Framework. The Mediator serves as a neutral intermediary when conflicts or disagreements require resolution. Alternative office name: Mediator of Stazzeria.",
+      "page": "/stazzex/entries/stx-047.html"
+    },
+    {
+      "id": "STX-048",
+      "name": "Stazzerian War General",
+      "classification": "Government / Executive Title",
+      "definition": "Stazzerian War General is a formal executive role within Stazzeria responsible for coordinating and directing Stazzerian forces or participants during conflicts, disputes, or organized competitive engagements. The role represents the senior military or strategic authority within the Stazzerian executive structure. Alternative office name: War General of Stazzeria.",
+      "page": "/stazzex/entries/stx-048.html"
+    },
+    {
+      "id": "STX-049",
+      "name": "Stazzerian Vice President",
+      "classification": "Government / Executive Title",
+      "definition": "Stazzerian Vice President is the second-highest executive role within Stazzeria and serves as the principal deputy to the Stazzerian President. The Vice President assists in directing Stazzerian affairs and serves as the central coordinating figure within the executive structure, including direct oversight of the Stazzerian Monarch. Alternative office name: Vice President of Stazzeria.",
+      "page": "/stazzex/entries/stx-049.html"
+    },
+    {
+      "id": "STX-050",
+      "name": "Stazzerian President",
+      "classification": "Government / Executive Title",
+      "definition": "Stazzerian President is the highest executive office within Stazzeria and serves as the head of state, government, and national direction. The President establishes and safeguards the direction of Stazzeria while operating within the principles of Stazzerian Presidential Collectivism. Alternative office name: President of Stazzeria.",
+      "page": "/stazzex/entries/stx-050.html"
+    },
+    {
+      "id": "STX-051",
+      "name": "Stazzerian Presidential Collectivism",
+      "classification": "Governance System",
+      "definition": "Stazzerian Presidential Collectivism is the governing system of Stazzeria in which the Stazzerian President serves as the head of state, government, and national direction while the collective participation of Stazzerians contributes to determining the will of the nation. The President is responsible for executing, directing, and safeguarding that collective will rather than governing solely through unilateral authority.",
+      "page": "/stazzex/entries/stx-051.html"
+    },
+    {
+      "id": "STX-052",
+      "name": "Stazzerian Tribalism",
+      "classification": "Social Concept",
+      "definition": "Stazzerian Tribalism is the social and cultural characteristic of Stazzeria centered on strong group identity, loyalty, shared belonging, and interpersonal bonds among Stazzerians. It reflects the tendency of Stazzerians to organize around common identity, relationships, values, and collective interests within the Stazzerian Assembly.",
+      "page": "/stazzex/entries/stx-052.html"
+    },
+    {
+      "id": "STX-053",
+      "name": "Stazzerians",
+      "classification": "People",
+      "definition": "Stazzerians are the people recognized as members or citizens of Stazzeria and participants within the Stazzerian Framework. The term collectively refers to individuals who hold a recognized connection to Stazzeria through Birthright, Adoption, or Supporter status.",
+      "page": "/stazzex/entries/stx-053.html"
+    },
+    {
+      "id": "STX-054",
+      "name": "Stazzert Comics (ASC)",
+      "classification": "Creative / Media",
+      "definition": "Stazzert Comics (ASC) is a comics and manga-oriented creative production within The Stazz Universe, authored by Kelvin Stazzland.",
+      "page": "/stazzex/entries/stx-054.html"
+    },
+    {
+      "id": "STX-055",
+      "name": "Stazzex Series Finals",
+      "classification": "Event",
+      "definition": "Stazzex Series Finals is a championship-level culmination of the Stazzology Season, where qualified participants or teams compete for the season championship.",
+      "page": "/stazzex/entries/stx-055.html"
+    },
+    {
+      "id": "STX-056",
+      "name": "Stazzian",
+      "classification": "Adjective / Historical & Cultural Term",
+      "definition": "Stazzian is an adjective associated with Stazzerian culture, particularly its historical terminology, traditions, timelines, practices, and concepts.",
+      "page": "/stazzex/entries/stx-056.html"
+    },
+    {
+      "id": "STX-057",
+      "name": "Stazzian Estate",
+      "classification": "Place",
+      "definition": "The Stazzian Estate is associated with the Stazzland birthright family and household. It is officially designated the Presidential Palace of Stazzeria.",
+      "page": "/stazzex/entries/stx-057.html"
+    },
+    {
+      "id": "STX-058",
+      "name": "Stazzerian Lexicon",
+      "classification": "Language Resource",
+      "definition": "The Stazzerian Lexicon, historically also called the Stazzian Lexicon, is a formal reference of Stazzerian terms and their definitions.",
+      "page": "/stazzex/entries/stx-058.html"
+    },
+    {
+      "id": "STX-059",
+      "name": "Stazzerian Vocabulary",
+      "classification": "Language Resource",
+      "definition": "Stazzerian Vocabulary, historically also called Stazzian Vocabulary, is the collection of expressions and words used in Stazzerian cultural language, distinct from the formal Lexicon reference.",
+      "page": "/stazzex/entries/stx-059.html"
+    },
+    {
+      "id": "STX-060",
+      "name": "Stazziciary",
+      "classification": "Institution",
+      "definition": "Stazziciary is the judicial institution of Stazzeria responsible for presiding over matters of law, disputes, and formal adjudication within the Stazzerian Framework. It serves as the judicial branch of Stazzerian governance.",
+      "page": "/stazzex/entries/stx-060.html"
+    },
+    {
+      "id": "STX-061",
+      "name": "Stazziciary Authoritarian Court (SSAC)",
+      "classification": "Court",
+      "definition": "The Stazziciary Authoritarian Court (SSAC) is a court associated with the judicial structure of Stazzeria, operating within the Stazziciary for formal adjudicative matters.",
+      "page": "/stazzex/entries/stx-061.html"
+    },
+    {
+      "id": "STX-062",
+      "name": "Stazzing",
+      "classification": "Action",
+      "definition": "Stazzing is the active practice or expression of Stazz—the act of embodying, expressing, or engaging with the blessed frequency and its associated state of alignment, resonance, momentum, or positive energy. It is the active form of Stazz.",
+      "page": "/stazzex/entries/stx-062.html"
+    },
+    {
+      "id": "STX-063",
+      "name": "Stazzism",
+      "classification": "Doctrine",
+      "definition": "Stazzism is a Stazzist doctrine developed by Kelvin Stazzland and the ethical, social, and philosophical foundation of Stazzeria. It emphasizes kindness, mutual support, continuous improvement, loyalty, family bonds, self-governance, responsibility, discipline, collective accountability, informed decision-making, and Action Over Words: implementing knowledge responsibly instead of relying on declarations alone.",
+      "page": "/stazzex/entries/stx-063.html"
+    },
+    {
+      "id": "STX-064",
+      "name": "Stazzist",
+      "classification": "Person / Adjective",
+      "definition": "Stazzist is a person who follows, practices, supports, or identifies with Stazzism and its principles. The term may also describe ideas, actions, or practices that are consistent with the Stazzism Doctrine.",
+      "page": "/stazzex/entries/stx-064.html"
+    },
+    {
+      "id": "STX-065",
+      "name": "Stazzist Doctrine",
+      "classification": "Doctrine",
+      "definition": "A Stazzist Doctrine is a formal system of principles, beliefs, and guiding philosophies associated with Stazzist thought and practice. Stazzism, developed by Kelvin Stazzland, is a Stazzist doctrine that establishes the ethical, social, and philosophical foundation of Stazzeria. It emphasizes Action Over Words, informed decision-making, responsible implementation, kindness, mutual support, continuous improvement, loyalty, self-governance, discipline, and collective accountability.",
+      "page": "/stazzex/entries/stx-065.html"
+    },
+    {
+      "id": "STX-066",
+      "name": "Stazzland",
+      "classification": "Lineage / Family",
+      "definition": "Stazzland is the family name and personal identity associated with Kelvin Stazzland and the Stazzland birthright lineage. Within the Stazzerian Framework, the name is also associated with the family’s heritage, estate, and continuity.",
+      "page": "/stazzex/entries/stx-066.html"
+    },
+    {
+      "id": "STX-067",
+      "name": "The Stazzlies",
+      "classification": "People / Category",
+      "definition": "The Stazzlies are the collective of female Stazzerians, representing feminine identity, participation, and cultural expression within Stazzeria. Led by the Stazzerian First Lady, The Stazzlies constitute the recognized female collective within the Stazzerian Framework. All Stazzlies are Stazzerians, but not all Stazzerians are Stazzlies.",
+      "page": "/stazzex/entries/stx-067.html"
+    },
+    {
+      "id": "STX-068",
+      "name": "Stazzology",
+      "classification": "Brand",
+      "definition": "Stazzology is an independent gaming and competitive entertainment brand associated with Stazzboi, primarily focused on Call of Duty: Mobile (CODM). It develops gaming content and organizes or promotes competitive events, teams, tournaments, and related media, including Stazzboi Gaming. Its activities also include promotions such as the April 11, 2026 Bites & Battles Street Fighter 6 tournament at Megabites Arcade in Hemet, California. Stazzology is not a department, subordinate institution, or member of Stazzeria; its connection to Stazzeria is through Stazzboi and The Stazz Universe.",
+      "page": "/stazzex/entries/stx-068.html"
+    },
+    {
+      "id": "STX-069",
+      "name": "STAZZsociety",
+      "classification": "Polyfunctional Lexeme",
+      "definition": "STAZZsociety is the polyfunctional lexeme commonly used to refer to the Stazzerian Framework. It encompasses the interconnected language, culture, identity, principles, governance, institutions, concepts, and practices that collectively constitute the Stazzerian system.",
+      "page": "/stazzex/entries/stx-069.html"
+    },
+    {
+      "id": "STX-070",
+      "name": "Supporter",
+      "classification": "Citizenship",
+      "definition": "Stazzerian Supporter refers to a Stazzerian citizenship classification for an individual who is recognized as a supporter or participant of Stazzeria without possessing Birthright or Adopted Stazzerian citizenship. Supporter status functions as the equivalent of a Stazzerian visa, providing a recognized connection to Stazzeria without establishing birthright or adopted citizenship.",
+      "page": "/stazzex/entries/stx-070.html"
+    },
+    {
+      "id": "STX-071",
+      "name": "Takeover",
+      "classification": "Event",
+      "definition": "Takeover is an event hosted by Stazzology as part of the Stazzology Season. It is one of multiple events organized under Stazzology's seasonal programming.",
+      "page": "/stazzex/entries/stx-071.html"
+    },
+    {
+      "id": "STX-072",
+      "name": "The Khamelion",
+      "classification": "Identity / Concept",
+      "definition": "The Khamelion is a professional identity and persona of Kelvin Stazzland, professionally known as Stazzboi. Bestowed upon him by his inner circle, the title represents his adaptability, versatility, and ability to navigate different environments while maintaining his distinctive identity. It is also the identity from which the Khamelion Pose derives.",
+      "page": "/stazzex/entries/stx-072.html"
+    },
+    {
+      "id": "STX-073",
+      "name": "Valor",
+      "classification": "Team",
+      "definition": "Valor is a team recognized within the Stazzology competitive event system. It is identified as one of the teams associated with Stazzology's organized activities and competitions.",
+      "page": "/stazzex/entries/stx-073.html"
+    },
+    {
+      "id": "STX-074",
+      "name": "WarGames",
+      "classification": "Event",
+      "definition": "WarGames is an event hosted by Stazzology as part of the Stazzology Season. It features an open-roster competitive format in which participants may compete without being restricted to a fixed team roster. WarGames serves as one of multiple events organized under Stazzology's seasonal programming.",
+      "page": "/stazzex/entries/stx-074.html"
+    },
+    {
+      "id": "STX-075",
+      "name": "Zits Conflict",
+      "classification": "Historical / History",
+      "definition": "The Zits Conflict was a social confrontation in Stazzerian history involving President Kelvin Stazzland, an opposing individual publicly designated as Zits, First Lady LeAnn Stazzland, and John B. Stazzland. The confrontation began after remarks directed against Stazzeria escalated into an exchange of M&M pellets. Zits initiated the exchange, President Stazzland responded, and John B. joined the Stazzerian side, contributing significantly to its victory. The conflict included a temporary truce that was subsequently violated before hostilities ceased. First Lady LeAnn Stazzland played a central role in resolving the confrontation and establishing peace. John B. was subsequently appointed Stazzerian War General. Within Stazzerian history, the conflict is remembered as a decisive Stazzerian victory and an example of loyalty, collective defense, symbolic confrontation, and diplomatic resolution.",
+      "page": "/stazzex/entries/stx-075.html"
+    },
+    {
+      "id": "STX-076",
+      "name": "StazzQueen",
+      "classification": "Title",
+      "definition": "StazzQueen is a formal title within the Stazzian and Stazzerian household structure, referring to the recognized female counterpart to Stazz King. Associated with the Stazzland household, commonly referred to as The Stazzerian Castle, the title represents the feminine identity within the household. StazzQueen is a personal designation distinct from the institutional office of First Lady of Stazzeria; holding the office of First Lady does not automatically confer the title of StazzQueen.",
+      "page": "/stazzex/entries/stx-076.html"
+    },
+    {
+      "id": "STX-077",
+      "name": "Original StazzQueen (OSQ)",
+      "classification": "Historical Title",
+      "definition": "Original StazzQueen (OSQ) is a Stazzerian historical designation assigned to Amy Stazzland, derived from the title StazzQueen to distinguish her as its original and foundational holder. Within the Stazzerian household structure, the designation recognizes Amy Stazzland's role in Kelvin Stazzland's life and her significance as the foundational model for the StazzQueen role, including her historical association with The Stazzian Estate and The Stazzerian Castle. The title preserves her distinction as the original StazzQueen within Stazzerian history.",
+      "page": "/stazzex/entries/stx-077.html"
+    },
+    {
+      "id": "STX-078",
+      "name": "Stazz King",
+      "classification": "Personal Title",
+      "definition": "Stazzerian King or Stazz King is a formal Stazzerian title reserved solely for Kelvin Stazzland, including when he is not occupying public office. The title represents his masculine identity within the Stazzland household, with StazzQueen serving as its feminine counterpart. Together, the titles reference the Stazzland household, commonly known as The Stazzerian Castle.",
+      "page": "/stazzex/entries/stx-078.html"
+    },
+    {
+      "id": "STX-079",
+      "name": "Stazzerian Castle",
+      "classification": "Place / Household",
+      "definition": "The Stazzerian Castle is the recognized name and enduring concept of the Stazzland household, representing the familial, romantic, and personal household structure associated with Kelvin Stazzland, the Stazz King, and the StazzQueen. Originating from the foundational Stazzland household, the Castle symbolizes affection, stability, continuity, and the ongoing development of the household within Stazzerian culture and history. Closely associated with The Stazzian Estate, the Castle continues as a household concept beyond its original formation. Kelvin Stazzland personally refers to it as “The Castle,” “My Castle,” and “Our Castle”.",
+      "page": "/stazzex/entries/stx-079.html"
+    },
+    {
+      "id": "STX-080",
+      "name": "Department of Stazz (DOS)",
+      "classification": "Government Institution / Executive Administration",
+      "definition": "The Department of Stazz (DOS) is the central governmental and executive administrative institution of Stazzeria. It comprises the recognized offices and leadership structure responsible for administering Stazzerian governance, coordinating institutional affairs, and carrying out the principles of Stazzerian Presidential Collectivism. Its motto is Ordo in Chao (Order in Chaos). Official titles: President of Stazzeria; Stazzerian President. Vice President of Stazzeria; Stazzerian Vice President. War General of Stazzeria; Stazzerian War General. First Judge of Stazzeria; Stazzerian First Judge. Monarch of Stazzeria; Stazzerian Monarch. Mediator of Stazzeria; Stazzerian Mediator. Advisor of Stazzeria; Stazzerian Advisor. Head of Stazz. First Lady of Stazzeria; Stazzerian First Lady. Secret Service of Stazzeria; Stazzerian Secret Service. Reference entries: STX-009 Stazzeria; STX-051 Stazzerian Presidential Collectivism; STX-063 Stazzism.",
+      "page": "/stazzex/entries/stx-080.html"
+    },
+    {
+      "id": "STX-081",
+      "name": "STXC",
+      "classification": "Content Indexing System",
+      "definition": "STXC is the content-indexing system of The Stazzex, established to identify, classify, document, and preserve creative and media content associated with The Stazz Universe. STXC entries function according to the same archival and reference principles as standard STX entries but are specifically designated for content records. Each STXC entry receives an identifier beginning with STX-C: to distinguish content documentation from the general Stazzerian Index. Example: STX-C:001.",
+      "page": "/stazzex/entries/stx-081.html"
+    }
+  ]
+}
