@@ -13,8 +13,8 @@ body{background:var(--black);font-family:-apple-system,BlinkMacSystemFont,"Segoe
 button,a{font:inherit}
 a{color:inherit;text-decoration:none}
 .app{position:relative;width:100%;height:100dvh;overflow:hidden;background:var(--black)}
-.stage{display:flex;width:700%;height:100%;transform:translateX(0);transition:transform .42s cubic-bezier(.22,.61,.36,1);will-change:transform}
-.page{width:14.2857142857%;height:100%;flex:0 0 14.2857142857%;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior-x:none}
+.stage{display:flex;width:500%;height:100%;transform:translateX(0);transition:transform .42s cubic-bezier(.22,.61,.36,1);will-change:transform}
+.page{width:20%;height:100%;flex:0 0 20%;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior-x:none}
 .page-inner{width:min(100%,1080px);min-height:100%;margin:auto;padding:18px 14px 40px}
 .landing{background:linear-gradient(180deg,#080808 0%,#111 55%,#181818 100%);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center}
 .home-logo-wrap{display:flex;align-items:center;justify-content:center;padding:4px 20px 10px}
@@ -133,17 +133,10 @@ a{color:inherit;text-decoration:none}
   <p>Stazzland and his female costars, known as <a class="home-branch" href="/stazzlies/">The Stazzlies</a>, collaborate in content, while the Stazzerian index known as <a class="home-branch" href="/stazzex/">The Stazzex</a> records and documents the process, becoming Stazzerian history.</p>
 </div>
 <div class="swipe-indicator home-swipe" aria-hidden="true"><span>SWIPE LEFT TO EXPLORE</span><span class="swipe-arrow">→</span></div>
-<div class="dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+<div class="dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
 
 </div>
 </section>
-
-<section class="page" id="stazzography" aria-label="Stazzography"><div class="page-inner"><div class="directs-header"><h1>Stazzography</h1><p>Powered by The Stazzex</p></div><div class="stazzography-gallery"><a class="stazzography-photo" href="/PresidentStazzlandSitting.jpg"><img src="/PresidentStazzlandSitting.jpg" alt="President Kelvin Stazzland seated" loading="lazy"><span>President Kelvin Stazzland seated</span></a>
-<a class="stazzography-photo" href="/Stazzboi-Offical-Portrait-Kelvin-Stazzland.jpg"><img src="/Stazzboi-Offical-Portrait-Kelvin-Stazzland.jpg" alt="Kelvin Stazzland official portrait" loading="lazy"><span>Kelvin Stazzland official portrait</span></a>
-<a class="stazzography-photo" href="/PresidentStazzland.PNG"><img src="/PresidentStazzland.PNG" alt="President Stazzland" loading="lazy"><span>President Stazzland</span></a>
-<a class="stazzography-photo" href="/PresidentandVPLaughing.jpg"><img src="/PresidentandVPLaughing.jpg" alt="President and Vice President laughing" loading="lazy"><span>President and Vice President laughing</span></a>
-<a class="stazzography-photo" href="/OriginalKhamelion.jpg"><img src="/OriginalKhamelion.jpg" alt="Original Khamelion pose" loading="lazy"><span>Original Khamelion pose</span></a>
-<a class="stazzography-photo" href="/stazzboi/kelvinstazzboidrink.png"><img src="/stazzboi/kelvinstazzboidrink.png" alt="President Kelvin Stazzland drinking a beverage" loading="lazy"><span>President Kelvin Stazzland drinking a beverage</span></a></div><a href="/stazzography/">Open Stazzography →</a></div></section>
 
 <section class="page" aria-label="Stazzeria">
 <div class="page-inner">
@@ -181,20 +174,6 @@ a{color:inherit;text-decoration:none}
 </div>
 </section>
 
-<section class="page" aria-label="Stazzboi Shop">
-<div class="page-inner">
-<div class="directs-header"><h1>Stazzboi Shop</h1><p>Design the collection. Current apparel inventory is sold out.</p></div>
-<div class="shop-hero"><div><strong>STAZZBOI SHOP</strong><span>Wear the Stazz Universe.</span></div><a href="/shop/">ENTER SHOP →</a></div>
-<div class="shop-mini-grid">
-  <a class="shop-mini-card" href="/shop/#beanies"><strong>BEANIES</strong><span>3 designs · $20</span></a>
-  <a class="shop-mini-card" href="/shop/#hoodies"><strong>HOODIES</strong><span>3 designs · $35</span></a>
-  <a class="shop-mini-card" href="/shop/#tees"><strong>TEES</strong><span>3 designs · $25</span></a>
-  <a class="shop-mini-card" href="/shop/#caps"><strong>BASEBALL CAPS</strong><span>2 designs · $20</span></a>
-  <a class="shop-mini-card" href="/shop/#bracelets"><strong>BRACELETS</strong><span>2 designs · $6.99</span></a>
-</div>
-<div class="shop-bundle"><span>STAZZEX CLASSIC</span><strong>COMPLETE SET</strong><small>Beanie + tee + hoodie + cap · estimated bundle value shown inside</small></div>
-</div>
-</section>
 
 </div>
 </div>
@@ -229,8 +208,6 @@ a{color:inherit;text-decoration:none}
     if(e.key==='ArrowLeft')go(page-1);
   });
   dots.forEach((d,i)=>d.addEventListener('click',()=>go(i)));
-  function openHash(){if(location.hash==='#stazzography')go(1);}
-  openHash();window.addEventListener('hashchange',openHash);
 
 })();
 </script>
