@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+Allow: /Stazzeria/
+Allow: /stazzology/
+Allow: /stazzlies/
+Allow: /stazzex/
+Allow: /stazzex/entries/
 
 Sitemap: https://stazzboi.com/sitemap.xml
