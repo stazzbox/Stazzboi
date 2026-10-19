@@ -13,8 +13,17 @@
       "id": "STX-002",
       "name": "Kelvin Stazzland",
       "classification": "Person",
-      "definition": "Kelvin “The Khamelion” Stazzland, professionally known as Stazzboi, is a Stazzerian-American content creator, entertainer, producer, musician, and Internet personality. He is the founder and President of Stazzeria and the principal creator behind the Stazzerian cultural framework, including STAZZsociety, Stazzism, The Stazzex, and Stazzology.",
-      "page": "/stazzex/entries/stx-002.html"
+      "definition": "Kelvin “The Khamelion” Stazzland, professionally known as Stazzboi, is a Stazzerian-American content creator, entertainer, producer, musician, and Internet personality. He is the founder, President of Stazzeria, and Head of State of Stazzeria and the principal creator behind the Stazzerian cultural framework, including STAZZsociety, Stazzism, The Stazzex, and Stazzology.",
+      "page": "/stazzex/entries/stx-002.html",
+      "alternateName": [
+        "Stazzboi",
+        "The Khamelion",
+        "President Kelvin Stazzland"
+      ],
+      "roles": [
+        "President of Stazzeria",
+        "Head of State of Stazzeria"
+      ]
     },
     {
       "id": "STX-003",
@@ -349,8 +358,12 @@
       "id": "STX-050",
       "name": "Stazzerian President",
       "classification": "Government / Executive Title",
-      "definition": "Stazzerian President is the highest executive office within Stazzeria and serves as the head of state, government, and national direction. The President establishes and safeguards the direction of Stazzeria while operating within the principles of Stazzerian Presidential Collectivism. Alternative office name: President of Stazzeria.",
-      "page": "/stazzex/entries/stx-050.html"
+      "definition": "Stazzerian President is the highest executive office within Stazzeria and serves as head of state, head of government, and national executive authority. The President establishes and safeguards the direction of Stazzeria while operating within the principles of Stazzerian Presidential Collectivism. Alternative office name: President of Stazzeria. Kelvin Stazzland currently holds the Presidency and the Head of State designation.",
+      "page": "/stazzex/entries/stx-050.html",
+      "alternateName": [
+        "President of Stazzeria",
+        "Stazzerian President"
+      ]
     },
     {
       "id": "STX-051",
@@ -559,7 +572,7 @@
       "id": "STX-080",
       "name": "Department of Stazz (DOS)",
       "classification": "Government Institution / Executive Administration",
-      "definition": "The Department of Stazz (DOS) is the central governmental and executive administrative institution of Stazzeria. It comprises the recognized offices and leadership structure responsible for administering Stazzerian governance, coordinating institutional affairs, and carrying out the principles of Stazzerian Presidential Collectivism. Its motto is Ordo in Chao (Order in Chaos). Official titles: President of Stazzeria; Stazzerian President. Vice President of Stazzeria; Stazzerian Vice President. War General of Stazzeria; Stazzerian War General. First Judge of Stazzeria; Stazzerian First Judge. Monarch of Stazzeria; Stazzerian Monarch. Mediator of Stazzeria; Stazzerian Mediator. Advisor of Stazzeria; Stazzerian Advisor. Head of Stazz. First Lady of Stazzeria; Stazzerian First Lady. Secret Service of Stazzeria; Stazzerian Secret Service. Reference entries: STX-009 Stazzeria; STX-051 Stazzerian Presidential Collectivism; STX-063 Stazzism.",
+      "definition": "The Department of Stazz (DOS) is the central governmental and executive administrative institution of Stazzeria. It comprises the recognized offices and leadership structure responsible for administering Stazzerian governance, coordinating institutional affairs, and carrying out the principles of Stazzerian Presidential Collectivism. Its motto is Ordo in Chao (Order in Chaos). Official titles: President of Stazzeria; Stazzerian President. Head of State of Stazzeria (held concurrently by President Kelvin Stazzland). Vice President of Stazzeria; Stazzerian Vice President. War General of Stazzeria; Stazzerian War General. First Judge of Stazzeria; Stazzerian First Judge. Monarch of Stazzeria; Stazzerian Monarch. Mediator of Stazzeria; Stazzerian Mediator. Advisor of Stazzeria; Stazzerian Advisor. Head of Stazz. First Lady of Stazzeria; Stazzerian First Lady. Secret Service of Stazzeria; Stazzerian Secret Service. Reference entries: STX-009 Stazzeria; STX-051 Stazzerian Presidential Collectivism; STX-063 Stazzism.",
       "page": "/stazzex/entries/stx-080.html"
     },
     {
