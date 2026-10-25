@@ -87,6 +87,9 @@ a{color:inherit;text-decoration:none}
 
 /* Stazzeria swipe-panel: official Department of Stazz directory */
 .dos-seal{display:flex;justify-content:center;padding:8px 0 16px}.dos-seal img{display:block;width:min(100%,290px);max-height:290px;object-fit:contain}.dos-directory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:14px 0 18px}.dos-person{background:#101010;border:1px solid #303030;overflow:hidden}.dos-person img,.dos-photo-placeholder{display:block;width:100%;height:clamp(155px,24vw,245px);object-fit:cover;object-position:center top;background:#181818}.dos-photo-placeholder{display:flex;align-items:center;justify-content:center;color:var(--gold-hi);font:700 26px Georgia,serif}.dos-person-info{padding:10px 10px 13px;min-height:76px}.dos-person-info strong{display:block;color:var(--gold-hi);font-size:11px;text-transform:uppercase;letter-spacing:.035em}.dos-person-info span{display:block;margin-top:5px;font-size:13px;font-weight:700;line-height:1.3}.dos-entry-button{border-color:var(--gold);margin:16px 0 22px;background:#18150c}.dos-entry-button .direct-copy strong{color:var(--gold-hi)}@media(max-width:390px){.dos-directory{gap:8px}.dos-person img,.dos-photo-placeholder{height:155px}.dos-person-info{padding:8px}.dos-person-info span{font-size:12px}}
+
+/* Live Stazzex index embedded in the Stazzboi swipe experience */
+.stazzex-slide-inner{display:flex;flex-direction:column;gap:12px;min-height:100%}.stazzex-slide-inner .directs-header{margin-bottom:0}.stazzex-slide-inner .wiki-text p{margin:0}.stazzex-live-frame-wrap{border:1px solid var(--gold-lo);border-radius:10px;overflow:hidden;background:#080a0d;min-height:420px;height:min(67dvh,850px)}.stazzex-live-frame{display:block;border:0;width:100%;height:100%;background:#080a0d}.stazzex-open-button{border-color:var(--gold);background:#17140c}.stazzex-open-button strong{color:var(--gold-hi)}.stazzex-slide-nav{display:flex;justify-content:flex-start;padding-bottom:15px}.stazzex-back{cursor:pointer;border:1px solid #444;background:#151515;color:var(--gold-hi);border-radius:7px;padding:10px 14px;font-weight:700}@media(max-width:600px){.stazzex-live-frame-wrap{height:64dvh;min-height:390px}.stazzex-slide-inner{gap:10px}}
 </style>
 <script type="application/ld+json">
 {
@@ -133,7 +136,7 @@ a{color:inherit;text-decoration:none}
   <span class="bio-title">About Stazzboi</span>
   <p><strong>Stazzboi is the personal brand of Kelvin Stazzland</strong> in which the Stazz Universe forms, where Stazzland leads his nation of <a class="home-branch" href="https://stazzeria.stazzboi.com/">Stazzeria</a> as its <strong>PRESIDENT</strong>.</p>
   <p>Stazzland is known for his gaming promotion, <a class="home-branch" href="/stazzology/">Stazzology</a>, which primarily focuses on <strong>Call of Duty: Mobile (CODM)</strong> and gained attention from the <strong>Megabites Arcade</strong> collaboration <strong>Bites &amp; Battles</strong>, hosted in Hemet, California.</p>
-  <p>Stazzland and his female costars, known as <a class="home-branch" href="/stazzlies/">The Stazzlies</a>, collaborate in content, while the Stazzerian index known as <a class="home-branch" href="/stazzex/">The Stazzex</a> records and documents the process, becoming Stazzerian history.</p>
+  <p>Stazzland and his female costars, known as <a class="home-branch" href="/stazzlies/">The Stazzlies</a>, collaborate in content, while the Stazzerian index known as <a class="home-branch" href="https://stazzex.stazzboi.com/">The Stazzex</a> records and documents the process, becoming Stazzerian history.</p>
 </div>
 <div class="swipe-indicator home-swipe" aria-hidden="true"><span>SWIPE LEFT TO EXPLORE</span><span class="swipe-arrow">→</span></div>
 <div class="dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
@@ -177,14 +180,14 @@ a{color:inherit;text-decoration:none}
 </section>
 
 <section class="page" aria-label="The Stazzex">
-<div class="page-inner">
-<div class="directs-header"><h1>The Stazzex</h1><p>The canonical Stazzerian index and archive.</p></div>
-<div class="hero"><img src="/stazzexicon.png" alt="The Stazzex"></div>
-<div class="wiki-text"><p>The canonical Stazzerian index and archive of STX records, people, offices, institutions, and terminology.</p></div>
-<a class="direct-card" href="/stazzex/"><span class="direct-icon">📚</span><span class="direct-copy"><strong>Open The Stazzex</strong><span>Go directly into the canonical archive</span></span><span class="direct-arrow">→</span></a>
+<div class="page-inner stazzex-slide-inner">
+<div class="directs-header"><h1>The Stazzex</h1><p>Official Stazzerian Index · 81 STX Records and Definitions</p></div>
+<div class="wiki-text"><p>Search the Stazzex, browse official STX entries, and open the full definitions of Stazzerian people, government offices, institutions, history, and terminology.</p></div>
+<div class="stazzex-live-frame-wrap"><iframe class="stazzex-live-frame" title="The Stazzex — searchable official index and full definitions" src="https://stazzex.stazzboi.com/" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+<a class="direct-card stazzex-open-button" href="https://stazzex.stazzboi.com/"><span class="direct-copy"><strong>OPEN THE STAZZEX</strong><span>Explore the complete archive at stazzex.stazzboi.com</span></span><span class="direct-arrow">→</span></a>
+<div class="stazzex-slide-nav"><button type="button" class="stazzex-back" id="stazzex-slide-back" aria-label="Return to previous swipe page">← Previous page</button></div>
 </div>
 </section>
-
 
 </div>
 </div>
@@ -219,6 +222,7 @@ a{color:inherit;text-decoration:none}
     if(e.key==='ArrowLeft')go(page-1);
   });
   dots.forEach((d,i)=>d.addEventListener('click',()=>go(i)));
+  document.getElementById('stazzex-slide-back')?.addEventListener('click',()=>go(page-1));
 
 })();
 </script>
